@@ -1560,17 +1560,19 @@
     "stats_kills"               (int)           // player kills on the level
     "stats_items"               (int)           // player item pickups on the level
     "stats_secrets"             (int)           // secrets found on the level
-    "stats_seconds"             (int)           // wasted seconds on the level
-    "stats_minutes"             (int)           // wasted minutes on the level
+    "stats_seconds"             (int)           // wasted seconds on the current level (read only)
+    "stats_minutes"             (int)           // wasted minutes on the current level (read only)
     "stats_kills_goal"          (int)           // kills goal on the level
     "stats_items_goal"          (int)           // items goal on the level
     "stats_secrets_goal"        (int)           // secrets goal on the level
     "stats_kills_total"         (int)           // kills total
     "stats_items_total"         (int)           // items found total
     "stats_secrets_total"       (int)           // secrets found total
-    "stats_seconds_total"       (int)           // hours total
-    "stats_minutes_total"       (int)           // minutes total
-    "stats_hours_total"         (int)           // seconds total
+    "stats_seconds_total"       (int)           // wasted seconds total (read only)
+    "stats_minutes_total"       (int)           // wasted minutes total (read only)
+    "stats_hours_total"         (int)           // wasted hours total (read only)
+    "stats_time"                (float)         // real timer of wasted time on the current level, mesuared in ticks (one tick is 1/30 of a second)
+    "stats_time_total"          (float)         // real timer of wasted total time, mesuared in ticks (one tick is 1/30 of a second)
     "stats_soulsave_total"      (int)           // souls saved total
     "stats_soulkill_total"      (int)           // souls destroyed total
 
