@@ -3881,6 +3881,198 @@
     },
     {
         "color": "#ff000000",
+        "name": "Entity Log",
+        "properties": [
+            {
+                "name": "e_activated",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text1",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text2",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text3",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text4",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text5",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text6",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text7",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text8",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text9",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_log_clear",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_log_ignore_empty",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_log_listen",
+                "type": "int",
+                "value": 123456789
+            },
+            {
+                "name": "e_input_target",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_input_parm",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_output_id_text",
+                "type": "int",
+                "value": 3
+            },
+            {
+                "name": "e_output_parm_text",
+                "type": "int",
+                "value": 5
+            },
+            {
+                "name": "e_output_value_text",
+                "type": "int",
+                "value": 7
+            },
+            {
+                "name": "e_output_prettify",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_use_console",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_use_messagebox",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_use_mini_text",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_mini_text_color",
+                "type": "color",
+                "value": "#ffffff00"
+            },
+            {
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_position",
+                "type": "int",
+                "value": 1
+            },
+            {
+                "name": "e_sort_radius",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sort_type",
+                "type": "string",
+                "value": "!Entity"
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "f_difficulty_chicken",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_easy",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_hard",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_nightmare",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_normal",
+                "type": "bool",
+                "value": true
+            }
+        ]
+    },
+    {
+        "color": "#ff000000",
         "name": "Entity Movement",
         "properties": [
             {
