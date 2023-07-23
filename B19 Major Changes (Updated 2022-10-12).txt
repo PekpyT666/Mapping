@@ -1,0 +1,382 @@
+//================================================================//
+//-------------------- Beta-18.4 ---> Beta-19 --------------------//
+//================================================================//
+
+//---------- CALCULATOR ----------//
+e_calc_type :
+    4 --->  8
+    5 --->  9
+    6 ---> 14
+    7 ---> 16
+    8 ---> 15
+    9 ---> 28
+   10 ---> 29 
+   11 ---> 18
+   12 ---> 26
+   13 ---> 50
+   14 ---> 19
+   15 ---> 20
+
+//---------- DOOR ----------//
+
+e_door_key (-1..2)  --->      e_door_key (0..3)
+Удален параметр "e_door_keyLock"
+
+//---------- DESTROYER ----------//
+
+e_target             --->     e_destroy_target
+e_endtarget          --->     e_target
+
+//---------- DISPLAY ----------//
+
+e_text_type          --->     e_text_style
+
+//---------- FADE ----------//
+
+e_color              --->     e_fade_color
+
+//---------- FOG ----------//
+
+e_fade_type          --->     e_fog_type
+e_fade_alpha         --->     e_fog_alpha
+
+//---------- LIGHT ----------//
+
+Удален параметр "e_light_pulse"
+Удален параметр "e_light_rot"
+Удален параметр "e_light_dirR"
+
+e_target             --->     e_follow
+e_target_npc         --->     e_follow_npc
+e_target_monst       --->     e_follow_monst
+e_light_pulseSpeed   --->     e_light_pulse
+e_light_rotSpeed     --->     e_light_rot
+e_image              --->     e_light_image
+e_anim               --->     e_light_anim 
+e_frames             --->     e_light_frames
+e_light_col          --->     e_light_color
+
+//---------- MOVEMENT ----------//
+
+e_jump_entity        --->     e_jump_target
+e_target             --->     e_slave
+e_endtarget          --->     e_target
+
+//---------- PORTAL ----------//
+
+e_target             --->     e_jump_target
+e_endtarget          --->     e_target
+e_fx (string)        --->     e_fx (bool)
+Удален e_fx_col
+
+//---------- SEQUENCER ----------//
+
+e_target_npc         --->     e_slave_npc
+e_target_monst       --->     e_slave_monst
+e_endtarget          --->     e_target
+
+Удалена активация e_target при прерывании секвенции
+
+//---------- SOUND ----------//
+
+e_loop               --->     e_sound_loop
+
+Удален параметр "e_music"
+Добавлен параметр "e_sound_type", который при значении "1" работает идентично параметру "e_music" со значением "true"
+
+//---------- SOUND 3D ----------//
+
+e_loop               --->     e_sound_loop
+
+Удален параметр "e_music"
+Добавлен параметр "e_sound_type", который при значении "1" работает идентично параметру "e_music" со значением "true"
+
+//---------- SPAWNER ----------//
+
+e_fx (string)        --->     e_fx (bool)
+
+Добавлен e_set_tag
+Удален e_fx_col
+
+//---------- ВСЕ ----------//
+
+Сущность "Entity Graber" (ent_graber) переименована в "Entity Grabber" (ent_grabber)
+
+Параметр "e_disable" теперь "true" по умолчанию
+
+полностью удалена поддержка corpseSprite (string) у трупов
+и sprite_index (string) у дверей
+
+Добавлено значение "!Any" для некоторых параметров
+Добавлено значение "!Entity" для некоторых параметров
+Удален параметр "e_output_a"
+Удален параметр "e_output_b"
+Удален параметр "e_output_global"
+
+Сущность "Entity Dialogue" полностью переработана и расширенна
+Удалена сущность "Entity Dialogue Sprite"
+
+e_image              --->     e_sprite_image
+e_anim               --->     e_sprite_anim 
+e_frames             --->     e_sprite_frames
+
+e_color (string/int) --->     e_color (color)
+Эти же изменения затронули все аналоги параметра "e_color"
+
+Удален параметр "e_color_RGB" и все его аналоги
+Удален параметр "e_color_R" и все его аналоги
+Удален параметр "e_color_G" и все его аналоги
+Удален параметр "e_color_B" и все его аналоги
+
+!player              --->     !Player
+!global              --->     !Global
+
+//---------- ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ----------//
+
+forceload_entities = true     --->     unload_entities = false
+
+hp                   --->     player_sanity
+poison               --->     player_toxin
+physHP               --->     player_health
+maniacPoints         --->     player_maniac_score
+playerInfected       --->     player_infected
+playerTeleport       --->     player_teleport
+
+bluekey              --->     inventory_key_steel
+yellowkey            --->     inventory_key_brass
+redkey               --->     inventory_key_copper
+map                  --->     inventory_map
+mapSacrifice         --->     inventory_map_score
+canMelee             --->     inventory_melee
+canFireball          --->     inventory_fireball
+canPlasmaball        --->     inventory_plasma
+SorceryCharges       --->     inventory_sorcery
+ShaftCharges         --->     inventory_shaft
+canTP                --->     inventory_teleport
+
+statsKills           --->     stats_kills
+statsItems           --->     stats_items
+statsSecrets         --->     stats_secrets
+statsTimeSeconds     --->     stats_seconds
+statsTimeMinutes     --->     stats_minutes
+statsKillsGoal       --->     stats_kills_goal
+statsItemsGoal       --->     stats_items_goal
+statsSecretsGoal     --->     stats_secrets_goal
+totalGameKills       --->     stats_kills_total
+totalGameItems       --->     stats_items_total
+totalGameSecrets     --->     stats_secrets_total
+totalTimeSeconds     --->     stats_seconds_total
+totalTimeMinutes     --->     stats_minutes_total
+totalTimeHours       --->     stats_hours_total
+totalGameSouls       --->     stats_soulsave_total
+totalGameSoulsKill   --->     stats_soulkill_total
+
+arcadeScore          --->     arcade_score
+_developer           --->     developer
+_godMode             --->     cheat_godmode
+_idclip              --->     cheat_noclip
+_noTarget            --->     cheat_notarget
+playPain             --->     pain_start
+hud_pickitem         --->     collect_alpha
+hud_enable           --->     gui_hud
+enableCursor         --->     gui_cursor
+usePressed           --->     interaction
+cutscenePlaying      --->     game_outside_frame
+sequencePlaying      --->     sequence_enabled
+arcadeEnd            --->     arcade_finish
+
+deathRun             --->     gamemode_deathrun
+randomRun            --->     gamemode_randomrun
+lanternInvasion      --->     gamemode_lanterns
+
+levelMusic           --->     level_music
+lanternLevel         --->     level_lantern
+allowLanterns        --->     level_lantern_allowed
+
+quad                 --->     rune_quad
+protection           --->     rune_protection
+vision               --->     rune_vision
+nuke                 --->     rune_nuke
+SoulSorcery          --->     sorcery_progress
+
+modifFireballCurrent --->     mod_fireball_current
+modifPlasmaCurrent   --->     mod_plasma_current
+modifTeleportCurrent --->     mod_teleport_current
+modifMeleeCurrent    --->     mod_melee_current
+
+level_lightmap (int) --->     level_lightmap (color)
+
+Удален параметр "levelTypeCustom"
+Удален параметр "level_lightmap_r"
+Удален параметр "level_lightmap_g"
+Удален параметр "level_lightmap_b"
+
+//---------- ЛОКАЛЬНЫЕ ПЕРЕМЕННЫЕ ----------//
+
+noLant              --->     lantern_immunity
+noRand              --->     randomrun_immunity
+monsterHp           --->     monster_hp
+
+//---------- Объекты лампочек ----------//
+
+Изменен принцип работы параметра "glare", 
+теперь он не является bool, заменяет собой следующие переменные:
+
+glare = false       --->     glare = ""
+glare = true        --->     glare = "spr_glow_lights"
+glareItem           --->     glare = "spr_glow_items"
+glareFire           --->     glare = "spr_glow_fire"
+glareProjectile     --->     glare = "spr_glow_projectiles"
+lightColor (string) --->     light_color (color)
+
+nanoglare           --->     glare_size = 0.1
+microglare          --->     glare_size = 0.25
+
+//---------- obj_portalIn ----------//
+
+target              --->     e_target
+
+//---------- obj_portalOut ----------//
+
+name                --->     e_name
+
+//-------------------- Изменения названий объектов --------------------//
+
+Удален объект obj_lightFinal
+
+obj_lightBig             ---> obj_light_big
+obj_lightBigAqua         ---> obj_light_big_aqua
+obj_lightBigDkGreen      ---> obj_light_big_dkgreen
+obj_lightBigBlue         ---> obj_light_big_blue
+obj_lightBigGreen        ---> obj_lightHugeGreen
+obj_lightBigLilac        ---> obj_light_big_lilac
+obj_lightBigLtRed        ---> obj_light_big_red
+obj_lightBigOrange       ---> obj_light_big_orange
+obj_lightBigRed          ---> obj_light_big_dkred
+
+obj_lightSmall           ---> obj_light_small
+obj_lightSmallBlue       ---> obj_light_small_blue
+obj_lightSmallGreen      ---> obj_light_small_green
+obj_lightSmallLilac      ---> obj_light_small_lilac
+obj_lightSmallLtRed      ---> obj_light_small_red
+obj_lightSmallOrange     ---> obj_light_small_orange
+obj_lightSmallRed        ---> obj_light_small_dkred
+
+obj_lightTiny            ---> obj_light_tiny
+obj_lightTinyLtRed       ---> obj_light_tiny_red
+obj_lightTinyRed         ---> obj_light_tiny_dkred
+
+obj_lightCustom          ---> obj_light_custom
+obj_lightRotating        ---> obj_light_rotating
+obj_lightSurface         ---> obj_light_big_dkgray
+
+obj_lampMansionF         ---> obj_illusionary_lampWhiteF
+obj_lampMansionL         ---> obj_illusionary_lampWhiteL
+obj_lampMansionR         ---> obj_illusionary_lampWhiteR
+
+obj_interact_lampPinkF   ---> obj_illusionary_lampPinkF
+obj_interact_lampPinkL   ---> obj_illusionary_lampPinkL
+obj_interact_lampPinkR   ---> obj_illusionary_lampPinkR
+
+obj_interact_lampPurpleF ---> obj_illusionary_lampPurpleF
+obj_interact_lampPurpleL ---> obj_illusionary_lampPurpleL
+obj_interact_lampPurpleR ---> obj_illusionary_lampPurpleR
+
+obj_interact_torchBigF   ---> obj_illusionary_torchBigF	
+obj_interact_torchBigL   ---> obj_illusionary_torchBigL	
+obj_interact_torchBigR   ---> obj_illusionary_torchBigR
+
+Ось obj_illusionary_torchBigL смещена на 16 пикселей влево
+Ось obj_illusionary_torchBigR смещена на 16 пикселей вправо
+Названия объектов obj_illusionary_torchBigL и obj_illusionary_torchBigR поменялись местами
+
+obj_interact_torchSmallF ---> obj_illusionary_torchSmallF
+obj_interact_torchSmallL ---> obj_illusionary_torchSmallL
+obj_interact_torchSmallR ---> obj_illusionary_torchSmallR
+
+Ось obj_illusionary_torchSmallL смещена на 3 пикселя влево
+Ось obj_illusionary_torchSmallR смещена на 3 пикселя вправо
+Названия объектов obj_illusionary_torchSmallL и obj_illusionary_torchSmallR поменялись местами
+
+//Keys
+obj_bluekey              ---> obj_key_steel
+obj_yellowkey            ---> obj_key_brass
+obj_redkey               ---> obj_key_copper
+Key Blue                 ---> obj_key_steel
+Key Yellow               ---> obj_key_brass
+Key Red                  ---> obj_key_copper
+
+//Doors
+obj_BlueDoor             ---> obj_door_steel
+obj_YellowDoor           ---> obj_door_brass
+obj_RedDoor              ---> obj_door_copper
+Door Blue                ---> obj_door_steel
+Door Yellow              ---> obj_door_brass
+Door Red                 ---> obj_door_copper
+obj_door1                ---> obj_door
+
+//Monsters
+obj_Monster              ---> obj_monster_wandering
+obj_MonsterDegan         ---> obj_monster_lost
+obj_MonsterFly           ---> obj_monster_howling
+obj_MonsterHorror        ---> obj_monster_horror
+obj_MonsterIcefly        ---> obj_monster_flyingwraith
+obj_MonsterIceFly        ---> obj_monster_flyingwraith
+obj_MonsterIcewalker     ---> obj_monster_wraith
+obj_MonsterNightmare     ---> obj_monster_nightmare
+obj_MonsterNightmarish   ---> obj_monster_nightmaris
+obj_MonsterRedwalker     ---> obj_monster_impendent
+obj_MonsterLantern       ---> obj_monster_lantern
+obj_MonsterPhantom       ---> obj_monster_phantom
+
+//Items
+obj_item_Bandage         ---> obj_item_bandage
+obj_item_Bandage_blue    ---> obj_item_bandage_blue
+obj_item_Bandage_black   ---> obj_item_bandage_black
+obj_item_Fireball        ---> obj_item_fireball
+obj_item_Knife           ---> obj_item_knife
+obj_item_Map             ---> obj_item_map
+obj_item_Medkit          ---> obj_item_medkit
+obj_item_Medkit_blue     ---> obj_item_medkit_blue
+obj_item_Medkit_black    ---> obj_item_medkit_black
+obj_item_Megahealth      ---> obj_item_megahealth
+obj_item_Needles         ---> obj_item_needles
+obj_item_Nuke            ---> obj_item_nuke
+obj_item_Plant           ---> obj_item_plant
+obj_item_Plasma          ---> obj_item_plasma
+obj_item_Protection      ---> obj_item_protection
+obj_item_Quad            ---> obj_item_quad
+obj_item_Shaft           ---> obj_item_shaft
+obj_item_Sorcery         ---> obj_item_sorcery
+obj_item_teleball        ---> obj_item_teleport
+obj_item_Vision          ---> obj_item_vision
+obj_item_Wrench          ---> obj_item_wrench
+
+//Misc
+obj_savepoint            ---> obj_sigil
+obj_lightHuge            ---> obj_light_huge
+obj_magicwall            ---> obj_trigger_secret
+
+//Some old maps have
+obj_item_Teleball        ---> obj_item_teleport
+obj_gift                 ---> obj_cycler_gift
+
+Удалён объект obj_monsterDead
+используйте ent_decor (с установленным e_sprite) или просто obj_Corpse
+
+Удалён obj_illusionary_goreExplo
+используйте ent_decor (с установленным e_sprite)
+
+Удалёны объекты obj_reddoorwall , obj_bluedoorwall и obj_yellowdoorwall
+используйте ent_door (с установленным e_mask и e_sprite)
+
+obj_MonsterClaudia       ---> obj_monster_exhausted_claudia
+obj_MonsterGestas        ---> obj_monster_exhausted_gestas
+obj_MonsterDismas        ---> obj_monster_exhausted_dismas
+
+//-------------------- Изменения названий страйтов --------------------//
+
+spr_BlueDoor_Indust1     ---> spr_Door_Indust_blue
+spr_YellowDoor_Indust1   ---> spr_Door_Indust_yellow
+spr_RedDoor_Indust1      ---> spr_Door_Indust_red
+spr_Door_Indust1         ---> spr_Door_Indust
