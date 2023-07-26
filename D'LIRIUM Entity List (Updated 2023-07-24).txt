@@ -1190,6 +1190,66 @@
                                         // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
+//-------------------- Entity Prefaber (ent_prefaber) --------------------// 
+{ 
+    "e_activated"                         (bool)   // Сurrent entity activation ("true" if must activate on start). 
+    "e_name"                              (string) // Сurrent entity name. 
+    "e_tag"                               (string) // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types. 
+    "e_pref_mode"                         (int)    // What this prefaber should do (from "0" to "3", any other value will be treated as "0").
+    "e_pref_activate_on_mode_switching"   (bool)   // If true then prefaber will activate when his mode is changed (to prevent infinite loop this feature ignored mode change made by "e_pref_mode_switching_on_activation").
+    "e_pref_mode_switching_on_activation" (bool)   // If true then after activation prefaber will switch his "e_pref_mode" to opposite ("0"<->"1" and "2"<->"3").
+    "e_pref_mode_switching_on_distance"   (float)  // Prefaber will manage it mode depending on how far player from this Entity Prefaber is ("0" disables this feature, but negative values will invert it). I.e. when number is positive and ditance between prefaber and player greater than this number, then prefaber will set itself in to save state ("1" or "3", depends on what you set in "e_pref_mode"), but when number is positive and ditance between prefaber and player less than this number,then prefaber will set itself in load state ("0" or "2", depends on what you set in "e_pref_mode").
+    "e_pref_distance_offset_x"            (float)  // X offset of point from wich prefaber checked distance between him and player (by default it is seted to width/2 of the prefaber, but if you set it to "0" then it will be the top left corner of the prefaber. i.e. his x).
+    "e_pref_distance_offset_y"            (float)  // Y offset of point from wich prefaber checked distance between him and player (by default it is seted to height/2 of the prefaber, but if you set it to "0" then it will be the top left corner of the prefaber. i.e. his y).
+    "e_pref_distance_offset_set_middle"   (bool)   // By default prefaber will set his own "e_pref_distance_offset_x" and "e_pref_distance_offset_y" in the middle of itself on the first frame after creation. However, you can disable this behaviour by setting this property to false. (For example if you want to spawn spiceific sized prefaber from spawner).
+    "e_pref_destroy_saved"                (bool)   // If true then prefaber will delete every object instance that he has saved (when "e_pref_mode" "1" or "3").
+    "e_pref_saved_types"                  (string) // What types of objects should prefaber save (when "e_pref_mode" "1" or "3"). You can supply multiple types by separating them with ";" e.g. "Monster Wandering;obj_enemy_flying;!Entity;obj_interact_plita;Item Plant" (note , Entity Prefaber is ok , but it will save only others prefabers , i.e. "notme").
+    "e_pref_create_image_layers"          (bool)   // By default prefaber load only object layers and global variables from prefab file. However, with this property equal to true you can tell to also load image layers. But be aware that right now you don't have any ability to manipulate such layers and they are not saved in save file! So this feature in some sort of preview state and will need additional logic from you to use it right now properly (if your map have savepoints or abilty to enter personal hell)! Also note, that prefab file should use .png near it (i.e. in the same folder) but you also need same .png near main map, sorry, i don't want to fix this spaghetty between Tiled and D' right now ._.
+    "e_pref_create_tile_layers"           (bool)   // Same as "e_pref_create_image_layers" but this one for tile layers.
+    "e_pref_file"                         (string) // Name of prefab file without extension ( when e_pref_mode "0" or "1"). E.g. If your map named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" then prefab "my_prefab.tmj" should have path "%LocalAppdata%/delirium/maps/my_map/my_prefab.tmj", and "e_prefab_file" property should have "my_prefab" value in it.
+    "e_pref_make_unique"                  (bool)   // By default Entity Prefaber loads objects without making any changes to them as they are inside the prefab file (this is a fast mode). However you can set this property to true and this will force Entity Prefab to replace any "{unique_id}" keyword in values of all loaded object properties with special unique string (this is a slow but powerful mode). This string will consist of 9 numbers and it will be different for each loaded instance of prefab, but it will be the same within all object properties of one loaded prefab. You can write "{unique_id}" in any values of objects properties that are of string type. E.g. you can have a prefab with Entity Light that has "e_name" with value "my_{unique_id}_name" and Entity Button that have "e_target" with value "my_{unique_id}_name". If you have loaded two instances of such a prefab (in different places, of course, by two Entity Prefab) then each Entity Button will activate only one Entity Light (which was created alongside with it button). The actual names and targets will be something like "my_000000001_name" for one pair of button and light, and "my_000000002_name" for the other pair.
+    "e_pref_intances_load_offset_x"       (float)  // X offset of the loaded object instances (can work in both "e_relative_coordinates" = true and "e_relative_coordinates" = false).
+    "e_pref_intances_load_offset_y"       (float)  // Y offset of the loaded object instances (can work in both "e_relative_coordinates" = true and "e_relative_coordinates" = false).
+    "e_pref_intances_save_offset_x"       (float)  // X offset of the saved object instances (can work in both "e_relative_coordinates" = true and "e_relative_coordinates" = false).
+    "e_pref_intances_save_offset_y"       (float)  // Y offset of the saved object instances (can work in both "e_relative_coordinates" = true and "e_relative_coordinates" = false).
+    "e_pref_relative_coordinates"         (bool)   // If this value is true, then the coordinates of this Entity Prefaber will be the origin of the loaded prefab objects (E.g. an object with x=0 and y=10 inside the prefab file will be loaded at the same map x as the Entity Prefaber, but his map y will be 10 pixel lower than Entity Prefaber). If this value is false, then the loaded prefab objects will be at the same coordinates as they are inside the prefab file (e.g. an object with x=0 and y=10 inside the prefab file will be loaded on the map coordinates x=0 and y=10 despite the location of the Entity Prefaber).
+    "e_pref_internal_storage"             (string) // This property contain prefab as json string that was been saved by using "e_pref_mode" = "3". You can manipulate this string on runtime, but you should avoid doing this when it contain big prefab, since it can result in performance impact.
+    "e_destroy_self"                      (bool)   // If true, then Entity Prefab will delete itself after activation.
+    "e_delayed_destroy_self"              (int)    // Amount of this prefaber activations before it set his "e_destroy_self" to true ("0" or lower to disable this feature). Helpful for example if you need to save prefab in to internal storage, but delete prefaber after it will load prefab back (i.e. "1" will allow prefaber to be activated two times before selfdestroys).
+
+    "e_pref_mode" (MODE) {
+        "0"       // Load everything from prefab file.
+                  // For this mode it is recomended to place prefaber as Point in Tiled.
+                  
+        "1"       // Get all object instances of the types "e_pref_saved_types" which coordinates are in rectangle range of this Entity Prefaber and save them in to prefab file, if file already exists it will be overwriten.
+                  // For this mode you need to place prefaber as Rectangle in Tiled.
+                  // Also note prefaber CAN'T save game core objects (like obj_Cursor or obj_dev_gameconsole, etc) and managed objects (obj_doorwall, obj_cyclerwall and obj_cyclerwall_solid).
+                  // Work of this mode is equal to how "level dump"/"level save"/"levels save all" commands saves objects (NOT "level dump full"/"level save full"/"levels save all full").
+				  
+        "2"       // Load everything that stored in internal prefaber storage.
+                  // For this mode you can place prefaber as Point in Tiled, but in most cases you will need to place it as Rectangle, since "2" and "3" modes intended to be used together.
+                  
+        "3"       // Get all object instances of the types "e_pref_saved_types" which coordinates are in rectangle range of this Entity Prefaber and save them in to internal prefaber storage, existing internal storage will be overwriten.
+                  // For this mode you need to place prefaber as Rectangle in Tiled.
+                  // Also note prefaber CAN'T save game core objects (like obj_Cursor or obj_dev_gameconsole, etc) and managed objects (obj_doorwall, obj_cyclerwall and obj_cyclerwall_solid).
+                  // Work of this mode is equal to how "level dump"/"level save"/"levels save all" commands saves objects (NOT "level dump full"/"level save full"/"levels save all full").
+    }
+	
+    e_pref_saved_types (KEYWORDS) {
+	// You can use this keywords instead of manually typing object types
+        "!Entity"       // All types of entities
+        "!Enemy"        // All types of regullar monsters and plus lanterns
+        "!Item"         // All types of items
+        "!Noone"        // Nothing, in case you need placeholder that didn't do anything
+    }
+
+//You can think about this entity as Entity Spawner but more powerful. Instead of manually defining properties of single spawned object in spawner, you create new map that will be a prefab (i.e. template/blueprint) for spawning all of it objects with all their properties. You can change prefab even when map is already started, but be aware that changing of prefab didn't change already loaded on map field prefab instances - they are just object instances without any connection between them and prefab. 
+//The true power of this entity is that you can set "e_make_unique" to true and use "{unique_id}" in properties of the string type. This will guaranty that entities will work with each others in one instance of loaded prefab, but will ignore same entities from another loaded instance of the same prefab.
+//Note, if for some reson you need to get/manipulate "{unique_id}", you can GET last string used for such replacement via "prefabers_unique_id_last" , and you can manipulate with it integer value via "prefabers_unique_id" global variable. But in most cases you don't need to change unique id since it is fully managed by game (nulling when new game started, incremented by one when prefab is loaded, and saved/loaded inside save file). What you can actually do - you can use "prefabers_unique_id_last" (it hold string) to connect some parts of the two prefabs together with some manually placed grabbers and calculators.
+//Also note that first prefab with {unique_id} will have "000000001" as unique string, not "000000000" ("000000000" value is reserved as flag that there is no prefabs instantiated yet).
+
+}
+
 //-------------------- Entity Programmer (ent_programmer) --------------------//
 {
     "e_name"            (string)        // name of any object to program
