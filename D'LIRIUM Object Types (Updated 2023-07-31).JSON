@@ -5826,6 +5826,11 @@
                 "type": "string",
                 "value": ""
             },
+			{
+                "name": "e_jump_cam_smooth",
+                "type": "bool",
+                "value": true
+            },
             {
                 "name": "e_jump_monst",
                 "type": "string",
