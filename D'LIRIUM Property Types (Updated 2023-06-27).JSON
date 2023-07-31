@@ -111,7 +111,7 @@
         "storageType": "int",
         "type": "enum",
         "values": [
-            "A = B",
+            "A == B",
             "A < B",
             "A > B",
             "A <= B",

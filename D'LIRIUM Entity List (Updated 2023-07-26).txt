@@ -317,7 +317,7 @@
 
     "e_compare_type" (ACTIONS) {
 
-        "0"     // "A = B"  // is e_input_a equal to e_input_b
+        "0"     // "A == B" // is e_input_a equal to e_input_b
         "1"     // "A < B"  // is e_input_a less than e_input_b
         "2"     // "A > B"  // is e_input_a greater than e_input_b
         "3"     // "A <= B" // is e_input_a less or equal to e_input_b
