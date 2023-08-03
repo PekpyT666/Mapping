@@ -1710,4 +1710,10 @@
     "mod_plasma_current"        (int)           // current Plasma modifier
     "mod_teleport_current"      (int)           // current Teleport modifier
     "mod_melee_current"         (int)           // current melee weapon
+
+    "powerup_knife"             (int)           // knife damage multiplier (increases each time the player get a second and subsequent knifes)
+    "powerup_needles"           (int)           // needles damage multiplier (increases each time the player get a second and subsequent needles)
+    "powerup_wrench"            (int)           // wrench damage multiplier (increases each time the player get a second and subsequent wrenches)
+    "powerup_fireball"          (int)           // fireball damage multiplier (increases each time the player get a fourth and subsequent fireballs)
+    "powerup_plasma"            (int)           // plasma damage multiplier (increases each time the player get a fourth and subsequent plasma)
 }
