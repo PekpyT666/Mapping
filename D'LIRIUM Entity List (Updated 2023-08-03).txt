@@ -1145,6 +1145,8 @@
 {
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+
+    //Note - When save file is writen, this entity saved ONLY it "x", "y", "e_name" and "e_tag". Any properties that you set to node will not be saved (even size).
 }
 
 //-------------------- Entity Portal (ent_portal) --------------------//
