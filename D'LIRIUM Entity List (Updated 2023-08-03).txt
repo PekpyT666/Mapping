@@ -716,7 +716,7 @@
     "e_door_openAct"    (bool)          // activates targeted entity on open
     "e_door_closeAct"   (bool)          // activates targeted entity on close
     "e_door_key"        (int)           // sets the key required to open ("0" if key is not required, "1" - steel, "2" - brass, "3" - copper, "4" - custom key color set in "e_door_key_color")
-    "e_door_key_color"  (color || int)  // sets the custom key color required to open (if "e_door_key" is "4")
+    "e_door_key_color"  (color || int)  // sets the custom key color required to open (if "e_door_key" is "4"). Player can unlock "Entity Door" if "e_door_key_color" equal to "key_color" of the picked up "Key" object ("obj_key") (this means that all their corresponding R/G/B values of the "e_door_key_color"-"key_color" pair should be identical).
     "e_door_lockDist"   (int)           // key unlocking distance (if "e_door_keyLock" is "true")
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
