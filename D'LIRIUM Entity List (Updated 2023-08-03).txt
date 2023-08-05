@@ -971,6 +971,7 @@
     //Note about "e_use_console" - steam launcher didn't love when you start steam games from cmd/powershell.
 	//Usually you need to tab-back to the steam launcher main window to recive small question window that will ask "is this actually you are starting game from cmd/powershell?".
 	//If steam at some point killed even this feauture, just use "e_use_messagebox" or "e_use_mini_text" instead.
+    //EDITED about "e_use_console" - in Beta 20 now you can use console command "debug" to open debug overlay which can give you access to see standart output log right in game.
 }
 
 //-------------------- Entity Movement (ent_movement) --------------------//
