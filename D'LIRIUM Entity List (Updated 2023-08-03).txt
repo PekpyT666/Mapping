@@ -1197,8 +1197,8 @@
 
 //-------------------- Entity Prefaber (ent_prefaber) --------------------// 
 { 
-    "e_activated"                         (bool)   // Сurrent entity activation ("true" if must activate on start). 
-    "e_name"                              (string) // Сurrent entity name. 
+    "e_activated"                         (bool)   // Current entity activation ("true" if must activate on start). 
+    "e_name"                              (string) // Current entity name. 
     "e_tag"                               (string) // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types. 
     "e_pref_mode"                         (int)    // What this prefaber should do (from "0" to "3", any other value will be treated as "0").
     "e_pref_activate_on_mode_switching"   (bool)   // If true then prefaber will activate when his mode is changed (to prevent infinite loop this feature ignored mode change made by "e_pref_mode_switching_on_activation").
