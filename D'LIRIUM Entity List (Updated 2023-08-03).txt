@@ -301,6 +301,8 @@
 {
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_input_a"         (float)         // first input value
+    "e_input_b"         (float)         // second input value
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_compare_type"    (int)           // comparator operation type
     "e_output_target"   (string)        // name of entity to set output value in ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
