@@ -1630,6 +1630,7 @@
                                 ////Monsters and NPCs////
 {
     "e_name"                    (string)        // monster name
+    "e_tag"                     (string)        // Second name of monster. Helpful if you need to chose certain monster from many that have the same name and types.
     "e_target"                  (string)        // name of entity that will be activated after death
     "drop"                      (string)        // object to drop after death
 }
