@@ -1567,7 +1567,7 @@
 {
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_next"            (string)        // next waypoint name
+    "e_next"            (string)        // next waypoint name ("" means that this waypoint is a end of path). Can also point to another non-waypoint entity, in this case such entity will be the end of path (unless you program "e_next" for non-waypoint entity, but please, avoid doing this, since non-waypoint entities DON'T save "e_next" in to save file!)
 }
 
 //-------------------- Entity Window (ent_window) --------------------//
