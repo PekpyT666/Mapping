@@ -4,6 +4,8 @@
 
 //-------------------- Entity Activator (ent_activator) --------------------//
 {
+    //@brief - Used when you need to activate other entity. In most cases you will use it as simpliest entity with e_delay.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -23,6 +25,8 @@
 
 //-------------------- Entity Active Area (ent_forceload) --------------------//
 {
+    //@brief - Used when you need to mark all objects (commonly non-entities) in specific zone to be processed by game in next frame (thats otherwise would not be processed by game due to optimization system).
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool) {        // (true by default) current entity activation ("true" if must activate on start)
@@ -87,6 +91,8 @@
 
 //-------------------- Entity Button (ent_button) --------------------//
 {
+    //@brief - Used when you need to detect that player pressed enter/space key in specific radious. This entity can activate other entities, it is have <USE> interaction, one sprite and one sound.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -131,6 +137,8 @@
 
 //-------------------- Entity Calculator (ent_calculator) --------------------//
 {
+    //@brief - Used when you need to perform operation over two input values(stored in this entity) and write result of operation in to another entity.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -303,6 +311,8 @@
 
 //-------------------- Entity Comparator (ent_comparator) --------------------//
 {
+    //@brief - Used when you need to perform operation over two input values(stored in this entity) and write result of operation in to another entity. Similar to "Entity Calculator" but separated in to independant entity for convenience reasons.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_input_a"         (float)         // first input value
@@ -358,6 +368,8 @@
 
 //-------------------- Entity Counter (ent_counter) --------------------//
 {
+    //@brief - Used when you need to activate other entity after specific amount of this entity activations.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -379,6 +391,8 @@
 
 //-------------------- Entity Decor (ent_decor) --------------------//
 {
+    //@brief - Used when you need simple(no <USE> interaction) decorative object with sprite, hitbox, and shadow.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -405,6 +419,8 @@
 
 //-------------------- Entity Destroyer (ent_destroyer) --------------------//
 {
+    //@brief - Used when you need to delete other entity from the level field on runtime.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -425,6 +441,8 @@
 
 //-------------------- Entity Dialogue (ent_dialogue) --------------------//
 {
+    //@brief - Used when you need dialogues pop-ups. Hightly customizable! You can even have "options"("choices") that activate their own targeted entities (i.e. you can make branched dialogues).
+    
     //Basis
 
     "e_name"            (string)        // current entity name
@@ -639,6 +657,8 @@
 
 //-------------------- Entity Dice (ent_dice) --------------------//
 {
+    //@brief - Used when you need to activate other entity with a some chance (i.e. roll the chance and depending on it activate other entity or do nothing).
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -659,6 +679,8 @@
 
 //-------------------- Entity Display (ent_display) --------------------//
 {
+    //@brief - Used when you need to render sprite or/and text on level field or on player GUI. You can make your custom gui with this entity, but for dialogues please use "Entity Dialogue".
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -692,6 +714,8 @@
 
 //-------------------- Entity Door (ent_door) --------------------//
 {
+    //@brief - Used when you need hightly customisable door. Can have sprite, hitbox and one sound. It can be opened/closed "only by player" or "only by entities" or "by player and entities".
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -750,6 +774,8 @@
 
 //-------------------- Entity Fade (ent_fade) --------------------//
 {
+    //@brief - Used when you need to smoothly turn screen in to black(or some other color) and vise versa.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -766,6 +792,8 @@
 
 //-------------------- Entity Fog (ent_fog) --------------------//
 {
+    //@brief - Used when you need same thing as "Entity Fade" but with sprite rather than solid color. By default sprite will moves in certain direction, but you can disable this bahaviour.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -792,6 +820,8 @@
 
 //-------------------- Entity Grabber (ent_grabber) --------------------//
 {
+    //@brief - Used when you need to copy value from one entity to another.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -814,6 +844,8 @@
 
 //-------------------- Entity Hurt (ent_hurt) --------------------//
 {
+    //@brief - Used when you need to change player healthbars with corresponding animations, sounds and particles.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -828,6 +860,8 @@
 
 //-------------------- Entity Interact (ent_interact) --------------------//
 {
+    //@brief - Used when you need interactable(via <USE>) decorative object with sprite, hitbox, and shadow. Unlike "Entity Button" or "Entity Decor" you have much more control over when other entity activations happened and how sprite animation played.
+    
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -900,6 +934,8 @@
 
 //-------------------- Entity Light (ent_light) --------------------//
 {
+    //@brief - Used when you need hightly customisable light source. Can have two sprites that will determine shape of light and glare respectively.
+    
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_follow"              (string)        // attach light object to entity or "!Player"
@@ -943,6 +979,8 @@
 
 //-------------------- Entity Log (ent_log) --------------------//
 {
+    //@brief - Used when you need to debug your map. Hightly customisable, but you can start simply by suppling "e_input_target" and "e_input_parm".
+    
     "e_activated"         (bool)          // current entity activation ("true" if must activate on start).
     "e_name"              (string)        // current entity name.
     "e_tag"               (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -980,6 +1018,8 @@
 
 //-------------------- Entity Movement (ent_movement) --------------------//
 {
+    //@brief - Used when you need to move something that does not have AI (i.e. NOT monsters, NPCs or Player).
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1006,6 +1046,8 @@
 
 //-------------------- Entity Multidestroyer (ent_multidestroyer) --------------------//
 {
+    //@brief - Used when you need same functionallity as "Entity Destroyer" but to delete more entities by their names in one entity activation (i.e. batch delete by names).
+    
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1037,6 +1079,8 @@
 
 //-------------------- Entity Multimanager (ent_multimanager) --------------------//
 {
+    //@brief - Used when you need to fork your activation chain. Order of e_targ's execution are always the same (from e_targ0 to e_targ10)!
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1068,6 +1112,8 @@
 
 //-------------------- Entity Multiprogrammer (ent_multiprogrammer) --------------------//
 {
+    //@brief - Used when you need same functionallity as "Entity Programmer" but to program more entities/values by their names in one entity activation (i.e. batch program by names).
+    
     "e_name"            (string)        // name of any object to program
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1149,6 +1195,8 @@
 
 //-------------------- Entity Node (ent_node) --------------------//
 {
+    //@brief - Used when you need entity that just a named point on level field.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
 
@@ -1157,6 +1205,8 @@
 
 //-------------------- Entity Portal (ent_portal) --------------------//
 {
+    //@brief - Used when you need so player/monster/NPC teleports to position of another entity when colliding with this enity.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1203,6 +1253,8 @@
 
 //-------------------- Entity Prefaber (ent_prefaber) --------------------// 
 { 
+    //@brief - Used when you need to batch spawn many objects by using another map or with previously saved data in this entity (and vise versa). Also provide ability to make names/tags/targets/etc unique per spawned batch (i.e. allow to easily reuse your entities mechanisms).
+    
     "e_activated"                         (bool)   // Current entity activation ("true" if must activate on start). 
     "e_name"                              (string) // Current entity name. 
     "e_tag"                               (string) // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types. 
@@ -1266,6 +1318,8 @@
 
 //-------------------- Entity Programmer (ent_programmer) --------------------//
 {
+    //@brief - Used when you need to program(write) value(stored in this entity) in to another entity.
+    
     "e_name"            (string)        // name of any object to program
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1292,6 +1346,8 @@
 
 //-------------------- Entity Randomizer (ent_randomizer) --------------------//
 {
+    //@brief - Used when you need to activate one random entity from some group of entities.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1321,6 +1377,8 @@
 
 //-------------------- Entity Reader (ent_reader) --------------------//
 {
+    //@brief - Used when you need to read content of the text file.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -1367,6 +1425,8 @@
 
 //-------------------- Entity Save (ent_save) --------------------//
 {
+    //@brief - Used when you need to trigger autosave or to show player a save menu.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_autosave"        (bool)          // autosave progress on activation
@@ -1376,6 +1436,8 @@
 
 //-------------------- Entity Sequencer (ent_sequencer) --------------------//
 {
+    //@brief - Used when you need to move something that DOES have AI (i.e. monsters, NPCs or Player). Can set to true/false sequence_enabled global variable. Can move camera (when sequence_enabled=true).
+    
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1412,6 +1474,8 @@
 
 //-------------------- Entity Sound (ent_sound) --------------------//
 {
+    //@brief - Used when you need to play mono sound (i.e. same 100% strength from both left and right speakers/headphones no matter what).
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -1433,6 +1497,8 @@
 
 //-------------------- Entity Sound 3D (ent_sound_3d) --------------------//
 {
+    //@brief - Used when you need to play stereo sound, strength depend on distance between this entity and player (i.e. strength of left and right speaker/headphone depend on which side from entity player are).
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -1457,6 +1523,8 @@
 
 //-------------------- Entity Spawner (ent_spawner) --------------------//
 {
+    //@brief - Used when you need to create objects on game field in the runtime.
+    
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1536,6 +1604,8 @@
 
 //-------------------- Entity Trigger (ent_trigger) --------------------//
 {
+    //@brief - Used when you need to detect collision(intersection) between this entity and player/monster/npc/(or specific object type) and if it happened, activate other entity.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1567,6 +1637,8 @@
 
 //-------------------- Entity Waypoint (ent_waypoint) --------------------//
 {
+    //@brief - Used when you need to create paths for "Entity Sequencer" and "Entity Movement". Unlike "Entity Node" this entity have "e_next" which is used by sequencer/movement when they move somethig along path of waypoints.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_next"            (string)        // next waypoint name ("" means that this waypoint is a end of path). Can also point to another non-waypoint entity, in this case such entity will be the end of path (unless you program "e_next" for non-waypoint entity, but please, avoid doing this, since non-waypoint entities DON'T save "e_next" in to save file!)
@@ -1610,6 +1682,8 @@
 
 //-------------------- Entity Writer (ent_writer) --------------------//
 {
+    //@brief - Used when you need to write value(stored in this entity) in to text file.
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
