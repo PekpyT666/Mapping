@@ -1256,6 +1256,9 @@
 //The true power of this entity is that you can set "e_make_unique" to true and use "{unique_id}" in properties of the string type. This will guaranty that entities will work with each others in one instance of loaded prefab, but will ignore same entities from another loaded instance of the same prefab.
 //Note, if for some reson you need to get/manipulate "{unique_id}", you can GET last string used for such replacement via "prefabers_unique_id_last" , and you can manipulate with it integer value via "prefabers_unique_id" global variable. But in most cases you don't need to change unique id since it is fully managed by game (nulling when new game started, incremented by one when prefab is loaded, and saved/loaded inside save file). What you can actually do - you can use "prefabers_unique_id_last" (it hold string) to connect some parts of the two prefabs together with some manually placed grabbers and calculators.
 //Also note that first prefab with {unique_id} will have "000000001" as unique string, not "000000000" ("000000000" value is reserved as flag that there is no prefabs instantiated yet).
+//Reusing of your entities mechanisms is not the only porpuse of this entity.
+//This entity is pretty good for your own optimization. If you have map with thousands of entities you can devide it in to smaller parts and load/unload them while player progress through your map.
+//And you can use it not only for optimization but for regular gameplay. For example you can use it to make the same room to be different in particullar moments of your map gameplay. Or you can spawn hundreds of monsters over the whole map by single prefaber. There is a ton of ideas you can come up with.
 
 }
 
