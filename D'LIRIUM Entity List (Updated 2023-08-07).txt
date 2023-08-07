@@ -23,7 +23,7 @@
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
 }
 
-//-------------------- Entity Active Area (ent_forceload) --------------------//
+//-------------------- Entity Active Area (ent_forceload_area) --------------------//
 {
     //@brief - Used when you need to mark all objects (commonly non-entities) in specific zone to be processed by game in next frame (thats otherwise would not be processed by game due to optimization system).
     //@shape - always rectangular
@@ -37,8 +37,8 @@
         // D' have something like occlusion culling plus mobs loading/unloading in minecraft chunks. This optimization system automatically keep needed objects loaded, and unload anything else. And this entity exist to give mapmaker ability to manipulate this system.
         // Basically this is work like this - on start of each frame game update what objects are loaded - i.e. should execute their code and draw their stuf. Unloaded object stored in RAM but didn't do almost anything, it's reduced ~95% of their impact on fps, since they are no more exist in the game in a normal form.
         // Here is list of objects that are always loaded each frame: game cores, anything on screen, all projectiles, monsters that chase player, anything close enoght to loaded monsters and projectiles(64 pixel radius), obj_Player, obj_NPC, obj_interact_personalHeart, obj_nightmarishMass, obj_gib, obj_gear, obj_light_custom, and obj_portalOut.
-        // And then game have two option - load all entities (global variable "unload_entities" = "false") or load only ent_forceload (global variable "unload_entities" = true).
-        // And finally, no matter what option is, game will load anything located inside activated ent_forceload.
+        // And then game have two option - load all entities (global variable "unload_entities" = "false") or load only ent_forceload_area (global variable "unload_entities" = true).
+        // And finally, no matter what option is, game will load anything located inside activated ent_forceload_area.
         // To visualize this process you can save debug wrap(screenshot) of whole level with only loaded objects. You need to press Ctrl+Shift+F11 (besides displaying on screen this will save wrap in to %LocalAppdata%\delirium). Try to look on such wraps in story and custom maps.
         // It is also worth mention that game optimization unloads entities/objects pretty fast, but game engine still perform some needed code on them every tick even in unloaded state, this is a remaining ~5% of fps impact mentioned earlier (i.e. on your map you CAN'T infinetely create entities/objects and leve them to be unloaded by oprimization system. They still will slowly drain game fps).
         // While "Entity Prefaber" work slower than game optimization, but it stored unloaded entities/objects as JSON string inside prefabs, thus game engine didn't do anything with them inside prefabs, they just lay in RAM or on disk (i.e. you CAN AND SHOULD create and unload in to prefab entities/objects if you want to infinetely do something on your map. Prefabs didn't do anything to game fps while they are unused, it's just a string in RAM or file on disk).
