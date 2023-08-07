@@ -4092,12 +4092,12 @@
             },
             {
                 "name": "e_move_dir",
-                "type": "int",
+                "type": "float",
                 "value": 0
             },
             {
                 "name": "e_move_dist",
-                "type": "int",
+                "type": "float",
                 "value": -1
             },
             {

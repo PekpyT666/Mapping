@@ -1046,9 +1046,9 @@
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
     "e_move_type"       (int)           // movement type ("0" // directional move to "e_move_target", "1" // move to "e_move_target" avoiding solid structures, "2" // directional move)
     "e_move_target"     (string)        // name of entity to move targeted entity on it (if "e_move_type" isn't "2")
-    "e_move_spd"        (int || float)  // movement speed
-    "e_move_dir"        (int || string) // movement direction (if "e_move_type" is "2")
-    "e_move_dist"       (int || float)  // deactivation distance ("-1" to infinity movement)
+    "e_move_spd"        (float)           // movement speed
+    "e_move_dir"        (float || string) // movement direction (if "e_move_type" is "2"). If float then treated as value of anticlockwise angle (0 is right, 90 is up, 180 is left and 270 is down), if string then treated as a e_name of entity between which and this ent_movement new angle should be calculated each tick.
+    "e_move_dist"       (float)           // deactivation distance ("-1" to infinity movement)
     "e_jump_target"     (string)        // name of entity to place current entity on it ("!Player" allowed)
     "e_slave"           (string)        // name of entity that will moved
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
