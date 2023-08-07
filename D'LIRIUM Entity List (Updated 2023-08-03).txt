@@ -21,7 +21,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Active Area (ent_forceload) --------------------//
@@ -90,7 +89,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Button (ent_button) --------------------//
@@ -137,7 +135,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Calculator (ent_calculator) --------------------//
@@ -161,7 +158,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
     
     "e_calc_type" (ACTIONS) {
 
@@ -314,7 +310,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Comparator (ent_comparator) --------------------//
@@ -338,7 +333,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 
     "e_compare_type" (ACTIONS) {
 
@@ -374,7 +368,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Counter (ent_counter) --------------------//
@@ -398,7 +391,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Decor (ent_decor) --------------------//
@@ -450,7 +442,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Dialogue (ent_dialogue) --------------------//
@@ -667,7 +658,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Dice (ent_dice) --------------------//
@@ -690,7 +680,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Display (ent_display) --------------------//
@@ -787,7 +776,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Fade (ent_fade) --------------------//
@@ -860,7 +848,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Hurt (ent_hurt) --------------------//
@@ -932,7 +919,6 @@
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_x_offset"       (int)           // x offset of "e_sort_radius"
     "e_sort_y_offset"       (int)           // y offset of "e_sort_radius"
-                                            // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
     
     "e_interact_type" (ACTIONS) {
         "0"  (Loop, Activate on end)                                     // проигрывание повторяющейся анимации с передачей активации в конце
@@ -1067,7 +1053,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Multidestroyer (ent_multidestroyer) --------------------//
@@ -1101,7 +1086,6 @@
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"             (int)           // x offset of "e_sort_radius"
     "e_sort_oy"             (int)           // y offset of "e_sort_radius"
-                                            // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Multimanager (ent_multimanager) --------------------//
@@ -1133,8 +1117,7 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
-    
+
     //Note - Order of e_targ's execution are deterministic (from 0 to 10). You can use this multimanager feature to execute entities in specific order in one game tick (e.g. you can activate spawner with e_targ1 and then delete it by activation of the destroyer with e_targ2 - this will happens in one frame and order will be always the same no matter what).
 }
 
@@ -1164,7 +1147,7 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
+
     "e_prog_target0"    (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
     "e_prog_parm0"      (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
     "e_prog_value0"     (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
@@ -1279,7 +1262,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Prefaber (ent_prefaber) --------------------// 
@@ -1374,7 +1356,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Randomizer (ent_randomizer) --------------------//
@@ -1406,7 +1387,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Reader (ent_reader) --------------------//
@@ -1430,7 +1410,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Rotating (ent_rotating) --------------------//
@@ -1532,7 +1511,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Sound 3D (ent_sound_3d) --------------------//
@@ -1559,7 +1537,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Spawner (ent_spawner) --------------------//
@@ -1596,7 +1573,6 @@
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"             (int)           // x offset of "e_sort_radius"
     "e_sort_oy"             (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Switch (ent_switch) --------------------//
@@ -1643,7 +1619,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Trigger (ent_trigger) --------------------//
@@ -1669,7 +1644,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
     
     "e_trigger_mode" (MODES) {
         "0"     // Activate if allowed object is inside the trigger zone (once per "e_refresh" amount of ticks)
@@ -1725,7 +1699,6 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-                                        // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
 }
 
 //-------------------- Entity Writer (ent_writer) --------------------//
