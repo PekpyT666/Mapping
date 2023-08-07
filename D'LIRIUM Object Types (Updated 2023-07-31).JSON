@@ -2418,6 +2418,11 @@
                 "value": 1
             },
             {
+                "name": "e_dice_percent",
+                "type": "float",
+                "value": -1
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""

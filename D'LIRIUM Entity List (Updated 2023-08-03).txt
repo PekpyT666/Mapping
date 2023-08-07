@@ -1,4 +1,4 @@
-//===========================================================================================//
+﻿//===========================================================================================//
 //---------------------------------------- Entities: ----------------------------------------//
 //===========================================================================================//
 
@@ -672,7 +672,8 @@
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
-    "e_dice_sides"      (int)           // defines "e_target" activation chance according to the formula: 1 / (e_dice_sides + 1)
+    "e_dice_sides"      (int)           // defines "e_target" activation chance according to the formula: 1 / (e_dice_sides + 1) (if "e_dice_percent" is less than 0)
+    "e_dice_percent"    (float)         // defines "e_target" activation chance in percentage. Value should be from 0 to 100 (used instead of "e_dice_sides" if equal or greater than 0)
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
