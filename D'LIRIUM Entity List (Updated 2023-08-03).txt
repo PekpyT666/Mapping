@@ -5,6 +5,7 @@
 //-------------------- Entity Activator (ent_activator) --------------------//
 {
     //@brief - Used when you need to activate other entity. In most cases you will use it as simpliest entity with e_delay.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -26,6 +27,7 @@
 //-------------------- Entity Active Area (ent_forceload) --------------------//
 {
     //@brief - Used when you need to mark all objects (commonly non-entities) in specific zone to be processed by game in next frame (thats otherwise would not be processed by game due to optimization system).
+    //@shape - always rectangular
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -46,6 +48,8 @@
 
 //-------------------- Entity Breakable (ent_breakable) --------------------//
 {
+    //@shape - always point
+
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -92,6 +96,7 @@
 //-------------------- Entity Button (ent_button) --------------------//
 {
     //@brief - Used when you need to detect that player pressed enter/space key in specific radious. This entity can activate other entities, it is have <USE> interaction, one sprite and one sound.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -138,6 +143,7 @@
 //-------------------- Entity Calculator (ent_calculator) --------------------//
 {
     //@brief - Used when you need to perform operation over two input values(stored in this entity) and write result of operation in to another entity.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -281,6 +287,8 @@
 
 //-------------------- Entity Cinematic (ent_cinematic) --------------------//
 {
+    //@shape - always point
+
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -312,6 +320,7 @@
 //-------------------- Entity Comparator (ent_comparator) --------------------//
 {
     //@brief - Used when you need to perform operation over two input values(stored in this entity) and write result of operation in to another entity. Similar to "Entity Calculator" but separated in to independant entity for convenience reasons.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -349,6 +358,8 @@
 
 //-------------------- Entity Constant (ent_constant) --------------------//
 {
+    //@shape - always point
+
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -369,6 +380,7 @@
 //-------------------- Entity Counter (ent_counter) --------------------//
 {
     //@brief - Used when you need to activate other entity after specific amount of this entity activations.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -392,6 +404,7 @@
 //-------------------- Entity Decor (ent_decor) --------------------//
 {
     //@brief - Used when you need simple(no <USE> interaction) decorative object with sprite, hitbox, and shadow.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -420,6 +433,7 @@
 //-------------------- Entity Destroyer (ent_destroyer) --------------------//
 {
     //@brief - Used when you need to delete other entity from the level field on runtime.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -442,6 +456,7 @@
 //-------------------- Entity Dialogue (ent_dialogue) --------------------//
 {
     //@brief - Used when you need dialogues pop-ups. Hightly customizable! You can even have "options"("choices") that activate their own targeted entities (i.e. you can make branched dialogues).
+    //@shape - always point
     
     //Basis
 
@@ -658,6 +673,7 @@
 //-------------------- Entity Dice (ent_dice) --------------------//
 {
     //@brief - Used when you need to activate other entity with a some chance (i.e. roll the chance and depending on it activate other entity or do nothing).
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -680,6 +696,7 @@
 //-------------------- Entity Display (ent_display) --------------------//
 {
     //@brief - Used when you need to render sprite or/and text on level field or on player GUI. You can make your custom gui with this entity, but for dialogues please use "Entity Dialogue".
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -715,6 +732,7 @@
 //-------------------- Entity Door (ent_door) --------------------//
 {
     //@brief - Used when you need hightly customisable door. Can have sprite, hitbox and one sound. It can be opened/closed "only by player" or "only by entities" or "by player and entities".
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -775,6 +793,7 @@
 //-------------------- Entity Fade (ent_fade) --------------------//
 {
     //@brief - Used when you need to smoothly turn screen in to black(or some other color) and vise versa.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -793,6 +812,7 @@
 //-------------------- Entity Fog (ent_fog) --------------------//
 {
     //@brief - Used when you need same thing as "Entity Fade" but with sprite rather than solid color. By default sprite will moves in certain direction, but you can disable this bahaviour.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -821,6 +841,7 @@
 //-------------------- Entity Grabber (ent_grabber) --------------------//
 {
     //@brief - Used when you need to copy value from one entity to another.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -845,6 +866,7 @@
 //-------------------- Entity Hurt (ent_hurt) --------------------//
 {
     //@brief - Used when you need to change player healthbars with corresponding animations, sounds and particles.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -861,6 +883,7 @@
 //-------------------- Entity Interact (ent_interact) --------------------//
 {
     //@brief - Used when you need interactable(via <USE>) decorative object with sprite, hitbox, and shadow. Unlike "Entity Button" or "Entity Decor" you have much more control over when other entity activations happened and how sprite animation played.
+    //@shape - always point
     
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -935,6 +958,7 @@
 //-------------------- Entity Light (ent_light) --------------------//
 {
     //@brief - Used when you need hightly customisable light source. Can have two sprites that will determine shape of light and glare respectively.
+    //@shape - always point
     
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -980,6 +1004,7 @@
 //-------------------- Entity Log (ent_log) --------------------//
 {
     //@brief - Used when you need to debug your map. Hightly customisable, but you can start simply by suppling "e_input_target" and "e_input_parm".
+    //@shape - always point
     
     "e_activated"         (bool)          // current entity activation ("true" if must activate on start).
     "e_name"              (string)        // current entity name.
@@ -1019,6 +1044,7 @@
 //-------------------- Entity Movement (ent_movement) --------------------//
 {
     //@brief - Used when you need to move something that does not have AI (i.e. NOT monsters, NPCs or Player).
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1047,6 +1073,7 @@
 //-------------------- Entity Multidestroyer (ent_multidestroyer) --------------------//
 {
     //@brief - Used when you need same functionallity as "Entity Destroyer" but to delete more entities by their names in one entity activation (i.e. batch delete by names).
+    //@shape - always point
     
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1080,6 +1107,7 @@
 //-------------------- Entity Multimanager (ent_multimanager) --------------------//
 {
     //@brief - Used when you need to fork your activation chain. Order of e_targ's execution are always the same (from e_targ0 to e_targ10)!
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1113,6 +1141,7 @@
 //-------------------- Entity Multiprogrammer (ent_multiprogrammer) --------------------//
 {
     //@brief - Used when you need same functionallity as "Entity Programmer" but to program more entities/values by their names in one entity activation (i.e. batch program by names).
+    //@shape - always point
     
     "e_name"            (string)        // name of any object to program
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1196,6 +1225,7 @@
 //-------------------- Entity Node (ent_node) --------------------//
 {
     //@brief - Used when you need entity that just a named point on level field.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1206,6 +1236,7 @@
 //-------------------- Entity Portal (ent_portal) --------------------//
 {
     //@brief - Used when you need so player/monster/NPC teleports to position of another entity when colliding with this enity.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1254,6 +1285,7 @@
 //-------------------- Entity Prefaber (ent_prefaber) --------------------// 
 { 
     //@brief - Used when you need to batch spawn many objects by using another map or with previously saved data in this entity (and vise versa). Also provide ability to make names/tags/targets/etc unique per spawned batch (i.e. allow to easily reuse your entities mechanisms).
+    //@shape - when "e_pref_mode"==0 point, but when "e_pref_mode"==1 or 2 or 3 should be rectangular
     
     "e_activated"                         (bool)   // Current entity activation ("true" if must activate on start). 
     "e_name"                              (string) // Current entity name. 
@@ -1319,6 +1351,7 @@
 //-------------------- Entity Programmer (ent_programmer) --------------------//
 {
     //@brief - Used when you need to program(write) value(stored in this entity) in to another entity.
+    //@shape - always point
     
     "e_name"            (string)        // name of any object to program
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1347,6 +1380,7 @@
 //-------------------- Entity Randomizer (ent_randomizer) --------------------//
 {
     //@brief - Used when you need to activate one random entity from some group of entities.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1378,6 +1412,7 @@
 //-------------------- Entity Reader (ent_reader) --------------------//
 {
     //@brief - Used when you need to read content of the text file.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1400,6 +1435,8 @@
 
 //-------------------- Entity Rotating (ent_rotating) --------------------//
 {
+    //@shape - always point
+
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_sprite"          (string)        // current entity sprite
@@ -1426,6 +1463,7 @@
 //-------------------- Entity Save (ent_save) --------------------//
 {
     //@brief - Used when you need to trigger autosave or to show player a save menu.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1437,6 +1475,7 @@
 //-------------------- Entity Sequencer (ent_sequencer) --------------------//
 {
     //@brief - Used when you need to move something that DOES have AI (i.e. monsters, NPCs or Player). Can set to true/false sequence_enabled global variable. Can move camera (when sequence_enabled=true).
+    //@shape - always point
     
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1475,6 +1514,7 @@
 //-------------------- Entity Sound (ent_sound) --------------------//
 {
     //@brief - Used when you need to play mono sound (i.e. same 100% strength from both left and right speakers/headphones no matter what).
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1498,6 +1538,7 @@
 //-------------------- Entity Sound 3D (ent_sound_3d) --------------------//
 {
     //@brief - Used when you need to play stereo sound, strength depend on distance between this entity and player (i.e. strength of left and right speaker/headphone depend on which side from entity player are).
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1524,6 +1565,7 @@
 //-------------------- Entity Spawner (ent_spawner) --------------------//
 {
     //@brief - Used when you need to create objects on game field in the runtime.
+    //@shape - always point
     
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1559,6 +1601,8 @@
 
 //-------------------- Entity Switch (ent_switch) --------------------//
 {
+    //@shape - always point
+
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1605,6 +1649,7 @@
 //-------------------- Entity Trigger (ent_trigger) --------------------//
 {
     //@brief - Used when you need to detect collision(intersection) between this entity and player/monster/npc/(or specific object type) and if it happened, activate other entity.
+    //@shape - always rectangular
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1638,6 +1683,7 @@
 //-------------------- Entity Waypoint (ent_waypoint) --------------------//
 {
     //@brief - Used when you need to create paths for "Entity Sequencer" and "Entity Movement". Unlike "Entity Node" this entity have "e_next" which is used by sequencer/movement when they move somethig along path of waypoints.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1646,6 +1692,8 @@
 
 //-------------------- Entity Window (ent_window) --------------------//
 {
+    //@shape - always point
+
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -1683,6 +1731,7 @@
 //-------------------- Entity Writer (ent_writer) --------------------//
 {
     //@brief - Used when you need to write value(stored in this entity) in to text file.
+    //@shape - always point
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
