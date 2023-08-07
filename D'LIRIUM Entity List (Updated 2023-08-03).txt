@@ -17,7 +17,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -86,7 +86,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -133,7 +133,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -157,7 +157,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -310,7 +310,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -334,7 +334,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -370,7 +370,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -394,7 +394,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -446,7 +446,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -663,7 +663,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -686,7 +686,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -783,7 +783,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -856,7 +856,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -928,7 +928,7 @@
     "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag
     "e_sort_type"           (string)        // you can find entity by it's type (like "ent_button", "ent_spawner", etc). Also note that this is the only e_sort parameter that truly decrease CPU load caused by sort algorithm
-    "e_sort_position"       (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_x_offset"       (int)           // x offset of "e_sort_radius"
     "e_sort_y_offset"       (int)           // y offset of "e_sort_radius"
@@ -1030,7 +1030,7 @@
 	"e_sort_method"       (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"          (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"         (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"     (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"     (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"       (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"           (int)           // x offset of "e_sort_radius"
     "e_sort_oy"           (int)           // y offset of "e_sort_radius"
@@ -1063,7 +1063,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1097,7 +1097,7 @@
     "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"           (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"       (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"             (int)           // x offset of "e_sort_radius"
     "e_sort_oy"             (int)           // y offset of "e_sort_radius"
@@ -1129,7 +1129,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1160,7 +1160,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1275,7 +1275,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1370,7 +1370,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1402,7 +1402,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1426,7 +1426,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1504,7 +1504,7 @@
     "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"           (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"       (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_x_offset"       (int)           // x offset of "e_sort_radius"
     "e_sort_y_offset"       (int)           // y offset of "e_sort_radius"
@@ -1528,7 +1528,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1555,7 +1555,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1592,7 +1592,7 @@
     "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"           (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"       (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"             (int)           // x offset of "e_sort_radius"
     "e_sort_oy"             (int)           // y offset of "e_sort_radius"
@@ -1639,7 +1639,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1665,7 +1665,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
@@ -1721,7 +1721,7 @@
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_type" is "1" or "2") OR count of entities (if "e_sort_type" is "3" or "4")
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
