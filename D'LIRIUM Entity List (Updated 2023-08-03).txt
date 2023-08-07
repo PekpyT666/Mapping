@@ -1118,7 +1118,7 @@
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
 
-    //Note - Order of e_targ's execution are deterministic (from 0 to 10). You can use this multimanager feature to execute entities in specific order in one game tick (e.g. you can activate spawner with e_targ1 and then delete it by activation of the destroyer with e_targ2 - this will happens in one frame and order will be always the same no matter what).
+    //Note - Order of e_targ's execution are deterministic (from e_targ0 to e_targ10). You can use this multimanager feature to execute entities in specific order in one game tick(frame) (e.g. you can activate spawner with e_targ1, then change it e_spawn by activation of the programmer with e_targ2 and you can again activate spawner with e_targ3 - this will happens in one game tick and order will be always the same no matter what).
 }
 
 //-------------------- Entity Multiprogrammer (ent_multiprogrammer) --------------------//
