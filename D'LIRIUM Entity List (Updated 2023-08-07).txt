@@ -45,6 +45,21 @@
     }
 }
 
+//-------------------- Entity Active Type (ent_forceload_type) --------------------//
+{
+    //@brief - Used when you need to mark all objects (commonly non-entities) of the specific type to be processed by game in next frame (thats otherwise would not be processed by game due to optimization system).
+    //@shape - always point
+    
+    "e_name"            (string)  // current entity name
+    "e_tag"             (string)  // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_activated"       (bool)    // current entity activation ("true" if must activate on start)
+    "e_forceload_type"  (string)  // Type of object which all instances will be forceloaded
+        // Note - Don't use it on entities, they are forceloaded by default(unless unload_entities global is true)! And in general, don't use this entity unless you really need to keep specific type of objects always active.
+        // Always active objects can be accessed by entities even when they are too far from camera/player/projectiles/etc(read more in "Entity Active Area" notes), but in the same time always active objects can give a massive impact on FPS. Try your best to use it for a few frames or for objects that count are low on level.
+        // This entity is similar to "Entity Active Area" ("ent_forceload_area") but instead of keeping anything active in some area, this entity work with all level instances of the specific object type.
+        // As example of usage - in the story mode on graveyard crypt when all normal monsters dissapears, it's actually this entity forceloaded all monsters, before "Entity Destroyer" destroy them all. Without it, destroyer could destroy only those monsters that are close enough to player/camera, but not those that are in other map end.
+}
+
 //-------------------- Entity Breakable (ent_breakable) --------------------//
 {
     //@shape - always point
