@@ -1039,6 +1039,7 @@
 {
     //@brief - Used when you need to move something that does not have AI (i.e. NOT monsters, NPCs or Player).
     //@shape - always point
+    //@double_sorts - first is moved object (WHO), second is destination (WHERE)
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1054,13 +1055,20 @@
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
-    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_method"     (int)           // Applied to "e_slave" and "e_target"! "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
     "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+    "e_second_sort_method"   (int)      // Applied to "e_jump_target", "e_move_target" and "e_move_dir" ! "0" (used by default) - all entities specified in "e_input_target", below second_sort parametrs are ignored, "1" - one nearest entity on "e_second_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_second_sort_position" that match all not empty sorts, "3" - "e_second_sort_position" nearest entities that match all not empty sorts, "4" - "e_second_sort_position" furthest entities that match all not empty sorts, "5" - "e_second_sort_position" some (random) entities that match all not empty sorts.
+    "e_second_sort_tag"      (string)   // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_second_sort_type"     (string)   // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_second_sort_position" (int)      // number of entity in order (if "e_second_sort_method" is "1" or "2") OR count of entities (if "e_second_sort_method" is "3" or "4" or "5")
+    "e_second_sort_radius"   (int)      // you can find entity in specified radius (or outside it if "e_second_sort_radius" less than or equel "0")
+    "e_second_sort_ox"       (int)      // x offset of "e_second_sort_radius"
+    "e_second_sort_oy"       (int)      // y offset of "e_second_sort_radius"
 }
 
 //-------------------- Entity Multidestroyer (ent_multidestroyer) --------------------//
