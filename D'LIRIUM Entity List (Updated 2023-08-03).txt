@@ -1487,7 +1487,11 @@
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_x_offset"       (int)           // x offset of "e_sort_radius"
     "e_sort_y_offset"       (int)           // y offset of "e_sort_radius"
-                                            // "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" are overall to all entities with which this entity works
+        // Note - "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" have limited functional in this entity!
+        // We not yet implemented e_second_sort_* for this entity, thus it is recomended to avoid usage of non-0 "e_sort_method" in this entity!
+        // Please use "Entity Movement" if you need to move sorted out non-AI objects.
+        // But if for some reason you need to move sorted out Monsters or NPCs you can always do such trick - sort out and rename needed Monsters/NPCs with "Entity Programmer", after that you can move them with "Entity Sequencer" in "e_sort_method"==0 (this is UGLY solution, but it will work for now and in the future updates too).
+        // Sorry for inconvenience, but we need to do a hellish refactoring to fit e_second_sort_* in to this entity ._.
 }
 
 //-------------------- Entity Sound (ent_sound) --------------------//
