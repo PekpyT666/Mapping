@@ -1770,6 +1770,9 @@
 {
     "unload_entities"           (bool)          // (false by default) all entities loaded if "false", entities that are in the visible range and in range of %PrettyName% (ent_forceload) will be loaded (you can manually manage entities load on CPU) if "true"
     "last_console_command"      (string)        // last executed console command, on level start initialized with empty string
+    
+    "prefabers_unique_id_last"  (string)        // string that used to instantiate last prefab, also if equal to "000000000" then no prefabs are instantiated on map yet (read only)
+    "prefabers_unique_id"       (int)           // number that is used to create "prefabers_unique_id_last" string
 
     "player_sanity"             (float)         // player sanity
     "player_toxin"              (float)         // player toxins
