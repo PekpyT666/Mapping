@@ -1,14 +1,21 @@
-//===========================================//
-//--------- TILED SETUP FOR D'LIRIUM --------//
-//===========================================//
+//============================================//
+//--------- TILED SETUP FOR D'LIRIUM ---------//
+//============================================//
 
-1) Open Tiled
+1) Run "Set up the map editor.bat" file.
 
-2) Go to "View -> Property Types Editor"
-Press "Import" and select "D'LIRIUM Property Types.JSON"
+2) Once Tiled opens, click "Enable Extensions" in the top right corner.
 
-3) Go to "View -> Object Types Editor"
-Press "Import" and select "D'LIRIUM Object Types.JSON"
+
+//============================================//
+//- Second and subsequent start of the Tiled -//
+//============================================//
+
+You can use the "Set up the map editor.bat" file to open Tiled everytime you need it.
+Or you can open Tiled directly using "D'LIRIUM.tiled-project
+(but note - this file will be automatically updated by steam, so DON'T COPY or DON'T RENAME it).
+Create a link to one of them on your desktop or wherever you like.
+
 
 //---------- GENERAL MAPPING RULES ----------//
 
@@ -25,19 +32,27 @@ Press "Import" and select "D'LIRIUM Object Types.JSON"
 11. Do not use Group Layers (D'lirium support only Tile Layers, Object Layers and Image Layers)!
 
 
+
 //===========================================//
 //-- НАСТРОЙКА TILED ДЛЯ РАБОТЫ С D'LIRIUM --//
 //===========================================//
 
-1) Открой Tiled
+1) Запусти "Set up the map editor.bat" file .
 
-2) Перейди во вкладку "Вид -> Редактор типов свойств"
-Затем нажми "Импортировать" и загрузи файл "D'LIRIUM Property Types.JSON"
+2) После того как Tiled откроется, нажмите на кнопку "Включить расширения" в правом верхнем углу.
 
-3) Перейди во вкладку "Вид -> Редактор типов объектов"
-Затем нажми "Импортировать" и загрузи файл "D'LIRIUM Object Types.JSON"
 
-//--------- ГЛАВНЫЕ ПРАВИЛА МАППИНГА --------//
+//============================================//
+//---- Втарой и последующие запуски Tiled ----//
+//============================================//
+
+Вы можете использовать файл "Set up the map editor.bat" для открытия Tiled каждый раз, когда это необходимо.
+Или вы можете открывать Tiled напрямую, используя файл "D'LIRIUM.tiled-project
+(но учтите - этот файл будет автоматически обновляться самим steam, поэтому НЕ КОПИРУЙТЕ и НЕ ПЕРЕИМЕНОВЫВАЙТЕ его).
+Создайте ссылку на один из них на рабочем столе или в любом другом удобном для вас месте.
+
+
+//--------- ГЛАВНЫЕ ПРАВИЛА МАППИНГА ---------//
 
 1.  Не создавай карты бесконечного размера!
 2.  Не создавай карты высотой больше, чем 12000 пикселей!
