@@ -372,7 +372,8 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_input"           (float || string) // If float then used as is. If string then this enity will searсh for game constant with "e_input" name (you can get names from "////constants names////" section) and set output value to value of such constant (if name of the constant spelled incorrectly then string inside "e_input" used as is to set output value).
+    "e_input"           (float || string) // This entity property will be used to programm "e_output_parm" of the "e_output_target" entity (work if "e_constant" == ""). Basically this property work identical as "e_prog_value" of the Entity Programmer.
+    "e_constant"        (string)        // Enity will searсh for game constant with "e_constant" name (you can find all names from "////constants names////" section) and set output value to value of such constant instead of using "e_input". If name of the constant spelled incorrectly then nothing will be programmed and will be generated custom map error (you need to use "ignorecustom" command to switch visibility of thous errors).
     "e_output_target"   (string)        // name of entity to set output value in ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
     "e_output_parm"     (string)        // name of targeted entity parameter to set output value (if "e_output_target" have value, !Activate allowed)
     "e_disable"         (bool)          // deactivate entity after performing activation
