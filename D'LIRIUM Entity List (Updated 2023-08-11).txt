@@ -1494,7 +1494,7 @@
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
     "e_delay"               (int)           // delay before activation ("30" means 1 second)
     "e_sequence"            (bool)          // allows to work in 'sequence mode'
-    "e_sequence_on"         (bool)          // enable 'sequence mode' if "true", dissable if "false" (if "e_sequence" is "true")
+    "e_sequence_on"         (bool)          // enable 'sequence mode' if "true", dissable if "false" (if "e_sequence" is "true") i.e. when you activate sequencer it will do `global.sequence_enabled = e_sequence_on;`
     "e_sequence_dur"        (int)           // disable 'sequence mode' in time if it's enabled (never if "-1", if "e_sequence" is "true")
     "e_sequence_off"        (bool)          // disable 'sequence mode' after sequence end (if "e_sequence" is "true")
     "e_slave_npc"           (string)        // name of NPC to work with
