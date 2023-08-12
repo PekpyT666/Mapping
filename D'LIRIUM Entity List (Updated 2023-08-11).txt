@@ -1,4 +1,4 @@
-//===========================================================================================//
+﻿//===========================================================================================//
 //---------------------------------------- Entities: ----------------------------------------//
 //===========================================================================================//
 
@@ -1497,6 +1497,7 @@
     "e_sequence_on"         (bool)          // enable 'sequence mode' if "true", dissable if "false" (if "e_sequence" is "true") i.e. when you activate sequencer it will do `global.sequence_enabled = e_sequence_on;`
     "e_sequence_dur"        (int)           // disable 'sequence mode' in time if it's enabled (never if "-1", if "e_sequence" is "true")
     "e_sequence_off"        (bool)          // disable 'sequence mode' after sequence end (if "e_sequence" is "true")
+    "e_sequence_stop_enemy" (bool)          // if "true" then on this sequencer activation command ALL regular monsters to stop walking (if "e_sequence" is "true")
     "e_slave_npc"           (string)        // name of NPC to work with
     "e_slave_monst"         (string)        // name of monster to work with
     "e_move_npc"            (string)        // name of entity to move targeted NPC to it

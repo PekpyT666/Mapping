@@ -5912,6 +5912,11 @@
                 "value": true
             },
             {
+                "name": "e_sequence_stop_enemy",
+                "type": "bool",
+                "value": true
+            },
+            {
                 "name": "e_slave_monst",
                 "type": "string",
                 "value": ""
