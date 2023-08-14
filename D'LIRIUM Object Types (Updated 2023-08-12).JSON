@@ -303,6 +303,42 @@
                 "name": "e_tag",
                 "type": "string",
                 "value": ""
+            },
+            {
+                "name": "e_disable",
+                "type": "bool",
+                "value": false
+            }
+        ]
+    },
+    {
+        "color": "#ff000000",
+        "name": "Entity Active Type",
+        "properties": [
+            {
+                "name": "e_activated",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_forceload_type",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_disable",
+                "type": "bool",
+                "value": false
             }
         ]
     },

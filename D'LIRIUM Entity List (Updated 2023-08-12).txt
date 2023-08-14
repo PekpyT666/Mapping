@@ -1,4 +1,4 @@
-//===========================================================================================//
+﻿//===========================================================================================//
 //---------------------------------------- Entities: ----------------------------------------//
 //===========================================================================================//
 
@@ -31,6 +31,7 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool) {        // (true by default) current entity activation ("true" if must activate on start)
+    "e_disable"         (bool)          // deactivate entity after performing activation
         // Notes - Commonly, you don't need to use this entity, unless you build something really big (more than thousands of entities) or complex (like moving/checking/programming/deleting non-entity objects)!
         // If you feel that you map is slowed down due to thousands of entities and you want to optimize it, please consider to look at "Entity Prefaber" first. You can still use combination of "Entity Active Area" and "unload_entities"==true, but "Entity Prefaber" is a much more elegant and efficient way to unload/load your mechanisms on runtime (since you control when entiites/objects from prefab should appear and dissapear in game while optimization system do it work every tick). 
         // 
@@ -54,6 +55,7 @@
     "e_tag"             (string)  // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)    // current entity activation ("true" if must activate on start)
     "e_forceload_type"  (string)  // Type of object which all instances will be forceloaded
+    "e_disable"         (bool)    // deactivate entity after performing activation
         // Note - Don't use it on entities, they are forceloaded by default(unless unload_entities global is true)! And in general, don't use this entity unless you really need to keep specific type of objects always active.
         // Always active objects can be accessed by entities even when they are too far from camera/player/projectiles/etc(read more in "Entity Active Area" notes), but in the same time always active objects can give a massive impact on FPS. Try your best to use it for a few frames or for objects that count are low on level.
         // This entity is similar to "Entity Active Area" ("ent_forceload_area") but instead of keeping anything active in some area, this entity work with all level instances of the specific object type.
