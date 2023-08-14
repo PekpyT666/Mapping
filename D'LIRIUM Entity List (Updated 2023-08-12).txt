@@ -1,4 +1,4 @@
-﻿//===========================================================================================//
+//===========================================================================================//
 //---------------------------------------- Entities: ----------------------------------------//
 //===========================================================================================//
 
@@ -1990,6 +1990,32 @@
     "dialogue_adv_option_num"
     "nc_dist"
     "christmas_time"
+
+    "playerDeath.sanity"
+	"playerDeath.toxin"
+	"playerDeath.physical"
+	"murdered.no"
+	"murdered.killed"
+	"murdered.torn"
+	"murdered.blown"
+	"language.English"
+	"language.Russian"
+	"language.sChinese"
+	"language.tChinese"
+	"language.French"
+	"language.Belarusian"
+	"language.Polish"
+	"language.Ukrainian"
+	"language.German"
+	"language.Hungarian"
+	"language.Czech"
+	"language.Spanish"
+	"npcstate.idle"
+	"npcstate.walking"
+	"npcstate.sneaking"
+	"npcstate.running"
+	"npcstate.following"
+	"npcstate.seating"
 }
 
                                 ////global variables////
