@@ -9402,5 +9402,28 @@
         "name": "World Wall Transparent",
         "properties": [
         ]
+    },    {
+        "color": "#ff0000ff",
+        "name": "entiline_activation",
+        "properties": [
+        ]
+    },
+    {
+        "color": "#ff00ff00",
+        "name": "entiline_manipulation",
+        "properties": [
+        ]
+    },
+    {
+        "color": "#ffffffff",
+        "name": "entiline_path",
+        "properties": [
+        ]
+    },
+    {
+        "color": "#ffff0000",
+        "name": "entiline_programmation",
+        "properties": [
+        ]
     }
 ]
