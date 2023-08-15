@@ -28,7 +28,7 @@ Create a link to one of them on your desktop or wherever you like.
 7.  All layers above player must have "depth" parameret set less than level height (map height) * -1, but higher than -15984!
 8.  All resources used on the map must be stored in the same directory as the map itself, in a folder with the same name as the map!
 9.  Wall objects must be placed 8px upper than wall tiles!
-10. Save and test your map in the "%LOCALAPPDATA%\Delirium\maps" (you can use .bat file to open this folder)!
+10. Save and test your map in the "%LOCALAPPDATA%\Delirium\maps" (you can use "Place Your Maps Here.bat" file to open this folder)!
 11. Do not use Group Layers (D'lirium support only Tile Layers, Object Layers and Image Layers)!
 
 
@@ -63,5 +63,5 @@ Create a link to one of them on your desktop or wherever you like.
 7.  Все слои, отрисовывающиеся над игроком должны иметь значение параметра "depth" ниже чем высота комнаты * -1, но не ниже чем -15984!
 8.  Все ресурсы, используемые на карте должны храниться в той же директории, что и сама карта, в папке с тем же именем, что и карта!
 9.  Объекты стен должны располагаться на 8 пикселей выше самих тайлов!
-10. Сохраняй и тестируй свои карты в "%LOCALAPPDATA%\Delirium\maps" (я приложил .bat файл, который открывает эту папку)!
+10. Сохраняй и тестируй свои карты в "%LOCALAPPDATA%\Delirium\maps" (вы можете использовать "Place Your Maps Here.bat" файл что бы открыть эту папку)!
 11. Не используй Группы Слоёв (D'lirium работает только с Слоями Тайлов, Слоями Объектов и Слоями Изображений)
