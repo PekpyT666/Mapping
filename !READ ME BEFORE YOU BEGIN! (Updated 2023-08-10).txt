@@ -12,7 +12,7 @@
 //============================================//
 
 You can use the "Set up the map editor.bat" file to open Tiled everytime you need it.
-Or you can open Tiled directly using "D'LIRIUM.tiled-project
+Or you can open Tiled directly using "D'LIRIUM.tiled-project"
 (but note - this file will be automatically updated by steam, so DON'T COPY or DON'T RENAME it).
 Create a link to one of them on your desktop or wherever you like.
 
@@ -37,7 +37,7 @@ Create a link to one of them on your desktop or wherever you like.
 //-- НАСТРОЙКА TILED ДЛЯ РАБОТЫ С D'LIRIUM --//
 //===========================================//
 
-1) Запусти "Set up the map editor.bat" file .
+1) Запустите "Set up the map editor.bat" file .
 
 2) После того как Tiled откроется, нажмите на кнопку "Включить расширения" в правом верхнем углу.
 
@@ -47,7 +47,7 @@ Create a link to one of them on your desktop or wherever you like.
 //============================================//
 
 Вы можете использовать файл "Set up the map editor.bat" для открытия Tiled каждый раз, когда это необходимо.
-Или вы можете открывать Tiled напрямую, используя файл "D'LIRIUM.tiled-project
+Или вы можете открывать Tiled напрямую, используя файл "D'LIRIUM.tiled-project"
 (но учтите - этот файл будет автоматически обновляться самим steam, поэтому НЕ КОПИРУЙТЕ и НЕ ПЕРЕИМЕНОВЫВАЙТЕ его).
 Создайте ссылку на один из них на рабочем столе или в любом другом удобном для вас месте.
 
