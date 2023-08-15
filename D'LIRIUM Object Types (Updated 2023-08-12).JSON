@@ -1204,6 +1204,11 @@
                 "value": 0
             },
             {
+                "name": "e_constant",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""

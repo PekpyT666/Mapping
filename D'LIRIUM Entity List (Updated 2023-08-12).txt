@@ -369,6 +369,7 @@
 
 //-------------------- Entity Constant (ent_constant) --------------------//
 {
+    //@brief - Used when you need to program(write) value(that you get from game vide constant) in to another entity. Like vanilla colors (that you can write in to level_lightmap/e_sprite_color/e_light_color/etc), monsters maxHP/speed/viewdistance, items heal/damage and many more others. This also ensures that your map will use the right values on whichever version of the game it is running on.
     //@shape - always point
 
     "e_name"            (string)        // current entity name
