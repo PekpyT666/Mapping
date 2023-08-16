@@ -7305,6 +7305,16 @@
         "name": "Item Bandage",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -7345,6 +7355,16 @@
         "color": "#ff55ff00",
         "name": "Item Bandage Black",
         "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
             {
                 "name": "e_target",
                 "type": "string",
@@ -7387,6 +7407,16 @@
         "name": "Item Bandage Blue",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -7427,6 +7457,16 @@
         "color": "#ff55ff00",
         "name": "Item Fireball",
         "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
             {
                 "name": "e_target",
                 "type": "string",
@@ -7469,6 +7509,16 @@
         "name": "Item Knife",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -7509,6 +7559,16 @@
         "color": "#ff55ff00",
         "name": "Item Map",
         "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
             {
                 "name": "e_target",
                 "type": "string",
@@ -7551,6 +7611,16 @@
         "name": "Item Medkit",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -7591,6 +7661,16 @@
         "color": "#ff55ff00",
         "name": "Item Medkit Black",
         "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
             {
                 "name": "e_target",
                 "type": "string",
@@ -7633,6 +7713,16 @@
         "name": "Item Medkit Blue",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -7673,6 +7763,16 @@
         "color": "#ff55ff00",
         "name": "Item Megahealth",
         "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
             {
                 "name": "e_target",
                 "type": "string",
@@ -7715,6 +7815,16 @@
         "name": "Item Needles",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -7755,6 +7865,16 @@
         "color": "#ff55ff00",
         "name": "Item Nuke",
         "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
             {
                 "name": "e_target",
                 "type": "string",
@@ -7797,6 +7917,16 @@
         "name": "Item Plant",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -7837,6 +7967,16 @@
         "color": "#ff55ff00",
         "name": "Item Plasma",
         "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
             {
                 "name": "e_target",
                 "type": "string",
@@ -7879,6 +8019,16 @@
         "name": "Item Protection",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -7919,6 +8069,16 @@
         "color": "#ff55ff00",
         "name": "Item Quad",
         "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
             {
                 "name": "e_target",
                 "type": "string",
@@ -7961,6 +8121,16 @@
         "name": "Item Shaft",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -8001,6 +8171,16 @@
         "color": "#ff55ff00",
         "name": "Item Sorcery",
         "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
             {
                 "name": "e_target",
                 "type": "string",
@@ -8043,6 +8223,16 @@
         "name": "Item Teleport",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -8084,6 +8274,16 @@
         "name": "Item Vision",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -8124,6 +8324,16 @@
         "color": "#ff55ff00",
         "name": "Item Wrench",
         "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
             {
                 "name": "e_target",
                 "type": "string",
@@ -8170,7 +8380,12 @@
                 "type": "string",
                 "value": ""
             },
-			{
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -8211,7 +8426,12 @@
                 "type": "string",
                 "value": ""
             },
-			{
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -8252,7 +8472,12 @@
                 "type": "string",
                 "value": ""
             },
-			{
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -8298,7 +8523,12 @@
                 "type": "string",
                 "value": ""
             },
-			{
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -8579,6 +8809,11 @@
                 "value": ""
             },
             {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -8641,6 +8876,11 @@
             },
             {
                 "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
                 "type": "string",
                 "value": ""
             },
@@ -8711,6 +8951,11 @@
                 "value": ""
             },
             {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -8773,6 +9018,11 @@
             },
             {
                 "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
                 "type": "string",
                 "value": ""
             },
@@ -8843,6 +9093,11 @@
                 "value": ""
             },
             {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -8890,6 +9145,11 @@
             },
             {
                 "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
                 "type": "string",
                 "value": ""
             },
@@ -8960,6 +9220,11 @@
                 "value": ""
             },
             {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -9022,6 +9287,11 @@
             },
             {
                 "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
                 "type": "string",
                 "value": ""
             },
@@ -9092,6 +9362,11 @@
                 "value": ""
             },
             {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -9144,6 +9419,11 @@
             },
             {
                 "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
                 "type": "string",
                 "value": ""
             },
@@ -9214,6 +9494,11 @@
                 "value": ""
             },
             {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_target",
                 "type": "string",
                 "value": ""
@@ -9276,6 +9561,11 @@
             },
             {
                 "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
                 "type": "string",
                 "value": ""
             },

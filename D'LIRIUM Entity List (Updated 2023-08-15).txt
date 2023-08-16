@@ -1,4 +1,4 @@
-//===========================================================================================//
+﻿//===========================================================================================//
 //---------------------------------------- Entities: ----------------------------------------//
 //===========================================================================================//
 
@@ -1777,9 +1777,10 @@
     "drop"                      (string)        // object to drop after death
 }
 
-                                ////Items////
+                                ////Items And Keys////
 {
-    "e_name"                (string)        // item name
+    "e_name"                (string)        // item/key name
+    "e_tag"                 (string)        // Second name of item/key. Helpful if you need to chose certain item/key from many that have the same name and type.
     "e_target"              (string)        // name of entity that will be activated after picking up
 }
 
