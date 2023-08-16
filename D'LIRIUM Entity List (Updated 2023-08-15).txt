@@ -1278,7 +1278,7 @@
     "e_mask_top"        (int)           // the maximum top position of the bounding box
     "e_mask_right"      (int)           // the maximum right position of the bounding box
     "e_mask_bottom"     (int)           // the maximum bottom position of the bounding box
-    "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
+    "e_sound"           (string)        // activation sound (quiet if "sound_NULL"). In this particullar entity can be "!Portal", this will make one of four random portal sounds. 
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_depth"           (int)           // current entity depth
     "e_fx"              (bool)          // special particle effect

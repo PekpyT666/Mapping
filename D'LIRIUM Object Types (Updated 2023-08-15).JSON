@@ -4658,7 +4658,7 @@
             {
                 "name": "e_sound",
                 "type": "string",
-                "value": "sound_FX_portal1"
+                "value": "!Portal"
             },
             {
                 "name": "e_sprite",
