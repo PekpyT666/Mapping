@@ -93,6 +93,7 @@
     "e_allowplayer"     (bool)          // allows player to activate entity
     "e_allowtele"       (bool)          // allows teleportation ball to activate entity
     "e_collision"       (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
+    "e_collied_only_ranged" (bool)      // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true")
     "e_inspector"       (string)        // entity name that will be displayed on the inspector
     "e_shadow"          (bool)          // allow entity to cast a shadow
     "e_shadow_bot"      (bool)          // sets shadow to cast from bottom side
@@ -141,6 +142,7 @@
     "e_allowplayer"     (bool)          // allows player to activate entity
     "e_allowtele"       (bool)          // allows teleportation ball to activate entity
     "e_collision"       (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
+    "e_collied_only_ranged" (bool)      // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
     "e_inspector"       (string)        // entity name that will be displayed on the inspector
     "e_falloff_ref"     (int)           // the falloff reference relative to the listener (clamp)
     "e_falloff_dist"    (int)           // the maximum falloff distance relative to the listener
@@ -785,6 +787,7 @@
     "e_allowplayer"     (bool)          // allows player to activate entity
     "e_allowtele"       (bool)          // allows teleportation ball to activate entity
     "e_collision"       (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
+    "e_collied_only_ranged" (bool)      // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
     "e_inspector"       (string)        // entity name that will be displayed on the inspector
     "e_falloff_ref"     (int)           // the falloff reference relative to the listener (clamp)
     "e_falloff_dist"    (int)           // the maximum falloff distance relative to the listener
@@ -934,6 +937,7 @@
     "e_allowplayer"         (bool)          // allows player to activate entity
     "e_allowtele"           (bool)          // allows teleportation ball to activate entity
     "e_collision"           (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
+    "e_collied_only_ranged" (bool)      // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
     "e_inspector"           (string)        // entity name that will be displayed on the inspector
     "e_shadow"              (bool)          // allow entity to cast a shadow
     "e_shadow_bot"          (bool)          // sets shadow to cast from bottom side
@@ -1665,6 +1669,7 @@
     "e_allowplayer"     (bool)          // allows player to activate entity
     "e_allowtele"       (bool)          // allows teleportation ball to activate entity
     "e_collision"       (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
+    "e_collied_only_ranged" (bool)      // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
     "e_inspector"       (string)        // entity name that will be displayed on the inspector
     "e_falloff_ref"     (int)           // the falloff reference relative to the listener (clamp)
     "e_falloff_dist"    (int)           // the maximum falloff distance relative to the listener
