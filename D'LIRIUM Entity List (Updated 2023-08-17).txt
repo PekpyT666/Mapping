@@ -30,7 +30,7 @@
     
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_activated"       (bool) {        // (true by default) current entity activation ("true" if must activate on start)
+    "e_activated"       (bool)          // (true by default) current entity activation ("true" if must activate on start)
     "e_disable"         (bool)          // deactivate entity after performing activation
         // Notes - Commonly, you don't need to use this entity, unless you build something really big (more than thousands of entities) or complex (like moving/checking/programming/deleting non-entity objects)!
         // If you feel that you map is slowed down due to thousands of entities and you want to optimize it, please consider to look at "Entity Prefaber" first. You can still use combination of "Entity Active Area" and "unload_entities"==true, but "Entity Prefaber" is a much more elegant and efficient way to unload/load your mechanisms on runtime (since you control when entiites/objects from prefab should appear and dissapear in game while optimization system do it work every tick). 
@@ -66,47 +66,47 @@
 {
     //@shape - always point
 
-    "e_name"            (string)        // current entity name
-    "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
-    "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
-    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_sprite"          (string)        // current entity sprite
-    "e_sprite_remback"  (bool)          // makes all pixels with the sprite background color (left-bottom pixel) transparent (if "e_sprite" is external)
-    "e_sprite_smooth"   (bool)          // smooth the sprite edges (if "e_sprite_remback" is "true")
-    "e_sprite_ox"       (int)           // sprite X origin (if "e_sprite" is external)
-    "e_sprite_oy"       (int)           // sprite Y origin (if "e_sprite" is external)
-    "e_sprite_xscale"   (float)         // sprite X scale ("1" is default)
-    "e_sprite_yscale"   (float)         // sprite Y scale ("1" is default)
-    "e_sprite_angle"    (int)           // sprite angle (anti-clockwise, "0" is default)
-    "e_sprite_color"    (color || int)  // current entity color
-    "e_sprite_frames"   (int)           // number of images in current sprite
-    "e_sprite_image"    (int)           // current entity sprite frame (do not use this)
-    "e_sprite_anim"     (float)         // animation speed
-    "e_mask"            (string)        // collision mask for current entity
-    "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_depth"           (int)           // current entity depth
-    "e_solid_type"      (int)           // sets collision for entity ("0" // no collision, "1" // projectiles can pass, "2" // full solid)
-    "e_allowmonsters"   (bool)          // allows monsters to activate entity
-    "e_allownpc"        (bool)          // allows NPC to activate entity
-    "e_allowplayer"     (bool)          // allows player to activate entity
-    "e_allowtele"       (bool)          // allows teleportation ball to activate entity
-    "e_collision"       (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
-    "e_collied_only_ranged" (bool)      // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true")
-    "e_inspector"       (string)        // entity name that will be displayed on the inspector
-    "e_shadow"          (bool)          // allow entity to cast a shadow
-    "e_shadow_bot"      (bool)          // sets shadow to cast from bottom side
-    "e_falloff_ref"     (int)           // the falloff reference relative to the listener (clamp)
-    "e_falloff_dist"    (int)           // the maximum falloff distance relative to the listener
-    "e_falloff_factor"  (int)           // the falloff factor (default "1")
-    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
-    "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
-    "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
-    "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
-    "e_sort_ox"         (int)           // x offset of "e_sort_radius"
-    "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+    "e_name"                (string)        // current entity name
+    "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
+    "e_sprite"              (string)        // current entity sprite
+    "e_sprite_remback"      (bool)          // makes all pixels with the sprite background color (left-bottom pixel) transparent (if "e_sprite" is external)
+    "e_sprite_smooth"       (bool)          // smooth the sprite edges (if "e_sprite_remback" is "true")
+    "e_sprite_ox"           (int)           // sprite X origin (if "e_sprite" is external)
+    "e_sprite_oy"           (int)           // sprite Y origin (if "e_sprite" is external)
+    "e_sprite_xscale"       (float)         // sprite X scale ("1" is default)
+    "e_sprite_yscale"       (float)         // sprite Y scale ("1" is default)
+    "e_sprite_angle"        (int)           // sprite angle (anti-clockwise, "0" is default)
+    "e_sprite_color"        (color || int)  // current entity color
+    "e_sprite_frames"       (int)           // number of images in current sprite
+    "e_sprite_image"        (int)           // current entity sprite frame (do not use this)
+    "e_sprite_anim"         (float)         // animation speed
+    "e_mask"                (string)        // collision mask for current entity
+    "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
+    "e_depth"               (int)           // current entity depth
+    "e_solid_type"          (int)           // sets collision for entity ("0" // no collision, "1" // projectiles can pass, "2" // full solid)
+    "e_allowmonsters"       (bool)          // allows monsters to activate entity
+    "e_allownpc"            (bool)          // allows NPC to activate entity
+    "e_allowplayer"         (bool)          // allows player to activate entity
+    "e_allowtele"           (bool)          // allows teleportation ball to activate entity
+    "e_collision"           (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
+    "e_collied_only_ranged" (bool)          // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true")
+    "e_inspector"           (string)        // entity name that will be displayed on the inspector
+    "e_shadow"              (bool)          // allow entity to cast a shadow
+    "e_shadow_bot"          (bool)          // sets shadow to cast from bottom side
+    "e_falloff_ref"         (int)           // the falloff reference relative to the listener (clamp)
+    "e_falloff_dist"        (int)           // the maximum falloff distance relative to the listener
+    "e_falloff_factor"      (int)           // the falloff factor (default "1")
+    "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"           (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"             (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"             (int)           // y offset of "e_sort_radius"
 }
 
 //-------------------- Entity Button (ent_button) --------------------//
@@ -114,46 +114,46 @@
     //@brief - Used when you need to detect that player pressed enter/space key in specific radious. This entity can activate other entities, it is have <USE> interaction, one sprite and one sound.
     //@shape - always point
     
-    "e_name"            (string)        // current entity name
-    "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
-    "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
-    "e_sprite"          (string)        // current entity sprite
-    "e_sprite_remback"  (bool)          // makes all pixels with the sprite background color (left-bottom pixel) transparent (if "e_sprite" is external)
-    "e_sprite_smooth"   (bool)          // smooth the sprite edges (if "e_sprite_remback" is "true")
-    "e_sprite_ox"       (int)           // sprite X origin (if "e_sprite" is external)
-    "e_sprite_oy"       (int)           // sprite Y origin (if "e_sprite" is external)
-    "e_sprite_xscale"   (float)         // sprite X scale ("1" is default)
-    "e_sprite_yscale"   (float)         // sprite Y scale ("1" is default)
-    "e_sprite_angle"    (int)           // sprite angle (anti-clockwise, "0" is default)
-    "e_sprite_color"    (color || int)  // current entity color
-    "e_sprite_image"    (int)           // current entity sprite frame (do not use this)
-    "e_mask"            (string)        // collision mask for current entity
-    "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
-    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_depth"           (int)           // current entity depth
-    "e_usedistance"     (int)           // current entity use distance
-    "e_shooter"         (bool)          // can be activated by shooting
-    "e_toggle"          (bool)          // entity can be activated only by other entity
-    "e_allowmonsters"   (bool)          // allows monsters to activate entity
-    "e_allownpc"        (bool)          // allows NPC to activate entity
-    "e_allowplayer"     (bool)          // allows player to activate entity
-    "e_allowtele"       (bool)          // allows teleportation ball to activate entity
-    "e_collision"       (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
-    "e_collied_only_ranged" (bool)      // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
-    "e_inspector"       (string)        // entity name that will be displayed on the inspector
-    "e_falloff_ref"     (int)           // the falloff reference relative to the listener (clamp)
-    "e_falloff_dist"    (int)           // the maximum falloff distance relative to the listener
-    "e_falloff_factor"  (int)           // the falloff factor (default "1")
-    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
-    "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
-    "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
-    "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
-    "e_sort_ox"         (int)           // x offset of "e_sort_radius"
-    "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+    "e_name"                (string)        // current entity name
+    "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
+    "e_sprite"              (string)        // current entity sprite
+    "e_sprite_remback"      (bool)          // makes all pixels with the sprite background color (left-bottom pixel) transparent (if "e_sprite" is external)
+    "e_sprite_smooth"       (bool)          // smooth the sprite edges (if "e_sprite_remback" is "true")
+    "e_sprite_ox"           (int)           // sprite X origin (if "e_sprite" is external)
+    "e_sprite_oy"           (int)           // sprite Y origin (if "e_sprite" is external)
+    "e_sprite_xscale"       (float)         // sprite X scale ("1" is default)
+    "e_sprite_yscale"       (float)         // sprite Y scale ("1" is default)
+    "e_sprite_angle"        (int)           // sprite angle (anti-clockwise, "0" is default)
+    "e_sprite_color"        (color || int)  // current entity color
+    "e_sprite_image"        (int)           // current entity sprite frame (do not use this)
+    "e_mask"                (string)        // collision mask for current entity
+    "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
+    "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
+    "e_depth"               (int)           // current entity depth
+    "e_usedistance"         (int)           // current entity use distance
+    "e_shooter"             (bool)          // can be activated by shooting
+    "e_toggle"              (bool)          // entity can be activated only by other entity
+    "e_allowmonsters"       (bool)          // allows monsters to activate entity
+    "e_allownpc"            (bool)          // allows NPC to activate entity
+    "e_allowplayer"         (bool)          // allows player to activate entity
+    "e_allowtele"           (bool)          // allows teleportation ball to activate entity
+    "e_collision"           (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
+    "e_collied_only_ranged" (bool)          // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
+    "e_inspector"           (string)        // entity name that will be displayed on the inspector
+    "e_falloff_ref"         (int)           // the falloff reference relative to the listener (clamp)
+    "e_falloff_dist"        (int)           // the maximum falloff distance relative to the listener
+    "e_falloff_factor"      (int)           // the falloff factor (default "1")
+    "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"           (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"             (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"             (int)           // y offset of "e_sort_radius"
 }
 
 //-------------------- Entity Calculator (ent_calculator) --------------------//
@@ -745,60 +745,60 @@
     //@brief - Used when you need hightly customisable door. Can have sprite, hitbox and one sound. It can be opened/closed "only by player" or "only by entities" or "by player and entities".
     //@shape - always point
     
-    "e_name"            (string)        // current entity name
-    "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
-    "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
-    "e_sprite"          (string)        // current entity sprite
-    "e_sprite_remback"  (bool)          // makes all pixels with the sprite background color (left-bottom pixel) transparent (if "e_sprite" is external)
-    "e_sprite_smooth"   (bool)          // smooth the sprite edges (if "e_sprite_remback" is "true")
-    "e_sprite_ox"       (int)           // sprite X origin (if "e_sprite" is external)
-    "e_sprite_oy"       (int)           // sprite Y origin (if "e_sprite" is external)
-    "e_sprite_xscale"   (float)         // sprite X scale ("1" is default)
-    "e_sprite_yscale"   (float)         // sprite Y scale ("1" is default)
-    "e_sprite_angle"    (int)           // sprite angle (anti-clockwise, "0" is default)
-    "e_sprite_color"    (color || int)  // current entity color
-    "e_sprite_frames"   (int)           // number of images in current sprite
-    "e_sprite_image"    (int)           // current entity sprite frame (do not use this)
-    "e_sprite_anim"     (float)         // animation speed
-    "e_mask"            (string)        // collision mask for current entity
-    "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_mask_left"       (int)           // the maximum left position of the bounding box
-    "e_mask_top"        (int)           // the maximum top position of the bounding box
-    "e_mask_right"      (int)           // the maximum right position of the bounding box
-    "e_mask_bottom"     (int)           // the maximum bottom position of the bounding box
-    "e_door_open"       (bool)          // door starts in its 'open' position (set "e_sprite_image" parameter to last the frame index ("e_sprite_frame - 1") if "true")
-    "e_door_openFrame"  (int)           // sets frame that allows player to pass through door
-    "e_door_openAct"    (bool)          // activates targeted entity on open
-    "e_door_closeAct"   (bool)          // activates targeted entity on close
-    "e_door_key"        (int)           // sets the key required to open ("0" if key is not required, "1" - steel, "2" - brass, "3" - copper, "4" - custom key color set in "e_door_key_color")
-    "e_door_key_color"  (color || int)  // sets the custom key color required to open (if "e_door_key" is "4"). Player can unlock "Entity Door" if "e_door_key_color" equal to "key_color" of the picked up "Key" object ("obj_key") (this means that all their corresponding R/G/B values of the "e_door_key_color"-"key_color" pair should be identical).
-    "e_door_lockDist"   (int)           // key unlocking distance (if "e_door_keyLock" is "true")
-    "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
-    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_usedistance"     (int)           // current entity use distance
-    "e_toggle"          (bool)          // entity can be activated only by other entity
-    "e_useonly"         (bool)          // entity can be activated by pressing <USE> button
-    "e_block"           (bool)          // blocks current entity until refresh
-    "e_shooter"         (bool)          // can be activated by shooting
-    "e_allowmonsters"   (bool)          // allows monsters to activate entity
-    "e_allownpc"        (bool)          // allows NPC to activate entity
-    "e_allowplayer"     (bool)          // allows player to activate entity
-    "e_allowtele"       (bool)          // allows teleportation ball to activate entity
-    "e_collision"       (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
-    "e_collied_only_ranged" (bool)      // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
-    "e_inspector"       (string)        // entity name that will be displayed on the inspector
-    "e_falloff_ref"     (int)           // the falloff reference relative to the listener (clamp)
-    "e_falloff_dist"    (int)           // the maximum falloff distance relative to the listener
-    "e_falloff_factor"  (int)           // the falloff factor (default "1")
-    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
-    "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
-    "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
-    "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
-    "e_sort_ox"         (int)           // x offset of "e_sort_radius"
-    "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+    "e_name"                (string)        // current entity name
+    "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
+    "e_sprite"              (string)        // current entity sprite
+    "e_sprite_remback"      (bool)          // makes all pixels with the sprite background color (left-bottom pixel) transparent (if "e_sprite" is external)
+    "e_sprite_smooth"       (bool)          // smooth the sprite edges (if "e_sprite_remback" is "true")
+    "e_sprite_ox"           (int)           // sprite X origin (if "e_sprite" is external)
+    "e_sprite_oy"           (int)           // sprite Y origin (if "e_sprite" is external)
+    "e_sprite_xscale"       (float)         // sprite X scale ("1" is default)
+    "e_sprite_yscale"       (float)         // sprite Y scale ("1" is default)
+    "e_sprite_angle"        (int)           // sprite angle (anti-clockwise, "0" is default)
+    "e_sprite_color"        (color || int)  // current entity color
+    "e_sprite_frames"       (int)           // number of images in current sprite
+    "e_sprite_image"        (int)           // current entity sprite frame (do not use this)
+    "e_sprite_anim"         (float)         // animation speed
+    "e_mask"                (string)        // collision mask for current entity
+    "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
+    "e_mask_left"           (int)           // the maximum left position of the bounding box
+    "e_mask_top"            (int)           // the maximum top position of the bounding box
+    "e_mask_right"          (int)           // the maximum right position of the bounding box
+    "e_mask_bottom"         (int)           // the maximum bottom position of the bounding box
+    "e_door_open"           (bool)          // door starts in its 'open' position (set "e_sprite_image" parameter to last the frame index ("e_sprite_frame - 1") if "true")
+    "e_door_openFrame"      (int)           // sets frame that allows player to pass through door
+    "e_door_openAct"        (bool)          // activates targeted entity on open
+    "e_door_closeAct"       (bool)          // activates targeted entity on close
+    "e_door_key"            (int)           // sets the key required to open ("0" if key is not required, "1" - steel, "2" - brass, "3" - copper, "4" - custom key color set in "e_door_key_color")
+    "e_door_key_color"      (color || int)  // sets the custom key color required to open (if "e_door_key" is "4"). Player can unlock "Entity Door" if "e_door_key_color" equal to "key_color" of the picked up "Key" object ("obj_key") (this means that all their corresponding R/G/B values of the "e_door_key_color"-"key_color" pair should be identical).
+    "e_door_lockDist"       (int)           // key unlocking distance (if "e_door_keyLock" is "true")
+    "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
+    "e_usedistance"         (int)           // current entity use distance
+    "e_toggle"              (bool)          // entity can be activated only by other entity
+    "e_useonly"             (bool)          // entity can be activated by pressing <USE> button
+    "e_block"               (bool)          // blocks current entity until refresh
+    "e_shooter"             (bool)          // can be activated by shooting
+    "e_allowmonsters"       (bool)          // allows monsters to activate entity
+    "e_allownpc"            (bool)          // allows NPC to activate entity
+    "e_allowplayer"         (bool)          // allows player to activate entity
+    "e_allowtele"           (bool)          // allows teleportation ball to activate entity
+    "e_collision"           (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
+    "e_collied_only_ranged" (bool)          // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
+    "e_inspector"           (string)        // entity name that will be displayed on the inspector
+    "e_falloff_ref"         (int)           // the falloff reference relative to the listener (clamp)
+    "e_falloff_dist"        (int)           // the maximum falloff distance relative to the listener
+    "e_falloff_factor"      (int)           // the falloff factor (default "1")
+    "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"           (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"             (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"             (int)           // y offset of "e_sort_radius"
 }
 
 //-------------------- Entity Fade (ent_fade) --------------------//
@@ -855,23 +855,23 @@
     //@shape - always point
     //@double_sorts - first is program (OUT), second is grab (IN)
     
-    "e_name"            (string)        // current entity name
-    "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_input_target"    (string)        // input entity name (if "e_input" is "undefined", "!Player" and "!Global" allowed)
-    "e_input_parm"      (string)        // name of targeted entity parameter to grab from input entity
-    "e_output_target"   (string)        // name of entity to set output value in ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
-    "e_output_parm"     (string)        // name of targeted entity parameter to set output value (if "e_output_target" have value, !Activate allowed)
-    "e_array_1st_dim"   (int)           // if e_output_parm is the name of an array, you can access its first dimension using that index. (If set to -1 then the array write function is not used)
-    "e_array_2nd_dim"   (int)           // if e_output_parm is the name of an array, you can access its second dimension using that index. (If set to -1 then the array write function is not used)
-    "e_disable"         (bool)          // deactivate entity after performing activation
-    "e_sort_method"     (int)           // Applied to "e_output_target"! "0" (used by default) - all entities specified in "e_output_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
-    "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
-    "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
-    "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
-    "e_sort_ox"         (int)           // x offset of "e_sort_radius"
-    "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+    "e_name"                 (string)   // current entity name
+    "e_tag"                  (string)   // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_activated"            (bool)     // current entity activation ("true" if must activate on start)
+    "e_input_target"         (string)   // input entity name (if "e_input" is "undefined", "!Player" and "!Global" allowed)
+    "e_input_parm"           (string)   // name of targeted entity parameter to grab from input entity
+    "e_output_target"        (string)   // name of entity to set output value in ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
+    "e_output_parm"          (string)   // name of targeted entity parameter to set output value (if "e_output_target" have value, !Activate allowed)
+    "e_array_1st_dim"        (int)      // if e_output_parm is the name of an array, you can access its first dimension using that index. (If set to -1 then the array write function is not used)
+    "e_array_2nd_dim"        (int)      // if e_output_parm is the name of an array, you can access its second dimension using that index. (If set to -1 then the array write function is not used)
+    "e_disable"              (bool)     // deactivate entity after performing activation
+    "e_sort_method"          (int)      // Applied to "e_output_target"! "0" (used by default) - all entities specified in "e_output_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"             (string)   // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"            (string)   // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"        (int)      // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"          (int)      // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"              (int)      // x offset of "e_sort_radius"
+    "e_sort_oy"              (int)      // y offset of "e_sort_radius"
     "e_second_sort_method"   (int)      // Applied to "e_input_target"! "0" (used by default) - all entities specified in "e_input_target", below second_sort parametrs are ignored, "1" - one nearest entity on "e_second_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_second_sort_position" that match all not empty sorts, "3" - "e_second_sort_position" nearest entities that match all not empty sorts, "4" - "e_second_sort_position" furthest entities that match all not empty sorts, "5" - "e_second_sort_position" some (random) entities that match all not empty sorts.
     "e_second_sort_tag"      (string)   // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_second_sort_type"     (string)   // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
@@ -937,7 +937,7 @@
     "e_allowplayer"         (bool)          // allows player to activate entity
     "e_allowtele"           (bool)          // allows teleportation ball to activate entity
     "e_collision"           (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
-    "e_collied_only_ranged" (bool)      // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
+    "e_collied_only_ranged" (bool)          // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
     "e_inspector"           (string)        // entity name that will be displayed on the inspector
     "e_shadow"              (bool)          // allow entity to cast a shadow
     "e_shadow_bot"          (bool)          // sets shadow to cast from bottom side
@@ -1065,34 +1065,34 @@
     //@shape - always point
     //@double_sorts - first is moved object (WHO), second is destination (WHERE)
     
-    "e_name"            (string)        // current entity name
-    "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_move_type"       (int)           // movement type ("0" // directional move to "e_move_target", "1" // move to "e_move_target" avoiding solid structures, "2" // directional move)
-    "e_move_target"     (string)        // name of entity to move targeted entity on it (if "e_move_type" isn't "2")
-    "e_move_spd"        (float)           // movement speed
-    "e_move_dir"        (float || string) // movement direction (if "e_move_type" is "2"). If float then treated as value of anticlockwise angle (0 is right, 90 is up, 180 is left and 270 is down), if string then treated as a e_name of entity between which and this ent_movement new angle should be calculated each tick.
-    "e_move_dist"       (float)           // deactivation distance ("-1" to infinity movement)
-    "e_jump_target"     (string)        // name of entity to place current entity on it ("!Player" allowed)
-    "e_slave"           (string)        // name of entity that will moved
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
-    "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
-    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
-    "e_sort_method"     (int)           // Applied to "e_slave" and "e_target"! "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
-    "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
-    "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
-    "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
-    "e_sort_ox"         (int)           // x offset of "e_sort_radius"
-    "e_sort_oy"         (int)           // y offset of "e_sort_radius"
-    "e_second_sort_method"   (int)      // Applied to "e_jump_target", "e_move_target" and "e_move_dir" ! "0" (used by default) - all entities specified in "e_input_target", below second_sort parametrs are ignored, "1" - one nearest entity on "e_second_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_second_sort_position" that match all not empty sorts, "3" - "e_second_sort_position" nearest entities that match all not empty sorts, "4" - "e_second_sort_position" furthest entities that match all not empty sorts, "5" - "e_second_sort_position" some (random) entities that match all not empty sorts.
-    "e_second_sort_tag"      (string)   // you can add unique tag for entity and find it by this tag ("!Any" allowed)
-    "e_second_sort_type"     (string)   // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_second_sort_position" (int)      // number of entity in order (if "e_second_sort_method" is "1" or "2") OR count of entities (if "e_second_sort_method" is "3" or "4" or "5")
-    "e_second_sort_radius"   (int)      // you can find entity in specified radius (or outside it if "e_second_sort_radius" less than or equel "0")
-    "e_second_sort_ox"       (int)      // x offset of "e_second_sort_radius"
-    "e_second_sort_oy"       (int)      // y offset of "e_second_sort_radius"
+    "e_name"                 (string)          // current entity name
+    "e_tag"                  (string)          // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_target"               (string)          // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_move_type"            (int)             // movement type ("0" // directional move to "e_move_target", "1" // move to "e_move_target" avoiding solid structures, "2" // directional move)
+    "e_move_target"          (string)          // name of entity to move targeted entity on it (if "e_move_type" isn't "2")
+    "e_move_spd"             (float)           // movement speed
+    "e_move_dir"             (float || string) // movement direction (if "e_move_type" is "2"). If float then treated as value of anticlockwise angle (0 is right, 90 is up, 180 is left and 270 is down), if string then treated as a e_name of entity between which and this ent_movement new angle should be calculated each tick.
+    "e_move_dist"            (float)           // deactivation distance ("-1" to infinity movement)
+    "e_jump_target"          (string)          // name of entity to place current entity on it ("!Player" allowed)
+    "e_slave"                (string)          // name of entity that will moved
+    "e_delay"                (int)             // delay before activation ("30" means 1 second)
+    "e_refresh"              (int)             // entity refresh (never if "-1", "30" means 1 second)
+    "e_activated"            (bool)            // current entity activation ("true" if must activate on start)
+    "e_sound"                (string)          // activation sound (quiet if "sound_NULL")
+    "e_sort_method"          (int)             // Applied to "e_slave" and "e_target"! "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"             (string)          // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"            (string)          // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"        (int)             // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"          (int)             // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"              (int)             // x offset of "e_sort_radius"
+    "e_sort_oy"              (int)             // y offset of "e_sort_radius"
+    "e_second_sort_method"   (int)             // Applied to "e_jump_target", "e_move_target" and "e_move_dir" ! "0" (used by default) - all entities specified in "e_input_target", below second_sort parametrs are ignored, "1" - one nearest entity on "e_second_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_second_sort_position" that match all not empty sorts, "3" - "e_second_sort_position" nearest entities that match all not empty sorts, "4" - "e_second_sort_position" furthest entities that match all not empty sorts, "5" - "e_second_sort_position" some (random) entities that match all not empty sorts.
+    "e_second_sort_tag"      (string)          // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_second_sort_type"     (string)          // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_second_sort_position" (int)             // number of entity in order (if "e_second_sort_method" is "1" or "2") OR count of entities (if "e_second_sort_method" is "3" or "4" or "5")
+    "e_second_sort_radius"   (int)             // you can find entity in specified radius (or outside it if "e_second_sort_radius" less than or equel "0")
+    "e_second_sort_ox"       (int)             // x offset of "e_second_sort_radius"
+    "e_second_sort_oy"       (int)             // y offset of "e_second_sort_radius"
 }
 
 //-------------------- Entity Multidestroyer (ent_multidestroyer) --------------------//
@@ -1640,47 +1640,47 @@
 {
     //@shape - always point
 
-    "e_name"            (string)        // current entity name
-    "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
-    "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
-    "e_sprite"          (string)        // current entity sprite
-    "e_sprite_remback"  (bool)          // makes all pixels with the sprite background color (left-bottom pixel) transparent (if "e_sprite" is external)
-    "e_sprite_smooth"   (bool)          // smooth the sprite edges (if "e_sprite_remback" is "true")
-    "e_sprite_ox"       (int)           // sprite X origin (if "e_sprite" is external)
-    "e_sprite_oy"       (int)           // sprite Y origin (if "e_sprite" is external)
-    "e_sprite_xscale"   (float)         // sprite X scale ("1" is default)
-    "e_sprite_yscale"   (float)         // sprite Y scale ("1" is default)
-    "e_sprite_angle"    (int)           // sprite angle (anti-clockwise, "0" is default)
-    "e_sprite_image"    (int)           // current entity sprite frame (do not use this)
-    "e_sprite_color"    (color || int)  // current entity color
-    "e_mask"            (string)        // collision mask for current entity
-    "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
-    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_depth"           (int)           // current entity depth
-    "e_usedistance"     (int)           // current entity use distance
-    "e_block"           (bool)          // blocks current entity until refresh
-    "e_toggle"          (bool)          // entity can be activated only by other entity
-    "e_shooter"         (bool)          // can be activated by shooting
-    "e_allowmonsters"   (bool)          // allows monsters to activate entity
-    "e_allownpc"        (bool)          // allows NPC to activate entity
-    "e_allowplayer"     (bool)          // allows player to activate entity
-    "e_allowtele"       (bool)          // allows teleportation ball to activate entity
-    "e_collision"       (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
-    "e_collied_only_ranged" (bool)      // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
-    "e_inspector"       (string)        // entity name that will be displayed on the inspector
-    "e_falloff_ref"     (int)           // the falloff reference relative to the listener (clamp)
-    "e_falloff_dist"    (int)           // the maximum falloff distance relative to the listener
-    "e_falloff_factor"  (int)           // the falloff factor (default "1")
-    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
-    "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
-    "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
-    "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
-    "e_sort_ox"         (int)           // x offset of "e_sort_radius"
-    "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+    "e_name"                (string)        // current entity name
+    "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
+    "e_sprite"              (string)        // current entity sprite
+    "e_sprite_remback"      (bool)          // makes all pixels with the sprite background color (left-bottom pixel) transparent (if "e_sprite" is external)
+    "e_sprite_smooth"       (bool)          // smooth the sprite edges (if "e_sprite_remback" is "true")
+    "e_sprite_ox"           (int)           // sprite X origin (if "e_sprite" is external)
+    "e_sprite_oy"           (int)           // sprite Y origin (if "e_sprite" is external)
+    "e_sprite_xscale"       (float)         // sprite X scale ("1" is default)
+    "e_sprite_yscale"       (float)         // sprite Y scale ("1" is default)
+    "e_sprite_angle"        (int)           // sprite angle (anti-clockwise, "0" is default)
+    "e_sprite_image"        (int)           // current entity sprite frame (do not use this)
+    "e_sprite_color"        (color || int)  // current entity color
+    "e_mask"                (string)        // collision mask for current entity
+    "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
+    "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
+    "e_depth"               (int)           // current entity depth
+    "e_usedistance"         (int)           // current entity use distance
+    "e_block"               (bool)          // blocks current entity until refresh
+    "e_toggle"              (bool)          // entity can be activated only by other entity
+    "e_shooter"             (bool)          // can be activated by shooting
+    "e_allowmonsters"       (bool)          // allows monsters to activate entity
+    "e_allownpc"            (bool)          // allows NPC to activate entity
+    "e_allowplayer"         (bool)          // allows player to activate entity
+    "e_allowtele"           (bool)          // allows teleportation ball to activate entity
+    "e_collision"           (bool)          // destroy projectiles on collision (if "e_shooter" is "true")
+    "e_collied_only_ranged" (bool)          // if false then melee projectiles can simultaneously activate entity and hit nearby monster before been marked as "collieded" (if "e_collision" is "true" and "e_shooter" is "true")
+    "e_inspector"           (string)        // entity name that will be displayed on the inspector
+    "e_falloff_ref"         (int)           // the falloff reference relative to the listener (clamp)
+    "e_falloff_dist"        (int)           // the maximum falloff distance relative to the listener
+    "e_falloff_factor"      (int)           // the falloff factor (default "1")
+    "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"           (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"             (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"             (int)           // y offset of "e_sort_radius"
 }
 
 //-------------------- Entity Trigger (ent_trigger) --------------------//
