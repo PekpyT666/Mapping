@@ -1283,7 +1283,7 @@
     "e_depth"           (int)           // current entity depth
     "e_fx"              (bool)          // special particle effect
     "e_toggle"          (bool)          // entity can be activated only by other entity
-    "e_useonly"         (bool)          // entity can be activated by pressing <USE> button
+    "e_useonly"         (bool)          // entity can be activated by pressing <USE> button. I.e. set this to true if you need to teleport colliding player/monster/NPC only when player USEd teleport or when it is activated by other entity.
     "e_usedistance"     (int)           // current entity use distance
     "e_jump_target"     (string)        // name of entity to place current entity on it
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
