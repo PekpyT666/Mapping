@@ -301,6 +301,19 @@
                 "Activate on Leave"
             ],
             "valuesAsFlags": false
+        },
+        {
+            "id": 15,
+            "name": "Prefaber Mode",
+            "storageType": "int",
+            "type": "enum",
+            "values": [
+                "Load EVERYTHING from prefab file",
+                "Save selected e_pref_saved_types in rectangle range in to prefab file",
+                "Load EVERYTHING that stored in internal prefaber storage",
+                "Save selected e_pref_saved_types in rectangle range in to internal prefaber storage"
+            ],
+            "valuesAsFlags": false
         }
     ]
 }

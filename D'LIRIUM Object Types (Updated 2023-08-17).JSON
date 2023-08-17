@@ -4793,6 +4793,7 @@
             },
             {
                 "name": "e_pref_mode",
+                "propertytype": "Prefaber Mode",
                 "type": "int",
                 "value": 0
             },
