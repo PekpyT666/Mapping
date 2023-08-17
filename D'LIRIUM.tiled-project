@@ -167,7 +167,8 @@
                 "Single Nearest",
                 "Single Furthest",
                 "Many Nearest",
-                "Many Furthest"
+                "Many Furthest",
+                "Many Random"
             ],
             "valuesAsFlags": false
         },
