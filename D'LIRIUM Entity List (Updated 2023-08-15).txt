@@ -1453,10 +1453,12 @@
 
 //-------------------- Entity Rotating (ent_rotating) --------------------//
 {
+    //@brief - Used when you need decorative object that spins around it center. Have sprite, hitbox, and shadow. Also unlike Entity Decor this entity have <USE> interaction and can activate other entity.
     //@shape - always point
-
+    
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_activated"       (bool)          // current entity activation ("true" if must activate on start) (unlike Entity Decor determine whether sprite is rotating or not)
     "e_sprite"          (string)        // current entity sprite
     "e_sprite_remback"  (bool)          // makes all pixels with the sprite background color (left-bottom pixel) transparent (if "e_sprite" is external)
     "e_sprite_smooth"   (bool)          // smooth the sprite edges (if "e_sprite_remback" is "true")
@@ -1465,17 +1467,28 @@
     "e_sprite_xscale"   (float)         // sprite X scale ("1" is default)
     "e_sprite_yscale"   (float)         // sprite Y scale ("1" is default)
     "e_sprite_angle"    (int)           // sprite angle (anti-clockwise, "0" is default)
+    "e_sprite_color"    (color || int)  // current entity color
     "e_sprite_frames"   (int)           // number of images in current sprite
     "e_sprite_image"    (int)           // current entity sprite frame (do not use this)
     "e_sprite_anim"     (float)         // animation speed
-    "e_sprite_color"    (color || int)  // current entity color
-    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
+    "e_mask"            (string)        // collision mask for current entity
+    "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
+    "e_solid_type"      (int)           // sets collision for entity ("0" - no collision, "1" - projectiles can pass, "2" - full solid)
     "e_depth"           (int)           // current entity depth
-    "e_usedistance"     (int)           // current entity use distance
+    "e_inspector"       (string)        // entity name that will be displayed on the inspector
+    "e_shadow"          (bool)          // allow entity to cast a shadow
+    "e_shadow_bot"      (bool)          // sets shadow to cast from bottom side
+    "e_usedistance"     (int)           // current entity use distance (0 or lower to be not usable by player)
     "e_toggle"          (bool)          // current entity can be activated only by other entity
-    "e_useonly"         (bool)          // current entity can be activated by pressing <USE> button
-    "e_angle"           (int)           // current entity's sprite angle
-    "e_rot_speed"       (int)           // rotating speed (negative value will rotate sprite in other direction)
+    "e_rot_speed"       (int)           // rotating speed with wich "e_sprite_angle" will change every tick (negative value will rotate sprite in other direction)
+    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"         (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+        //Note - this entity rotate only it sprite (i.e. mask did not rotating)
 }
 
 //-------------------- Entity Save (ent_save) --------------------//

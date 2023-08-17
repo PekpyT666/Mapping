@@ -5746,6 +5746,73 @@
                 "value": 1
             },
             {
+                "name": "e_mask",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_mask_remback",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_solid_type",
+                "propertytype": "Solid Type",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_inspector",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_shadow",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_shadow_bot",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_position",
+                "type": "int",
+                "value": 1
+            },
+            {
+                "name": "e_sort_radius",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sort_type",
+                "type": "string",
+                "value": "!Entity"
+            },
+            {
                 "name": "e_tag",
                 "type": "string",
                 "value": ""
@@ -5759,11 +5826,6 @@
                 "name": "e_usedistance",
                 "type": "int",
                 "value": 24
-            },
-            {
-                "name": "e_useonly",
-                "type": "bool",
-                "value": false
             },
             {
                 "name": "f_difficulty_chicken",
