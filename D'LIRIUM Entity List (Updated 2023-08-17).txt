@@ -43,7 +43,6 @@
         // To visualize this process you can save debug wrap(screenshot) of whole level with only loaded objects. You need to press Ctrl+Shift+F11 (besides displaying on screen this will save wrap in to %LocalAppdata%\delirium). Try to look on such wraps in story and custom maps.
         // It is also worth mention that game optimization unloads entities/objects pretty fast, but game engine still perform some needed code on them every tick even in unloaded state, this is a remaining ~5% of fps impact mentioned earlier (i.e. on your map you CAN'T infinetely create entities/objects and leve them to be unloaded by oprimization system. They still will slowly drain game fps).
         // While "Entity Prefaber" work slower than game optimization, but it stored unloaded entities/objects as JSON string inside prefabs, thus game engine didn't do anything with them inside prefabs, they just lay in RAM or on disk (i.e. you CAN AND SHOULD create and unload in to prefab entities/objects if you want to infinetely do something on your map. Prefabs didn't do anything to game fps while they are unused, it's just a string in RAM or file on disk).
-    }
 }
 
 //-------------------- Entity Active Type (ent_forceload_type) --------------------//
@@ -589,22 +588,20 @@
 
     //Built in text pages
 
-    "e_text_page1"      (string)        // 1st text page ("" to skip the page)
-    "e_text_page2"      (string)        // 2nd text page ("" to skip the page)
-    "e_text_page3"      (string)        // 3rd text page ("" to skip the page)
-    "e_text_page4"      (string)        // 4th text page ("" to skip the page)
-    "e_text_page5"      (string)        // 5th text page ("" to skip the page)
-                                        // you can use up to 32 built in pages (including "e_text_page0")
+    "e_text_page0"          (string)    // 0st text page ("" to skip the page)
+    "e_text_page1"          (string)    // 1st text page ("" to skip the page)
+    //...
+    "e_text_page15"         (string)    // 15th text page ("" to skip the page)
+    "e_text_page16"         (string)    // 16th text page ("" to skip the page)
 
     //Text pages from file
 
-    "e_text_file"       (string)        // text (.txt) file to get pages from, instead built in pages
-    "e_text_line1"      (int)           // 1st text page from file ("-1" to skip the line)
-    "e_text_line2"      (int)           // 2nd text page from file ("-1" to skip the line)
-    "e_text_line3"      (int)           // 3rd text page from file ("-1" to skip the line)
-    "e_text_line4"      (int)           // 4th text page from file ("-1" to skip the line)
-    "e_text_line5"      (int)           // 5th text page from file ("-1" to skip the line)
-                                        // you can use up to 32 pages from lines (including "e_text_line0")
+    "e_text_file"           (string)    // text (.txt) file to get pages from, instead built in pages
+    "e_text_line0"          (int)       // 0st text page from file ("-1" to skip the line)
+    "e_text_line1"          (int)       // 1st text page from file ("-1" to skip the line)
+    //...
+    "e_text_line15"         (int)       // 15th text page from file ("-1" to skip the line)
+    "e_text_line16"         (int)       // 16th text page from file ("-1" to skip the line)
 
     //Other text parameters
 
@@ -634,31 +631,28 @@
     
     //Built in options
 
-    "e_option_1"        (string)        // 1st option ("" to skip the option)
-    "e_option_2"        (string)        // 2nd option ("" to skip the option)
-    "e_option_3"        (string)        // 3er option ("" to skip the option)
-    "e_option_4"        (string)        // 4th option ("" to skip the option)
-    "e_option_5"        (string)        // 5th option ("" to skip the option)
-                                        // you can use up to 8 built in options (including "e_option_0")
+    "e_option_0"            (string)    // 0st option ("" to skip the option)
+    "e_option_1"            (string)    // 1st option ("" to skip the option)
+    //...
+    "e_option_7"            (string)    // 7th option ("" to skip the option)
+    "e_option_8"            (string)    // 8th option ("" to skip the option)
 
     //Options from file
 
-    "e_option_file"     (string)        // text (.txt) file to get options from, instead built in options
-    "e_option_line1"    (int)           // 1st option from file ("-1" to skip the line)
-    "e_option_line2"    (int)           // 2nd option from file ("-1" to skip the line)
-    "e_option_line3"    (int)           // 3rd option from file ("-1" to skip the line)
-    "e_option_line4"    (int)           // 4th option from file ("-1" to skip the line)
-    "e_option_line5"    (int)           // 5th option from file ("-1" to skip the line)
-                                        // you can use up to 8 options from lines (including "e_option_line0")
+    "e_option_file"         (string)    // text (.txt) file to get options from, instead built in options
+    "e_option_line0"        (int)       // 0st option from file ("-1" to skip the line)
+    "e_option_line1"        (int)       // 1st option from file ("-1" to skip the line)
+    //...
+    "e_option_line7"        (int)       // 7th option from file ("-1" to skip the line)
+    "e_option_line8"        (int)       // 8th option from file ("-1" to skip the line)
 
     //Option targets
 
+    "e_option_0_target"     (string)    // target to activate by selecting 0st option
     "e_option_1_target"     (string)    // target to activate by selecting 1st option
-    "e_option_2_target"     (string)    // target to activate by selecting 2nd option
-    "e_option_3_target"     (string)    // target to activate by selecting 3rd option
-    "e_option_4_target"     (string)    // target to activate by selecting 4th option
-    "e_option_5_target"     (string)    // target to activate by selecting 5th option
-                                        // each one of 8 options has it's own target name "including e_option_0_target"
+    //...
+    "e_option_7_target"     (string)    // target to activate by selecting 7th option
+    "e_option_8_target"     (string)    // target to activate by selecting 8th option
 
     //Other option parameters
 
@@ -1106,18 +1100,12 @@
     "e_delay"               (int)           // delay before activation ("30" means 1 second)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
-    "e_destroy_target"      (string)        // name of entity that will be destroyed (sorting allowed)
+    "e_destroy_target"      (string)        // name of entity that will be destroyed
     "e_destroy_target0"     (string)        // name of entity that will be destroyed
     "e_destroy_target1"     (string)        // name of entity that will be destroyed
-    "e_destroy_target2"     (string)        // name of entity that will be destroyed
-    "e_destroy_target3"     (string)        // name of entity that will be destroyed
-    "e_destroy_target4"     (string)        // name of entity that will be destroyed
-    "e_destroy_target5"     (string)        // name of entity that will be destroyed
-    "e_destroy_target6"     (string)        // name of entity that will be destroyed
-    "e_destroy_target7"     (string)        // name of entity that will be destroyed
+    //...
     "e_destroy_target8"     (string)        // name of entity that will be destroyed
     "e_destroy_target9"     (string)        // name of entity that will be destroyed
-    "e_destroy_target10"    (string)        // name of entity that will be destroyed
     "e_destroy_self"        (bool)          // self-destroy after all work done
     "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
@@ -1130,7 +1118,7 @@
 
 //-------------------- Entity Multimanager (ent_multimanager) --------------------//
 {
-    //@brief - Used when you need to fork your activation chain. Order of e_targ's execution are always the same (from e_targ0 to e_targ10)!
+    //@brief - Used when you need to fork your activation chain. Order of e_targ's execution are always the same (from e_targ0 to e_targ9)!
     //@shape - always point
     
     "e_name"            (string)        // current entity name
@@ -1142,15 +1130,10 @@
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
     "e_targ0"           (string)        // name of entity that can be activated by current entity
     "e_targ1"           (string)        // name of entity that can be activated by current entity
-    "e_targ2"           (string)        // name of entity that can be activated by current entity
-    "e_targ3"           (string)        // name of entity that can be activated by current entity
-    "e_targ4"           (string)        // name of entity that can be activated by current entity
-    "e_targ5"           (string)        // name of entity that can be activated by current entity
-    "e_targ6"           (string)        // name of entity that can be activated by current entity
-    "e_targ7"           (string)        // name of entity that can be activated by current entity
+    //...
     "e_targ8"           (string)        // name of entity that can be activated by current entity
     "e_targ9"           (string)        // name of entity that can be activated by current entity
-    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in targets, below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
     "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
@@ -1158,7 +1141,7 @@
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
 
-    //Note - Order of e_targ's execution are deterministic (from e_targ0 to e_targ10). You can use this multimanager feature to execute entities in specific order in one game tick(frame) (e.g. you can activate spawner with e_targ1, then change it e_spawn by activation of the programmer with e_targ2 and you can again activate spawner with e_targ3 - this will happens in one game tick and order will be always the same no matter what).
+    //Note - Order of e_targ's execution are deterministic (from e_targ0 to e_targ9). You can use this multimanager feature to execute entities in specific order in one game tick(frame) (e.g. you can activate spawner with e_targ1, then change it e_spawn by activation of the programmer with e_targ2 and you can again activate spawner with e_targ3 - this will happens in one game tick and order will be always the same no matter what).
 }
 
 //-------------------- Entity Multiprogrammer (ent_multiprogrammer) --------------------//
@@ -1197,37 +1180,12 @@
     "e_prog_parm1"      (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
     "e_prog_value1"     (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
     "e_prog_string1"    (string)        // parameter value with string type to program instead float (if "e_prog_parm" has value)
-
-    "e_prog_target2"    (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
-    "e_prog_parm2"      (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
-    "e_prog_value2"     (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
-    "e_prog_string2"    (string)        // parameter value with string type to program instead float (if "e_prog_parm" has value)
-
-    "e_prog_target3"    (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
-    "e_prog_parm3"      (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
-    "e_prog_value3"     (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
-    "e_prog_string3"    (string)        // parameter value with string type to program instead float (if "e_prog_parm" has value)
-
-    "e_prog_target4"    (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
-    "e_prog_parm4"      (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
-    "e_prog_value4"     (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
-    "e_prog_string4"    (string)        // parameter value with string type to program instead float (if "e_prog_parm" has value)
-
-    "e_prog_target5"    (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
-    "e_prog_parm5"      (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
-    "e_prog_value5"     (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
-    "e_prog_string5"    (string)        // parameter value with string type to program instead float (if "e_prog_parm" has value)
-
-    "e_prog_target6"    (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
-    "e_prog_parm6"      (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
-    "e_prog_value6"     (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
-    "e_prog_string6"    (string)        // parameter value with string type to program instead float (if "e_prog_parm" has value)
-
-    "e_prog_target7"    (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
-    "e_prog_parm7"      (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
-    "e_prog_value7"     (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
-    "e_prog_string7"    (string)        // parameter value with string type to program instead float (if "e_prog_parm" has value)
-
+    
+    //...
+    //...
+    //...
+    //...
+    
     "e_prog_target8"    (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
     "e_prog_parm8"      (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
     "e_prog_value8"     (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
@@ -1237,11 +1195,6 @@
     "e_prog_parm9"      (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
     "e_prog_value9"     (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
     "e_prog_string9"    (string)        // parameter value with string type to program instead float (if "e_prog_parm" has value)
-
-    "e_prog_target10"   (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
-    "e_prog_parm10"     (string)        // parameter name to program (if "e_prog_target" has value, !Activate allowed)
-    "e_prog_value10"    (float)         // parameter value with float type to program (if "e_prog_parm" has value and "e_prog_string" has no value)
-    "e_prog_string10"   (string)        // parameter value with string type to program instead float (if "e_prog_parm" has value)
 
 }
 
@@ -1415,12 +1368,7 @@
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_targ0"           (string)        // name of entity that can be activated by current entity
     "e_targ1"           (string)        // name of entity that can be activated by current entity
-    "e_targ2"           (string)        // name of entity that can be activated by current entity
-    "e_targ3"           (string)        // name of entity that can be activated by current entity
-    "e_targ4"           (string)        // name of entity that can be activated by current entity
-    "e_targ5"           (string)        // name of entity that can be activated by current entity
-    "e_targ6"           (string)        // name of entity that can be activated by current entity
-    "e_targ7"           (string)        // name of entity that can be activated by current entity
+    //...
     "e_targ8"           (string)        // name of entity that can be activated by current entity
     "e_targ9"           (string)        // name of entity that can be activated by current entity
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
@@ -1624,9 +1572,25 @@
     "e_falloff_dist"        (int)           // the maximum falloff distance relative to the listener
     "e_falloff_factor"      (int)           // the falloff factor (default "1")
     "e_set_parameters"      (bool)          // allows to set up to 10 float and 10 string custom parameters for spawned object
-    "e_set_parm_01..20"     (string)        // name of spawned object parameter to set (if "e_set_parameters" is "true")
-    "e_set_value_01..10"    (float)         // float value to set into parameter, defined in "e_set_parm_01..10" (if "e_set_parameters" is "true")
-    "e_set_value_11..20"    (string)        // string value to set into parameter, defined in "e_set_parm_11..20" (if "e_set_parameters" is "true")
+    
+    "e_set_parm_01"         (string)        // name of spawned object parameter to set (if "e_set_parameters" is "true")
+    "e_set_parm_02"         (string)        // name of spawned object parameter to set (if "e_set_parameters" is "true")
+    //...
+    "e_set_parm_19"         (string)        // name of spawned object parameter to set (if "e_set_parameters" is "true")
+    "e_set_parm_20"         (string)        // name of spawned object parameter to set (if "e_set_parameters" is "true")
+    
+    "e_set_value_01"        (float)         // float value to set into parameter, defined in "e_set_parm_01" (if "e_set_parameters" is "true")
+    "e_set_value_02"        (float)         // float value to set into parameter, defined in "e_set_parm_02" (if "e_set_parameters" is "true")
+    //..
+    "e_set_value_09"        (float)         // float value to set into parameter, defined in "e_set_parm_09" (if "e_set_parameters" is "true")
+    "e_set_value_10"        (float)         // float value to set into parameter, defined in "e_set_parm_10" (if "e_set_parameters" is "true")
+    
+    "e_set_value_11"        (string)        // string value to set into parameter, defined in "e_set_parm_11" (if "e_set_parameters" is "true")
+    "e_set_value_12"        (string)        // string value to set into parameter, defined in "e_set_parm_12" (if "e_set_parameters" is "true")
+    //...
+    "e_set_value_19"        (string)        // string value to set into parameter, defined in "e_set_parm_19" (if "e_set_parameters" is "true")
+    "e_set_value_20"        (string)        // string value to set into parameter, defined in "e_set_parm_20" (if "e_set_parameters" is "true")
+    
     "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"           (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
