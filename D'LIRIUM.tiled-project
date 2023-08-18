@@ -214,7 +214,7 @@
         },
         {
             "id": 9,
-            "name": "Movement Direction",
+            "name": "Fog Movement Direction",
             "storageType": "int",
             "type": "enum",
             "values": [

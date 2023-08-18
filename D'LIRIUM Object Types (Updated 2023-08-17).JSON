@@ -3154,7 +3154,7 @@
             },
             {
                 "name": "e_fog_dir",
-                "propertytype": "Movement Direction",
+                "propertytype": "Fog Movement Direction",
                 "type": "int",
                 "value": 0
             },
