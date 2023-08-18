@@ -1511,6 +1511,8 @@
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // sound to play on entity activation (quiet if "sound_NULL")
+    "e_sound_fadedown"  (int)           // If greater than 0 then the sound will fade down to zero volume over "e_sound_fadedown" milliseconds after this entity is activated while it working
+    "e_sound_fadeup"    (int)           // If greater than 0 then the sound will fade up to full volume over "e_sound_fadedown" milliseconds after this entity is activated while it is not working
     "e_sound_loop"      (bool)          // repeat sound until deactivation
     "e_sound_type"      (int)           // defines sound type for volume options ("0" - sound, "1" - music, "2" - voice)
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
