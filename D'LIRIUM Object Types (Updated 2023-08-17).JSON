@@ -7002,6 +7002,16 @@
                 "value": ""
             },
             {
+                "name": "e_target_on",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_target_off",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_toggle",
                 "type": "bool",
                 "value": false

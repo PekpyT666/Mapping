@@ -1602,11 +1602,14 @@
 
 //-------------------- Entity Switch (ent_switch) --------------------//
 {
+    //@brief - Used when you need same functional as Entity Button, but also with the ability to activate two different entities every odd/even time the player uses this Entity Switch (or when it activated by other entity). 
     //@shape - always point
 
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_target"              (string)        // name of entity that current entity will activate everytime (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_target_on"           (string)        // name of entity that current entity will activate every odd numbered time (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_target_off"          (string)        // name of entity that current entity will activate every even numbered time (if e_sort_method isn't 0 then "!Any" allowed)
     "e_delay"               (int)           // delay before activation ("30" means 1 second)
     "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sprite"              (string)        // current entity sprite
