@@ -85,7 +85,7 @@
     "e_sprite_anim"         (float)         // animation speed
     "e_mask"                (string)        // collision mask for current entity
     "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_depth"               (int)           // current entity depth
+    "e_depth"               (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_solid_type"          (int)           // sets collision for entity ("0" // no collision, "1" // projectiles can pass, "2" // full solid)
     "e_allowmonsters"       (bool)          // allows monsters to activate entity
     "e_allownpc"            (bool)          // allows NPC to activate entity
@@ -132,7 +132,7 @@
     "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
-    "e_depth"               (int)           // current entity depth
+    "e_depth"               (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_usedistance"         (int)           // current entity use distance
     "e_shooter"             (bool)          // can be activated by shooting
     "e_toggle"              (bool)          // entity can be activated only by other entity
@@ -435,7 +435,7 @@
     "e_sprite_anim"     (float)         // animation speed
     "e_mask"            (string)        // collision mask for current entity
     "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_depth"           (int)           // current entity depth
+    "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_solid_type"      (int)           // sets collision for entity ("0" - no collision, "1" - projectiles can pass, "2" - full solid)
     "e_inspector"       (string)        // entity name that will be displayed on the inspector
     "e_shadow"          (bool)          // allow entity to cast a shadow
@@ -718,7 +718,7 @@
     "e_sprite_frames"   (int)           // number of images in current sprite
     "e_sprite_image"    (int)           // current entity sprite frame (do not use this)
     "e_sprite_anim"     (float)         // animation speed
-    "e_depth"           (int)           // current entity depth
+    "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_draw_priority"   (int)           // sets the draw order if draws above screen or GUI
     "e_display_gui"     (bool)          // display placement (on GUI if "true", on the level if "false")
     "e_display_x"       (int)           // display X position (if "e_display_gui" is "true")
@@ -810,7 +810,7 @@
     "e_fade_color"      (color || int)  // current entity color
     "e_fade_alpha"      (float)         // maximum fade transparency
     "e_fade_type"       (int)           // sets screen to fade: "0" - using "e_depth", "1" - above level, "2" - above screen, "3" - above GUI
-    "e_depth"           (int)           // current entity depth
+    "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_draw_priority"   (int)           // sets the draw order if draws above screen or GUI
 }
 
@@ -839,7 +839,7 @@
     "e_fog_type"        (int)           // sets fog to draw: "0" - using "e_depth", "1" - above level, "2" - above screen, "3" - above GUI
     "e_fog_spd"         (int)           // sets fog scrolling speed
     "e_fog_dir"         (int)           // sets fog direction ("0" - right, "1" - up, "2" - left, "3" - down)
-    "e_depth"           (int)           // current entity depth
+    "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_draw_priority"   (int)           // sets the draw order if draws above screen or GUI
 }
 
@@ -919,7 +919,7 @@
     "e_sprite_color"        (color || int)  // current entity color
     "e_mask"                (string)        // collision mask for current entity
     "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_depth"               (int)           // current entity depth
+    "e_depth"               (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_solid_type"          (int)           // sets collision for entity ("0" - no collision, "1" - projectiles can pass, "2" - full solid)
     "e_interact_type"       (int)           // sets animation type ("0" to "12", any other value will activate targeted entity)
     "e_interact_visible"    (bool)          // sets entity visibility while being deactivated
@@ -1237,7 +1237,7 @@
     "e_mask_bottom"     (int)           // the maximum bottom position of the bounding box
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL"). In this particullar entity can be "!Portal", this will make one of four random portal sounds. 
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_depth"           (int)           // current entity depth
+    "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_fx"              (bool)          // special particle effect
     "e_toggle"          (bool)          // entity can be activated only by other entity
     "e_useonly"         (bool)          // entity can be activated by pressing <USE> button. I.e. set this to true if you need to teleport colliding player/monster/NPC only when player USEd teleport or when it is activated by other entity.
@@ -1426,7 +1426,7 @@
     "e_mask"            (string)        // collision mask for current entity
     "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
     "e_solid_type"      (int)           // sets collision for entity ("0" - no collision, "1" - projectiles can pass, "2" - full solid)
-    "e_depth"           (int)           // current entity depth
+    "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_inspector"       (string)        // entity name that will be displayed on the inspector
     "e_shadow"          (bool)          // allow entity to cast a shadow
     "e_shadow_bot"      (bool)          // sets shadow to cast from bottom side
@@ -1626,7 +1626,7 @@
     "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
-    "e_depth"               (int)           // current entity depth
+    "e_depth"               (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_usedistance"         (int)           // current entity use distance
     "e_block"               (bool)          // blocks current entity until refresh
     "e_toggle"              (bool)          // entity can be activated only by other entity
@@ -1717,7 +1717,7 @@
     "e_sprite_color"    (color || int)  // current entity color
     "e_mask"            (string)        // collision mask for current entity
     "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_depth"           (int)           // current entity depth
+    "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_falloff_ref"     (int)           // the falloff reference relative to the listener (clamp)
     "e_falloff_dist"    (int)           // the maximum falloff distance relative to the listener
     "e_falloff_factor"  (int)           // the falloff factor (default "1")
