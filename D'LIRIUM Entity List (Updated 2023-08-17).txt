@@ -1,4 +1,4 @@
-//===========================================================================================//
+﻿//===========================================================================================//
 //---------------------------------------- Entities: ----------------------------------------//
 //===========================================================================================//
 
@@ -303,6 +303,7 @@
 {
     //@shape - always point
 
+    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
@@ -320,7 +321,6 @@
     "e_cgi_above"       (bool)          // sets cinematic to draw above GUI (if "true")
     "e_cgi_frame"       (bool)          // draws game frame while cinematic is activated
     "e_draw_priority"   (int)           // sets the draw order if draws above screen or GUI
-    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
@@ -328,6 +328,7 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+    "e_progress"        (bool)          // Cinematic progress state. Do not change it manually! You need to activate cinematic to properly pause/play it.
 }
 
 //-------------------- Entity Comparator (ent_comparator) --------------------//
@@ -488,6 +489,7 @@
 
     //Dialogue
 
+    "e_diag_player"     (bool)          // Shut player's mouth i.e. stop sound of player voice (used in story mode when Ada react while killing someone)
     "e_diag_skip"       (bool)          // allow player to skip text typing
     "e_diag_dur"        (int)           // delay before automatical page flipping
     "e_diag_X"          (int)           // X position of textbox (regarding the GUI)
@@ -673,6 +675,10 @@
     "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"         (int)           // x offset of "e_sort_radius"
     "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+
+    //Other
+    "e_progress"        (bool)          // Dialogue progress state. Do not change it manually! You need to activate dialogue to properly start/stop it. 
+
 }
 
 //-------------------- Entity Dice (ent_dice) --------------------//
@@ -1087,6 +1093,7 @@
     "e_second_sort_radius"   (int)             // you can find entity in specified radius (or outside it if "e_second_sort_radius" less than or equel "0")
     "e_second_sort_ox"       (int)             // x offset of "e_second_sort_radius"
     "e_second_sort_oy"       (int)             // y offset of "e_second_sort_radius"
+    "e_progress"             (bool)            // Movement progress state. Do not change it manually! You need to activate movement to properly start/stop it.
 }
 
 //-------------------- Entity Multidestroyer (ent_multidestroyer) --------------------//
@@ -1469,18 +1476,21 @@
     "e_sequence_dur"        (int)           // disable 'sequence mode' in time if it's enabled (never if "-1", if "e_sequence" is "true")
     "e_sequence_off"        (bool)          // disable 'sequence mode' after sequence end (if "e_sequence" is "true")
     "e_sequence_stop_enemy" (bool)          // if "true" then on this sequencer activation command ALL regular monsters to stop walking (if "e_sequence" is "true")
+    "e_slave_any"           (string)        // name of "obj_enemy_base" to work with (can be used to manipulate both monsters+NPCs+lanters)
     "e_slave_npc"           (string)        // name of NPC to work with
     "e_slave_monst"         (string)        // name of monster to work with
+    "e_move_any"            (string)        // name of entity to move targeted "obj_enemy_base" on it (can be used to manipulate both monsters+NPCs+lanters)
     "e_move_npc"            (string)        // name of entity to move targeted NPC to it
-    "e_move_monst"          (string)        // name of entity to move targeted monster to it
+    "e_move_monst"          (string)        // name of entity to move targeted monster to it (also can be used to manipulate lanterns)
     "e_move_player"         (string)        // name of entity to move player to it (if 'sequence mode' is enabled)
     "e_move_player_type"    (int)           // sets player movement type ("0" - crawling, "1" - walking, "2" - running, "3" - teleporting, "4" - custom speed)
     "e_move_player_spd"     (float)         // sets player movement speed (if "e_move_player_type" == "4")
     "e_move_cam"            (string)        // name of entity to move camera to it (if 'sequence mode' is enabled)
     "e_move_cam_spd"        (int || float)  // camera movement speed (if "e_move_cam" isn't "undefined")
     "e_follow_cam"          (string)        // name of entity that will be followed by the camera (if 'sequence mode' is enabled, "!Player" & "!noone" allowed)
+    "e_jump_any"            (string)        // name of entity to place targeted "obj_enemy_base" on it (can be used to manipulate both monsters+NPCs+lanters)
     "e_jump_npc"            (string)        // name of entity to place targeted NPC on it
-    "e_jump_monst"          (string)        // name of entity to place targeted monster on it
+    "e_jump_monst"          (string)        // name of entity to place targeted monster on it (also can be used to manipulate lanterns)
     "e_jump_player"         (string)        // name of entity to place player on it
     "e_jump_cam"            (string)        // name of entity to place camera on it (if 'sequence mode' is enabled)
     "e_jump_cam_smooth"     (bool)          // defines if camera will jump instantly (if "false") 
@@ -1492,6 +1502,7 @@
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_x_offset"       (int)           // x offset of "e_sort_radius"
     "e_sort_y_offset"       (int)           // y offset of "e_sort_radius"
+    "e_progress"            (bool)          // Sequencer progress state. Do not change it manually! You need to activate sequencer to properly start/stop it.
         // Note - "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" have limited functional in this entity!
         // We not yet implemented e_second_sort_* for this entity, thus it is recomended to avoid usage of non-0 "e_sort_method" in this entity!
         // Please use "Entity Movement" if you need to move sorted out non-AI objects.

@@ -414,7 +414,7 @@
             {
                 "name": "e_mask",
                 "type": "string",
-                "value": ""
+                "value": "spr_dev_cycler"
             },
             {
                 "name": "e_mask_remback",
@@ -441,6 +441,12 @@
                 "propertytype": "Solid Type",
                 "type": "int",
                 "value": 1
+            },
+            {
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_sort_ox",
@@ -646,7 +652,7 @@
             {
                 "name": "e_mask",
                 "type": "string",
-                "value": ""
+                "value": "spr_ent_button"
             },
             {
                 "name": "e_mask_remback",
@@ -782,7 +788,7 @@
             {
                 "name": "e_usedistance",
                 "type": "int",
-                "value": 16
+                "value": 24
             },
             {
                 "name": "f_difficulty_chicken",
@@ -825,6 +831,16 @@
                 "propertytype": "Calculation Method",
                 "type": "int",
                 "value": 0
+            },
+            {
+                "name": "e_array_1st_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
+                "name": "e_array_2nd_dim",
+                "type": "int",
+                "value": -4
             },
             {
                 "name": "e_disable",
@@ -954,6 +970,11 @@
                 "value": ""
             },
             {
+                "name": "e_progress",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_refresh",
                 "type": "int",
                 "value": -1
@@ -1002,7 +1023,7 @@
             {
                 "name": "e_sprite",
                 "type": "string",
-                "value": "spr_cg_delirium"
+                "value": ""
             },
             {
                 "name": "e_sprite_anim",
@@ -1095,6 +1116,16 @@
                 "propertytype": "Comparison Method",
                 "type": "int",
                 "value": 0
+            },
+            {
+                "name": "e_array_1st_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
+                "name": "e_array_2nd_dim",
+                "type": "int",
+                "value": -4
             },
             {
                 "name": "e_disable",
@@ -1202,6 +1233,16 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_array_1st_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
+                "name": "e_array_2nd_dim",
+                "type": "int",
+                "value": -4
             },
             {
                 "name": "e_disable",
@@ -1435,7 +1476,7 @@
             {
                 "name": "e_mask",
                 "type": "string",
-                "value": ""
+                "value": "spr_dev_cycler"
             },
             {
                 "name": "e_mask_remback",
@@ -1709,7 +1750,7 @@
             {
                 "name": "e_answer_spr_frames",
                 "type": "int",
-                "value": 0
+                "value": 1
             },
             {
                 "name": "e_answer_spr_image",
@@ -1874,7 +1915,7 @@
             {
                 "name": "e_delay",
                 "type": "int",
-                "value": 0
+                "value": 3
             },
             {
                 "name": "e_diag_X",
@@ -1892,9 +1933,14 @@
                 "value": -1
             },
             {
+                "name": "e_diag_player",
+                "type": "bool",
+                "value": true
+            },
+            {
                 "name": "e_diag_skip",
                 "type": "bool",
-                "value": false
+                "value": true
             },
             {
                 "name": "e_draw_priority",
@@ -1903,6 +1949,16 @@
             },
             {
                 "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_option_0",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_option_0_target",
                 "type": "string",
                 "value": ""
             },
@@ -1957,6 +2013,36 @@
                 "value": ""
             },
             {
+                "name": "e_option_6",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_option_6_target",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_option_7",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_option_7_target",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_option_8",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_option_8_target",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_option_border_L",
                 "type": "int",
                 "value": 40
@@ -1977,9 +2063,14 @@
                 "value": ""
             },
             {
+                "name": "e_option_line0",
+                "type": "int",
+                "value": -1
+            },
+            {
                 "name": "e_option_line1",
                 "type": "int",
-                "value": 0
+                "value": -1
             },
             {
                 "name": "e_option_line2",
@@ -1998,6 +2089,21 @@
             },
             {
                 "name": "e_option_line5",
+                "type": "int",
+                "value": -1
+            },
+            {
+                "name": "e_option_line6",
+                "type": "int",
+                "value": -1
+            },
+            {
+                "name": "e_option_line7",
+                "type": "int",
+                "value": -1
+            },
+            {
+                "name": "e_option_line8",
                 "type": "int",
                 "value": -1
             },
@@ -2207,9 +2313,19 @@
                 "value": 1
             },
             {
+                "name": "e_progress",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_refresh",
                 "type": "int",
-                "value": 0
+                "value": 30
+            },
+            {
+                "name": "e_sound_poly",
+                "type": "bool",
+                "value": true
             },
             {
                 "name": "e_sort_method",
@@ -2303,9 +2419,14 @@
                 "value": ""
             },
             {
+                "name": "e_text_line0",
+                "type": "int",
+                "value": -1
+            },
+            {
                 "name": "e_text_line1",
                 "type": "int",
-                "value": 0
+                "value": -1
             },
             {
                 "name": "e_text_line2",
@@ -2326,6 +2447,31 @@
                 "name": "e_text_line5",
                 "type": "int",
                 "value": -1
+            },
+            {
+                "name": "e_text_line6",
+                "type": "int",
+                "value": -1
+            },
+            {
+                "name": "e_text_line7",
+                "type": "int",
+                "value": -1
+            },
+            {
+                "name": "e_text_line8",
+                "type": "int",
+                "value": -1
+            },
+            {
+                "name": "e_text_line9",
+                "type": "int",
+                "value": -1
+            },
+            {
+                "name": "e_text_page0",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_text_page1",
@@ -2349,6 +2495,26 @@
             },
             {
                 "name": "e_text_page5",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text_page6",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text_page7",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text_page8",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_text_page9",
                 "type": "string",
                 "value": ""
             },
@@ -2703,7 +2869,7 @@
             {
                 "name": "e_text_line",
                 "type": "int",
-                "value": 0
+                "value": -1
             },
             {
                 "name": "e_text_style",
@@ -2788,6 +2954,11 @@
                 "value": 0
             },
             {
+                "name": "e_depth",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_door_closeAct",
                 "type": "bool",
                 "value": false
@@ -2846,7 +3017,7 @@
             {
                 "name": "e_mask",
                 "type": "string",
-                "value": ""
+                "value": "spr_Door_Indust"
             },
             {
                 "name": "e_mask_remback",
@@ -2861,7 +3032,7 @@
             {
                 "name": "e_refresh",
                 "type": "int",
-                "value": 90
+                "value": -1
             },
             {
                 "name": "e_shooter",
@@ -3032,8 +3203,9 @@
             },
             {
                 "name": "e_blending",
+                "propertytype": "Blending",
                 "type": "int",
-                "value": 0
+                "value": 1
             },
             {
                 "name": "e_depth",
@@ -3058,12 +3230,12 @@
             {
                 "name": "e_fadein_spd",
                 "type": "float",
-                "value": 0.2
+                "value": 0.02
             },
             {
                 "name": "e_fadeout_spd",
                 "type": "float",
-                "value": 0.2
+                "value": 0.02
             },
             {
                 "name": "e_draw_priority",
@@ -3268,12 +3440,12 @@
             {
                 "name": "e_array_1st_dim",
                 "type": "int",
-                "value": -1
+                "value": -4
             },
             {
                 "name": "e_array_2nd_dim",
                 "type": "int",
-                "value": -1
+                "value": -4
             },
             {
                 "name": "e_disable",
@@ -3579,7 +3751,7 @@
             {
                 "name": "e_mask",
                 "type": "string",
-                "value": ""
+                "value": "spr_dev_cycler"
             },
             {
                 "name": "e_mask_remback",
@@ -3736,7 +3908,7 @@
             {
                 "name": "e_usedistance",
                 "type": "int",
-                "value": 16
+                "value": 32
             },
             {
                 "name": "f_difficulty_chicken",
@@ -3867,7 +4039,7 @@
             {
                 "name": "e_light_anim",
                 "type": "float",
-                "value": 0.25
+                "value": 0
             },
             {
                 "name": "e_light_color",
@@ -3902,12 +4074,12 @@
             {
                 "name": "e_light_ox",
                 "type": "int",
-                "value": 64
+                "value": 0
             },
             {
                 "name": "e_light_oy",
                 "type": "int",
-                "value": 64
+                "value": 0
             },
             {
                 "name": "e_light_pulse",
@@ -3922,7 +4094,7 @@
             {
                 "name": "e_light_rot",
                 "type": "float",
-                "value": 1
+                "value": 0
             },
             {
                 "name": "e_light_sizeX",
@@ -4224,6 +4396,11 @@
                 "value": ""
             },
             {
+                "name": "e_progress",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_refresh",
                 "type": "int",
                 "value": 0
@@ -4372,6 +4549,11 @@
                 "value": ""
             },
             {
+                "name": "e_destroy_target0",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_destroy_target1",
                 "type": "string",
                 "value": ""
@@ -4393,6 +4575,26 @@
             },
             {
                 "name": "e_destroy_target5",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_destroy_target6",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_destroy_target7",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_destroy_target8",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_destroy_target9",
                 "type": "string",
                 "value": ""
             },
@@ -4550,6 +4752,11 @@
                 "value": ""
             },
             {
+                "name": "e_targ0",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_targ1",
                 "type": "string",
                 "value": ""
@@ -4571,6 +4778,26 @@
             },
             {
                 "name": "e_targ5",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_targ6",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_targ7",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_targ8",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_targ9",
                 "type": "string",
                 "value": ""
             },
@@ -4669,7 +4896,7 @@
             {
                 "name": "e_fx",
                 "type": "bool",
-                "value": true
+                "value": false
             },
             {
                 "name": "e_inspector",
@@ -4684,7 +4911,7 @@
             {
                 "name": "e_mask",
                 "type": "string",
-                "value": ""
+                "value": "spr_portalIn"
             },
             {
                 "name": "e_mask_remback",
@@ -4907,12 +5134,12 @@
             {
                 "name": "e_pref_distance_offset_x",
                 "type": "float",
-                "value": 0
+                "value": 8
             },
             {
                 "name": "e_pref_distance_offset_y",
                 "type": "float",
-                "value": 0
+                "value": 8
             },
             {
                 "name": "e_pref_distance_offset_set_middle",
@@ -5028,12 +5255,12 @@
             {
                 "name": "e_array_1st_dim",
                 "type": "int",
-                "value": -1
+                "value": -4
             },
             {
                 "name": "e_array_2nd_dim",
                 "type": "int",
-                "value": -1
+                "value": -4
             },
             {
                 "name": "e_delay",
@@ -5165,12 +5392,12 @@
             {
                 "name": "e_array_1st_dim",
                 "type": "int",
-                "value": -1
+                "value": -4
             },
             {
                 "name": "e_array_2nd_dim",
                 "type": "int",
-                "value": -1
+                "value": -4
             },
             {
                 "name": "e_delay",
@@ -5652,6 +5879,16 @@
                 "value": false
             },
             {
+                "name": "e_array_1st_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
+                "name": "e_array_2nd_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -5791,7 +6028,7 @@
             {
                 "name": "e_sprite_anim",
                 "type": "float",
-                "value": 0.2
+                "value": 0.5
             },
             {
                 "name": "e_sprite_color",
@@ -5841,7 +6078,7 @@
             {
                 "name": "e_mask",
                 "type": "string",
-                "value": ""
+                "value": "spr_dev_cycler"
             },
             {
                 "name": "e_mask_remback",
@@ -5913,7 +6150,12 @@
             {
                 "name": "e_toggle",
                 "type": "bool",
-                "value": false
+                "value": true
+            },
+            {
+                "name": "e_target",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_usedistance",
@@ -6023,6 +6265,11 @@
                 "value": ""
             },
             {
+                "name": "e_jump_any",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_jump_cam",
                 "type": "string",
                 "value": ""
@@ -6044,6 +6291,11 @@
             },
             {
                 "name": "e_jump_player",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_move_any",
                 "type": "string",
                 "value": ""
             },
@@ -6086,6 +6338,11 @@
                 "name": "e_name",
                 "type": "string",
                 "value": ""
+            },
+            {
+                "name": "e_progress",
+                "type": "bool",
+                "value": false
             },
             {
                 "name": "e_sequence",
@@ -6406,6 +6663,12 @@
                 "name": "f_difficulty_normal",
                 "type": "bool",
                 "value": true
+            },
+            {
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_sort_ox",
@@ -6883,7 +7146,7 @@
             {
                 "name": "e_mask",
                 "type": "string",
-                "value": ""
+                "value": "spr_ent_switch"
             },
             {
                 "name": "e_mask_remback",
@@ -7029,7 +7292,7 @@
             {
                 "name": "e_usedistance",
                 "type": "int",
-                "value": 16
+                "value": 24
             },
             {
                 "name": "f_difficulty_chicken",
@@ -7320,7 +7583,7 @@
             {
                 "name": "e_sound",
                 "type": "string",
-                "value": "sound_FX_windowBreak2"
+                "value": "sound_FX_windowBreak1"
             },
             {
                 "name": "e_sprite",
