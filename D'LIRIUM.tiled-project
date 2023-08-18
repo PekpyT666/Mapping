@@ -309,9 +309,9 @@
             "type": "enum",
             "values": [
                 "Load EVERYTHING from prefab file",
-                "Save selected e_pref_saved_types in rectangle range in to prefab file",
-                "Load EVERYTHING that stored in internal prefaber storage",
-                "Save selected e_pref_saved_types in rectangle range in to internal prefaber storage"
+                "Save (types) into prefab file",
+                "Load EVERYTHING from internal storage",
+                "Save (types) into internal storage"
             ],
             "valuesAsFlags": false
         }
