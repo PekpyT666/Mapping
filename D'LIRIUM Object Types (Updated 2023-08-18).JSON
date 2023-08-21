@@ -184,6 +184,30 @@
         ]
     },
     {
+        "color": "#ff0000ff",
+        "name": "entiline_activation",
+        "properties": [
+        ]
+    },
+    {
+        "color": "#ff00ff00",
+        "name": "entiline_manipulation",
+        "properties": [
+        ]
+    },
+    {
+        "color": "#ffffffff",
+        "name": "entiline_path",
+        "properties": [
+        ]
+    },
+    {
+        "color": "#ffff0000",
+        "name": "entiline_programmation",
+        "properties": [
+        ]
+    },
+    {
         "color": "#ff000000",
         "name": "Entity Activator",
         "properties": [
@@ -295,6 +319,11 @@
                 "value": true
             },
             {
+                "name": "e_disable",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -303,11 +332,6 @@
                 "name": "e_tag",
                 "type": "string",
                 "value": ""
-            },
-            {
-                "name": "e_disable",
-                "type": "bool",
-                "value": false
             }
         ]
     },
@@ -321,6 +345,16 @@
                 "value": false
             },
             {
+                "name": "e_disable",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_forceload_type",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -329,16 +363,6 @@
                 "name": "e_tag",
                 "type": "string",
                 "value": ""
-            },
-            {
-                "name": "e_forceload_type",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_disable",
-                "type": "bool",
-                "value": false
             }
         ]
     },
@@ -372,14 +396,14 @@
                 "value": false
             },
             {
-                "name": "e_collision",
-                "type": "bool",
-                "value": true
-            },
-            {
                 "name": "e_collied_only_ranged",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_collision",
+                "type": "bool",
+                "value": true
             },
             {
                 "name": "e_delay",
@@ -610,14 +634,14 @@
                 "value": false
             },
             {
-                "name": "e_collision",
-                "type": "bool",
-                "value": true
-            },
-            {
                 "name": "e_collied_only_ranged",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_collision",
+                "type": "bool",
+                "value": true
             },
             {
                 "name": "e_delay",
@@ -827,12 +851,6 @@
                 "value": false
             },
             {
-                "name": "e_calc_type",
-                "propertytype": "Calculation Method",
-                "type": "int",
-                "value": 0
-            },
-            {
                 "name": "e_array_1st_dim",
                 "type": "int",
                 "value": -4
@@ -841,6 +859,12 @@
                 "name": "e_array_2nd_dim",
                 "type": "int",
                 "value": -4
+            },
+            {
+                "name": "e_calc_type",
+                "propertytype": "Calculation Method",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_disable",
@@ -965,6 +989,11 @@
                 "value": 0
             },
             {
+                "name": "e_draw_priority",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -1061,11 +1090,6 @@
                 "value": false
             },
             {
-                "name": "e_draw_priority",
-                "type": "int",
-                "value": 0
-            },
-            {
                 "name": "e_tag",
                 "type": "string",
                 "value": ""
@@ -1112,12 +1136,6 @@
                 "value": false
             },
             {
-                "name": "e_compare_type",
-                "propertytype": "Comparison Method",
-                "type": "int",
-                "value": 0
-            },
-            {
                 "name": "e_array_1st_dim",
                 "type": "int",
                 "value": -4
@@ -1126,6 +1144,12 @@
                 "name": "e_array_2nd_dim",
                 "type": "int",
                 "value": -4
+            },
+            {
+                "name": "e_compare_type",
+                "propertytype": "Comparison Method",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_disable",
@@ -1245,6 +1269,11 @@
                 "value": -4
             },
             {
+                "name": "e_constant",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_disable",
                 "type": "bool",
                 "value": true
@@ -1253,11 +1282,6 @@
                 "name": "e_input",
                 "type": "int",
                 "value": 0
-            },
-            {
-                "name": "e_constant",
-                "type": "string",
-                "value": ""
             },
             {
                 "name": "e_name",
@@ -1361,7 +1385,7 @@
                 "type": "bool",
                 "value": true
             },
-			{
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -2323,11 +2347,6 @@
                 "value": 30
             },
             {
-                "name": "e_sound_poly",
-                "type": "bool",
-                "value": true
-            },
-            {
                 "name": "e_sort_method",
                 "propertytype": "Entity Sorting Method",
                 "type": "int",
@@ -2379,14 +2398,14 @@
                 "value": ""
             },
             {
-                "name": "e_sound_poly",
-                "type": "bool",
-                "value": false
-            },
-            {
                 "name": "e_sound_pause",
                 "type": "float",
                 "value": 2.25
+            },
+            {
+                "name": "e_sound_poly",
+                "type": "bool",
+                "value": false
             },
             {
                 "name": "e_tag",
@@ -2630,14 +2649,14 @@
                 "value": 0
             },
             {
-                "name": "e_dice_sides",
-                "type": "int",
-                "value": 1
-            },
-            {
                 "name": "e_dice_percent",
                 "type": "float",
                 "value": -1
+            },
+            {
+                "name": "e_dice_sides",
+                "type": "int",
+                "value": 1
             },
             {
                 "name": "e_name",
@@ -2939,14 +2958,14 @@
                 "value": false
             },
             {
-                "name": "e_collision",
-                "type": "bool",
-                "value": true
-            },
-            {
                 "name": "e_collied_only_ranged",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_collision",
+                "type": "bool",
+                "value": true
             },
             {
                 "name": "e_delay",
@@ -3213,6 +3232,11 @@
                 "value": 0
             },
             {
+                "name": "e_draw_priority",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_fade_alpha",
                 "type": "float",
                 "value": 1
@@ -3236,11 +3260,6 @@
                 "name": "e_fadeout_spd",
                 "type": "float",
                 "value": 0.02
-            },
-            {
-                "name": "e_draw_priority",
-                "type": "int",
-                "value": 0
             },
             {
                 "name": "e_name",
@@ -3300,12 +3319,12 @@
                 "value": 0
             },
             {
-                "name": "e_draw_priority",
+                "name": "e_depth",
                 "type": "int",
                 "value": 0
             },
             {
-                "name": "e_depth",
+                "name": "e_draw_priority",
                 "type": "int",
                 "value": 0
             },
@@ -3478,42 +3497,6 @@
                 "value": ""
             },
             {
-                "name": "e_sort_method",
-                "propertytype": "Entity Sorting Method",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_ox",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_oy",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_position",
-                "type": "int",
-                "value": 1
-            },
-            {
-                "name": "e_sort_radius",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_sort_type",
-                "type": "string",
-                "value": "!Entity"
-            },
-            {
                 "name": "e_second_sort_method",
                 "propertytype": "Entity Sorting Method",
                 "type": "int",
@@ -3546,6 +3529,42 @@
             },
             {
                 "name": "e_second_sort_type",
+                "type": "string",
+                "value": "!Entity"
+            },
+            {
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_position",
+                "type": "int",
+                "value": 1
+            },
+            {
+                "name": "e_sort_radius",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sort_type",
                 "type": "string",
                 "value": "!Entity"
             },
@@ -3698,14 +3717,14 @@
                 "value": false
             },
             {
-                "name": "e_collision",
-                "type": "bool",
-                "value": true
-            },
-            {
                 "name": "e_collied_only_ranged",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_collision",
+                "type": "bool",
+                "value": true
             },
             {
                 "name": "e_delay",
@@ -4163,7 +4182,98 @@
                 "value": false
             },
             {
+                "name": "e_input_parm",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_input_target",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_log_clear",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_log_ignore_empty",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_log_listen",
+                "type": "int",
+                "value": 123456789
+            },
+            {
+                "name": "e_mini_text_color",
+                "type": "color",
+                "value": "#ffffff00"
+            },
+            {
                 "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_output_id_text",
+                "type": "int",
+                "value": 3
+            },
+            {
+                "name": "e_output_parm_text",
+                "type": "int",
+                "value": 5
+            },
+            {
+                "name": "e_output_prettify",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_output_value_text",
+                "type": "int",
+                "value": 7
+            },
+            {
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_position",
+                "type": "int",
+                "value": 1
+            },
+            {
+                "name": "e_sort_radius",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sort_type",
+                "type": "string",
+                "value": "!Entity"
+            },
+            {
+                "name": "e_tag",
                 "type": "string",
                 "value": ""
             },
@@ -4213,51 +4323,6 @@
                 "value": ""
             },
             {
-                "name": "e_log_clear",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_log_ignore_empty",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_log_listen",
-                "type": "int",
-                "value": 123456789
-            },
-            {
-                "name": "e_input_target",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_input_parm",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_output_id_text",
-                "type": "int",
-                "value": 3
-            },
-            {
-                "name": "e_output_parm_text",
-                "type": "int",
-                "value": 5
-            },
-            {
-                "name": "e_output_value_text",
-                "type": "int",
-                "value": 7
-            },
-            {
-                "name": "e_output_prettify",
-                "type": "bool",
-                "value": true
-            },
-            {
                 "name": "e_use_console",
                 "type": "bool",
                 "value": false
@@ -4271,52 +4336,6 @@
                 "name": "e_use_mini_text",
                 "type": "bool",
                 "value": false
-            },
-            {
-                "name": "e_mini_text_color",
-                "type": "color",
-                "value": "#ffffff00"
-            },
-            {
-                "name": "e_sort_method",
-                "propertytype": "Entity Sorting Method",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_ox",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_oy",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_position",
-                "type": "int",
-                "value": 1
-            },
-            {
-                "name": "e_sort_radius",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_sort_type",
-                "type": "string",
-                "value": "!Entity"
-            },
-            {
-                "name": "e_tag",
-                "type": "string",
-                "value": ""
             },
             {
                 "name": "f_difficulty_chicken",
@@ -4406,6 +4425,42 @@
                 "value": 0
             },
             {
+                "name": "e_second_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_second_sort_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_second_sort_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_second_sort_position",
+                "type": "int",
+                "value": 1
+            },
+            {
+                "name": "e_second_sort_radius",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_second_sort_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_second_sort_type",
+                "type": "string",
+                "value": "!Entity"
+            },
+            {
                 "name": "e_slave",
                 "type": "string",
                 "value": ""
@@ -4443,42 +4498,6 @@
             },
             {
                 "name": "e_sort_type",
-                "type": "string",
-                "value": "!Entity"
-            },
-            {
-                "name": "e_second_sort_method",
-                "propertytype": "Entity Sorting Method",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_second_sort_ox",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_second_sort_oy",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_second_sort_position",
-                "type": "int",
-                "value": 1
-            },
-            {
-                "name": "e_second_sort_radius",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_second_sort_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_second_sort_type",
                 "type": "string",
                 "value": "!Entity"
             },
@@ -4835,6 +4854,343 @@
     },
     {
         "color": "#ff000000",
+        "name": "Entity Multiprogrammer",
+        "properties": [
+            {
+                "name": "e_activated",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_array_1st_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
+                "name": "e_array_2nd_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
+                "name": "e_delay",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_disable",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm0",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm1",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm2",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm3",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm4",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm5",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm6",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm7",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm8",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_parm9",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string0",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string1",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string2",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string3",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string4",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string5",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string6",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string7",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string8",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_string9",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target0",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target1",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target2",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target3",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target4",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target5",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target6",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target7",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target8",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_target9",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_prog_value",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_prog_value0",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_prog_value1",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_prog_value2",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_prog_value3",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_prog_value4",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_prog_value5",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_prog_value6",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_prog_value7",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_prog_value8",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_prog_value9",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_refresh",
+                "type": "int",
+                "value": 30
+            },
+            {
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_position",
+                "type": "int",
+                "value": 1
+            },
+            {
+                "name": "e_sort_radius",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sort_type",
+                "type": "string",
+                "value": "!Entity"
+            },
+            {
+                "name": "e_sound",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_target",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "f_difficulty_chicken",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_easy",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_hard",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_nightmare",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_normal",
+                "type": "bool",
+                "value": true
+            }
+        ]
+    },
+    {
+        "color": "#ff000000",
         "name": "Entity Node",
         "properties": [
             {
@@ -5101,60 +5457,24 @@
                 "value": false
             },
             {
+                "name": "e_delayed_destroy_self",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_destroy_self",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
             },
             {
-                "name": "e_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_pref_mode",
-                "propertytype": "Prefaber Mode",
-                "type": "int",
-                "value": 0
-            },
-            {
                 "name": "e_pref_activate_on_mode_switching",
                 "type": "bool",
                 "value": false
-            },
-            {
-                "name": "e_pref_mode_switching_on_activation",
-                "type": "bool",
-                "value": false
-            },
-            {
-                "name": "e_pref_mode_switching_on_distance",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_pref_distance_offset_x",
-                "type": "float",
-                "value": 8
-            },
-            {
-                "name": "e_pref_distance_offset_y",
-                "type": "float",
-                "value": 8
-            },
-            {
-                "name": "e_pref_distance_offset_set_middle",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "e_pref_destroy_saved",
-                "type": "bool",
-                "value": false
-            },
-            {
-                "name": "e_pref_saved_types",
-                "type": "string",
-                "value": "!Entity"
             },
             {
                 "name": "e_pref_create_image_layers",
@@ -5167,14 +5487,29 @@
                 "value": false
             },
             {
+                "name": "e_pref_destroy_saved",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_pref_distance_offset_set_middle",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_pref_distance_offset_x",
+                "type": "float",
+                "value": 8
+            },
+            {
+                "name": "e_pref_distance_offset_y",
+                "type": "float",
+                "value": 8
+            },
+            {
                 "name": "e_pref_file",
                 "type": "string",
                 "value": ""
-            },
-            {
-                "name": "e_pref_make_unique",
-                "type": "bool",
-                "value": false
             },
             {
                 "name": "e_pref_intances_load_offset_x",
@@ -5197,24 +5532,45 @@
                 "value": 0
             },
             {
-                "name": "e_pref_relative_coordinates",
-                "type": "bool",
-                "value": true
-            },
-            {
                 "name": "e_pref_internal_storage",
                 "type": "string",
                 "value": ""
             },
             {
-                "name": "e_destroy_self",
+                "name": "e_pref_make_unique",
                 "type": "bool",
                 "value": false
             },
             {
-                "name": "e_delayed_destroy_self",
+                "name": "e_pref_mode",
+                "propertytype": "Prefaber Mode",
                 "type": "int",
                 "value": 0
+            },
+            {
+                "name": "e_pref_mode_switching_on_activation",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_pref_mode_switching_on_distance",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_pref_relative_coordinates",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_pref_saved_types",
+                "type": "string",
+                "value": "!Entity"
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "f_difficulty_chicken",
@@ -5283,139 +5639,7 @@
                 "value": ""
             },
             {
-                "name": "e_prog_target",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value",
-                "type": "int",
-                "value": 0
-            },
-            {
                 "name": "e_prog_string",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_refresh",
-                "type": "int",
-                "value": 30
-            },
-            {
-                "name": "e_sort_method",
-                "propertytype": "Entity Sorting Method",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_ox",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_oy",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_position",
-                "type": "int",
-                "value": 1
-            },
-            {
-                "name": "e_sort_radius",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_sort_type",
-                "type": "string",
-                "value": "!Entity"
-            },
-            {
-                "name": "e_sound",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_target",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "f_difficulty_chicken",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_easy",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_hard",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_nightmare",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_normal",
-                "type": "bool",
-                "value": true
-            }
-        ]
-    },
-	{
-        "color": "#ff000000",
-        "name": "Entity Multiprogrammer",
-        "properties": [
-            {
-                "name": "e_activated",
-                "type": "bool",
-                "value": false
-            },
-            {
-                "name": "e_array_1st_dim",
-                "type": "int",
-                "value": -4
-            },
-            {
-                "name": "e_array_2nd_dim",
-                "type": "int",
-                "value": -4
-            },
-            {
-                "name": "e_delay",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_disable",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "e_name",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm",
                 "type": "string",
                 "value": ""
             },
@@ -5428,211 +5652,6 @@
                 "name": "e_prog_value",
                 "type": "int",
                 "value": 0
-            },
-            {
-                "name": "e_prog_string",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm0",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_target0",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value0",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_prog_string0",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm1",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_target1",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value1",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_prog_string1",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm2",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_target2",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value2",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_prog_string2",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm3",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_target3",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value3",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_prog_string3",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm4",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_target4",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value4",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_prog_string4",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm5",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_target5",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value5",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_prog_string5",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm6",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_target6",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value6",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_prog_string6",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm7",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_target7",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value7",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_prog_string7",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm8",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_target8",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value8",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_prog_string8",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_parm9",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_target9",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_prog_value9",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_prog_string9",
-                "type": "string",
-                "value": ""
             },
             {
                 "name": "e_refresh",
@@ -6006,6 +6025,21 @@
                 "value": 0
             },
             {
+                "name": "e_inspector",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_mask",
+                "type": "string",
+                "value": "spr_dev_cycler"
+            },
+            {
+                "name": "e_mask_remback",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -6014,6 +6048,58 @@
                 "name": "e_rot_speed",
                 "type": "int",
                 "value": 1
+            },
+            {
+                "name": "e_shadow",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_shadow_bot",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_solid_type",
+                "propertytype": "Solid Type",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_position",
+                "type": "int",
+                "value": 1
+            },
+            {
+                "name": "e_sort_radius",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sort_type",
+                "type": "string",
+                "value": "!Entity"
             },
             {
                 "name": "e_sprite",
@@ -6076,74 +6162,12 @@
                 "value": 1
             },
             {
-                "name": "e_mask",
-                "type": "string",
-                "value": "spr_dev_cycler"
-            },
-            {
-                "name": "e_mask_remback",
-                "type": "bool",
-                "value": false
-            },
-            {
-                "name": "e_solid_type",
-                "propertytype": "Solid Type",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_inspector",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_shadow",
-                "type": "bool",
-                "value": false
-            },
-            {
-                "name": "e_shadow_bot",
-                "type": "bool",
-                "value": false
-            },
-            {
-                "name": "e_sort_method",
-                "propertytype": "Entity Sorting Method",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_ox",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_oy",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_position",
-                "type": "int",
-                "value": 1
-            },
-            {
-                "name": "e_sort_radius",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_sort_type",
-                "type": "string",
-                "value": "!Entity"
-            },
-            {
                 "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_target",
                 "type": "string",
                 "value": ""
             },
@@ -6151,11 +6175,6 @@
                 "name": "e_toggle",
                 "type": "bool",
                 "value": true
-            },
-            {
-                "name": "e_target",
-                "type": "string",
-                "value": ""
             },
             {
                 "name": "e_usedistance",
@@ -6274,7 +6293,7 @@
                 "type": "string",
                 "value": ""
             },
-			{
+            {
                 "name": "e_jump_cam_smooth",
                 "type": "bool",
                 "value": true
@@ -6462,12 +6481,12 @@
                 "value": false
             },
             {
-                "name": "e_name",
-                "type": "string",
-                "value": ""
+                "name": "e_delay",
+                "type": "int",
+                "value": 0
             },
             {
-                "name": "e_target",
+                "name": "e_name",
                 "type": "string",
                 "value": ""
             },
@@ -6477,9 +6496,40 @@
                 "value": 0
             },
             {
-                "name": "e_delay",
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
                 "type": "int",
                 "value": 0
+            },
+            {
+                "name": "e_sort_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_position",
+                "type": "int",
+                "value": 1
+            },
+            {
+                "name": "e_sort_radius",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sort_type",
+                "type": "string",
+                "value": "!Entity"
             },
             {
                 "name": "e_sound",
@@ -6513,6 +6563,11 @@
                 "value": ""
             },
             {
+                "name": "e_target",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "f_difficulty_chicken",
                 "type": "bool",
                 "value": true
@@ -6536,42 +6591,6 @@
                 "name": "f_difficulty_normal",
                 "type": "bool",
                 "value": true
-            },
-            {
-                "name": "e_sort_method",
-                "propertytype": "Entity Sorting Method",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_ox",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_oy",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_position",
-                "type": "int",
-                "value": 1
-            },
-            {
-                "name": "e_sort_radius",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sort_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_sort_type",
-                "type": "string",
-                "value": "!Entity"
             }
         ]
     },
@@ -6583,6 +6602,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_delay",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_falloff_dist",
@@ -6610,59 +6634,9 @@
                 "value": ""
             },
             {
-                "name": "e_target",
-                "type": "string",
-                "value": ""
-            },
-            {
                 "name": "e_refresh",
                 "type": "int",
                 "value": 0
-            },
-            {
-                "name": "e_delay",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "e_sound",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_sound_loop",
-                "type": "bool",
-                "value": false
-            },
-            {
-                "name": "e_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "f_difficulty_chicken",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_easy",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_hard",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_nightmare",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_normal",
-                "type": "bool",
-                "value": true
             },
             {
                 "name": "e_sort_method",
@@ -6699,6 +6673,51 @@
                 "name": "e_sort_type",
                 "type": "string",
                 "value": "!Entity"
+            },
+            {
+                "name": "e_sound",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sound_loop",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_target",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "f_difficulty_chicken",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_easy",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_hard",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_nightmare",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_normal",
+                "type": "bool",
+                "value": true
             }
         ]
     },
@@ -7104,14 +7123,14 @@
                 "value": false
             },
             {
-                "name": "e_collision",
-                "type": "bool",
-                "value": true
-            },
-            {
                 "name": "e_collied_only_ranged",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_collision",
+                "type": "bool",
+                "value": true
             },
             {
                 "name": "e_delay",
@@ -7275,12 +7294,12 @@
                 "value": ""
             },
             {
-                "name": "e_target_on",
+                "name": "e_target_off",
                 "type": "string",
                 "value": ""
             },
             {
-                "name": "e_target_off",
+                "name": "e_target_on",
                 "type": "string",
                 "value": ""
             },
@@ -7418,7 +7437,7 @@
             },
             {
                 "name": "e_trigger_mode",
-                "propertytype": "Trigger Mode",
+                "propertytype": "Prefaber Mode",
                 "type": "int",
                 "value": 0
             },
@@ -8815,6 +8834,57 @@
         ]
     },
     {
+        "color": "#ffa5b9c3",
+        "name": "Key",
+        "properties": [
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_target",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "f_difficulty_chicken",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_easy",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_hard",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_nightmare",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_normal",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "key_color",
+                "type": "color",
+                "value": "#ffffffff"
+            }
+        ]
+    },
+    {
         "color": "#ffc3aa55",
         "name": "Key Brass",
         "properties": [
@@ -8878,57 +8948,6 @@
                 "name": "e_target",
                 "type": "string",
                 "value": ""
-            },
-            {
-                "name": "f_difficulty_chicken",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_easy",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_hard",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_nightmare",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_normal",
-                "type": "bool",
-                "value": true
-            }
-        ]
-    },
-    {
-        "color": "#ffa5b9c3",
-        "name": "Key",
-        "properties": [
-            {
-                "name": "e_name",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_target",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "key_color",
-                "type": "color",
-                "value": "#ffffffff"
             },
             {
                 "name": "f_difficulty_chicken",
@@ -9230,6 +9249,77 @@
         "color": "#ff55557f",
         "name": "Material Wood",
         "properties": [
+        ]
+    },
+    {
+        "color": "#ffaa0000",
+        "name": "Monster Exhausted",
+        "properties": [
+            {
+                "name": "direction",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "drop",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_target",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "f_difficulty_chicken",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_easy",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_hard",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_nightmare",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_normal",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "lantern_immunity",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "monster_hp",
+                "type": "int",
+                "value": 425
+            },
+            {
+                "name": "randomrun_immunity",
+                "type": "bool",
+                "value": false
+            }
         ]
     },
     {
@@ -9989,77 +10079,6 @@
         ]
     },
     {
-        "color": "#ffaa0000",
-        "name": "Monster Exhausted",
-        "properties": [
-            {
-                "name": "direction",
-                "type": "int",
-                "value": 0
-            },
-            {
-                "name": "drop",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_name",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_tag",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "e_target",
-                "type": "string",
-                "value": ""
-            },
-            {
-                "name": "f_difficulty_chicken",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_easy",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_hard",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_nightmare",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "f_difficulty_normal",
-                "type": "bool",
-                "value": true
-            },
-            {
-                "name": "lantern_immunity",
-                "type": "bool",
-                "value": false
-            },
-            {
-                "name": "monster_hp",
-                "type": "int",
-                "value": 425
-            },
-            {
-                "name": "randomrun_immunity",
-                "type": "bool",
-                "value": false
-            }
-        ]
-    },
-    {
         "color": "#ff00aaff",
         "name": "Player",
         "properties": [
@@ -10174,29 +10193,6 @@
     {
         "color": "#ffa4a38f",
         "name": "World Wall Transparent",
-        "properties": [
-        ]
-    },    {
-        "color": "#ff0000ff",
-        "name": "entiline_activation",
-        "properties": [
-        ]
-    },
-    {
-        "color": "#ff00ff00",
-        "name": "entiline_manipulation",
-        "properties": [
-        ]
-    },
-    {
-        "color": "#ffffffff",
-        "name": "entiline_path",
-        "properties": [
-        ]
-    },
-    {
-        "color": "#ffff0000",
-        "name": "entiline_programmation",
         "properties": [
         ]
     }
