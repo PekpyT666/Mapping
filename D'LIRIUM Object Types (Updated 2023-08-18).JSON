@@ -2405,7 +2405,7 @@
             {
                 "name": "e_sound_poly",
                 "type": "bool",
-                "value": false
+                "value": true
             },
             {
                 "name": "e_tag",
@@ -2823,7 +2823,7 @@
             {
                 "name": "e_sprite_color",
                 "type": "color",
-                "value": "#ff00007f"
+                "value": "#ff000080"
             },
             {
                 "name": "e_sprite_frames",
@@ -3224,7 +3224,7 @@
                 "name": "e_blending",
                 "propertytype": "Blending",
                 "type": "int",
-                "value": 1
+                "value": 0
             },
             {
                 "name": "e_depth",
@@ -3316,7 +3316,7 @@
                 "name": "e_blending",
                 "propertytype": "Blending",
                 "type": "int",
-                "value": 0
+                "value": 1
             },
             {
                 "name": "e_depth",
@@ -3383,7 +3383,7 @@
             {
                 "name": "e_sprite_color",
                 "type": "color",
-                "value": "#ffffffff"
+                "value": "#c0c0c0"
             },
             {
                 "name": "e_sprite_frames",
@@ -4003,7 +4003,7 @@
             {
                 "name": "e_glare_ciny",
                 "type": "float",
-                "value": -2
+                "value": 1
             },
             {
                 "name": "e_glare_minAlpha",
@@ -4013,12 +4013,12 @@
             {
                 "name": "e_glare_ox",
                 "type": "int",
-                "value": 64
+                "value": 0
             },
             {
                 "name": "e_glare_oy",
                 "type": "int",
-                "value": 64
+                "value": 0
             },
             {
                 "name": "e_glare_remback",
@@ -6389,6 +6389,11 @@
                 "value": true
             },
             {
+                "name": "e_slave_any",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_slave_monst",
                 "type": "string",
                 "value": ""
@@ -7562,6 +7567,11 @@
                 "name": "e_name",
                 "type": "string",
                 "value": ""
+            },
+            {
+                "name": "e_refresh",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_sort_method",
