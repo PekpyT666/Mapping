@@ -6339,6 +6339,16 @@
                 "value": ""
             },
             {
+                "name": "e_move_npc_spd",
+                "type": "float",
+                "value": 1
+            },
+            {
+                "name": "e_move_npc_type",
+                "type": "int",
+                "value": 2
+            },
+            {
                 "name": "e_move_player",
                 "type": "string",
                 "value": ""

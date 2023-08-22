@@ -1539,6 +1539,8 @@
     "e_slave_monst"         (string)        // name of monster to work with
     "e_move_any"            (string)        // name of entity to move targeted "obj_enemy_base" on it (can be used to manipulate both monsters+NPCs+lanters)
     "e_move_npc"            (string)        // name of entity to move targeted NPC to it
+    "e_move_npc_type"       (int)           // determine "e_slave_npc"'s speed ("0" - sneaking, "1" - walking,"2" - running, "3" - moving with "e_move_npc_spd" speed)
+    "e_move_npc_spd"        (float)         // determine "e_slave_npc"'s speed (if "e_move_npc_type" equal to 3)
     "e_move_monst"          (string)        // name of entity to move targeted monster to it (also can be used to manipulate lanterns)
     "e_move_player"         (string)        // name of entity to move player to it (if 'sequence mode' is enabled)
     "e_move_player_type"    (int)           // sets player movement type ("0" - crawling, "1" - walking, "2" - running, "3" - teleporting, "4" - custom speed)
