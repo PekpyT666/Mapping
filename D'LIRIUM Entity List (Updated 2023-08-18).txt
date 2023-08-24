@@ -1630,6 +1630,7 @@
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
     "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second). After activation enity will count down this amount of time. While counting down it will ignore any incoming activations (don't spawn anything and don't activate it e_target).
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_spawn"               (string)        // object to spawn on activation

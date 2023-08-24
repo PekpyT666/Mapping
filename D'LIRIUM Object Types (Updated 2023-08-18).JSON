@@ -6781,6 +6781,11 @@
                 "value": ""
             },
             {
+                "name": "e_refresh",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_set_dir",
                 "type": "int",
                 "value": 0
