@@ -161,8 +161,8 @@ obj_interact_fridge             - Fridge
 obj_interact_kitchenTumba1      - Kitchen cupboard 1
 obj_interact_kitchenTumba2      - Kitchen cupboard 2
 obj_interact_kitchenTumba3      - Kitchen cupboard 3
-obj_interact_hearth             - Fireplace
-obj_interact_hearthCursed       - Cursed Fireplace
+obj_interact_fireplace          - Fireplace
+obj_interact_fireplace_cursed   - Cursed Fireplace
 							    
 obj_interact_abelLamp           - Cementery Lamp
 obj_interact_torchMansionBig    - Big Ground Torch
