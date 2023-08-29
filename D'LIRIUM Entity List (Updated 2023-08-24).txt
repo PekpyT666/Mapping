@@ -21,7 +21,7 @@
 //There is also prefabs rosources. Basically this is a custommaps that you can spawn inside your main custommap. 
 //They should have "!prefab" prefix in the begining of their name and have ".tmj" file format.
 //You can read more about them in Entity Prefaber notes and properties descriptions.
-    //As example here is a "e_text_file" usage -
+    //As example here is a "e_pref_file" usage -
     //If your custommap named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" then prefab "!prefab_my_test.tmj" should have path "%LocalAppdata%/delirium/maps/my_map/!prefab_my_test.tmj", and "e_prefab_file" property should have "!prefab_my_test" value in it.
 
 
