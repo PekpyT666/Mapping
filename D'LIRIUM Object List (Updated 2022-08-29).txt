@@ -201,8 +201,6 @@ obj_interact_washbasin          - normal washbasin
 obj_interact_washCursed         - cursed washbasin facing right
 obj_interact_washCursedL        - cursed washbasin facing left
 obj_interact_medtumba           - medical cabinet on right wall
-obj_interact_vine               - wine bottle
-obj_interact_vineCup            - cup of wine
 obj_interact_tableMap           - table with map used in industrial level
 obj_interact_plita              - everyone's favourite stove
 
@@ -276,6 +274,8 @@ obj_cycler_bankaC               - empty pot
 obj_cycler_bigPlantA
 obj_cycler_bigPlantB
 obj_cycler_bigPlantC
+obj_cycler_bigPlantD
+obj_cycler_bigPlantE
 obj_cycler_bigVase
 obj_cycler_boxA
 obj_cycler_boxB
@@ -391,6 +391,10 @@ obj_illusionary_torchSmallR         -Small torch on right wall
 obj_illusionary_torchBigF           -Big torch on front wall, used in cathedral
 obj_illusionary_torchBigL           -Big torch on left wall, used in cathedral
 obj_illusionary_torchBigR           -Big torch on right wall, used in cathedral
+
+obj_illusionary_winebottle      - wine bottle
+obj_illusionary_wineglass       - glass of wine
+obj_illusionary_wineglass_empty - empty glass of wine
 							        
 obj_illusionary_darknessA           -dark blood on the wall
 obj_illusionary_darknessB           -dark blood on the wall
@@ -504,8 +508,7 @@ obj_illusionary_potionRnd
 obj_illusionary_smallLeavesA
 obj_illusionary_smallLeavesB
 obj_illusionary_smallLeavesRnd
-obj_illusionary_spiderA
-obj_illusionary_spiderB
+obj_illusionary_spider
 obj_illusionary_stick
 obj_illusionary_sticks
 obj_illusionary_treeMicro
