@@ -184,13 +184,11 @@ obj_interact_indust10           - big blocked pipe
 obj_interact_cursedClaudia      - Cursed Claudia, used in mansion level
 obj_interact_cursedGestas       - Cursed Gestas, used in mansion level
 obj_interact_cursedDismas       - Cursed Dismas, used in mansion level
-obj_interact_gift               - gift used in intro cutscene
 obj_interact_chainGestas        - chained Gestas, used in Industrial level
 obj_interact_chainDismas        - chained Dismas, used in cave level
 obj_interact_personalHeart      - Heart from personal hell
 obj_interact_hangedClaudia      - hanged Claudia, used in cementery level
-obj_interact_Gnome              - Gnome easter egg, used in cementery level
-							    
+
 obj_interact_wood               - breakable wooden boards, used in industrial level
 obj_interact_mansionWindowBig   - breakable window used in Mansion level
 obj_interact_tumba              - big commode
@@ -246,7 +244,8 @@ obj_cycler_abeltable
 obj_cycler_streetChairA
 obj_cycler_streetChairB
 obj_cycler_streetChairC
-obj_cycler_abeltableHell	
+obj_cycler_abeltableHell
+obj_cycler_Gnome                - Gnome easter egg, used in cementery (graveyard) level
                                   
 obj_cycler_sideShkafL
 obj_cycler_sideShkafR
@@ -299,9 +298,10 @@ obj_cycler_diningTumba          - kitchen locker
 obj_cycler_dismasSeat           
 obj_cycler_drova                
 obj_cycler_fishDead             - Hell aquarium 
-obj_cycler_gazetaBig		    - newspapers
+obj_cycler_gazetaBig            - newspapers
 obj_cycler_gestasSeat
-obj_cycler_gift
+obj_cycler_giftA
+obj_cycler_giftB                - gift, used in intro cutscene (in beta versions)
 obj_cycler_giftsA
 obj_cycler_giftsB
 obj_cycler_glassTable
