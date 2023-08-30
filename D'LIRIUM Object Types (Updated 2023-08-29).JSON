@@ -185,25 +185,25 @@
     },
     {
         "color": "#ff0000ff",
-        "name": "entiline_activation",
+        "name": "_entiline_activation",
         "properties": [
         ]
     },
     {
         "color": "#ff00ff00",
-        "name": "entiline_manipulation",
+        "name": "_entiline_manipulation",
         "properties": [
         ]
     },
     {
         "color": "#ffffffff",
-        "name": "entiline_path",
+        "name": "_entiline_path",
         "properties": [
         ]
     },
     {
         "color": "#ffff0000",
-        "name": "entiline_programmation",
+        "name": "_entiline_programmation",
         "properties": [
         ]
     },
