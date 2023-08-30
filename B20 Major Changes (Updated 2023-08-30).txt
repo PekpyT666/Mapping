@@ -1,0 +1,15 @@
+// Renamed objects:
+
+obj_interact_gift         ---> obj_cycler_giftB
+obj_cycler_gift           ---> obj_cycler_giftA
+obj_interact_Gnome        ---> obj_cycler_Gnome
+obj_interact_vine         ---> obj_illusionary_winebottle
+obj_interact_vineCup      ---> obj_illusionary_wineglass
+obj_interact_vineCupEmpty ---> obj_illusionary_wineglass_empty
+obj_illusionary_spiderA   ---> obj_illusionary_spider
+obj_interact_hearth       ---> obj_interact_fireplace
+obj_interact_hearthCursed ---> obj_interact_fireplace_cursed
+obj_chrystmasTreeSmall    ---> obj_cycler_christmastree_small
+obj_chrystmasTreeBig      ---> obj_cycler_christmastree_big
+obj_tree                  ---> obj_cycler_tree_classic
+obj_tree_winter           ---> obj_cycler_tree_classic_winter
