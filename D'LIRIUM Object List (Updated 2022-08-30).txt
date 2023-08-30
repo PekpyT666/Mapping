@@ -132,19 +132,15 @@ Material Rubber         (obj_material_rubber)         - Rubber
 //////// MAP OBJECTS ////////
 ///////////////////////////////////////////////////////////////////////
 
-obj_gamelogo            - The customizable logo shown at the start of the level (In order to use custom logo you must create logo.jpg file (320x240 or 640x480) and place it into mapname folder) 
-obj_tree                - tree from alpha builds
-obj_tree_winter         - tree from alpha builds
-obj_chrystmasTreeBig    - used in intro cutscene and one of the endings
-obj_chrystmasTreeSmall  - used in Mansion level
-obj_bush                - Bush used in cementery level
-obj_Grave               - Tombstone
-obj_nightmarishMass     - Darkness, Native to personal hell
-obj_rave                - Rave trigger?
-obj_gas                 - Gas that comes out of broken conveyors in industrial level, dont use it
-obj_Thunder             - Thunder
-obj_ThunderRed          - Red colored thunder
-obj_explosion           - Explosion
+obj_gamelogo        - The customizable logo shown at the start of the level (In order to use custom logo you must create logo.jpg file (320x240 or 640x480) and place it into mapname folder) 
+obj_bush            - Bush used in cementery level
+obj_Grave           - Tombstone
+obj_nightmarishMass - Darkness, Native to personal hell
+obj_rave            - Rave trigger?
+obj_gas             - Gas that comes out of broken conveyors in industrial level, dont use it
+obj_Thunder         - Thunder
+obj_ThunderRed      - Red colored thunder
+obj_explosion       - Explosion
 
 ///////// PORTALS /////////
 
@@ -219,31 +215,35 @@ obj_interact_frog
 
 /////CYCLERS//////
 
-obj_cycler_corpsePike           - corpse impaled on a pike from personal hell level
-obj_cycler_tableJournal         - small table from Mansion level
-obj_cycler_abelChair            - Abel's personal chair used in mansion level and cave level
-obj_cycler_mansionBooks         - bookshelf from Mansion level
-obj_cycler_bed1                 - Blue bed
-obj_cycler_bed2                 - Pink bed
-obj_cycler_bed3                 - Red bed
-obj_cycler_bedDouble            - Double sized bed
-obj_cycler_bedSide1             - Blue bed placed horizontally
-obj_cycler_bedSide2             - Pink bed placed horizontally
-obj_cycler_pentaSafe            - Pentagram statue from Cathedral
-obj_cycler_pentaHell            - Pentagram statue from Pandemonium
-obj_cycler_lavkaF               - Front bench
-obj_cycler_lavkaL               - Left bench
-obj_cycler_lavkaR               - Right bench
-obj_cycler_cageCorpse           - Caged corpse from pandemonium
-obj_cycler_nightmareTree        - Nightmarish christmas tree from Mansion level
-obj_cycler_tableLibrary         - Table from mansion library
-obj_cycler_tableLibraryWide     - Table from wooden room in caves level
+obj_cycler_tree_classic        - tree from alpha builds
+obj_cycler_tree_classic_winter - tree from alpha builds
+obj_cycler_christmastree_big   - used in intro cutscene and one of the endings
+obj_cycler_christmastree_small - used in Mansion level
+obj_cycler_corpsePike          - corpse impaled on a pike from personal hell level
+obj_cycler_tableJournal        - small table from Mansion level
+obj_cycler_abelChair           - Abel's personal chair used in mansion level and cave level
+obj_cycler_mansionBooks        - bookshelf from Mansion level
+obj_cycler_bed1                - Blue bed
+obj_cycler_bed2                - Pink bed
+obj_cycler_bed3                - Red bed
+obj_cycler_bedDouble           - Double sized bed
+obj_cycler_bedSide1            - Blue bed placed horizontally
+obj_cycler_bedSide2            - Pink bed placed horizontally
+obj_cycler_pentaSafe           - Pentagram statue from Cathedral
+obj_cycler_pentaHell           - Pentagram statue from Pandemonium
+obj_cycler_lavkaF              - Front bench
+obj_cycler_lavkaL              - Left bench
+obj_cycler_lavkaR              - Right bench
+obj_cycler_cageCorpse          - Caged corpse from pandemonium
+obj_cycler_nightmareTree       - Nightmarish christmas tree from Mansion level
+obj_cycler_tableLibrary        - Table from mansion library
+obj_cycler_tableLibraryWide    - Table from wooden room in caves level
 obj_cycler_abeltable
 obj_cycler_streetChairA
 obj_cycler_streetChairB
 obj_cycler_streetChairC
 obj_cycler_abeltableHell
-obj_cycler_Gnome                - Gnome easter egg, used in cementery (graveyard) level
+obj_cycler_Gnome               - Gnome easter egg, used in cementery (graveyard) level
                                   
 obj_cycler_sideShkafL
 obj_cycler_sideShkafR
