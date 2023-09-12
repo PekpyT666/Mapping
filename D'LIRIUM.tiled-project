@@ -303,7 +303,7 @@
             "valuesAsFlags": false
         },
         {
-            "id": 15,
+            "id": 16,
             "name": "Prefaber Mode",
             "storageType": "int",
             "type": "enum",

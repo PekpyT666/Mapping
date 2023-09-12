@@ -7457,7 +7457,7 @@
             },
             {
                 "name": "e_trigger_mode",
-                "propertytype": "Prefaber Mode",
+                "propertytype": "Trigger Mode",
                 "type": "int",
                 "value": 0
             },
