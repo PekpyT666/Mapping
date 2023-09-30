@@ -1645,6 +1645,11 @@
                 "value": ""
             },
             {
+                "name": "e_disable",
+                "type": "bool",
+                "value": true
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -4616,6 +4621,11 @@
                 "name": "e_destroy_target9",
                 "type": "string",
                 "value": ""
+            },
+            {
+                "name": "e_disable",
+                "type": "bool",
+                "value": true
             },
             {
                 "name": "e_name",
