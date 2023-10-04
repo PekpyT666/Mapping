@@ -820,10 +820,6 @@
     "e_sprite_anim"         (float)         // animation speed
     "e_mask"                (string)        // collision mask for current entity
     "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_mask_left"           (int)           // the maximum left position of the bounding box
-    "e_mask_top"            (int)           // the maximum top position of the bounding box
-    "e_mask_right"          (int)           // the maximum right position of the bounding box
-    "e_mask_bottom"         (int)           // the maximum bottom position of the bounding box
     "e_door_open"           (bool)          // door starts in its 'open' position (set "e_sprite_image" parameter to last the frame index ("e_sprite_frame - 1") if "true")
     "e_door_openFrame"      (int)           // sets frame that allows player to pass through door
     "e_door_openAct"        (bool)          // activates targeted entity on open
@@ -1295,10 +1291,6 @@
     "e_sprite_color"    (color || int)  // current entity color
     "e_mask"            (string)        // collision mask for current entity
     "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_mask_left"       (int)           // the maximum left position of the bounding box
-    "e_mask_top"        (int)           // the maximum top position of the bounding box
-    "e_mask_right"      (int)           // the maximum right position of the bounding box
-    "e_mask_bottom"     (int)           // the maximum bottom position of the bounding box
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL"). In this particullar entity can be "!Portal", this will make one of four random portal sounds. 
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
