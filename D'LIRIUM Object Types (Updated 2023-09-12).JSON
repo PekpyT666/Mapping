@@ -10166,6 +10166,12 @@
         ]
     },
     {
+        "color": "#ff183913",
+        "name": "Splash Screen",
+        "properties": [
+        ]
+    },
+    {
         "color": "#ff55aa7f",
         "name": "Trigger Autosave",
         "properties": [
