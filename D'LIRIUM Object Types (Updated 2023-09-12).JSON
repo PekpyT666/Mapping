@@ -7380,6 +7380,11 @@
                 "value": false
             },
             {
+                "name": "e_allowplayerintele",
+                "type": "bool",
+                "value": true
+            },
+            {
                 "name": "e_allowcustom",
                 "type": "string",
                 "value": ""
