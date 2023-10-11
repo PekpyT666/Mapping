@@ -441,6 +441,16 @@
                 "value": "spr_dev_cycler"
             },
             {
+                "name": "e_mask_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_mask_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_mask_remback",
                 "type": "bool",
                 "value": false
@@ -677,6 +687,16 @@
                 "name": "e_mask",
                 "type": "string",
                 "value": "spr_ent_button"
+            },
+            {
+                "name": "e_mask_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_mask_oy",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_mask_remback",
@@ -1501,6 +1521,16 @@
                 "name": "e_mask",
                 "type": "string",
                 "value": "spr_dev_cycler"
+            },
+            {
+                "name": "e_mask_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_mask_oy",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_mask_remback",
@@ -3044,6 +3074,16 @@
                 "value": "spr_Door_Indust"
             },
             {
+                "name": "e_mask_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_mask_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_mask_remback",
                 "type": "bool",
                 "value": false
@@ -3776,6 +3816,16 @@
                 "name": "e_mask",
                 "type": "string",
                 "value": "spr_dev_cycler"
+            },
+            {
+                "name": "e_mask_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_mask_oy",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_mask_remback",
@@ -5280,6 +5330,16 @@
                 "value": "spr_portalIn"
             },
             {
+                "name": "e_mask_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_mask_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_mask_remback",
                 "type": "bool",
                 "value": false
@@ -6043,6 +6103,16 @@
                 "name": "e_mask",
                 "type": "string",
                 "value": "spr_dev_cycler"
+            },
+            {
+                "name": "e_mask_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_mask_oy",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_mask_remback",
@@ -7198,6 +7268,16 @@
                 "value": "spr_ent_switch"
             },
             {
+                "name": "e_mask_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_mask_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_mask_remback",
                 "type": "bool",
                 "value": false
@@ -7587,6 +7667,16 @@
                 "name": "e_mask",
                 "type": "string",
                 "value": "spr_window_mansionWood"
+            },
+            {
+                "name": "e_mask_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_mask_oy",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_mask_remback",
