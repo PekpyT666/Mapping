@@ -1115,10 +1115,19 @@
     "e_sort_ox"           (int)           // x offset of "e_sort_radius"
     "e_sort_oy"           (int)           // y offset of "e_sort_radius"
     
-    //Note about "e_use_console" - steam launcher didn't love when you start steam games from cmd/powershell.
-	//Usually you need to tab-back to the steam launcher main window to recive small question window that will ask "is this actually you are starting game from cmd/powershell?".
-	//If steam at some point killed even this feauture, just use "e_use_messagebox" or "e_use_mini_text" instead.
-    //EDITED about "e_use_console" - in Beta 20 now you can use console command "debug" to open debug overlay which can give you access to see standart output log right in game.
+    //Note - there a three ways of how you can see standart output log (this is where "e_use_console" is write) :
+    //1.
+    //Right in the game.
+    //Easy, but obstructs the view in the game.
+    //Use console command "debug" to open in-game debug overlay and open overlay window "Log".
+    //2.
+    //in the text file.
+    //Good, but you will need LATEST notepad++ and ask google "how to use tail in notepad++".
+    //To force game write standart output log add this line "-output output.txt -debugoutput output.txt" in to the D'LIRIUM steam comand line parameters field ("Game"-->"Properties..."-->"General"-->"LAUNCH OPTIONS").
+    //3.
+    //In the git-bash/cmd/powershell.
+    //It's possible, but for some reason we managed it to work only in MINGW64 git-bash :thinking:
+    //You are on your own here.
 }
 
 //-------------------- Entity Movement (ent_movement) --------------------//
