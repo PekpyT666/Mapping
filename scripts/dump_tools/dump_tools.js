@@ -63,10 +63,19 @@ const remove_defaults_from_objects = tiled.registerAction("Remove properties wit
                     current_layer.objects.forEach(function (processedObject) {
                         let originalProperties = processedObject.properties();
                         for (const [key, value] of Object.entries(originalProperties)) {
-                            if (typeof (value) === "object" && value.toString().charAt(0) == "#" && value.toString().length == 7) continue //skip colors objects
+                            let return_it = false;
+
                             processedObject.removeProperty(key); // remove property
                             let defaultProperty = processedObject.resolvedProperty(key)
-                            if (!(defaultProperty === value || ((typeof(defaultProperty) === "object") && defaultProperty.value === value))) {
+                            if (typeof (value) === "object" && value.toString().charAt(0) == "#" && value.toString().length == 7) return_it = true //skip colors objects
+                            if (typeof (defaultProperty) === "object" && defaultProperty.toString().charAt(0) == "#" && defaultProperty.toString().length == 7) return_it = true //skip properties that by default are colors objects
+                            // if (key === "e_sort_method") {
+                            //     tiled.log("value = " + value);
+                            //     tiled.log("value.value = " + value.value);
+                            //     tiled.log("defaultProperty = " + defaultProperty);
+                            //     tiled.log("defaultProperty.value = " + defaultProperty.value);
+                            // }
+                            if (return_it || (!(defaultProperty === value || ((typeof (defaultProperty) === "object") && (defaultProperty.value === value || defaultProperty.value === value.value))))) {
                                 processedObject.setProperty(key, value); //return property back only if it has non-default value
                             }
                         }
@@ -86,10 +95,41 @@ tiled.extendMenu("Map", [
 
 
 
+const remove_temp_values_from_objects = tiled.registerAction("Remove _temp_ properties (objects)", function () {
+    let map = tiled.activeAsset;
+    map.macro("Remove _temp_ properties (objects)", function () {
+        let also_remove_flag_properties = tiled.confirm("Remove _term_ and _timer_ properties too ?\n_term_ and _timer_ properties are flags that necessary if you trying to load dumped level(that already runned for some time before being dumped) but they 100% unnecessary if you trying to load saved story mode level(that saved by game in first game tick) . Be careful though : we (D'LIRIUM developers) don't use these properties (manually on level start) in story mode , but there is no guarantee that other mappers won't .", "Full clear ?")
+        for (let i = 0; i < map.layerCount; i++) {
+            current_layer = map.layerAt(i);
+            if (current_layer.isObjectLayer) {                          //игнорировать необъектные слои
+                if (current_layer.objects != null) {                    //на случай , если слой не будет иметь объектов вообще
+                    current_layer.objects.forEach(function (processedObject) {
+                        let properties = processedObject.properties();
+                        for (const [key, value] of Object.entries(properties)) {
+                            if (key.includes("_temp_")) processedObject.removeProperty(key);
+                            if (also_remove_flag_properties && key.includes("_term_")) processedObject.removeProperty(key);
+                            if (also_remove_flag_properties && key.includes("_timer_")) processedObject.removeProperty(key);
+                        }
+                    });
+                }
+            }
+        }
+    });
+})
+
+remove_temp_values_from_objects.text = "Remove _temp_ properties (objects)";
+remove_temp_values_from_objects.icon = "ext:aaaaaaaaa.png";
+
+tiled.extendMenu("Map", [
+    { action: "Remove _temp_ properties (objects)", before: "SelectNextTileset" }
+]);
+
+
+
 const remove_builtins_from_objects = tiled.registerAction("Remove engine built-in properties (objects)", function () {
     let map = tiled.activeAsset;
     map.macro("Remove engine built-in properties (objects)", function () {
-        let remove_speed_and_direction = tiled.confirm("Remove speed and direction properties too ? Direction is used as is by some objects (e.g. player and monsters will look only on right without it) !","Full clear ?")
+        let remove_speed_and_direction = tiled.confirm("Remove speed and direction properties too ? Direction is used as is by some objects (e.g. player and monsters will look only on right without it) !", "Full clear ?");
         for (let i = 0; i < map.layerCount; i++) {
             current_layer = map.layerAt(i);
             if (current_layer.isObjectLayer) {                          //игнорировать необъектные слои
@@ -125,7 +165,7 @@ const remove_builtins_from_objects = tiled.registerAction("Remove engine built-i
                                 case "direction":
                                 case "speed":
                                     if (remove_speed_and_direction) processedObject.removeProperty(key);
-                                    break;                          
+                                    break;
                                 default:
                                     break;
                             }
@@ -190,6 +230,38 @@ tiled.extendMenu("Map", [
 
 
 
+const select_all_objects_with_not_classic_sorts = tiled.registerAction("Select all objects with non classic sorts", function () {
+    let map = tiled.activeAsset;
+    for (let i = 0; i < map.layerCount; i++) {
+        current_layer = map.layerAt(i);
+        if (current_layer.isObjectLayer) {                          //игнорировать необъектные слои
+            if (current_layer.objects != null) {                    //на случай , если слой не будет иметь объектов вообще
+                current_layer.objects.forEach(function (processedObject) {
+                    let properties = processedObject.properties();
+                    for (const [key, value] of Object.entries(properties)) {
+                        if (key === "e_sort_method") {
+                            if (typeof (value) === "object") {
+                                if (value.value !== 0) processedObject.selected = true;
+                            } else {
+                                if (value !== 0) processedObject.selected = true;
+                            }
+                        }
+                    }
+                });
+            }
+        }
+    }
+})
+
+select_all_objects_with_not_classic_sorts.text = "Select all objects with non classic sorts";
+select_all_objects_with_not_classic_sorts.icon = "ext:aaaaaaaaa.png";
+
+tiled.extendMenu("Map", [
+    { action: "Select all objects with non classic sorts", before: "SelectNextTileset" }
+]);
+
+
+
 const about_dump_tools = tiled.registerAction("About dump tools", function () {
     let message = "\t     \"Dump tools\" by Grif_on .\n\
     Main purpose of thous tools is to automatize work with D'LIRIUM dubug/dump files .\n\
@@ -203,6 +275,10 @@ const about_dump_tools = tiled.registerAction("About dump tools", function () {
     Simply say - it will turn all dark properties in to grey if such property have default value .\n\
     Note , colors properties are not affected .\n\
     \n\
+    =====Remove _temp_ properties (objects)=====\n\
+    This tool will itterate over all your objects and delete any property that contain \"_temp_\" in it's name ? Temp properties is a cache and they are fully restorble so you can get rid of them them safely .\n\
+    You can also remove properties that contains \"_term_\" and \"_timer_\" in their name . Term and timer properties contains states of entities , so if you are just want to clean saved STORY map , you can safely delete them . But if you want to tinker around dumped level you are trongly recomended to keep terms and timers .\n\
+    \n\
     =====Remove engine built-in properties (objects)=====\n\
     This tool will itterate over all your objects and delete this list of properties [xprevious, yprevious, xstart, ystart, alarm, depth, sprite_index, image_alpha, image_angle, image_blend, image_index, image_speed, mask_index, sprite_width, sprite_height, sprite_xoffset, sprite_yoffset, image_number, bbox_bottom, bbox_left, bbox_right, bbox_top ] .\n\
     In most cases you don't need them , their role is to be just an helpfull information in the game full dump . But you can use this tool to remove direction property from all objects .\n\
@@ -210,6 +286,10 @@ const about_dump_tools = tiled.registerAction("About dump tools", function () {
     =====Remove !!!non_json!!! properties (objects and global)=====\n\
     This tool will itterate over all your objects and delete any property wich ends with one of following [!!!ARRAY!!!, !!!UNDEFINED!!!, !!!INFINITY!!!, !!!NAN!!!, !!!STRUCT!!!, !!!METHOD!!!, !!!UNKNOWN!!!] .\n\
     Your map will never (and should not) have this properties , they appear only in full dump that created when game crashed . They have string type and altered names because tiled map format didn't support any of them .\n\
+    \n\
+    =====Select all objects with non classic sorts=====\n\
+    This tool will itterate over all your objects and select objects that have e_sort_method != \"No Sorting\" (or e_sort_method != 0) .\n\
+    Note - your previous selection is not cleared .\n\
     \n\
     Github page of this script - https://github.com/grif-on/dump_tools .\n\n\
     This message also printed in to tiled console log .";
