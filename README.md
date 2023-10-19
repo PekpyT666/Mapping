@@ -13,11 +13,15 @@ Feel free to open a pool request.
 But please, if you found a bug in one of the .js scripts, open a pool request for respective repository instead of this one.
 
 ` `
-[move_player](https://github.com/grif-on/move_player)
-` `
 [dev_vs_pretty](https://github.com/grif-on/dev_vs_pretty)
 ` `
-[startup_layers](https://github.com/grif-on/startup_layers)
-` `
 [dump_tools](https://github.com/grif-on/dump_tools)
+` `
+[move_player](https://github.com/grif-on/move_player)
+` `
+[place_all_d_objects](https://github.com/grif-on/place_all_d_objects.git)
+` `
+[start_delirium](https://github.com/grif-on/start_delirium.git)
+` `
+[startup_layers](https://github.com/grif-on/startup_layers)
 ` `
