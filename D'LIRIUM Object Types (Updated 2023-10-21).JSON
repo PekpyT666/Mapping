@@ -835,6 +835,11 @@
                 "value": 24
             },
             {
+                "name": "e_usetype",
+                "type": "int",
+                "value": 8
+            },
+            {
                 "name": "f_difficulty_chicken",
                 "type": "bool",
                 "value": true
@@ -3225,6 +3230,11 @@
                 "value": 32
             },
             {
+                "name": "e_usetype",
+                "type": "int",
+                "value": 7
+            },
+            {
                 "name": "e_useonly",
                 "type": "bool",
                 "value": true
@@ -3983,6 +3993,11 @@
                 "name": "e_usedistance",
                 "type": "int",
                 "value": 32
+            },
+            {
+                "name": "e_usetype",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "f_difficulty_chicken",
@@ -5486,6 +5501,11 @@
                 "value": 8
             },
             {
+                "name": "e_usetype",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_useonly",
                 "type": "bool",
                 "value": false
@@ -6260,6 +6280,11 @@
                 "name": "e_usedistance",
                 "type": "int",
                 "value": 24
+            },
+            {
+                "name": "e_usetype",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "f_difficulty_chicken",
@@ -7422,6 +7447,11 @@
                 "name": "e_usedistance",
                 "type": "int",
                 "value": 24
+            },
+            {
+                "name": "e_usetype",
+                "type": "int",
+                "value": 8
             },
             {
                 "name": "f_difficulty_chicken",
