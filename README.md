@@ -4,8 +4,10 @@ This repository contains the documentation and programs that you need to create 
 
 These files are also shipped alongside with the game on steam.
 <picture>
-  <img src="https://media.discordapp.net/attachments/697540199739293797/1141682612969156758/mapping.png?width=876&height=445">
+  <img src="https://github.com/PekpyT666/Mapping/blob/main/Screenshot.png">
 </picture>
+
+To get started, please read the "!READ ME BEFORE YOU BEGIN!" text file.
 
 # Found a typo/bug/inaccuracy?
 Feel free to open a pool request.
