@@ -1,4 +1,4 @@
-//===========================================================================================//
+﻿//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -2115,95 +2115,95 @@
 
                                 ////global variables////
 {
-    "unload_entities"           (bool)          // (false by default) all entities loaded if "false", entities that are in the visible range and in range of Entity Active Area (ent_forceload_area) will be loaded (you can manually manage entities load on CPU) if "true". (It is worth nothing to mention that Entity Prefaber is also good for optimization of big maps with many entities) .
-    "last_console_command"      (string)        // last executed console command, on level start initialized with empty string
+    "unload_entities"           (bool)            // (false by default) all entities loaded if "false", entities that are in the visible range and in range of Entity Active Area (ent_forceload_area) will be loaded (you can manually manage entities load on CPU) if "true". (It is worth nothing to mention that Entity Prefaber is also good for optimization of big maps with many entities) .
+    "last_console_command"      (string)          // last executed console command, on level start initialized with empty string
     
-    "prefabers_unique_id_last"  (string)        // string that used to instantiate last prefab, also if equal to "000000000" then no prefabs are instantiated on map yet (read only)
-    "prefabers_unique_id"       (int)           // number that is used to create "prefabers_unique_id_last" string
+    "prefabers_unique_id_last"  (string)          // string that used to instantiate last prefab, also if equal to "000000000" then no prefabs are instantiated on map yet (read only)
+    "prefabers_unique_id"       (int)             // number that is used to create "prefabers_unique_id_last" string
 
-    "player_sanity"             (float)         // player sanity
-    "player_toxins"             (float)         // player toxins
-    "player_health"             (float)         // player health
-    "player_maniac_score"       (float)         // player maniac points
-    "player_infected"           (bool)          // player infection state
-    "player_teleport"           (bool)          // player teleportation
-    "player_allowcombat"        (bool)          // allow player to fight
-    "player_allowflashlight"    (bool)          // allow player to use flashlight
+    "player_sanity"             (float)           // player sanity
+    "player_toxins"             (float)           // player toxins
+    "player_health"             (float)           // player health
+    "player_maniac_score"       (float)           // player maniac points
+    "player_infected"           (bool)            // player infection state
+    "player_teleport"           (bool)            // player teleportation
+    "player_allowcombat"        (bool)            // allow player to fight
+    "player_allowflashlight"    (bool)            // allow player to use flashlight
 
-    "inventory_key_steel"       (bool)          // player has the steel (blue) key if "true"
-    "inventory_key_brass"       (bool)          // player has the brass (yellow) key if "true"
-    "inventory_key_copper"      (bool)          // player has the copper (red) key if "true"
+    "inventory_key_steel"       (bool)            // player has the steel (blue) key if "true"
+    "inventory_key_brass"       (bool)            // player has the brass (yellow) key if "true"
+    "inventory_key_copper"      (bool)            // player has the copper (red) key if "true"
     "inventory_key_custom"      (array of colors) // each entry in array represents that player have custom key of such color (Note - info about empty slots for custom keys stored in the "hud_key_custom" variable of the obj_controller . It is also an array of colors)
-    "inventory_map"             (bool)          // player can use map if "true"
-    "inventory_map_score"       (bool)          // sacrifices count (5 max)
-    "inventory_melee"           (bool)          // Player can use melee weapons if "true"
-    "inventory_fireball"        (bool)          // Player can use Fireball spell if "true"
-    "inventory_plasma"          (bool)          // Player can use Plasma spell if "true"
-    "inventory_sorcery"         (int)           // number of Sorcery spell charges
-    "inventory_shaft"           (int)           // number of Shaft spell charges
-    "inventory_teleport"        (bool)          // Player can use Teleport spell if "true"
+    "inventory_map"             (bool)            // player can use map if "true"
+    "inventory_map_score"       (bool)            // sacrifices count (5 max)
+    "inventory_melee"           (bool)            // Player can use melee weapons if "true"
+    "inventory_fireball"        (bool)            // Player can use Fireball spell if "true"
+    "inventory_plasma"          (bool)            // Player can use Plasma spell if "true"
+    "inventory_sorcery"         (int)             // number of Sorcery spell charges
+    "inventory_shaft"           (int)             // number of Shaft spell charges
+    "inventory_teleport"        (bool)            // Player can use Teleport spell if "true"
 
-    "stats_kills"               (int)           // player kills on the level
-    "stats_items"               (int)           // player item pickups on the level
-    "stats_secrets"             (int)           // secrets found on the level
-    "stats_seconds"             (int)           // wasted seconds on the current level (read only)
-    "stats_minutes"             (int)           // wasted minutes on the current level (read only)
-    "stats_kills_goal"          (int)           // kills goal on the level
-    "stats_items_goal"          (int)           // items goal on the level
-    "stats_secrets_goal"        (int)           // secrets goal on the level
-    "stats_kills_total"         (int)           // kills total
-    "stats_items_total"         (int)           // items found total
-    "stats_secrets_total"       (int)           // secrets found total
-    "stats_seconds_total"       (int)           // wasted seconds total (read only)
-    "stats_minutes_total"       (int)           // wasted minutes total (read only)
-    "stats_hours_total"         (int)           // wasted hours total (read only)
-    "stats_time"                (float)         // real timer of wasted time on the current level, mesuared in ticks (one tick is 1/30 of a second)
-    "stats_time_total"          (float)         // real timer of wasted total time, mesuared in ticks (one tick is 1/30 of a second)
-    "stats_soulsave_total"      (int)           // souls saved total
-    "stats_soulkill_total"      (int)           // souls destroyed total
+    "stats_kills"               (int)             // player kills on the level
+    "stats_items"               (int)             // player item pickups on the level
+    "stats_secrets"             (int)             // secrets found on the level
+    "stats_seconds"             (int)             // wasted seconds on the current level (read only)
+    "stats_minutes"             (int)             // wasted minutes on the current level (read only)
+    "stats_kills_goal"          (int)             // kills goal on the level
+    "stats_items_goal"          (int)             // items goal on the level
+    "stats_secrets_goal"        (int)             // secrets goal on the level
+    "stats_kills_total"         (int)             // kills total
+    "stats_items_total"         (int)             // items found total
+    "stats_secrets_total"       (int)             // secrets found total
+    "stats_seconds_total"       (int)             // wasted seconds total (read only)
+    "stats_minutes_total"       (int)             // wasted minutes total (read only)
+    "stats_hours_total"         (int)             // wasted hours total (read only)
+    "stats_time"                (float)           // real timer of wasted time on the current level, mesuared in ticks (one tick is 1/30 of a second)
+    "stats_time_total"          (float)           // real timer of wasted total time, mesuared in ticks (one tick is 1/30 of a second)
+    "stats_soulsave_total"      (int)             // souls saved total
+    "stats_soulkill_total"      (int)             // souls destroyed total
 
-    "arcade_score"              (int)           // player score in arcade mode
-    "developer"                 (bool)          // developer mode if "true"
-    "cheat_godmode"             (bool)          // makes player invincible if "true"
-    "cheat_noclip"              (bool)          // no wall collision for player if "true"
-    "cheat_notarget"            (bool)          // disable monsters AI if "true"
-    "difficulty"                (int)           // game difficulty (0 to 4)    
-    "pain_start"                (bool)          // plays player pain effect if "true"
-    "collect_alpha"             (float)         // plays picking item effect if > "0" ("0.25" is default)
-    "maniac_hud_transparency"   (float)         // strength of maniac mask effect on screen (from 0 to 1)
-    "flashlight"                (bool)          // enable or disable the flashlight
-    "flashlight_flick"          (float)         // flashlight flickering if > "0"
-    "gui_hud"                   (bool)          // defines HUD visibility
-    "gui_cursor"                (bool)          // defines Cursor visibility
-    "interaction"               (bool)          // presses <USE> button if "true"
-    "game_outside_frame"        (bool)          // draw background frame outside game window
-    "sequence_enabled"          (bool)          // enables sequence mode if "true"
-    "arcade_finish"             (bool)          // Defines if player has finished his run in the arcade mode
+    "arcade_score"              (int)             // player score in arcade mode
+    "developer"                 (bool)            // developer mode if "true"
+    "cheat_godmode"             (bool)            // makes player invincible if "true"
+    "cheat_noclip"              (bool)            // no wall collision for player if "true"
+    "cheat_notarget"            (bool)            // disable monsters AI if "true"
+    "difficulty"                (int)             // game difficulty (0 to 4)    
+    "pain_start"                (bool)            // plays player pain effect if "true"
+    "collect_alpha"             (float)           // plays picking item effect if > "0" ("0.25" is default)
+    "maniac_hud_transparency"   (float)           // strength of maniac mask effect on screen (from 0 to 1)
+    "flashlight"                (bool)            // enable or disable the flashlight
+    "flashlight_flick"          (float)           // flashlight flickering if > "0"
+    "gui_hud"                   (bool)            // defines HUD visibility
+    "gui_cursor"                (bool)            // defines Cursor visibility
+    "interaction"               (bool)            // presses <USE> button if "true"
+    "game_outside_frame"        (bool)            // draw background frame outside game window
+    "sequence_enabled"          (bool)            // enables sequence mode if "true"
+    "arcade_finish"             (bool)            // Defines if player has finished his run in the arcade mode
 
-    "gamemode_deathrun"         (int)           // deathrun lap
-    "gamemode_randomrun"        (bool)          // enables random run if "true"
-    "gamemode_lanterns"         (bool)          // enables lantern invasion if "true"
+    "gamemode_deathrun"         (int)             // deathrun lap
+    "gamemode_randomrun"        (bool)            // enables random run if "true"
+    "gamemode_lanterns"         (bool)            // enables lantern invasion if "true"
 
-    "level_music"               (bool)          // plays arcade music on the level if "true"
-    "level_lantern"             (bool)          // enables lantern level type if "true"
-    "level_lantern_allowed"     (bool)          // defines if it's possible to enable Lanterns mode on the level
-    "level_lightmap"            (color)         // level environment color
+    "level_music"               (bool)            // plays arcade music on the level if "true"
+    "level_lantern"             (bool)            // enables lantern level type if "true"
+    "level_lantern_allowed"     (bool)            // defines if it's possible to enable Lanterns mode on the level
+    "level_lightmap"            (color)           // level environment color
 
-    "rune_quad"                 (bool)          // gives quad rune if "true"
-    "rune_protection"           (bool)          // gives protection rune if "true"
-    "rune_vision"               (bool)          // gives vision rune if "true"
-    "rune_nuke"                 (bool)          // gives ??? rune if "true"
-    "sorcery_progress"          (bool)          // enable sorcery mode 
+    "rune_quad"                 (bool)            // gives quad rune if "true"
+    "rune_protection"           (bool)            // gives protection rune if "true"
+    "rune_vision"               (bool)            // gives vision rune if "true"
+    "rune_nuke"                 (bool)            // gives ??? rune if "true"
+    "sorcery_progress"          (bool)            // enable sorcery mode 
    
-    "current_spell"             (int)           // current spell
-    "mod_fireball_current"      (int)           // current Fireball modifier
-    "mod_plasma_current"        (int)           // current Plasma modifier
-    "mod_teleport_current"      (int)           // current Teleport modifier
-    "mod_melee_current"         (int)           // current melee weapon
+    "current_spell"             (int)             // current spell
+    "mod_fireball_current"      (int)             // current Fireball modifier
+    "mod_plasma_current"        (int)             // current Plasma modifier
+    "mod_teleport_current"      (int)             // current Teleport modifier
+    "mod_melee_current"         (int)             // current melee weapon
 
-    "powerup_knife"             (int)           // knife damage multiplier (increases each time the player get a second and subsequent knifes)
-    "powerup_needles"           (int)           // needles damage multiplier (increases each time the player get a second and subsequent needles)
-    "powerup_wrench"            (int)           // wrench damage multiplier (increases each time the player get a second and subsequent wrenches)
-    "powerup_fireball"          (int)           // fireball damage multiplier (increases each time the player get a fourth and subsequent fireballs)
-    "powerup_plasma"            (int)           // plasma damage multiplier (increases each time the player get a fourth and subsequent plasma)
+    "powerup_knife"             (int)             // knife damage multiplier (increases each time the player get a second and subsequent knifes)
+    "powerup_needles"           (int)             // needles damage multiplier (increases each time the player get a second and subsequent needles)
+    "powerup_wrench"            (int)             // wrench damage multiplier (increases each time the player get a second and subsequent wrenches)
+    "powerup_fireball"          (int)             // fireball damage multiplier (increases each time the player get a fourth and subsequent fireballs)
+    "powerup_plasma"            (int)             // plasma damage multiplier (increases each time the player get a fourth and subsequent plasma)
 }
