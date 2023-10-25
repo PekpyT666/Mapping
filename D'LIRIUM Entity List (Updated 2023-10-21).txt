@@ -405,6 +405,7 @@
 {
     //@brief - Used when you need to execute console command on your map.
     //@shape - always point
+    //@unoptimized - try to not spam activation of this entity
 
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
@@ -1104,6 +1105,7 @@
 {
     //@brief - Used when you need to debug your map. Hightly customisable, but you can start simply by suppling "e_input_target" and "e_input_parm".
     //@shape - always point
+    //@unoptimized - try to not spam activation of this entity
     
     "e_activated"         (bool)          // current entity activation ("true" if must activate on start).
     "e_name"              (string)        // current entity name.
