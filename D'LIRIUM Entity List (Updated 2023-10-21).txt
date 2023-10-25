@@ -401,6 +401,22 @@
     }
 }
 
+//-------------------- Entity Console (ent_console) --------------------//
+{
+    //@brief - Used when you need to execute console command on your map.
+    //@shape - always point
+
+    "e_name"            (string)        // current entity name
+    "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
+    "e_command"         (string)        // command to execute when entity activated. Executed before e_script.
+    "e_script           (string)        // name (without extension) of the .dscript file to execute commands from it.
+    "e_cheater_flag"    (bool)          // if false then player will not be marked as cheater. Set it to true if you are implementing your own cheat/debug system (i.e. if this entity will not indended to be activated in a normal playthrough of your level).
+    "e_respond_sound"   (bool)          // if false then entity will not produce any sound that you regularly hear when executing commands manually. Set it to true if you need to debug your mechanism.
+        //Note - if you need to use complex commands, then you need to execute command "level enable complex commands" first (NOT just "enable complex commands"). You need to do this only once, right after the level start. This command will initialise all needed resources for complex commands to work, but will forbid player to use complex commands via manual console (unless player will enable them by himself explicitly via manual console). "level enable complex commands" is bound to level thus will not affect other custommaps or story mode.
+        //You can't use this command manually!
+}
+
 //-------------------- Entity Constant (ent_constant) --------------------//
 {
     //@brief - Used when you need to program(write) value(that you get from game vide constant) in to another entity. Like vanilla colors (that you can write in to level_lightmap/e_sprite_color/e_light_color/etc), monsters maxHP/speed/viewdistance, items heal/damage and many more others. This also ensures that your map will use the right values on whichever version of the game it is running on.
