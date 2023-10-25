@@ -2142,6 +2142,9 @@
     "player_sanity"             (float)           // player sanity
     "player_toxins"             (float)           // player toxins
     "player_health"             (float)           // player health
+    "no_auto_heal_sanity"       (bool)            // if true then player will not have natural regeneration of sanity
+    "no_auto_heal_toxins"       (bool)            // if true then player will not have natural regeneration of toxins
+    "no_auto_heal_health"       (bool)            // if true then player will not have natural regeneration of health
     "player_maniac_score"       (float)           // player maniac points
     "player_infected"           (bool)            // player infection state
     "player_teleport"           (bool)            // player teleportation
