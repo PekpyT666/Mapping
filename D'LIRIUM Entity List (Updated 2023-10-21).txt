@@ -2115,7 +2115,7 @@
 
                                 ////global variables////
 {
-    "unload_entities"           (bool)          // (false by default) all entities loaded if "false", entities that are in the visible range and in range of %PrettyName% (ent_forceload) will be loaded (you can manually manage entities load on CPU) if "true"
+    "unload_entities"           (bool)          // (false by default) all entities loaded if "false", entities that are in the visible range and in range of Entity Active Area (ent_forceload_area) will be loaded (you can manually manage entities load on CPU) if "true". (It is worth nothing to mention that Entity Prefaber is also good for optimization of big maps with many entities) .
     "last_console_command"      (string)        // last executed console command, on level start initialized with empty string
     
     "prefabers_unique_id_last"  (string)        // string that used to instantiate last prefab, also if equal to "000000000" then no prefabs are instantiated on map yet (read only)
@@ -2132,7 +2132,7 @@
 
     "inventory_key_steel"       (bool)          // player has the steel (blue) key if "true"
     "inventory_key_brass"       (bool)          // player has the brass (yellow) key if "true"
-    "inventory_key_copper"      (bool)          // player has the commer (red) key if "true"
+    "inventory_key_copper"      (bool)          // player has the copper (red) key if "true"
     "inventory_key_custom"      (array of colors) // each entry in array represents that player have custom key of such color (Note - info about empty slots for custom keys stored in the "hud_key_custom" variable of the obj_controller . It is also an array of colors)
     "inventory_map"             (bool)          // player can use map if "true"
     "inventory_map_score"       (bool)          // sacrifices count (5 max)
