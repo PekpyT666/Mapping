@@ -2133,6 +2133,7 @@
     "inventory_key_steel"       (bool)          // player has the steel (blue) key if "true"
     "inventory_key_brass"       (bool)          // player has the brass (yellow) key if "true"
     "inventory_key_copper"      (bool)          // player has the commer (red) key if "true"
+    "inventory_key_custom"      (array of colors) // each entry in array represents that player have custom key of such color (Note - info about empty slots for custom keys stored in the "hud_key_custom" variable of the obj_controller . It is also an array of colors)
     "inventory_map"             (bool)          // player can use map if "true"
     "inventory_map_score"       (bool)          // sacrifices count (5 max)
     "inventory_melee"           (bool)          // Player can use melee weapons if "true"
