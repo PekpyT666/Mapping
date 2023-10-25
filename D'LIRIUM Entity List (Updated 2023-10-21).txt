@@ -2122,7 +2122,7 @@
     "prefabers_unique_id"       (int)           // number that is used to create "prefabers_unique_id_last" string
 
     "player_sanity"             (float)         // player sanity
-    "player_toxin"              (float)         // player toxins
+    "player_toxins"             (float)         // player toxins
     "player_health"             (float)         // player health
     "player_maniac_score"       (float)         // player maniac points
     "player_infected"           (bool)          // player infection state

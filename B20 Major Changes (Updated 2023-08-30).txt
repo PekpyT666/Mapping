@@ -14,3 +14,6 @@ obj_chrystmasTreeBig      ---> obj_cycler_christmastree_big
 obj_tree                  ---> obj_cycler_tree_classic
 obj_tree_winter           ---> obj_cycler_tree_classic_winter
 obj_cycler_corpsePike     ---> obj_interact_corpsePike
+
+// Renamed global variables:
+player_toxin              ---> player_toxins
