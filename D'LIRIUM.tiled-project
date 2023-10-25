@@ -314,6 +314,27 @@
                 "Save (types) into internal storage"
             ],
             "valuesAsFlags": false
+        },
+        {
+            "id": 17,
+            "name": "Entity Use Type",
+            "storageType": "int",
+            "type": "enum",
+            "values": [
+                "common",
+                "inspect",
+                "talk",
+                "pick up",
+                "save",
+                "sorcery",
+                "gift",
+                "door",
+                "button press",
+                "search",
+                "use",
+                "nothing"
+            ],
+            "valuesAsFlags": false
         }
     ]
 }

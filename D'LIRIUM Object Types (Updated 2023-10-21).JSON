@@ -836,6 +836,7 @@
             },
             {
                 "name": "e_usetype",
+                "propertytype": "Entity Use Type",
                 "type": "int",
                 "value": 8
             },
@@ -3231,6 +3232,7 @@
             },
             {
                 "name": "e_usetype",
+                "propertytype": "Entity Use Type",
                 "type": "int",
                 "value": 7
             },
@@ -3996,6 +3998,7 @@
             },
             {
                 "name": "e_usetype",
+                "propertytype": "Entity Use Type",
                 "type": "int",
                 "value": 0
             },
@@ -5502,6 +5505,7 @@
             },
             {
                 "name": "e_usetype",
+                "propertytype": "Entity Use Type",
                 "type": "int",
                 "value": 0
             },
@@ -6283,6 +6287,7 @@
             },
             {
                 "name": "e_usetype",
+                "propertytype": "Entity Use Type",
                 "type": "int",
                 "value": 0
             },
@@ -7450,6 +7455,7 @@
             },
             {
                 "name": "e_usetype",
+                "propertytype": "Entity Use Type",
                 "type": "int",
                 "value": 8
             },
