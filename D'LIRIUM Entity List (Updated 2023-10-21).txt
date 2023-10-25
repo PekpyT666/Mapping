@@ -165,7 +165,7 @@
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_depth"               (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_usedistance"         (int)           // current entity use distance
-    "e_usetype"             (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use)
+    "e_usetype"             (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use, "11" - nothing)
     "e_shooter"             (bool)          // can be activated by shooting
     "e_toggle"              (bool)          // entity can be activated only by other entity
     "e_allowmonsters"       (bool)          // allows monsters to activate entity
@@ -839,7 +839,7 @@
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_usedistance"         (int)           // current entity use distance
-    "e_usetype"             (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use)
+    "e_usetype"             (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use, "11" - nothing)
     "e_toggle"              (bool)          // entity can be activated only by other entity
     "e_useonly"             (bool)          // entity can be activated by pressing <USE> button
     "e_block"               (bool)          // blocks current entity until refresh
@@ -994,7 +994,7 @@
     "e_interact_type"       (int)           // sets animation type ("0" to "12", any other value will activate targeted entity)
     "e_interact_visible"    (bool)          // sets entity visibility while being deactivated
     "e_usedistance"         (int)           // current entity use distance
-    "e_usetype"             (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use)
+    "e_usetype"             (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use, "11" - nothing)
     "e_toggle"              (bool)          // entity can be activated only by other entity
     "e_shooter"             (bool)          // can be activated by shooting
     "e_allowmonsters"       (bool)          // allows monsters to activate entity
@@ -1322,7 +1322,7 @@
     "e_toggle"          (bool)          // entity can be activated only by other entity
     "e_useonly"         (bool)          // entity can be activated by pressing <USE> button. I.e. set this to true if you need to teleport colliding player/monster/NPC only when player USEd teleport or when it is activated by other entity.
     "e_usedistance"     (int)           // current entity use distance
-    "e_usetype"         (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use)
+    "e_usetype"         (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use, "11" - nothing)
     "e_jump_target"     (string)        // name of entity to place current entity on it
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
@@ -1517,7 +1517,7 @@
     "e_shadow"          (bool)          // allow entity to cast a shadow
     "e_shadow_bot"      (bool)          // sets shadow to cast from bottom side
     "e_usedistance"     (int)           // current entity use distance (0 or lower to be not usable by player)
-    "e_usetype"         (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use)
+    "e_usetype"         (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use, "11" - nothing)
     "e_toggle"          (bool)          // current entity can be activated only by other entity
     "e_rot_speed"       (int)           // rotating speed with wich "e_sprite_angle" will change every tick (negative value will rotate sprite in other direction)
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
@@ -1726,7 +1726,7 @@
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_depth"               (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_usedistance"         (int)           // current entity use distance
-    "e_usetype"             (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use)
+    "e_usetype"             (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use, "11" - nothing)
     "e_block"               (bool)          // blocks current entity until refresh
     "e_toggle"              (bool)          // entity can be activated only by other entity
     "e_shooter"             (bool)          // can be activated by shooting
