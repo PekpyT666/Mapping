@@ -2169,6 +2169,7 @@
     "difficulty"                (int)           // game difficulty (0 to 4)    
     "pain_start"                (bool)          // plays player pain effect if "true"
     "collect_alpha"             (float)         // plays picking item effect if > "0" ("0.25" is default)
+    "maniac_hud_transparency"   (float)         // strength of maniac mask effect on screen (from 0 to 1)
     "flashlight"                (bool)          // enable or disable the flashlight
     "flashlight_flick"          (float)         // flashlight flickering if > "0"
     "gui_hud"                   (bool)          // defines HUD visibility
