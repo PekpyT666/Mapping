@@ -19,17 +19,18 @@ Create a link to one of them on your desktop or wherever you like.
 
 //---------- GENERAL MAPPING RULES ----------//
 
-1.  Do not make infinity sized maps!
-2.  Do not make maps with height more than 12000px!
-3.  "Embed in map" flag must be enabled when you creating tiles!
-4.  Always use type "Based on Tileset Image" when you creating tiles!
-5.  Always set "depth" parameter for all your layers!
-6.  All layers below player must have "depth" parameter set more than 0, but less than 16000!
-7.  All layers above player must have "depth" parameret set less than level height (map height) * -1, but higher than -15984!
-8.  All resources used on the map must be stored in the same directory as the map itself, in a folder with the same name as the map!
-9.  Wall objects must be placed 8px upper than wall tiles!
-10. Save and test your map in the "%LOCALAPPDATA%\Delirium\maps" (you can use "Place Your Maps Here.bat" file to open this folder)!
-11. Do not use Group Layers (D'lirium support only Tile Layers, Object Layers and Image Layers)!
+1.  Do not close the D'LIRIUM project! It contains all the types and scripts you need for mapping!
+2.  Do not make infinity sized maps!
+3.  Do not make maps with height more than 12000px!
+4.  "Embed in map" flag must be enabled when you creating tiles!
+5.  Always use type "Based on Tileset Image" when you creating tiles!
+6.  Always set "depth" parameter for all your layers!
+7.  All layers below player must have "depth" parameter set more than 0, but less than 16000!
+8.  All layers above player must have "depth" parameret set less than level height (map height) * -1, but higher than -15984!
+9.  All resources used on the map must be stored in the same directory as the map itself, in a folder with the same name as the map!
+10.  Wall objects must be placed 8px upper than wall tiles!
+11. Save and test your map in the "%LOCALAPPDATA%\Delirium\maps" (you can use "Place Your Maps Here.bat" file to open this folder)!
+12. Do not use Group Layers (D'lirium support only Tile Layers, Object Layers and Image Layers)!
 
 
 
@@ -54,14 +55,15 @@ Create a link to one of them on your desktop or wherever you like.
 
 //--------- ГЛАВНЫЕ ПРАВИЛА МАППИНГА ---------//
 
-1.  Не создавай карты бесконечного размера!
-2.  Не создавай карты высотой больше, чем 12000 пикселей!
-3.  При создании набора тайлов флаг "Встроить в карту" должен быть включен!
-4.  При создании набора тайлов всегда используй тип "Основано на изображении набора тайлов"!
-5.  Все слои должны иметь установленный параметр "depth"!
-6.  Все слои, отрисовывающиеся под игроком должны иметь значение параметра "depth" больше 0, но не больше чем 16000!
-7.  Все слои, отрисовывающиеся над игроком должны иметь значение параметра "depth" ниже чем высота комнаты * -1, но не ниже чем -15984!
-8.  Все ресурсы, используемые на карте должны храниться в той же директории, что и сама карта, в папке с тем же именем, что и карта!
-9.  Объекты стен должны располагаться на 8 пикселей выше самих тайлов!
-10. Сохраняй и тестируй свои карты в "%LOCALAPPDATA%\Delirium\maps" (вы можете использовать "Place Your Maps Here.bat" файл что бы открыть эту папку)!
-11. Не используй Группы Слоёв (D'lirium работает только с Слоями Тайлов, Слоями Объектов и Слоями Изображений)
+1.  Не закрывай проект D'LIRIUM! В нём находятся все нужные для маппинга типы и скрипты!
+2.  Не создавай карты бесконечного размера!
+3.  Не создавай карты высотой больше, чем 12000 пикселей!
+4.  При создании набора тайлов флаг "Встроить в карту" должен быть включен!
+5.  При создании набора тайлов всегда используй тип "Основано на изображении набора тайлов"!
+6.  Все слои должны иметь установленный параметр "depth"!
+7.  Все слои, отрисовывающиеся под игроком должны иметь значение параметра "depth" больше 0, но не больше чем 16000!
+8.  Все слои, отрисовывающиеся над игроком должны иметь значение параметра "depth" ниже чем высота комнаты * -1, но не ниже чем -15984!
+9.  Все ресурсы, используемые на карте должны храниться в той же директории, что и сама карта, в папке с тем же именем, что и карта!
+10. Объекты стен должны располагаться на 8 пикселей выше самих тайлов!
+11. Сохраняй и тестируй свои карты в "%LOCALAPPDATA%\Delirium\maps" (вы можете использовать "Place Your Maps Here.bat" файл что бы открыть эту папку)!
+12. Не используй Группы Слоёв (D'lirium работает только с Слоями Тайлов, Слоями Объектов и Слоями Изображений)
