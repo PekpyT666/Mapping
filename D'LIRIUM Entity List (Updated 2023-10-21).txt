@@ -1,4 +1,4 @@
-﻿//===========================================================================================//
+//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -1869,6 +1869,7 @@
     "e_name"                (string)        // item/key name
     "e_tag"                 (string)        // Second name of item/key. Helpful if you need to chose certain item/key from many that have the same name and type.
     "e_target"              (string)        // name of entity that will be activated after picking up
+    "e_auto_pickup"         (bool)          // if true then item/key will be picked up by player instantaneously on touch (i.e. classic items/keys pickup mode)
 }
 
                                 ////constants names////

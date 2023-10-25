@@ -7927,6 +7927,11 @@
         "name": "Item Bandage",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -7977,6 +7982,11 @@
         "color": "#ff55ff00",
         "name": "Item Bandage Black",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -8029,6 +8039,11 @@
         "name": "Item Bandage Blue",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -8079,6 +8094,11 @@
         "color": "#ff55ff00",
         "name": "Item Fireball",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -8131,6 +8151,11 @@
         "name": "Item Knife",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -8181,6 +8206,11 @@
         "color": "#ff55ff00",
         "name": "Item Map",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -8233,6 +8263,11 @@
         "name": "Item Medkit",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -8283,6 +8318,11 @@
         "color": "#ff55ff00",
         "name": "Item Medkit Black",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -8335,6 +8375,11 @@
         "name": "Item Medkit Blue",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -8385,6 +8430,11 @@
         "color": "#ff55ff00",
         "name": "Item Megahealth",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -8437,6 +8487,11 @@
         "name": "Item Needles",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -8487,6 +8542,11 @@
         "color": "#ff55ff00",
         "name": "Item Nuke",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -8539,6 +8599,11 @@
         "name": "Item Plant",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -8589,6 +8654,11 @@
         "color": "#ff55ff00",
         "name": "Item Plasma",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -8641,6 +8711,11 @@
         "name": "Item Protection",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -8691,6 +8766,11 @@
         "color": "#ff55ff00",
         "name": "Item Quad",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -8743,6 +8823,11 @@
         "name": "Item Shaft",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -8793,6 +8878,11 @@
         "color": "#ff55ff00",
         "name": "Item Sorcery",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -8845,6 +8935,11 @@
         "name": "Item Teleport",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -8895,6 +8990,11 @@
         "color": "#ff55ff00",
         "name": "Item Vision",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -8947,6 +9047,11 @@
         "name": "Item Wrench",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -8997,6 +9102,11 @@
         "color": "#ffa5b9c3",
         "name": "Key",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
@@ -9049,6 +9159,11 @@
         "name": "Key Brass",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -9095,6 +9210,11 @@
         "name": "Key Copper",
         "properties": [
             {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -9140,6 +9260,11 @@
         "color": "#ffa5b9c3",
         "name": "Key Steel",
         "properties": [
+            {
+                "name": "e_auto_pickup",
+                "type": "bool",
+                "value": false
+            },
             {
                 "name": "e_name",
                 "type": "string",
