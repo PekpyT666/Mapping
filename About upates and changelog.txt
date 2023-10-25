@@ -1,0 +1,13 @@
+//===========================================//
+//---------- Updates and changelog ----------//
+//===========================================//
+If you know how to use git, you can use it to see the change history of the mapping toolkit.
+And you can also use git to download the latest version of the mapping toolkit with hotfixes and new scripts/documentation (i.e. bleeding edge versions).
+
+
+
+//===========================================//
+//------ Обновления и список изменений ------//
+//===========================================//
+Если вы знаете как использовать git, то вы можете использовать его что бы увидеть историю изменений инструментария для маппинга.
+Так же вы можете использовать git что бы скачать последнюю версию инструментария для мапинга с хотфиксами и новыми скриптами/документацией (тоесть bleeding edge версии).
