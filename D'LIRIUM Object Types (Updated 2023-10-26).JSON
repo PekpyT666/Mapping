@@ -6388,6 +6388,11 @@
                 "type": "int",
                 "value": 0
             },
+			{
+                "name": "e_disable_flashlight",
+                "type": "bool",
+                "value": false
+            },			
             {
                 "name": "e_follow_cam",
                 "type": "string",

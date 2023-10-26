@@ -1602,6 +1602,7 @@
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_x_offset"       (int)           // x offset of "e_sort_radius"
     "e_sort_y_offset"       (int)           // y offset of "e_sort_radius"
+    "e_disable_flashlight"  (bool)          // Disable flashlight on activation
     "e_progress"            (bool)          // Sequencer progress state. Do not change it manually! You need to activate sequencer to properly start/stop it.
         // Note - "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" have limited functional in this entity!
         // We not yet implemented e_second_sort_* for this entity, thus it is recomended to avoid usage of non-0 "e_sort_method" in this entity!
