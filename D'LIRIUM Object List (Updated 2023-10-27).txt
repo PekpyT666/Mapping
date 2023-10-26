@@ -17,7 +17,7 @@ Door Steel              (obj_door_steel)        - Steel Door
 Door Brass              (obj_door_brass)        - Brass Door
 Door Copper             (obj_door_copper)       - Copper Door
 Save Point              (obj_sigil)             - Save point
-Trigger Secret          (obj_trigger_secret)    - Secret area
+Trigger Secret          (obj_trigger_secret)    - Secret area, "e_allowtele" parameter defines whether the trigger is activated or not while player is teleporting (by default is true)
 Trigger Autosave        (obj_trigger_autosave)  - Autosave area, "e_allowtele" parameter defines whether the trigger is activated or not while player is teleporting (by default is true)
 Map Pointer Zone        (obj_map_pointer_zone)  - Sets player's position on the map
 											    
