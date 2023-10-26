@@ -1560,6 +1560,18 @@
     "e_ignorehealth"    (bool)          // allows to activate current entity only if Player is alive (if "false")
 }
 
+//-------------------- Entity Secret (ent_secret) --------------------//
+{
+    //@brief - Works same as Trigger Secret, but can be activated.
+    //@shape - rectangular, can be point if "e_allowplayer" set to "false"
+    
+    "e_name"                (string)    // current entity name
+    "e_tag"                 (string)    // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_allowplayer"         (bool)      // allows player to activate entity
+    "e_allowplayerintele"   (bool)      // allows player to activate entity while teleporting
+
+}
+
 //-------------------- Entity Sequencer (ent_sequencer) --------------------//
 {
     //@brief - Used when you need to move something that DOES have AI (i.e. monsters, NPCs or Player). Can set to true/false sequence_enabled global variable. Can move camera (when sequence_enabled=true).
@@ -1773,24 +1785,26 @@
     //@brief - Used when you need to detect collision(intersection) between this entity and player/monster/npc/(or specific object type) and if it happened, activate other entity.
     //@shape - always rectangular
     
-    "e_name"            (string)        // current entity name
-    "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
-    "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
-    "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
-    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_allowmonsters"   (bool)          // allows monsters to activate entity
-    "e_allownpc"        (bool)          // allows NPC to activate entity
-    "e_allowcustom"     (string)        // allows specified object to activate entity (for example try "obj_Fireball" or "Monster Wandering")
-    "e_trigger_mode"    (int)           // determine at what point e_target will be activated
-    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
-    "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
-    "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
-    "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
-    "e_sort_ox"         (int)           // x offset of "e_sort_radius"
-    "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+    "e_name"                (string)        // current entity name
+    "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
+    "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
+    "e_allowmonsters"       (bool)          // allows monsters to activate entity
+    "e_allownpc"            (bool)          // allows NPC to activate entity
+    "e_allowcustom"         (string)        // allows specified object to activate entity (for example try "obj_Fireball" or "Monster Wandering")
+    "e_allowplayer"         (bool)          // allows player to activate entity
+    "e_allowplayerintele"   (bool)          // allows player to activate entity while teleporting
+    "e_trigger_mode"        (int)           // determine at what point e_target will be activated
+    "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"           (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"             (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"             (int)           // y offset of "e_sort_radius"
     
     "e_trigger_mode" (MODES) {
         "0"     // Activate if allowed object is inside the trigger zone (once per "e_refresh" amount of ticks)

@@ -6442,6 +6442,62 @@
     },
     {
         "color": "#ff000000",
+        "name": "Entity Secret",
+        "properties": [
+			{
+                "name": "e_activated",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_allowplayer",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_allowplayerintele",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_chicken",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_easy",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_hard",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_nightmare",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_normal",
+                "type": "bool",
+                "value": true
+            }
+        ]
+    },
+    {
+        "color": "#ff000000",
         "name": "Entity Sequencer",
         "properties": [
             {
@@ -7567,11 +7623,6 @@
                 "value": false
             },
             {
-                "name": "e_allowplayerintele",
-                "type": "bool",
-                "value": true
-            },
-            {
                 "name": "e_allowcustom",
                 "type": "string",
                 "value": ""
@@ -7588,6 +7639,11 @@
             },
             {
                 "name": "e_allowplayer",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_allowplayerintele",
                 "type": "bool",
                 "value": true
             },
@@ -10567,6 +10623,11 @@
                 "type": "bool",
                 "value": true
             },
+			{
+                "name": "e_allowplayer",
+                "type": "bool",
+                "value": true
+            },
             {
                 "name": "f_difficulty_chicken",
                 "type": "bool",
@@ -10598,6 +10659,16 @@
         "color": "#ffffaaff",
         "name": "Trigger Secret",
         "properties": [
+			{
+                "name": "e_allowtele",
+                "type": "bool",
+                "value": true
+            },
+			{
+                "name": "e_allowplayer",
+                "type": "bool",
+                "value": true
+            },
         ]
     },
     {
