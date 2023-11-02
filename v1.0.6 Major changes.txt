@@ -1,0 +1,10 @@
+Renamed objects:
+
+obj_Grave              ---> obj_cycler_grave
+obj_industrial_lamp_01 ---> obj_interact_factoryLamp
+
+Deleted objects:
+
+obj_piston_05
+obj_piston_06
+obj_gasTrigger
