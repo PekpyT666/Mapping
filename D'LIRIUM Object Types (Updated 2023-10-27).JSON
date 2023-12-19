@@ -4356,6 +4356,16 @@
                 "value": false
             },
             {
+                "name": "e_array_1st_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
+                "name": "e_array_2nd_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
                 "name": "e_input_parm",
                 "type": "string",
                 "value": ""
