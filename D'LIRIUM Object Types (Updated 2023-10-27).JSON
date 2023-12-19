@@ -4366,6 +4366,11 @@
                 "value": -4
             },
             {
+                "name": "e_destroy_self",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_input_parm",
                 "type": "string",
                 "value": ""

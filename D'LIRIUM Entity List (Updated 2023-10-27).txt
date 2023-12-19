@@ -1129,6 +1129,7 @@
     "e_input_parm"        (string)        // Propetry to grabb from e_input_target entity
     "e_array_1st_dim"     (int)           // if e_input_parm is the name of an array, you can access its first dimension using that index. (If set to -1 then the array read function is not used)
     "e_array_2nd_dim"     (int)           // if e_input_parm is the name of an array, you can access its second dimension using that index. (If set to -1 then the array read function is not used)
+    "e_destroy_self"      (bool)          // self-destroy after all work done
     "e_output_id_text"    (int)           // In which e_text write id of entity from where value was been grabbed (if e_input_target is not "") (0 or lover will disable this output)
     "e_output_parm_text"  (int)           // In which e_text write name of property from where value was been grabbed (if e_input_target is not "") (0 or lover will disable this output)
     "e_output_value_text" (int)           // In which e_text write grabbed value (if e_input_target is not "") (0 or lover will disable this output)
