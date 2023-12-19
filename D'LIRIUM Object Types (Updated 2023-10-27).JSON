@@ -3615,6 +3615,16 @@
                 "value": -4
             },
             {
+                "name": "e_array_grab_1st_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
+                "name": "e_array_grab_2nd_dim",
+                "type": "int",
+                "value": -4
+            },
+            {
                 "name": "e_disable",
                 "type": "bool",
                 "value": true

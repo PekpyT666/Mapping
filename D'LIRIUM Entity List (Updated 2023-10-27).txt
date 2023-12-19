@@ -1,4 +1,4 @@
-﻿//===========================================================================================//
+//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -943,6 +943,8 @@
     "e_output_parm"          (string)   // name of targeted entity parameter to set output value (if "e_output_target" have value, !Activate allowed)
     "e_array_1st_dim"        (int)      // if e_output_parm is the name of an array, you can access its first dimension using that index. (If set to -1 then the array write function is not used)
     "e_array_2nd_dim"        (int)      // if e_output_parm is the name of an array, you can access its second dimension using that index. (If set to -1 then the array write function is not used)
+    "e_array_grab_1st_dim"   (int)      // if e_input_parm is the name of an array, you can access its first dimension using that index. (If set to -1 then the array read function is not used)
+    "e_array_grab_2nd_dim"   (int)      // if e_input_parm is the name of an array, you can access its second dimension using that index. (If set to -1 then the array read function is not used)
     "e_disable"              (bool)     // deactivate entity after performing activation
     "e_sort_method"          (int)      // Applied to "e_output_target"! "0" (used by default) - all entities specified in "e_output_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"             (string)   // you can add unique tag for entity and find it by this tag ("!Any" allowed)
