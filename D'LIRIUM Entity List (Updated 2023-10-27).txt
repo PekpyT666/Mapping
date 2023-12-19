@@ -2189,6 +2189,7 @@
 	"language.Hungarian"
 	"language.Czech"
 	"language.Spanish"
+	"language.Norwegian"
 	"npcstate.idle"
 	"npcstate.walking"
 	"npcstate.sneaking"
