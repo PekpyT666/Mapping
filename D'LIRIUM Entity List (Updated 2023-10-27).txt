@@ -2193,6 +2193,7 @@
 	"npcstate.walking"
 	"npcstate.sneaking"
 	"npcstate.running"
+	"npcstate.moving"
 	"npcstate.following"
 	"npcstate.seating"
 }
