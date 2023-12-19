@@ -3141,6 +3141,31 @@
                 "value": ""
             },
             {
+                "name": "e_lock_alpha",
+                "type": "float",
+                "value": 1.0
+            },
+            {
+                "name": "e_lock_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_lock_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_lock_xscale",
+                "type": "float",
+                "value": 1.0
+            },
+            {
+                "name": "e_lock_yscale",
+                "type": "float",
+                "value": 1.0
+            },
+            {
                 "name": "e_mask",
                 "type": "string",
                 "value": "spr_Door_Indust"
