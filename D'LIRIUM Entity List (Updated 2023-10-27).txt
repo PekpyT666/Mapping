@@ -1319,6 +1319,47 @@
     //Note - When save file is writen, this entity saved ONLY it "x", "y", "e_name" and "e_tag". Any properties that you set to node will not be saved (even size).
 }
 
+//-------------------- Entity Observer (ent_observer) --------------------//
+{
+    //@brief - Used when you need to make your mechanisms react to some game events.
+    //@shape - always point
+    
+    "e_name"            (string)        // current entity name
+    "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
+    "e_observed_event"  (int)           // currently observed event ("1" to "12", any other value including "0" will do nothing)
+    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"         (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+        //Notes -
+        //"e_activated" doesn't resets to false by itself (to disable observer you need to activate it again or programm false in his "e_activated").
+        //Activation of this entity by other entity or with programming "!Activate" forces observer to immediately check for his event and react to it if event was waiting.
+        //If there event happens and there is no active observer with observed type of such event, then this event will be marked as happened and stays in this state until correct observer react to it or resets after level is finished/abandoned.
+        //In the end of the game frame if at least one observer reacts to event, then state of this particullar event reseted. (this means you can have multiple observers that react to same event in one frame)
+        //You can look at all events states on one of the developer menu pages (open console with ~ or F3, execute command "developer" and press a few times "X" button on your keyboard).
+        
+    "e_observed_event" (EVENTS) {
+        "0"  (Nothing)               // Observer is idling
+        "1"  (Save any)              // Any type of saving (i.e when "Save manual" or "Save personal hell" or "Save auto" happens)
+        "2"  (Load any)              // Any type of loading (i.e when "Load manual" or "Load personal hell" happens)
+        "3"  (Save manual)           // Manual save on savepoints or "save game" console command or entity save with "e_autosave" == false
+        "4"  (Load manual)           // Manual load from main menu or menu on the level or "load game" console command or "Load latest save file" on death screen
+        "5"  (Save auto)             // Automatical save that don't take any direct input from player to happen (i.e. autosaves on level or entity save with "e_autosave" == true or "Save personal hell")
+        "6"  (UNUSED)                // Same as "Nothing", be aware that it reserved for posible in the future event "Load auto"
+        "7"  (Save personal hell)    // Internal saving before going in to personal hell
+        "8"  (Load personal hell)    // internal loading after returning from personal hell
+        "9"  (Cheats used)           // Player used cheats in console or entity console executed command/script with "e_cheater_flag" == true
+        "10" (Level started)         // Happens on start of the level before first tick of other entities
+        "11" (Level abandoned)       // Happens right before player exit the level without finishing it
+        "12" (Level finished)        // Happens when player or entity finish the level
+    }
+}
+
 //-------------------- Entity Portal (ent_portal) --------------------//
 {
     //@brief - Used when you need so player/monster/NPC teleports to position of another entity when colliding with this enity.

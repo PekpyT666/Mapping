@@ -335,6 +335,28 @@
                 "nothing"
             ],
             "valuesAsFlags": false
+        },
+        {
+            "id": 18,
+            "name": "Entity Observed Events",
+            "storageType": "int",
+            "type": "enum",
+            "values": [
+                "Nothing",
+                "Save any",
+                "Load any",
+                "Save manual",
+                "Load manual",
+                "Save auto",
+                "UNUSED",
+                "Save personal hell",
+                "Load personal hell",
+                "Cheats used",
+                "Level started",
+                "Level abandoned",
+                "Level finished"
+            ],
+            "valuesAsFlags": false
         }
     ]
 }
