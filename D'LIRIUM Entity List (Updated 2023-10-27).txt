@@ -2170,9 +2170,11 @@
     "nc_dist"
     "christmas_time"
 
+    "playerDeath.alive"
     "playerDeath.sanity"
 	"playerDeath.toxin"
 	"playerDeath.physical"
+
 	"murdered.no"
 	"murdered.killed"
 	"murdered.torn"
