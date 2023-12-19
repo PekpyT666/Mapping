@@ -960,6 +960,11 @@
     "e_second_sort_radius"   (int)      // you can find entity in specified radius (or outside it if "e_second_sort_radius" less than or equel "0")
     "e_second_sort_ox"       (int)      // x offset of "e_second_sort_radius"
     "e_second_sort_oy"       (int)      // y offset of "e_second_sort_radius"
+        //Note - some objects have a nested structures inside of their variables and thous structures in them have normal variables or other nested structures (and etc).
+        //All of them are undocumented and hidden since in most cases you don't need to grabb/programm such variables (you can only see them in "level_dump_full.tmj").
+        //But grabber have ability to grabb such nested variables.
+        //And any entity that work like programmer have ability to programm them as well.
+        //Syntax is fairly intuitive if you have some OOP coding knowledge - just write full "path" of nested variable (starting from grabbed object variable) and separate nested varibles names with "." in e_input_parm/e_output_parm/e_prog_parm/etc.
 }
 
 //-------------------- Entity Hurt (ent_hurt) --------------------//
