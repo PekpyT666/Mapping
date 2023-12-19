@@ -1958,6 +1958,9 @@
 
                                 ////constants names////
 {
+    //Use this names of constants in "e_constant" of the entity constant to get actual integer values of them.
+    //Even if from verion to version some internal values may change, entity contant will always give you correct integer value for corresponding constant name.
+
     "score_time"
     "score_level"
     "score_level_lantern"
@@ -1983,6 +1986,8 @@
     "score_sacrifice"
     "score_cheat"
     "score_secret"
+
+    //Collors values that can be used in any collor variable of entities and objects
     "c_darkBlue"
     "c_darkGreen"
     "c_darkRed"
@@ -2024,6 +2029,7 @@
     "c_spell_plasma"
     "c_spell_fireball"
     "c_spell_melee"
+    
     "monster_wandering_hp"
     "monster_wandering_speed"
     "monster_wandering_damage"
@@ -2039,7 +2045,7 @@
     "monster_lantern_radyellow"
     "monster_lantern_radblue"
     "monster_lantern_radnoone"
-    "lanterns_max_limit"
+    "lanterns_max_limit"               //maximum number of monters that turns in to lanterns when lantern event starts (remaining are just delete themelves) (doesn't affect spawnable lanterns by mapper)
     "monster_horror_hp"
     "monster_horror_speed"
     "monster_horror_hdamage"
@@ -2167,18 +2173,22 @@
     "explosion_parts"
     "dialogue_adv_page_num"
     "dialogue_adv_option_num"
-    "nc_dist"
-    "christmas_time"
+    "nc_dist"                          // on which distance (or more) from camera to entity ligth it will not cast shadows 
+    "christmas_time"                   // evaluates on game start in to true/false
 
+    //values in global variable "death_type" (upated every frame)
     "playerDeath.alive"
     "playerDeath.sanity"
 	"playerDeath.toxin"
 	"playerDeath.physical"
 
+    //values in monsters variable "killed_by_player", anything that is not "no" will count as player kill when monster dies (while non player kills substracted from goal intad of adding stat for player)
 	"murdered.no"
 	"murdered.killed"
 	"murdered.torn"
 	"murdered.blown"
+    
+    //values in global varialbe "config_language"
 	"language.English"
 	"language.Russian"
 	"language.sChinese"
@@ -2192,6 +2202,8 @@
 	"language.Czech"
 	"language.Spanish"
 	"language.Norwegian"
+
+    //values in NPC and monsters variable "current_state"
 	"npcstate.idle"
 	"npcstate.walking"
 	"npcstate.sneaking"
