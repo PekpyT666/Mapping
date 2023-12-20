@@ -1800,7 +1800,7 @@
     
     "e_set_value_01"        (float)         // float value to set into parameter, defined in "e_set_parm_01" (if "e_set_parameters" is "true")
     "e_set_value_02"        (float)         // float value to set into parameter, defined in "e_set_parm_02" (if "e_set_parameters" is "true")
-    //..
+    //...
     "e_set_value_09"        (float)         // float value to set into parameter, defined in "e_set_parm_09" (if "e_set_parameters" is "true")
     "e_set_value_10"        (float)         // float value to set into parameter, defined in "e_set_parm_10" (if "e_set_parameters" is "true")
     
@@ -1870,6 +1870,29 @@
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
     "e_sort_ox"             (int)           // x offset of "e_sort_radius"
     "e_sort_oy"             (int)           // y offset of "e_sort_radius"
+}
+
+//-------------------- Entity Storage (ent_storage) --------------------//
+{
+    //@brief - Used when you need to store a lot of values. 
+    //@shape - always point
+
+    "e_name"                (string)        // current entity name
+    "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+
+    "e_number_value00"      (int/any)       // Slot with initial value that is integer zero (0)
+    "e_number_value01"      (int/any)       // Slot with initial value that is integer zero (0)
+    "e_number_value02"      (int/any)       // Slot with initial value that is integer zero (0)
+    //...
+    "e_number_value19"      (int/any)       // Slot with initial value that is integer zero (0)
+    "e_number_value20"      (int/any)       // Slot with initial value that is integer zero (0)
+
+    "e_string_value00"      (string/any)    // Slot with initial value that is empty string ("")
+    "e_string_value01"      (string/any)    // Slot with initial value that is empty string ("")
+    "e_string_value02"      (string/any)    // Slot with initial value that is empty string ("")
+    //...
+    "e_string_value19"      (string/any)    // Slot with initial value that is empty string ("")
+    "e_string_value20"      (string/any)    // Slot with initial value that is empty string ("")
 }
 
 //-------------------- Entity Trigger (ent_trigger) --------------------//
