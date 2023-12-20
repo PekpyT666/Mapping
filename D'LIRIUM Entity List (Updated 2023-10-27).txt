@@ -334,6 +334,20 @@
 
 }
 
+//-------------------- Entity Changelevel (ent_changelevel) --------------------//
+{
+    //@brief - Used when you need to change current custommap, but keep inventory, stats and healthbars of the player.
+    //@shape - always point
+    
+    "e_name"                (string)        // current entity name
+    "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
+    "e_level_next"          (string)        // Name of tmj custommap file without extension
+        //Note - This entity work exactly as in story mode , except it does not have a "end level" statistics screen.
+        //If you need statistics screen you need to make your own by using entities display, grabber and calculator (and others if you wish).
+        //In the "////global variables////" section of this file you can find all statistics related global variabless.
+}
+
 //-------------------- Entity Cinematic (ent_cinematic) --------------------//
 {
     //@shape - always point
