@@ -5527,6 +5527,21 @@
                 "value": false
             },
             {
+                "name": "e_allowmonsters",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_allownpc",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_allowplayer",
+                "type": "bool",
+                "value": true
+            },
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -5554,7 +5569,7 @@
             {
                 "name": "e_mask",
                 "type": "string",
-                "value": "spr_portalIn"
+                "value": "spr_portalOut"
             },
             {
                 "name": "e_mask_ox",

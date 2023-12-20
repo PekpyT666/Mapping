@@ -1386,6 +1386,9 @@
     "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL"). In this particullar entity can be "!Portal", this will make one of four random portal sounds. 
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
+    "e_allowmonsters"   (bool)          // allows monsters to activate entity
+    "e_allownpc"        (bool)          // allows NPC to activate entity
+    "e_allowplayer"     (bool)          // allows player to activate entity
     "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_fx"              (bool)          // special particle effect
     "e_toggle"          (bool)          // entity can be activated only by other entity
