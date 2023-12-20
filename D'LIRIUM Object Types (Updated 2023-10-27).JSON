@@ -217,6 +217,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -394,6 +399,11 @@
                 "name": "e_allowtele",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_collied_only_ranged",
@@ -642,6 +652,11 @@
                 "name": "e_allowtele",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_collied_only_ranged",
@@ -1010,6 +1025,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_level_next",
                 "type": "string",
                 "value": ""
@@ -1059,6 +1079,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_cgi_above",
@@ -1346,6 +1371,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -1529,6 +1559,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_counter",
                 "type": "int",
                 "value": 1
@@ -1639,6 +1674,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_depth",
@@ -1793,6 +1833,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -1903,6 +1948,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_answer_spr",
@@ -2812,6 +2862,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -2922,6 +2977,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_depth",
@@ -3119,6 +3179,11 @@
                 "name": "e_allowtele",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_block",
@@ -3520,6 +3585,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_blending",
@@ -3931,6 +4001,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_block",
                 "type": "bool",
                 "value": false
@@ -4199,6 +4274,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_follow",
@@ -4624,6 +4704,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -4803,6 +4888,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -4965,6 +5055,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -5115,6 +5210,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_array_1st_dim",
@@ -5715,6 +5815,11 @@
                 "value": true
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -5948,6 +6053,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_delayed_destroy_self",
                 "type": "int",
                 "value": 0
@@ -6100,6 +6210,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_array_1st_dim",
                 "type": "int",
                 "value": -4
@@ -6235,6 +6350,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_delay",
@@ -6399,6 +6519,11 @@
                 "value": -4
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
@@ -6509,6 +6634,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_depth",
@@ -7065,6 +7195,11 @@
                 "value": false
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -7186,6 +7321,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_delay",
@@ -7329,6 +7469,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_delay",
@@ -7721,6 +7866,11 @@
                 "name": "e_allowtele",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_block",
@@ -8247,6 +8397,11 @@
                 "value": true
             },
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_delay",
                 "type": "int",
                 "value": 0
@@ -8399,6 +8554,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_delay",
@@ -8601,6 +8761,11 @@
                 "name": "e_activated",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
             },
             {
                 "name": "e_name",

@@ -1,9 +1,9 @@
-//===========================================================================================//
+﻿//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
-//Store your resources in a folder with the same name as the custommap.
-//You can store all your resources in this folder. But you can also (optionally) made in it a subfolders for specific filetypes or however you prefer to organize your files (note , you need to use normal "/" and NOT a windows "\").
+//Store your resources in a folder that located near custommap and have the same name as the custommap.
+//You can store all your resources in this folder. But (optionally !) you can also made in it a subfolders for specific filetypes or however you prefer to organize your files. To access files in such nested folders you need either - redefine "e_assets_folder" (more about it in the end of this chapter) or use relative path in resource name (note , you need to use normal "/" and NOT a windows "\").
 
 //"Sprites" is a fancy word for "images". Their supported file format is ".png".
 //If you need sprite with multiple images in it then you need to make "strip" - this means that you need to arrange all your individual frames horizontally inside one ".png" file.
@@ -18,11 +18,43 @@
     //As example here is a "e_text_file" usage -
     //If your custommap named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" then text file "my_test.txt" should have path "%LocalAppdata%/delirium/maps/my_map/my_test.txt", and "e_text_file" properties should have "my_test" value in it.
 
-//There is also prefabs rosources. Basically this is a custommaps that you can spawn inside your main custommap. 
-//They should have "!prefab" prefix in the begining of their name and have ".tmj" file format.
-//You can read more about them in Entity Prefaber notes and properties descriptions.
+//There is also custommaps and prefabs rosources. 
+//Custommap resources is just another custommaps in .tmj format. You can switch between them using entity changelevel like levels chained in story mode.
+    //For custommaps resources there is no special rules - just make sure that they are have .tmj file format.
+    //You can read more about chaining custommaps to each others in entity changelevel notes and properties descriptions. 
+//While prefab reources are custommaps that you can spawn inside your current custommap.
+//Prefabs should have "!prefab" prefix in the begining of their name and also have ".tmj" file format.
+//You can read more about prefabs in entity prefaber notes and properties descriptions.
     //As example here is a "e_pref_file" usage -
     //If your custommap named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" then prefab "!prefab_my_test.tmj" should have path "%LocalAppdata%/delirium/maps/my_map/!prefab_my_test.tmj", and "e_prefab_file" property should have "!prefab_my_test" value in it.
+
+
+//Bellow is advanced work with folders
+
+//All above examples are described for particullar scenario - when "e_assets_folder" = "".
+//By default (when "e_assets_folder" = "") entity will search for resources in a folder that located near custommap and have the same name as the custommap.
+//But you can redefine "e_assets_folder" to change this behaviour in to one of bellow.
+
+//Folder near custommap
+//No prefix.
+//If you write a some folder name in "e_assets_folder" without any prefix then the game will use it as `folder in which custommap is + "e_assets_folder" + resource name variable`. 
+//Also, if you write a name of your custommap in the "e_assets_folder" it will be equivalent of "e_assets_folder" = "", with exception that prefabs which instantiated by entity prefaber or console command "inject", will not inherit "e_assets_folder" from prefaber or "inject" command.
+//This folder alway have READ access but may or may NOT have WRITE access. As turns out steam didn't give a write access for game that made in our game engine to this folder, so if you need read/write access to files for you workhop please look at "%/" prefix usage lower.
+
+//LocalAppdata
+//Prefix "%/" expands to "%LocalAppdata%/delirium/" under the game hood.
+//If you write "%/" before folder name in "e_assets_folder" game will use it as `"%LocalAppdata%/delirium/" + "e_assets_folder"(without prefix) + resource name variable`.
+//This folder always have full READ/WRITE access.
+
+//Workshop subscriptions
+//Prefix ">/" expands to "<Steam Path>/steamapps/workshop/content/670160/" under the game hood.
+//If you write ">/" before folder name in "e_assets_folder" game will use it as `"<Steam Path>/steamapps/workshop/content/670160/" + "e_assets_folder"(without prefix) + resource name variable`.
+//This folder always have READ ONLY access.
+
+//Scripts context
+//Prefix "?/" expands to "Curent script folder" under the game hood.
+//It's affect only one complex command - "inject". Execute command "inject --help" in game for more info about use case of it.
+//This folder alway have READ access but may or may NOT have WRITE access. In general script context works like maps one, but it is designed for scripts files.
 
 
 //===========================================================================================//
@@ -41,6 +73,7 @@
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
@@ -60,7 +93,7 @@
     "e_activated"       (bool)          // (true by default) current entity activation ("true" if must activate on start)
     "e_disable"         (bool)          // deactivate entity after performing activation
         // Notes - Commonly, you don't need to use this entity, unless you build something really big (more than thousands of entities) or complex (like moving/checking/programming/deleting non-entity objects)!
-        // If you feel that you map is slowed down due to thousands of entities and you want to optimize it, please consider to look at "Entity Prefaber" first. You can still use combination of "Entity Active Area" and "unload_entities"==true, but "Entity Prefaber" is a much more elegant and efficient way to unload/load your mechanisms on runtime (since you control when entiites/objects from prefab should appear and dissapear in game while optimization system do it work every tick). 
+        // If you feel that you custommap is slowed down due to thousands of entities and you want to optimize it, please consider to look at "Entity Prefaber" first. You can still use combination of "Entity Active Area" and "unload_entities"==true, but "Entity Prefaber" is a much more elegant and efficient way to unload/load your mechanisms on runtime (since you control when entiites/objects from prefab should appear and dissapear in game while optimization system do it work every tick). 
         // 
         // D' have something like occlusion culling plus mobs loading/unloading in minecraft chunks. This optimization system automatically keep needed objects loaded, and unload anything else. And this entity exist to give mapmaker ability to manipulate this system.
         // Basically this is work like this - on start of each frame game update what objects are loaded - i.e. should execute their code and draw their stuf. Unloaded object stored in RAM but didn't do almost anything, it's reduced ~95% of their impact on fps, since they are no more exist in the game in a normal form.
@@ -68,8 +101,8 @@
         // And then game have two option - load all entities (global variable "unload_entities" = "false") or load only ent_forceload_area (global variable "unload_entities" = true).
         // And finally, no matter what option is, game will load anything located inside activated ent_forceload_area.
         // To visualize this process you can save debug wrap(screenshot) of whole level with only loaded objects. You need to press Ctrl+Shift+F11 (besides displaying on screen this will save wrap in to %LocalAppdata%\delirium). Try to look on such wraps in story and custom maps.
-        // It is also worth mention that game optimization unloads entities/objects pretty fast, but game engine still perform some needed code on them every tick even in unloaded state, this is a remaining ~5% of fps impact mentioned earlier (i.e. on your map you CAN'T infinetely create entities/objects and leve them to be unloaded by oprimization system. They still will slowly drain game fps).
-        // While "Entity Prefaber" work slower than game optimization, but it stored unloaded entities/objects as JSON string inside prefabs, thus game engine didn't do anything with them inside prefabs, they just lay in RAM or on disk (i.e. you CAN AND SHOULD create and unload in to prefab entities/objects if you want to infinetely do something on your map. Prefabs didn't do anything to game fps while they are unused, it's just a string in RAM or file on disk).
+        // It is also worth mention that game optimization unloads entities/objects pretty fast, but game engine still perform some needed code on them every tick even in unloaded state, this is a remaining ~5% of fps impact mentioned earlier (i.e. on your custommap you CAN'T infinetely create entities/objects and leve them to be unloaded by oprimization system. They still will slowly drain game fps).
+        // While "Entity Prefaber" work slower than game optimization, but it stored unloaded entities/objects as JSON string inside prefabs, thus game engine didn't do anything with them inside prefabs, they just lay in RAM or on disk (i.e. you CAN AND SHOULD create and unload in to prefab entities/objects if you want to infinetely do something on your custommap. Prefabs didn't do anything to game fps while they are unused, it's just a string in RAM or file on disk).
 }
 
 //-------------------- Entity Active Type (ent_forceload_type) --------------------//
@@ -85,7 +118,7 @@
         // Note - Don't use it on entities, they are forceloaded by default(unless unload_entities global is true)! And in general, don't use this entity unless you really need to keep specific type of objects always active.
         // Always active objects can be accessed by entities even when they are too far from camera/player/projectiles/etc(read more in "Entity Active Area" notes), but in the same time always active objects can give a massive impact on FPS. Try your best to use it for a few frames or for objects that count are low on level.
         // This entity is similar to "Entity Active Area" ("ent_forceload_area") but instead of keeping anything active in some area, this entity work with all level instances of the specific object type.
-        // As example of usage - in the story mode on graveyard crypt when all normal monsters dissapears, it's actually this entity forceloaded all monsters, before "Entity Destroyer" destroy them all. Without it, destroyer could destroy only those monsters that are close enough to player/camera, but not those that are in other map end.
+        // As example of usage - in the story mode on graveyard crypt when all normal monsters dissapears, it's actually this entity forceloaded all monsters, before "Entity Destroyer" destroy them all. Without it, destroyer could destroy only those monsters that are close enough to player/camera, but not those that are in other custommap end.
 }
 
 //-------------------- Entity Breakable (ent_breakable) --------------------//
@@ -114,6 +147,7 @@
     "e_mask_ox"             (int)           // mask X origin (if "e_mask" is external)
     "e_mask_oy"             (int)           // mask Y origin (if "e_mask" is external)
     "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
+    "e_assets_folder"       (string)        // folder in which entity will search for sound , sprite and mask resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_depth"               (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_solid_type"          (int)           // sets collision for entity ("0" // no collision, "1" // projectiles can pass, "2" // full solid)
     "e_allowmonsters"       (bool)          // allows monsters to activate entity
@@ -162,6 +196,7 @@
     "e_mask_oy"             (int)           // mask Y origin (if "e_mask" is external)
     "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"       (string)        // folder in which entity will search for sound , sprite and mask resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_depth"               (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_usedistance"         (int)           // current entity use distance
@@ -215,7 +250,7 @@
 
         #region REGULAR MATH 
         // Notes - brackets ( / ) show what type of data e_input_a and e_input_b should be. Again, order always is (a/b).
-        // By default e_input_a and e_input_b properties in Tiled have integer type (that's if you import D'LIRIUM Object Types).
+        // By default e_input_a and e_input_b properties in Tiled have integer type (that's if you have imported "D'LIRIUM Object Types" manually or by "Set up the map editor" script).
         // Float and integer and boolean types implicitly converts to each others, but strings don't converts by themselves.
         // And remember that conversion int --> float is not a problem, but float --> int will cause a fractional part loss.
         
@@ -343,9 +378,14 @@
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_level_next"          (string)        // Name of tmj custommap file without extension
+    "e_assets_folder"       (string)        // folder in which entity will search for custommap resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
         //Note - This entity work exactly as in story mode , except it does not have a "end level" statistics screen.
         //If you need statistics screen you need to make your own by using entities display, grabber and calculator (and others if you wish).
         //In the "////global variables////" section of this file you can find all statistics related global variabless.
+        //Examples of usage -
+        //1. If your custommap named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" and your next level have path "%LocalAppdata%/delirium/maps/my_map/chapter_one.tmj", then "e_level_next" property should have "chapter_one" value in it.
+        //2. However, you most likely want to store maps near each others (instead of folder in folder in folder for third level in chain). So, If your custommap named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" and your next level have path "%LocalAppdata%/delirium/maps/chapter_one.tmj", then "e_level_next" property should have "../chapter_one" value in it.
+        //3. Chaining maps from workshop. You can make this too, just don't forget to set required custommaps via steam "Add/Remove Required Items" on your workshop items page. So, no matter how your custommap is named and next level from workshop have path "<Steam Path>/steamapps/workshop/content/670160/2189377165/GRF_D'OOM_(E1M1)_V3.tmj", then "e_assets_folder" property should have ">/2189377165" value in it and "e_level_next" property should have "GRF_D'OOM_(E1M1)_V3" value in it.
 }
 
 //-------------------- Entity Cinematic (ent_cinematic) --------------------//
@@ -367,6 +407,7 @@
     "e_sprite_image"    (int)           // current entity sprite frame (do not use this)
     "e_sprite_anim"     (float)         // animation speed
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound and sprite resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_cgi_above"       (bool)          // sets cinematic to draw above GUI (if "true")
     "e_cgi_frame"       (bool)          // draws game frame while cinematic is activated
     "e_draw_priority"   (int)           // sets the draw order if draws above screen or GUI
@@ -420,7 +461,7 @@
 
 //-------------------- Entity Console (ent_console) --------------------//
 {
-    //@brief - Used when you need to execute console command on your map.
+    //@brief - Used when you need to execute console command on your custommap.
     //@shape - always point
     //@unoptimized - try to not spam activation of this entity
 
@@ -429,6 +470,7 @@
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_command"         (string)        // command to execute when entity activated. Executed before e_script.
     "e_script           (string)        // name (without extension) of the .dscript file to execute commands from it.
+    "e_assets_folder"   (string)        // folder in which entity will search for script resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_cheater_flag"    (bool)          // if false then player will not be marked as cheater. Set it to true if you are implementing your own cheat/debug system (i.e. if this entity will not indended to be activated in a normal playthrough of your level).
     "e_respond_sound"   (bool)          // if false then entity will not produce any sound that you regularly hear when executing commands manually. Set it to true if you need to debug your mechanism.
         //Note - if you need to use complex commands, then you need to execute command "level enable complex commands" first (NOT just "enable complex commands"). You need to do this only once, right after the level start. This command will initialise all needed resources for complex commands to work, but will forbid player to use complex commands via manual console (unless player will enable them by himself explicitly via manual console). "level enable complex commands" is bound to level thus will not affect other custommaps or story mode.
@@ -437,14 +479,14 @@
 
 //-------------------- Entity Constant (ent_constant) --------------------//
 {
-    //@brief - Used when you need to program(write) value(that you get from game vide constant) in to another entity. Like vanilla colors (that you can write in to level_lightmap/e_sprite_color/e_light_color/etc), monsters maxHP/speed/viewdistance, items heal/damage and many more others. This also ensures that your map will use the right values on whichever version of the game it is running on.
+    //@brief - Used when you need to program(write) value(that you get from game vide constant) in to another entity. Like vanilla colors (that you can write in to level_lightmap/e_sprite_color/e_light_color/etc), monsters maxHP/speed/viewdistance, items heal/damage and many more others. This also ensures that your custommap will use the right values on whichever version of the game it is running on.
     //@shape - always point
 
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_input"           (float || string) // This entity property will be used to programm "e_output_parm" of the "e_output_target" entity (work if "e_constant" == ""). Basically this property work identical as "e_prog_value" of the Entity Programmer.
-    "e_constant"        (string)        // Enity will searсh for game constant with "e_constant" name (you can find all names from "////constants names////" section) and set output value to value of such constant instead of using "e_input". If name of the constant spelled incorrectly then nothing will be programmed and will be generated custom map error (you need to use "ignorecustom" command to switch visibility of thous errors).
+    "e_constant"        (string)        // Enity will searсh for game constant with "e_constant" name (you can find all names from "////constants names////" section) and set output value to value of such constant instead of using "e_input". If name of the constant spelled incorrectly then nothing will be programmed and will be generated custommap error (you need to use "ignorecustom" command to switch visibility of thous errors).
     "e_output_target"   (string)        // name of entity to set output value in ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
     "e_output_parm"     (string)        // name of targeted entity parameter to set output value (if "e_output_target" have value, !Activate allowed)
     "e_disable"         (bool)          // deactivate entity after performing activation
@@ -469,6 +511,7 @@
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_counter"         (int)           // number of current entity activations until target activation
     "e_counter_reset"   (bool)          // defines it counter will reset number of activations after reaching the goal
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
@@ -504,6 +547,7 @@
     "e_mask_ox"         (int)           // mask X origin (if "e_mask" is external)
     "e_mask_oy"         (int)           // mask Y origin (if "e_mask" is external)
     "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
+    "e_assets_folder"   (string)        // folder in which entity will search for sprite and mask resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_solid_type"      (int)           // sets collision for entity ("0" - no collision, "1" - projectiles can pass, "2" - full solid)
     "e_inspector"       (string)        // entity name that will be displayed on the inspector
@@ -521,6 +565,7 @@
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_destroy_target"  (string)        // name of entity that will be destroyed
     "e_destroy_self"    (bool)          // self-destroy after all work done
@@ -547,6 +592,7 @@
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
+    "e_assets_folder"   (string)        // folder in which entity will search for sound , sprite and text resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
 
     //Sound
 
@@ -763,12 +809,13 @@
     //     "_hu.txt"    (Hungarian)
     //     "_cz.txt"    (Czech)
     //     "_es.txt"    (Spanish)
+    //     "_no.txt"    (Norwegian)
         // The algorithm works as follows -
 	    // 1. It tries to open the file with the suffix of the currently selected player language.
 	    // 2. If 1. does not exist, then it tries to open the file with "_en.txt" suffix.
 	    // 3. If 2. does not exist, then it will open the file without any suffixes as you supplied.
     // As example here is setup for English and Russian localizations :
-    // If your map named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" then text files "my_test.txt" and "my_test_en.txt" and "my_test_ru.txt" should have path "%LocalAppdata%/delirium/maps/my_map/my_test.txt" and "%LocalAppdata%/delirium/maps/my_map/my_test_en.txt" and "%LocalAppdata%/delirium/maps/my_map/my_test_ru.txt" respectively, and "e_text_file"/"e_option_file" properties should have "my_test" value in it.
+    // If your custommap named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" then text files "my_test.txt" and "my_test_en.txt" and "my_test_ru.txt" should have path "%LocalAppdata%/delirium/maps/my_map/my_test.txt" and "%LocalAppdata%/delirium/maps/my_map/my_test_en.txt" and "%LocalAppdata%/delirium/maps/my_map/my_test_ru.txt" respectively, and "e_text_file"/"e_option_file" properties should have "my_test" value in it.
     // Players who have selected the English language in their settings will see lines from "my_test_en.txt".
     // Players who have selected the Russian language in their settings will see lines from "my_test_ru.txt".
     // Players who have selected any other language in their settings will see lines from "my_test.txt".
@@ -787,6 +834,7 @@
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_dice_sides"      (int)           // defines "e_target" activation chance according to the formula: 1 / (e_dice_sides + 1) (if "e_dice_percent" is less than 0)
     "e_dice_percent"    (float)         // defines "e_target" activation chance in percentage. Value should be from 0 to 100 (used instead of "e_dice_sides" if equal or greater than 0)
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
@@ -818,6 +866,7 @@
     "e_sprite_frames"   (int)           // number of images in current sprite
     "e_sprite_image"    (int)           // current entity sprite frame (do not use this)
     "e_sprite_anim"     (float)         // animation speed
+    "e_assets_folder"   (string)        // folder in which entity will search for sprite resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_draw_priority"   (int)           // sets the draw order if draws above screen or GUI
     "e_display_gui"     (bool)          // display placement (on GUI if "true", on the level if "false")
@@ -871,6 +920,7 @@
     "e_door_key_color"      (color || int)  // sets the custom key color required to open (if "e_door_key" is "4"). Player can unlock "Entity Door" if "e_door_key_color" equal to "key_color" of the picked up "Key" object ("obj_key") (this means that all their corresponding R/G/B values of the "e_door_key_color"-"key_color" pair should be identical).
     "e_door_lockDist"       (int)           // key unlocking distance (if "e_door_keyLock" is "true")
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"       (string)        // folder in which entity will search for sound , sprite and mask resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_usedistance"         (int)           // current entity use distance
     "e_usetype"             (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use, "11" - nothing)
@@ -918,7 +968,7 @@
 
 //-------------------- Entity Fog (ent_fog) --------------------//
 {
-    //@brief - Used when you need same thing as "Entity Fade" but with sprite rather than solid color. By default sprite will moves in certain direction, but you can disable this bahaviour.
+    //@brief - Used when you need same thing as "Entity Fade" but with sprite rather than solid color. By default sprite will moves in certain direction, but you can disable this behaviour.
     //@shape - always point
     
     "e_name"            (string)        // current entity name
@@ -934,6 +984,7 @@
     "e_sprite_frames"   (int)           // number of images in current sprite
     "e_sprite_image"    (int)           // current entity sprite frame (do not use this)
     "e_sprite_anim"     (float)         // animation speed
+    "e_assets_folder"   (string)        // folder in which entity will search for sprite resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_blending"        (int)           // sets blending mode ("0" - normal, "1" - additive, "2" - subtract, "3" - multiply, "4" - max blending)
     "e_fadein_spd"      (float)         // fade in speed
     "e_fadeout_spd"     (float)         // fade out speed
@@ -1030,6 +1081,7 @@
     "e_mask_ox"             (int)           // mask X origin (if "e_mask" is external)
     "e_mask_oy"             (int)           // mask Y origin (if "e_mask" is external)
     "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
+    "e_assets_folder"       (string)        // folder in which entity will search for sound , sprite and mask resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_depth"               (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_solid_type"          (int)           // sets collision for entity ("0" - no collision, "1" - projectiles can pass, "2" - full solid)
     "e_interact_type"       (int)           // sets animation type ("0" to "12", any other value will activate targeted entity)
@@ -1123,11 +1175,12 @@
     "e_glare_cinx"          (float)         // set "cinematic" glare xscale
     "e_glare_ciny"          (float)         // set "cinematic" glare yscale
     "e_glare_cindir"        (int)           // set "cinematic" glare angle (anti-clockwise, "0" - right)
+    "e_assets_folder"       (string)        // folder in which entity will search for sprite and sprite resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
 }
 
 //-------------------- Entity Log (ent_log) --------------------//
 {
-    //@brief - Used when you need to debug your map. Hightly customisable, but you can start simply by suppling "e_input_target" and "e_input_parm".
+    //@brief - Used when you need to debug your custommap. Hightly customisable, but you can start simply by suppling "e_input_target" and "e_input_parm".
     //@shape - always point
     //@unoptimized - try to not spam activation of this entity
     
@@ -1198,6 +1251,7 @@
     "e_refresh"              (int)             // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"            (bool)            // current entity activation ("true" if must activate on start)
     "e_sound"                (string)          // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"        (string)          // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_sort_method"          (int)             // Applied to "e_slave" and "e_target"! "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"             (string)          // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"            (string)          // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
@@ -1225,6 +1279,7 @@
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
     "e_delay"               (int)           // delay before activation ("30" means 1 second)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"       (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_destroy_target"      (string)        // name of entity that will be destroyed
     "e_destroy_target0"     (string)        // name of entity that will be destroyed
@@ -1255,6 +1310,7 @@
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_targ0"           (string)        // name of entity that can be activated by current entity
     "e_targ1"           (string)        // name of entity that can be activated by current entity
     //...
@@ -1282,6 +1338,7 @@
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_disable"         (bool)          // deactivate entity after performing activation
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_prog_target"     (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
@@ -1439,7 +1496,8 @@
     "e_mask_ox"         (int)           // mask X origin (if "e_mask" is external)
     "e_mask_oy"         (int)           // mask Y origin (if "e_mask" is external)
     "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
-    "e_sound"           (string)        // activation sound (quiet if "sound_NULL"). In this particullar entity can be "!Portal", this will make one of four random portal sounds. 
+    "e_sound"           (string)        // activation sound (quiet if "sound_NULL"). In this particullar entity can be "!Portal", this will make one of four random portal sounds.
+    "e_assets_folder"   (string)        // folder in which entity will search for sound , sprite and mask resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap) 
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_allowmonsters"   (bool)          // allows monsters to activate entity
     "e_allownpc"        (bool)          // allows NPC to activate entity
@@ -1467,7 +1525,7 @@
 
 //-------------------- Entity Prefaber (ent_prefaber) --------------------// 
 { 
-    //@brief - Used when you need to batch spawn many objects by using another map or with previously saved data in this entity (and vise versa). Also provide ability to make names/tags/targets/etc unique per spawned batch (i.e. allow to easily reuse your entities mechanisms).
+    //@brief - Used when you need to batch spawn many objects by using another prefab file or with previously saved data in this entity (and vise versa). Also provide ability to make names/tags/targets/etc unique per spawned batch (i.e. allow to easily reuse your entities mechanisms).
     //@shape - when "e_pref_mode"==0 point, but when "e_pref_mode"==1 or 2 or 3 should be rectangular
     
     "e_activated"                         (bool)   // Current entity activation ("true" if must activate on start). 
@@ -1482,15 +1540,16 @@
     "e_pref_distance_offset_set_middle"   (bool)   // By default prefaber will set his own "e_pref_distance_offset_x" and "e_pref_distance_offset_y" in the middle of itself on the first frame after creation. However, you can disable this behaviour by setting this property to false. (For example if you want to spawn spiceific sized prefaber from spawner).
     "e_pref_destroy_saved"                (bool)   // If true then prefaber will delete every object instance that he has saved (when "e_pref_mode" "1" or "3").
     "e_pref_saved_types"                  (string) // What types of objects should prefaber save (when "e_pref_mode" "1" or "3"). You can supply multiple types by separating them with ";" e.g. "Monster Wandering;obj_enemy_flying;!Entity;obj_interact_plita;Item Plant" (note , Entity Prefaber is ok , but it will save only others prefabers , i.e. "notme").
-    "e_pref_create_image_layers"          (bool)   // By default prefaber load only object layers and global variables from prefab file. However, with this property equal to true you can tell to also load image layers. But be aware that right now you don't have any ability to manipulate such layers and they are not saved in save file! So this feature in some sort of preview state and will need additional logic from you to use it right now properly (if your map have savepoints or abilty to enter personal hell)! Also note, that prefab file should use .png near it (i.e. in the same folder) but you also need same .png near main map, sorry, i don't want to fix this spaghetty between Tiled and D' right now ._.
+    "e_pref_create_image_layers"          (bool)   // By default prefaber load only object layers and global variables from prefab file. However, with this property equal to true you can tell to also load image layers. But be aware that right now you don't have any ability to manipulate such layers and they are not saved in save file! So this feature in some sort of preview state and will need additional logic from you to use it right now properly (if your custommap have savepoints or abilty to enter personal hell)! Also note, that prefab file should use .png near it (i.e. in the same folder) but you also need same .png near main custommap, sorry, i don't want to fix this spaghetty between Tiled and D' right now ._.
     "e_pref_create_tile_layers"           (bool)   // Same as "e_pref_create_image_layers" but this one for tile layers.
-    "e_pref_file"                         (string) // Name of the prefab file without extension (when e_pref_mode "0" or "1"). Name of the prefab file always should start with "!prefab" . E.g. If your map named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" then prefab "!prefab_my_test.tmj" should have path "%LocalAppdata%/delirium/maps/my_map/!prefab_my_test.tmj", and "e_prefab_file" property should have "!prefab_my_test" value in it.
+    "e_pref_file"                         (string) // Name of the prefab file without extension (when e_pref_mode "0" or "1"). Name of the prefab file always should start with "!prefab" . E.g. If your custommap named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" then prefab "!prefab_my_test.tmj" should have path "%LocalAppdata%/delirium/maps/my_map/!prefab_my_test.tmj", and "e_prefab_file" property should have "!prefab_my_test" value in it.
+    "e_assets_folder"                     (string) // folder in which entity will search for prefab resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_pref_make_unique"                  (bool)   // By default Entity Prefaber loads objects without making any changes to them as they are inside the prefab file (this is a fast mode). However you can set this property to true and this will force Entity Prefab to replace any "{unique_id}" keyword in values of all loaded object properties with special unique string (this is a slow but powerful mode). This string will consist of 9 numbers and it will be different for each loaded instance of prefab, but it will be the same within all object properties of one loaded prefab. You can write "{unique_id}" in any values of objects properties that are of string type. E.g. you can have a prefab with Entity Light that has "e_name" with value "my_{unique_id}_name" and Entity Button that have "e_target" with value "my_{unique_id}_name". If you have loaded two instances of such a prefab (in different places, of course, by two Entity Prefab) then each Entity Button will activate only one Entity Light (which was created alongside with it button). The actual names and targets will be something like "my_000000001_name" for one pair of button and light, and "my_000000002_name" for the other pair.
     "e_pref_intances_load_offset_x"       (float)  // X offset of the loaded object instances (can work in both "e_relative_coordinates" = true and "e_relative_coordinates" = false).
     "e_pref_intances_load_offset_y"       (float)  // Y offset of the loaded object instances (can work in both "e_relative_coordinates" = true and "e_relative_coordinates" = false).
     "e_pref_intances_save_offset_x"       (float)  // X offset of the saved object instances (can work in both "e_relative_coordinates" = true and "e_relative_coordinates" = false).
     "e_pref_intances_save_offset_y"       (float)  // Y offset of the saved object instances (can work in both "e_relative_coordinates" = true and "e_relative_coordinates" = false).
-    "e_pref_relative_coordinates"         (bool)   // If this value is true, then the coordinates of this Entity Prefaber will be the origin of the loaded prefab objects (E.g. an object with x=0 and y=10 inside the prefab file will be loaded at the same map x as the Entity Prefaber, but his map y will be 10 pixel lower than Entity Prefaber). If this value is false, then the loaded prefab objects will be at the same coordinates as they are inside the prefab file (e.g. an object with x=0 and y=10 inside the prefab file will be loaded on the map coordinates x=0 and y=10 despite the location of the Entity Prefaber).
+    "e_pref_relative_coordinates"         (bool)   // If this value is true, then the coordinates of this Entity Prefaber will be the origin of the loaded prefab objects (E.g. an object with x=0 and y=10 inside the prefab file will be loaded at the same custommap x as the Entity Prefaber, but his custommap y will be 10 pixel lower than Entity Prefaber). If this value is false, then the loaded prefab objects will be at the same coordinates as they are inside the prefab file (e.g. an object with x=0 and y=10 inside the prefab file will be loaded on the custommap coordinates x=0 and y=10 despite the location of the Entity Prefaber).
     "e_pref_internal_storage"             (string) // This property contain prefab as json string that was been saved by using "e_pref_mode" = "3". You can manipulate this string on runtime, but you should avoid doing this when it contain big prefab, since it can result in performance impact.
     "e_destroy_self"                      (bool)   // If true, then Entity Prefab will delete itself after activation.
     "e_delayed_destroy_self"              (int)    // Amount of this prefaber activations before it set his "e_destroy_self" to true ("0" or lower to disable this feature). Helpful for example if you need to save prefab in to internal storage, but delete prefaber after it will load prefab back (i.e. "1" will allow prefaber to be activated two times before selfdestroys).
@@ -1521,16 +1580,16 @@
         "!Noone"        // Nothing, in case you need placeholder that didn't do anything
     }
 
-//You can think about this entity as Entity Spawner but more powerful. Instead of manually defining properties of single spawned object in spawner, you create new map that will be a prefab (i.e. template/blueprint) for spawning all of it objects with all their properties. You can change prefab even when map is already started, but be aware that changing of prefab didn't change already loaded on map field prefab instances - they are just object instances without any connection between them and prefab. 
+//You can think about this entity as Entity Spawner but more powerful. Instead of manually defining properties of single spawned object in spawner, you create new custommap that will be a prefab (i.e. template/blueprint) for spawning all of it objects with all their properties. You can change prefab even when custommap is already started, but be aware that changing of prefab didn't change already loaded on custommap field prefab instances - they are just object instances without any connection between them and prefab. 
 //The true power of this entity is that you can set "e_make_unique" to true and use "{unique_id}" in properties of the string type. This will guaranty that entities will work with each others in one instance of loaded prefab, but will ignore same entities from another loaded instance of the same prefab.
 //Note, if for some reson you need to get/manipulate "{unique_id}", you can GET last string used for such replacement via "prefabers_unique_id_last" , and you can manipulate with it integer value via "prefabers_unique_id" global variable. But in most cases you don't need to change unique id since it is fully managed by game (nulling when new game started, incremented by one when prefab is loaded, and saved/loaded inside save file). What you can actually do - you can use "prefabers_unique_id_last" (it hold string) to connect some parts of the two prefabs together with some manually placed grabbers and calculators.
 //Also note that first prefab with {unique_id} will have "000000001" as unique string, not "000000000" ("000000000" value is reserved as flag that there is no prefabs instantiated yet).
 //Reusing of your entities mechanisms is not the only porpuse of this entity.
-//This entity is pretty good for your own optimization. If you have map with thousands of entities you can devide it in to smaller parts and load/unload them while player progress through your map.
-//And you can use it not only for optimization but for regular gameplay. For example you can use it to make the same room to be different in particullar moments of your map gameplay. Or you can spawn hundreds of monsters over the whole map by single prefaber. There is a ton of ideas you can come up with.
+//This entity is pretty good for your own optimization. If you have custommap with thousands of entities you can devide it in to smaller parts and load/unload them while player progress through your custommap.
+//And you can use it not only for optimization but for regular gameplay. For example you can use it to make the same room to be different in particullar moments of your custommap gameplay. Or you can spawn hundreds of monsters over the whole custommap by single prefaber. There is a ton of ideas you can come up with.
 
 //Note about "!prefab" - such naming rule was been made to distinguish prefab files from the normal maps. Entity Prefaber will refuse to load files that don't have this prefix and the arcade menu will not read files that have this prefix.
-//If for some reason you need to load prefab file as regular map you can do this by renaming+moving file or by creating a SYMBOLIC link to it. But it is advisable to use Entity Prefaber on normal map to test prefabs.
+//If for some reason you need to load prefab file as regular custommap you can do this by renaming+moving file or by creating a SYMBOLIC link to it. But it is advisable to use Entity Prefaber on normal custommap to test prefabs.
 
 }
 
@@ -1545,6 +1604,7 @@
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_disable"         (bool)          // deactivate entity after performing activation
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_prog_target"     (string)        // name of entity to program ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
@@ -1573,6 +1633,7 @@
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_targ0"           (string)        // name of entity that can be activated by current entity
     "e_targ1"           (string)        // name of entity that can be activated by current entity
@@ -1599,6 +1660,7 @@
     "e_read_file"       (string)        // text file name to read input value in
     "e_read_line"       (int)           // text line inside the file to read
     "e_read_string"     (bool)          // read whole text instead digits if "true", read only numbers and ignore other characters if "false"
+    "e_assets_folder"   (string)        // folder in which entity will search for text resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_output_target"   (string)        // name of entity to set output value in ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
     "e_output_parm"     (string)        // name of targeted entity parameter to set output value (if "e_output_target" have value, !Activate allowed)
     "e_output_string"   (bool)          // convert output value to string
@@ -1638,6 +1700,7 @@
     "e_mask_ox"         (int)           // mask X origin (if "e_mask" is external)
     "e_mask_oy"         (int)           // mask Y origin (if "e_mask" is external)
     "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
+    "e_assets_folder"   (string)        // folder in which entity will search for sprite and mask resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_solid_type"      (int)           // sets collision for entity ("0" - no collision, "1" - projectiles can pass, "2" - full solid)
     "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_inspector"       (string)        // entity name that will be displayed on the inspector
@@ -1744,6 +1807,7 @@
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // sound to play on entity activation (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_sound_fadedown"  (int)           // If greater than 0 then the sound will fade down to zero volume over "e_sound_fadedown" milliseconds after this entity is activated while it working
     "e_sound_fadeup"    (int)           // If greater than 0 then the sound will fade up to full volume over "e_sound_fadedown" milliseconds after this entity is activated while it is not working
     "e_sound_loop"      (bool)          // repeat sound until deactivation
@@ -1769,6 +1833,7 @@
     "e_delay"           (int)           // delay before activation ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // sound to play on entity activation (quiet if "sound_NULL")
+    "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_sound_loop"      (bool)          // repeat sound until deactivation
     "e_sound_type"      (int)           // defines sound type for volume options ("0" - sound, "1" - music, "2" - voice)
     "e_falloff_ref"     (int)           // the falloff reference relative to the listener (clamp)
@@ -1794,6 +1859,7 @@
     "e_delay"               (int)           // delay before activation ("30" means 1 second)
     "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second). After activation enity will count down this amount of time. While counting down it will ignore any incoming activations (don't spawn anything and don't activate it e_target).
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"       (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_spawn"               (string)        // object to spawn on activation
     "e_set_dir"             (int || string) // spawned object direction (anti-clockwise, 0 = right, object "e_name" or "!Player" if string)
@@ -1863,6 +1929,7 @@
     "e_mask_oy"             (int)           // mask Y origin (if "e_mask" is external)
     "e_mask_remback"        (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"       (string)        // folder in which entity will search for sound , sprite and mask resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_depth"               (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_usedistance"         (int)           // current entity use distance
@@ -1923,6 +1990,7 @@
     "e_delay"               (int)           // delay before activation ("30" means 1 second)
     "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
+    "e_assets_folder"       (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_allowmonsters"       (bool)          // allows monsters to activate entity
     "e_allownpc"            (bool)          // allows NPC to activate entity
@@ -1983,6 +2051,7 @@
     "e_mask_ox"         (int)           // mask X origin (if "e_mask" is external)
     "e_mask_oy"         (int)           // mask Y origin (if "e_mask" is external)
     "e_mask_remback"    (bool)          // makes all pixels with the mask background color (left-bottom pixel) transparent (if "e_mask" is external)
+    "e_assets_folder"   (string)        // folder in which entity will search for sound , sprite and mask resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_depth"           (int)           // Current entity depth. By default (if e_depth is UNDEFINED in Tiled - i.e. like when you pressed Delete with e_depth selected) entities set their e_depth to "-y" when they are created. Unlike the "depth" of the regular object , the e_depth of entities does not change on every tick. This allows you to easily manipulate e_depth in TIled and even at runtime. e_depth determines the drawing order - objects/entities/layers with higher e_depth are drawn "behind" objects/entities/layers with lower e_depth.
     "e_falloff_ref"     (int)           // the falloff reference relative to the listener (clamp)
     "e_falloff_dist"    (int)           // the maximum falloff distance relative to the listener
@@ -2007,6 +2076,7 @@
     "e_write_input"     (any)           // any value to write in the text file
     "e_write_file"      (string)        // text file name to write input value in
     "e_write_line"      (int)           // text line inside the file to write
+    "e_assets_folder"   (string)        // folder in which entity will search for text resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
 }
 
 //===================================================================================================//
@@ -2299,7 +2369,7 @@
     "unload_entities"           (bool)            // (false by default) all entities loaded if "false", entities that are in the visible range and in range of Entity Active Area (ent_forceload_area) will be loaded (you can manually manage entities load on CPU) if "true". (It is worth nothing to mention that Entity Prefaber is also good for optimization of big maps with many entities) .
     "last_console_command"      (string)          // last executed console command, on level start initialized with empty string
     
-    "prefabers_unique_id_last"  (string)          // string that used to instantiate last prefab, also if equal to "000000000" then no prefabs are instantiated on map yet (read only)
+    "prefabers_unique_id_last"  (string)          // string that used to instantiate last prefab, also if equal to "000000000" then no prefabs are instantiated on custommap yet (read only)
     "prefabers_unique_id"       (int)             // number that is used to create "prefabers_unique_id_last" string
 
     "player_sanity"             (float)           // player sanity
@@ -2355,7 +2425,7 @@
     "pain_start"                (bool)            // plays player pain effect if "true"
     "collect_alpha"             (float)           // plays picking item effect if > "0" ("0.25" is default)
     "maniac_hud_transparency"   (float)           // strength of maniac mask effect on screen (from 0 to 1)
-    "no_default_keys_drawing"   (bool)            // if true then the game will not draw copper, brass and steel keys on the hud. Useful if you want to make map only with custom keys.
+    "no_default_keys_drawing"   (bool)            // if true then the game will not draw copper, brass and steel keys on the hud. Useful if you want to make custommap only with custom keys.
     "flashlight"                (bool)            // enable or disable the flashlight
     "flashlight_flick"          (float)           // flashlight flickering if > "0"
     "gui_hud"                   (bool)            // defines HUD visibility
