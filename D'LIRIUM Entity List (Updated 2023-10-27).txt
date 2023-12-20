@@ -192,22 +192,24 @@
     //@brief - Used when you need to perform operation over two input values(stored in this entity) and write result of operation in to another entity.
     //@shape - always point
     
-    "e_name"            (string)        // current entity name
-    "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
-    "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_input_a"         (float)         // first input value
-    "e_input_b"         (float)         // second input value
-    "e_calc_type"       (int)           // calculator operation type
-    "e_output_target"   (string)        // name of entity to set output value in ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
-    "e_output_parm"     (string)        // name of targeted entity parameter to set output value (if "e_output_target" have value, !Activate allowed)
-    "e_disable"         (bool)          // deactivate entity after performing activation
-    "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
-    "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
-    "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
-    "e_sort_position"   (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
-    "e_sort_radius"     (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
-    "e_sort_ox"         (int)           // x offset of "e_sort_radius"
-    "e_sort_oy"         (int)           // y offset of "e_sort_radius"
+    "e_name"               (string)        // current entity name
+    "e_tag"                (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_activated"          (bool)          // current entity activation ("true" if must activate on start)
+    "e_input_a"            (float)         // first input value
+    "e_input_b"            (float)         // second input value
+    "e_input_a_multiplied" (bool)          // (by default false) if true then additionaly multiply e_input_a value by delta time before passing it in to calculator action
+    "e_input_b_multiplied" (bool)          // (by default false) if true then additionaly multiply e_input_b value by delta time before passing it in to calculator action
+    "e_calc_type"          (int)           // calculator operation type
+    "e_output_target"      (string)        // name of entity to set output value in ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
+    "e_output_parm"        (string)        // name of targeted entity parameter to set output value (if "e_output_target" have value, !Activate allowed)
+    "e_disable"            (bool)          // deactivate entity after performing activation
+    "e_sort_method"        (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"           (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"          (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"      (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"        (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"            (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"            (int)           // y offset of "e_sort_radius"
     
     "e_calc_type" (ACTIONS) {
 

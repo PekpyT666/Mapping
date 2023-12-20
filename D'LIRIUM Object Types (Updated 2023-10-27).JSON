@@ -903,9 +903,19 @@
                 "value": 0
             },
             {
+                "name": "e_input_a_multiplied",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_input_b",
                 "type": "int",
                 "value": 0
+            },
+            {
+                "name": "e_input_b_multiplied",
+                "type": "bool",
+                "value": false
             },
             {
                 "name": "e_name",
