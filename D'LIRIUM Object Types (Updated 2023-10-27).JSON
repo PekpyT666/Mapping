@@ -6848,12 +6848,13 @@
             {
                 "name": "e_move_npc_spd",
                 "type": "float",
-                "value": 1
+                "value": 2
             },
             {
                 "name": "e_move_npc_type",
+                "propertytype": "Entity Sequencer NPC Move Type",
                 "type": "int",
-                "value": 2
+                "value": 1
             },
             {
                 "name": "e_move_player",

@@ -377,6 +377,19 @@
                 "Set shake"
             ],
             "valuesAsFlags": false
+        },
+        {
+            "id": 20,
+            "name": "Entity Sequencer NPC Move Type",
+            "storageType": "int",
+            "type": "enum",
+            "values": [
+                "Sneaking",
+                "Walking",
+                "Running",
+                "Moving with "e_move_npc_spd" speed"
+            ],
+            "valuesAsFlags": false
         }
     ]
 }
