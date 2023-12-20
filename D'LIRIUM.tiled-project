@@ -357,6 +357,26 @@
                 "Level finished"
             ],
             "valuesAsFlags": false
+        },
+        {
+            "id": 19,
+            "name": "Entity Operator Operations",
+            "storageType": "int",
+            "type": "enum",
+            "values": [
+                "Add to current width and height",
+                "Set width and height",
+                "Set width",
+                "Set height",
+                "Lerp to width and height",
+                "Lerp to width",
+                "Lerp to height",
+                "Add to current angle",
+                "Add to current shake",
+                "Set angle",
+                "Set shake"
+            ],
+            "valuesAsFlags": false
         }
     ]
 }

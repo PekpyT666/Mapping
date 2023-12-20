@@ -1328,7 +1328,7 @@
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
-    "e_observed_event"  (int)           // currently observed event ("1" to "12", any other value including "0" will do nothing)
+    "e_observed_event"  (int)           // currently observed event (from "1" to "12", any other value including "0" will do nothing)
     "e_sort_method"     (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"        (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"       (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
@@ -1357,6 +1357,44 @@
         "10" (Level started)         // Happens on start of the level before first tick of other entities
         "11" (Level abandoned)       // Happens right before player exit the level without finishing it
         "12" (Level finished)        // Happens when player or entity finish the level
+    }
+}
+
+//-------------------- Entity Operator (ent_operator) --------------------//
+{
+    //@brief - Used when you need to manipulate with size and angle of camera.
+    //@shape - always point
+    
+    "e_name"                   (string)        // current entity name
+    "e_tag"                    (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_target"                 (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_activated"              (bool)          // current entity activation ("true" if must activate on start)
+    "e_destroy_self"           (bool)          // self-destroy after all work done
+    "e_op_input_angle"         (int)           // value that used in angle and shake operations
+    "e_op_input_height"        (int)           // value that used in height operations
+    "e_op_input_width"         (int)           // value that used in widtht operations
+    "e_op_lerp_implementation" (int)           // current algorithm that used in lerp operations (0 - pretty default with "e_op_speed", 1 - basic lerp with "e_op_speed", 2 - basic lerp with "e_op_time")
+    "e_op_limit_angle"         (int)           // angle and shake operation will be clamped between +e_op_limit_angle and -e_op_limit_angle if it greater than 0 
+    "e_op_limit_max_height"    (int)           // upper limit of height clamping
+    "e_op_limit_max_width"     (int)           // upper limit of width clamping
+    "e_op_limit_min_height"    (int)           // down limit of height clamping
+    "e_op_limit_min_width"     (int)           // down limit of width clamping
+    "e_op_operation"           (int)           // current operation that oprator will make to camera (from "0" to "10", any other value will be treated as "0")
+    "e_op_speed"               (int)           // determine how fast lerp operations goes
+    "e_op_time"                (int)           // determine how fast lerp operations goes
+           
+    "e_op_operation" (OPERATIONS) {
+        "0"  (Add to current width and height) // Add "e_op_input_width" to camera width and add "e_op_input_heigh" to camera height
+        "1"  (Set width and height)            // Set width of the camera equal to "e_op_input_width" and set height of the camera equal to "e_op_input_height"
+        "2"  (Set width)                       // Set width of the camera equal to "e_op_input_width"
+        "3"  (Set height)                      // Set height of the camera equal to "e_op_input_height"
+        "4"  (Lerp to width and height)        // Set "e_op_input_width" and "e_op_input_height" as target for slow zooming of camera
+        "5"  (Lerp to width)                   // Set "e_op_input_width" as target for slow zooming of camera
+        "6"  (Lerp to height)                  // Set "e_op_input_height" as target for slow zooming of camera
+        "7"  (Add to current angle)            // Add "e_op_input_angle" to camera rotation
+        "8"  (Add to current shake)            // Add "e_op_input_angle" to camera shaking effect
+        "9"  (Set angle)                       // Set camera rotation equal to "e_op_input_angle"
+        "10" (Set shake)                       // Set camera shaking effect equal to "e_op_input_angle"
     }
 }
 
