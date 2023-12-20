@@ -7203,9 +7203,25 @@
                 "value": ""
             },
             {
+                "name": "e_sound_fadedown",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sound_fadeup",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_sound_loop",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_sound_type",
+                "propertytype": "Sound Type",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_tag",
