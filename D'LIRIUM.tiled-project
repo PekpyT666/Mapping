@@ -109,7 +109,8 @@
                 "bits A OR bits B",
                 "bits A XOR bits B",
                 "bits shift A << B",
-                "bits shift A >> B"
+                "bits shift A >> B",
+                "bits NOT A"
             ],
             "valuesAsFlags": false
         },

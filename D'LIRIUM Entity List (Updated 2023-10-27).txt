@@ -324,8 +324,9 @@
             "78" (i/i) "bits A AND bits B"// Compares each bit of the "e_input_a" integer to the corresponding bit of the "e_input_b" integer, if both bits are 1, corresponding result bit is set to 1
             "79" (i/i) "bits A OR bits B" // Compares each bit of the "e_input_a" integer to the corresponding bit of the "e_input_b" integer, if at lest one bit are 1, corresponding result bit is set to 1
             "80" (i/i) "bits A XOR bits B"// Compares each bit of the "e_input_a" integer to the corresponding bit of the "e_input_b" integer, if one bit are 1 and other is 0, corresponding result bit is set to 1
-            "81" (i/i) "bits shift A << B"// Shift bits of the "e_input_a" integer to the left
-            "82" (i/i) "bits shift A >> B"// Shift bits of the "e_input_a" integer to the right
+            "81" (i/i) "bits shift A << B"// Shift bits of the "e_input_a" integer to the left "e_input_b" times
+            "82" (i/i) "bits shift A >> B"// Shift bits of the "e_input_a" integer to the right "e_input_b" times
+            "83" (i/i) "bits NOT A"// Reverse "e_input_a" bits
         
         #endregion
 		
