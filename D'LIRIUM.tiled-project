@@ -388,7 +388,7 @@
                 "Sneaking",
                 "Walking",
                 "Running",
-                "Moving with "e_move_npc_spd" speed"
+                "Moving with \"e_move_npc_spd\" speed"
             ],
             "valuesAsFlags": false
         }
