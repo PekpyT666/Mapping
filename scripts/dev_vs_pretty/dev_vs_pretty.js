@@ -27,10 +27,10 @@ SOFTWARE.
 
 let map
 
-let sharedNameDtoP = "Convert types from DEV to PRETTY";
+let sharedNameDevToPretty = "Convert types from DEV to PRETTY";
 const devToPretty = tiled.registerAction("devToPretty", function () {
     map = tiled.activeAsset;
-    map.macro(sharedNameDtoP, function () {
+    map.macro(sharedNameDevToPretty, function () {
         for (let l = 0; l < map.layerCount; l++) {
             currentLayer = map.layerAt(l);
             if (currentLayer.objects != null) {                    //на случай , если слой не будет иметь объектов вообще
@@ -81,6 +81,7 @@ const devToPretty = tiled.registerAction("devToPretty", function () {
                         case "ent_breakable": iteratedObject.type = "Entity Breakable"; break;
                         case "ent_button": iteratedObject.type = "Entity Button"; break;
                         case "ent_calculator": iteratedObject.type = "Entity Calculator"; break;
+                        case "ent_changelevel": iteratedObject.type = "Entity Changelevel"; break;
                         case "ent_cinematic": iteratedObject.type = "Entity Cinematic"; break;
                         case "ent_comparator": iteratedObject.type = "Entity Comparator"; break;
                         case "ent_console": iteratedObject.type = "Entity Console"; break;
@@ -104,6 +105,8 @@ const devToPretty = tiled.registerAction("devToPretty", function () {
                         case "ent_multimanager": iteratedObject.type = "Entity Multimanager"; break;
                         case "ent_multiprogrammer": iteratedObject.type = "Entity Multiprogrammer"; break;
                         case "ent_node": iteratedObject.type = "Entity Node"; break;
+                        case "ent_observer": iteratedObject.type = "Entity Observer"; break;
+                        case "ent_operator": iteratedObject.type = "Entity Operator"; break;
                         case "ent_prefaber": iteratedObject.type = "Entity Prefaber"; break;
                         case "ent_portal": iteratedObject.type = "Entity Portal"; break;
                         case "ent_programmer": iteratedObject.type = "Entity Programmer"; break;
@@ -116,6 +119,7 @@ const devToPretty = tiled.registerAction("devToPretty", function () {
                         case "ent_sound": iteratedObject.type = "Entity Sound"; break;
                         case "ent_sound_3d": iteratedObject.type = "Entity Sound 3D"; break;
                         case "ent_spawner": iteratedObject.type = "Entity Spawner"; break;
+                        case "ent_storage": iteratedObject.type = "Entity Storage"; break;
                         case "ent_switch": iteratedObject.type = "Entity Switch"; break;
                         case "ent_trigger": iteratedObject.type = "Entity Trigger"; break;
                         case "ent_waypoint": iteratedObject.type = "Entity Waypoint"; break;
@@ -153,7 +157,7 @@ const devToPretty = tiled.registerAction("devToPretty", function () {
     });
 });
 
-devToPretty.text = sharedNameDtoP;
+devToPretty.text = sharedNameDevToPretty;
 devToPretty.icon = "conv.png"
 
 tiled.extendMenu("Map", [
@@ -163,10 +167,10 @@ tiled.extendMenu("Map", [
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-let sharedNamePtoD = "Convert types from PRETTY to DEV";
+let sharedNamePrettyToDev = "Convert types from PRETTY to DEV";
 const prettyToDev = tiled.registerAction("prettyToDev", function () {
     map = tiled.activeAsset;
-    map.macro(sharedNamePtoD, function () {
+    map.macro(sharedNamePrettyToDev, function () {
         for (let l = 0; l < map.layerCount; l++) {
             currentLayer = map.layerAt(l);
             if (currentLayer.objects != null) {                    //на случай , если слой не будет иметь объектов вообще
@@ -217,6 +221,7 @@ const prettyToDev = tiled.registerAction("prettyToDev", function () {
                         case "Entity Breakable": iteratedObject.type = "ent_breakable"; break;
                         case "Entity Button": iteratedObject.type = "ent_button"; break;
                         case "Entity Calculator": iteratedObject.type = "ent_calculator"; break;
+                        case "Entity Changelevel": iteratedObject.type = "ent_changelevel"; break;
                         case "Entity Cinematic": iteratedObject.type = "ent_cinematic"; break;
                         case "Entity Comparator": iteratedObject.type = "ent_comparator"; break;
                         case "Entity Console": iteratedObject.type = "ent_console"; break;
@@ -240,6 +245,8 @@ const prettyToDev = tiled.registerAction("prettyToDev", function () {
                         case "Entity Multimanager": iteratedObject.type = "ent_multimanager"; break;
                         case "Entity Multiprogrammer": iteratedObject.type = "ent_multiprogrammer"; break;
                         case "Entity Node": iteratedObject.type = "ent_node"; break;
+                        case "Entity Observer": iteratedObject.type = "ent_observer"; break;
+                        case "Entity Operator": iteratedObject.type = "ent_operator"; break;
                         case "Entity Prefaber": iteratedObject.type = "ent_prefaber"; break;
                         case "Entity Portal": iteratedObject.type = "ent_portal"; break;
                         case "Entity Programmer": iteratedObject.type = "ent_programmer"; break;
@@ -252,6 +259,7 @@ const prettyToDev = tiled.registerAction("prettyToDev", function () {
                         case "Entity Sound": iteratedObject.type = "ent_sound"; break;
                         case "Entity Sound 3D": iteratedObject.type = "ent_sound_3d"; break;
                         case "Entity Spawner": iteratedObject.type = "ent_spawner"; break;
+                        case "Entity Storage": iteratedObject.type = "ent_storage"; break;
                         case "Entity Switch": iteratedObject.type = "ent_switch"; break;
                         case "Entity Trigger": iteratedObject.type = "ent_trigger"; break;
                         case "Entity Waypoint": iteratedObject.type = "ent_waypoint"; break;
@@ -289,7 +297,7 @@ const prettyToDev = tiled.registerAction("prettyToDev", function () {
     });
 });
 
-prettyToDev.text = sharedNamePtoD;
+prettyToDev.text = sharedNamePrettyToDev;
 prettyToDev.icon = "conv.png"
 
 tiled.extendMenu("Map", [
