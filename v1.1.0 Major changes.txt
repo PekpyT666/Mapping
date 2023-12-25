@@ -1,0 +1,8 @@
+//---------- SEQUENCER ----------//
+
+Added e_force_complete (by default are true)
+Now if e_sequence_dur > -1 and player/camera/monster/npc are didn't get to the e_move_* in e_sequence_dur they will be instantaneously jumped to e_move_* (or the last e_next in waypoints chain) instead of just stoping where they are right now.
+If you want old behaviour - set e_force_complete to false.
+
+Added e_force_complete_smart (by default are false)
+Set this to true to make player teleport with 1st level of teleportation spell (even if he didn't have it) intead of instantaneously jump (work if e_force_complete is true).
