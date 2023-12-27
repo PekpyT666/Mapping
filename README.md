@@ -15,6 +15,8 @@ Feel free to open a pool request.
 But please, if you found a bug in one of the .js scripts, open a pool request for respective repository instead of this one.
 
 ` `
+[automate_dump_tools](https://github.com/grif-on/automate_dump_tools)
+` `
 [dev_vs_pretty](https://github.com/grif-on/dev_vs_pretty)
 ` `
 [dump_tools](https://github.com/grif-on/dump_tools)
@@ -22,6 +24,8 @@ But please, if you found a bug in one of the .js scripts, open a pool request fo
 [move_player](https://github.com/grif-on/move_player)
 ` `
 [place_all_d_objects](https://github.com/grif-on/place_all_d_objects.git)
+` `
+[property_finder](https://github.com/grif-on/property_finder.git)
 ` `
 [start_delirium](https://github.com/grif-on/start_delirium.git)
 ` `
