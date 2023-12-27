@@ -1761,6 +1761,8 @@
     "e_slave_any"           (string)        // name of "obj_enemy_base" to work with (can be used to manipulate both monsters+NPCs+lanters)
     "e_slave_npc"           (string)        // name of NPC to work with
     "e_slave_monst"         (string)        // name of monster to work with
+    "e_force_complete"      (bool)          // if \"e_sequence_dur\" > -1 and player/camera/monster/npc are didn't get to the e_move_player/e_move_cam/e_move_monst/e_move_npc in e_sequence_dur time so then they will be instantaneously jumped to e_move_player/e_move_cam/e_move_monst/e_move_npc (or the last e_next in waypoints chain) instead of just stoping where they are right now
+    "e_force_complete_smart"(bool)          // If true and \"e_force_complete\" i true - then player will teleport with 1st level of teleportation spell (even if he didn't have it) intead of instantaneously jump
     "e_move_any"            (string)        // name of entity to move targeted "obj_enemy_base" on it (can be used to manipulate both monsters+NPCs+lanters)
     "e_move_npc"            (string)        // name of entity to move targeted NPC to it
     "e_move_npc_type"       (int)           // determine "e_slave_npc"'s speed ("0" - sneaking, "1" - walking,"2" - running, "3" - moving with "e_move_npc_spd" speed)

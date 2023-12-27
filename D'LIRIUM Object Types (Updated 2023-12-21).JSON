@@ -6982,6 +6982,16 @@
                 "value": ""
             },
             {
+                "name": "e_force_complete",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_force_complete_smart",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_jump_any",
                 "type": "string",
                 "value": ""
