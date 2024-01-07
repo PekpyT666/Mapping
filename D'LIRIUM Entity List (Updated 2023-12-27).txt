@@ -39,7 +39,7 @@
 //No prefix.
 //If you write a some folder name in "e_assets_folder" without any prefix then the game will use it as `folder in which custommap is + "e_assets_folder" + resource name variable`. 
 //Also, if you write a name of your custommap in the "e_assets_folder" it will be equivalent of "e_assets_folder" = "", with exception that prefabs which instantiated by entity prefaber or console command "inject", will not inherit "e_assets_folder" from prefaber or "inject" command.
-//This folder alway have READ access but may or may NOT have WRITE access. As turns out steam didn't give a write access for game that made in our game engine to this folder, so if you need read/write access to files for you workhop please look at "%/" prefix usage lower.
+//This folder alway have READ access but may or may NOT have WRITE access. As turns out steam didn't give a write access for game that made in our game engine to this folder, so if you need read/write access to files for you workshop please look at "%/" prefix usage lower.
 
 //LocalAppdata
 //Prefix "%/" expands to "%LocalAppdata%/delirium/" under the game hood.
@@ -54,7 +54,7 @@
 //Scripts context
 //Prefix "?/" expands to "Curent script folder" under the game hood.
 //It's affect only one complex command - "inject". Execute command "inject --help" in game for more info about use case of it.
-//This folder alway have READ access but may or may NOT have WRITE access. In general script context works like maps one, but it is designed for scripts files.
+//This folder alway have READ access but may or may NOT have WRITE access. In general script context works like custommaps one, but it is designed for scripts files.
 
 
 //===========================================================================================//
@@ -471,9 +471,9 @@
     "e_command"         (string)        // command to execute when entity activated. Executed before e_script.
     "e_script           (string)        // name (without extension) of the .dscript file to execute commands from it.
     "e_assets_folder"   (string)        // folder in which entity will search for script resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
-    "e_cheater_flag"    (bool)          // if false then player will not be marked as cheater. Set it to true if you are implementing your own cheat/debug system (i.e. if this entity will not indended to be activated in a normal playthrough of your level).
+    "e_cheater_flag"    (bool)          // if false then player will not be marked as cheater. Set it to true if you are implementing your own cheat/debug system (i.e. if this entity will not indended to be activated in a normal playthrough of your custommap).
     "e_respond_sound"   (bool)          // if false then entity will not produce any sound that you regularly hear when executing commands manually. Set it to true if you need to debug your mechanism.
-        //Note - if you need to use complex commands, then you need to execute command "level enable complex commands" first (NOT just "enable complex commands"). You need to do this only once, right after the level start. This command will initialise all needed resources for complex commands to work, but will forbid player to use complex commands via manual console (unless player will enable them by himself explicitly via manual console). "level enable complex commands" is bound to level thus will not affect other custommaps or story mode.
+        //Note - if you need to use complex commands, then you need to execute command "level enable complex commands" first (NOT just "enable complex commands"). You need to do this only once, right after the custommap start. This command will initialise all needed resources for complex commands to work, but will forbid player to use complex commands via manual console (unless player will enable them by himself explicitly via manual console). "level enable complex commands" is bound to level thus will not affect other custommaps or story mode.
         //You can't use this command manually!
 }
 
@@ -1588,7 +1588,7 @@
 //This entity is pretty good for your own optimization. If you have custommap with thousands of entities you can devide it in to smaller parts and load/unload them while player progress through your custommap.
 //And you can use it not only for optimization but for regular gameplay. For example you can use it to make the same room to be different in particullar moments of your custommap gameplay. Or you can spawn hundreds of monsters over the whole custommap by single prefaber. There is a ton of ideas you can come up with.
 
-//Note about "!prefab" - such naming rule was been made to distinguish prefab files from the normal maps. Entity Prefaber will refuse to load files that don't have this prefix and the arcade menu will not read files that have this prefix.
+//Note about "!prefab" - such naming rule was been made to distinguish prefab files from the normal custommaps. Entity Prefaber will refuse to load files that don't have this prefix and the arcade menu will not read files that have this prefix.
 //If for some reason you need to load prefab file as regular custommap you can do this by renaming+moving file or by creating a SYMBOLIC link to it. But it is advisable to use Entity Prefaber on normal custommap to test prefabs.
 
 }
@@ -2368,7 +2368,7 @@
 
                                 ////global variables////
 {
-    "unload_entities"           (bool)            // (false by default) all entities loaded if "false", entities that are in the visible range and in range of Entity Active Area (ent_forceload_area) will be loaded (you can manually manage entities load on CPU) if "true". (It is worth nothing to mention that Entity Prefaber is also good for optimization of big maps with many entities) .
+    "unload_entities"           (bool)            // (false by default) all entities loaded if "false", entities that are in the visible range and in range of Entity Active Area (ent_forceload_area) will be loaded (you can manually manage entities load on CPU) if "true". (It is worth nothing to mention that Entity Prefaber is also good for optimization of big custommaps with many entities) .
     "last_console_command"      (string)          // last executed console command, on level start initialized with empty string
     
     "prefabers_unique_id_last"  (string)          // string that used to instantiate last prefab, also if equal to "000000000" then no prefabs are instantiated on custommap yet (read only)
