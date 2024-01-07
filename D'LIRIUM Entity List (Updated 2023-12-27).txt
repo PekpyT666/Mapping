@@ -1,4 +1,4 @@
-﻿//===========================================================================================//
+//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -2417,6 +2417,13 @@
     "stats_time_total"          (float)           // real timer of wasted total time, mesuared in ticks (one tick is 1/30 of a second)
     "stats_soulsave_total"      (int)             // souls saved total
     "stats_soulkill_total"      (int)             // souls destroyed total
+	"stats_kills_total_goal"    (int)             // kills goal total of all previous levels
+	"stats_items_total_goal"    (int)             // items goal total of all previous levels
+	"stats_secrets_total_goal"  (int)             // secrets goal total of all previous levels
+	"stats_100percent_kills"    (bool)            // true if player killed all monsters on previous levels (and locked on false after player finished level with at lest one alive monster), note - if you want to use this variable in you custommap you need to read it with enity that activated by Entity Observer with "Level finished" observed event (since this variable updated right after level is finished and not every tick)
+	"stats_100percent_items"    (bool)            // true if player collected all items on previous levels (and locked on false after player finished level with at lest one missed item), note - if you want to use this variable in you custommap you need to read it with enity that activated by Entity Observer with "Level finished" observed event (since this variable updated right after level is finished and not every tick)
+	"stats_100percent_secrets"  (bool)            // true if player collected all secrets on previous levels (and locked on false after player finished level with at lest one missed secret), note - if you want to use this variable in you custommap you need to read it with enity that activated by Entity Observer with "Level finished" observed event (since this variable updated right after level is finished and not every tick)
+	"stats_unforgiven_kills"    (int)             // total karma (negative is "good" and positive is "bad"), monster kills and soul kills are added to this value, while saving of souls with sorcery are substracted from this value
 
     "arcade_score"              (int)             // player score in arcade mode
     "developer"                 (bool)            // developer mode if "true"
