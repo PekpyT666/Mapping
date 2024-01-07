@@ -1,4 +1,4 @@
-//===========================================================================================//
+﻿//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -373,19 +373,42 @@
 {
     //@brief - Used when you need to change current custommap, but keep inventory, stats and healthbars of the player.
     //@shape - always point
+    //@entry_assets - by default this entity will search in entry custommap resource folder no matter which custommap is currently runned.
     
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_level_next"          (string)        // Name of tmj custommap file without extension
     "e_assets_folder"       (string)        // folder in which entity will search for custommap resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
-        //Note - This entity work exactly as in story mode , except it does not have a "end level" statistics screen.
-        //If you need statistics screen you need to make your own by using entities display, grabber and calculator (and others if you wish).
+    "e_assets_folder_entry" (bool)          // (by default true) can be set to false in case you want to store your custommaps in nested structure, i.e. same as all other custommap resources (but nested structure is not advisable!)
+        //Note - This entity work exactly as in story mode , except it does not have a "end" statistics screen for each custommap 
+        //Game have only "final stats" screen when final custommap in chain finished via "Level End" object or with "arcade_finish" global variable.
+        //If you need statistics screen for specific custommap in chain you need to make your own by using entities display, grabber and calculator (and others if you wish).
         //In the "////global variables////" section of this file you can find all statistics related global variabless.
+        
+        //As rule of thumb, store your 2nd-Nth custommaps in resource folder of entry custommap.
+        //(Entry custommap is a custommap that player selected to start in arcade menu OR custommap that you start from Tiled OR custommap started with console command "map custommap")
+        
         //Examples of usage -
-        //1. If your custommap named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" and your next level have path "%LocalAppdata%/delirium/maps/my_map/chapter_one.tmj", then "e_level_next" property should have "chapter_one" value in it.
-        //2. However, you most likely want to store maps near each others (instead of folder in folder in folder for third level in chain). So, If your custommap named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" and your next level have path "%LocalAppdata%/delirium/maps/chapter_one.tmj", then "e_level_next" property should have "../chapter_one" value in it.
-        //3. Chaining maps from workshop. You can make this too, just don't forget to set required custommaps via steam "Add/Remove Required Items" on your workshop items page. So, no matter how your custommap is named and next level from workshop have path "<Steam Path>/steamapps/workshop/content/670160/2189377165/GRF_D'OOM_(E1M1)_V3.tmj", then "e_assets_folder" property should have ">/2189377165" value in it and "e_level_next" property should have "GRF_D'OOM_(E1M1)_V3" value in it.
+        
+        //Suppose for all bellow situations you follow above rule of thumb and you didn't change "e_assets_folder_entry".
+        //You have an entry custommap that named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" .
+        //Note - steam paths equivalents behave similar (like "<Steam Path>/steamapps/workshop/content/670160/<your workshop item id>/my_map.tmj" for subscribed workshop item and "<Game Folder>/UGC/my_map.tmj" for moment when you upload your custommap in to workshop). Since entities work with relative paths you don't need to bother about paths bellow your entry map (unless you override "e_assets_folder" like in situation 4).
+        
+        //Situation 1. From entry custommap to next custommap located in the same workshop item.
+        //If your next custommap have path "%LocalAppdata%/delirium/maps/my_map/chapter_one.tmj", then "e_level_next" property should have "chapter_one" value in it.
+        
+        //Situation 2. From 2nd-Nth custommap to next custommap located in the same workshop item.
+        //If your next custommap have path "%LocalAppdata%/delirium/maps/my_map/chapter_two.tmj", then "e_level_next" property should have "chapter_two" value in it.
+        //As you can see, it is similar to situation 1.
+        
+        //Situation 3. From 2nd-Nth custommap to entry custommap located in the same workshop item.
+        //"e_level_next" property should have "../my_map" value in it.
+        //".." (double dot) signifies moving up one directory level from the current one. In this situation "%LocalAppdata%/delirium/maps/my_map/../my_map.tmj" evaluates in to "%LocalAppdata%/delirium/maps/my_map.tmj".
+        
+        //Situation 4. From any custommap to workshop item cutommap (of your own or even of other mapmakers).
+        //If next custommap have path "<Steam Path>/steamapps/workshop/content/670160/2189377165/GRF_D'OOM_(E1M1)_V3.tmj", then "e_assets_folder" property should have ">/2189377165" value in it and "e_level_next" property should have "GRF_D'OOM_(E1M1)_V3" value in it.
+        //Don't forget to set required custommaps via steam "Add/Remove Required Items" on your workshop items page (so player downloads them automatically by downloading your workshop item).
 }
 
 //-------------------- Entity Cinematic (ent_cinematic) --------------------//
