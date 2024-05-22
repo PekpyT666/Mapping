@@ -232,8 +232,8 @@
     "e_activated"          (bool)          // current entity activation ("true" if must activate on start)
     "e_input_a"            (float)         // first input value
     "e_input_b"            (float)         // second input value
-    "e_input_a_multiplied" (bool)          // (by default false) if true then additionaly multiply e_input_a value by delta time before passing it in to calculator action
-    "e_input_b_multiplied" (bool)          // (by default false) if true then additionaly multiply e_input_b value by delta time before passing it in to calculator action
+    "e_input_a_multiplied" (bool)          // (by default false) if true then additionaly multiply e_input_a value by delta time (same value as in "delta_speed" global variable) before passing it in to calculator action
+    "e_input_b_multiplied" (bool)          // (by default false) if true then additionaly multiply e_input_b value by delta time (same value as in "delta_speed" global variable) before passing it in to calculator action
     "e_calc_type"          (int)           // calculator operation type
     "e_output_target"      (string)        // name of entity to set output value in ("!Player" and "!Global" allowed, aslo allowed !Any if e_sort_method != 0)
     "e_output_parm"        (string)        // name of targeted entity parameter to set output value (if "e_output_target" have value, !Activate allowed)
@@ -2493,4 +2493,8 @@
     "powerup_wrench"            (int)             // wrench damage multiplier (increases each time the player get a second and subsequent wrenches)
     "powerup_fireball"          (int)             // fireball damage multiplier (increases each time the player get a fourth and subsequent fireballs)
     "powerup_plasma"            (int)             // plasma damage multiplier (increases each time the player get a fourth and subsequent plasma)
+
+    "delta_speed"                       (float)   // Multiplier of mostly everything in the game (arcade time, entities timers, monsters/projectiles/player speed and etc). Such a multiplication of everything in the game ensures consistent movement of game elements, regardless of the frame rate (i.e. the game will run at the same speed no matter on how low end pc it is run). The game calculates this value each frame as `"internal time of a one game frame" * (30 / 1000000)`.
+    "delta_speed_fixed_for_next_frames" (int)     // If this variable > 0, it will be decreased every frame by one and block the "delta_speed" calculation. Effectively this means that setting this to N and setting "delta_speed" to some value, you will force the game to work N amount of frames at your desired delta_speed.
+    Note - for a stable 60 fps "delta_speed" is equal to 0.5, NOT 1.0! It is equal to 1.0 when the game is running at 30 fps. It is equal to 2.0 when the game is running at 15 fps, it is equal to 0.75 when the game running at 45 fps and etc.
 }
