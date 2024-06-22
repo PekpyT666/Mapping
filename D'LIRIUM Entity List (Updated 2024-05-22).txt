@@ -406,7 +406,7 @@
         //"e_level_next" property should have "../my_map" value in it.
         //".." (double dot) signifies moving up one directory level from the current one. In this situation "%LocalAppdata%/delirium/maps/my_map/../my_map.tmj" evaluates in to "%LocalAppdata%/delirium/maps/my_map.tmj".
         
-        //Situation 4. From any custommap to workshop item cutommap (of your own or even of other mapmakers).
+        //Situation 4. From any custommap to workshop item custommap (of your own or even of other mapmakers).
         //If next custommap have path "<Steam Path>/steamapps/workshop/content/670160/2189377165/GRF_D'OOM_(E1M1)_V3.tmj", then "e_assets_folder" property should have ">/2189377165" value in it and "e_level_next" property should have "GRF_D'OOM_(E1M1)_V3" value in it.
         //Don't forget to set required custommaps via steam "Add/Remove Required Items" on your workshop items page (so player downloads them automatically by downloading your workshop item).
 }
