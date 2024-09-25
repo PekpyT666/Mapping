@@ -284,7 +284,7 @@
                                               // So best usage is to get it only with one calculator and frrom it write time to all entities where needed.
 
         #endregion
-		
+        
         #region TRIGONOMETRY
         //Notes - Degrees and radians are just regular float numbers in game engine. You can feed float and integer numbers into trigonometry operation.
         //If operation need degrees it will treat any number data like degrees . And if operation need radian it will treat any number data like radian.
@@ -364,7 +364,7 @@
             "83" (i/i) "bits NOT A"// Reverse "e_input_a" bits
         
         #endregion
-		
+        
     }
 
 }
@@ -834,9 +834,9 @@
     //     "_es.txt"    (Spanish)
     //     "_no.txt"    (Norwegian)
         // The algorithm works as follows -
-	    // 1. It tries to open the file with the suffix of the currently selected player language.
-	    // 2. If 1. does not exist, then it tries to open the file with "_en.txt" suffix.
-	    // 3. If 2. does not exist, then it will open the file without any suffixes as you supplied.
+        // 1. It tries to open the file with the suffix of the currently selected player language.
+        // 2. If 1. does not exist, then it tries to open the file with "_en.txt" suffix.
+        // 3. If 2. does not exist, then it will open the file without any suffixes as you supplied.
     // As example here is setup for English and Russian localizations :
     // If your custommap named "my_map.tmj" and it path is "%LocalAppdata%/delirium/maps/my_map.tmj" then text files "my_test.txt" and "my_test_en.txt" and "my_test_ru.txt" should have path "%LocalAppdata%/delirium/maps/my_map/my_test.txt" and "%LocalAppdata%/delirium/maps/my_map/my_test_en.txt" and "%LocalAppdata%/delirium/maps/my_map/my_test_ru.txt" respectively, and "e_text_file"/"e_option_file" properties should have "my_test" value in it.
     // Players who have selected the English language in their settings will see lines from "my_test_en.txt".
@@ -1217,7 +1217,7 @@
     "e_text9"             (string)        // Text that need to be logged (number determine order in resulting logged line)
     "e_log_clear"         (string | int)  // Set desired e_text's equal to ""(empty string) after activation (not only after logging). E.g. value of 146 will clear e_text1 , e_text4 and e_text6 (if this property are 0 or "" means do not clear anything)
     "e_log_ignore_empty"  (string | int)  // Do not log anything if all desired e_text's are empty (also do not execute e_log_clear). E.g. value of 83 will block logging when both e_text3 and e_text8 are "" (if this property are 0 or "" means do not use this feature)
-	"e_log_listen"        (string | int)  // Activate itself once per frame when desired e_text's are changed (but not triggered by e_log_clear). E.g. value of 5 will activate this entity if e_text5 are differnt from what it was last frame (if this property are 0 or "" means do not use this feature)
+    "e_log_listen"        (string | int)  // Activate itself once per frame when desired e_text's are changed (but not triggered by e_log_clear). E.g. value of 5 will activate this entity if e_text5 are differnt from what it was last frame (if this property are 0 or "" means do not use this feature)
     "e_input_target"      (string)        // If not "" then work as grabber every tick , but instead of programming some other entity , write grabbed value in to itself e_text's specified by "e_output_id_text" , "e_output_parm_text" and "e_output_value_text"
     "e_input_parm"        (string)        // Propetry to grabb from e_input_target entity
     "e_array_1st_dim"     (int)           // if e_input_parm is the name of an array, you can access its first dimension using that index. (If set to -1 then the array read function is not used)
@@ -1227,11 +1227,11 @@
     "e_output_parm_text"  (int)           // In which e_text write name of property from where value was been grabbed (if e_input_target is not "") (0 or lover will disable this output)
     "e_output_value_text" (int)           // In which e_text write grabbed value (if e_input_target is not "") (0 or lover will disable this output)
     "e_output_prettify"   (bool)          // Add additional text to output's. Disable this if you need only raw id/name/value. (if e_input_target is not "")
-	"e_use_console"       (bool)          // Print e_text in to standart output. You need to start game with cmd/powershell to see this output in them!
-	"e_use_messagebox"    (bool)          // Show e_text as small dialogue box that separated from main game window (recomended to use in windowed mode).
-	"e_use_mini_text"     (bool)          // Spawn text object on entity coordinates, this text object will be selfdeleted after some time.
-	"e_mini_text_color"   (color | int)   // Collor of the text object (if "e_use_mini_text" = true).
-	"e_sort_method"       (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_use_console"       (bool)          // Print e_text in to standart output. You need to start game with cmd/powershell to see this output in them!
+    "e_use_messagebox"    (bool)          // Show e_text as small dialogue box that separated from main game window (recomended to use in windowed mode).
+    "e_use_mini_text"     (bool)          // Spawn text object on entity coordinates, this text object will be selfdeleted after some time.
+    "e_mini_text_color"   (color | int)   // Collor of the text object (if "e_use_mini_text" = true).
+    "e_sort_method"       (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
     "e_sort_tag"          (string)        // you can add unique tag for entity and find it by this tag ("!Any" allowed)
     "e_sort_type"         (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
     "e_sort_position"     (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
@@ -1585,7 +1585,7 @@
                   // For this mode you need to place prefaber as Rectangle in Tiled.
                   // Also note prefaber CAN'T save game core objects (like obj_Cursor or obj_dev_gameconsole, etc) and managed objects (obj_doorwall, obj_cyclerwall and obj_cyclerwall_solid).
                   // Work of this mode is equal to how "level dump"/"level save"/"levels save all" commands saves objects (NOT "level dump full"/"level save full"/"levels save all full").
-				  
+                  
         "2"       // Load everything that stored in internal prefaber storage.
                   // For this mode you can place prefaber as Point in Tiled, but in most cases you will need to place it as Rectangle, since "2" and "3" modes intended to be used together.
                   
@@ -1594,9 +1594,9 @@
                   // Also note prefaber CAN'T save game core objects (like obj_Cursor or obj_dev_gameconsole, etc) and managed objects (obj_doorwall, obj_cyclerwall and obj_cyclerwall_solid).
                   // Work of this mode is equal to how "level dump"/"level save"/"levels save all" commands saves objects (NOT "level dump full"/"level save full"/"levels save all full").
     }
-	
+    
     e_pref_saved_types (KEYWORDS) {
-	// You can use this keywords instead of manually typing object types
+    // You can use this keywords instead of manually typing object types
         "!Entity"       // All types of entities
         "!Enemy"        // All types of regullar monsters and plus lanterns
         "!Item"         // All types of items
@@ -2355,38 +2355,38 @@
     //values in global variable "death_type" (upated every frame)
     "playerDeath.alive"
     "playerDeath.sanity"
-	"playerDeath.toxin"
-	"playerDeath.physical"
+    "playerDeath.toxin"
+    "playerDeath.physical"
 
     //values in monsters variable "killed_by_player", anything that is not "no" will count as player kill when monster dies (while non player kills substracted from goal intad of adding stat for player)
-	"murdered.no"
-	"murdered.killed"
-	"murdered.torn"
-	"murdered.blown"
+    "murdered.no"
+    "murdered.killed"
+    "murdered.torn"
+    "murdered.blown"
     
     //values in global varialbe "config_language"
-	"language.English"
-	"language.Russian"
-	"language.sChinese"
-	"language.tChinese"
-	"language.French"
-	"language.Belarusian"
-	"language.Polish"
-	"language.Ukrainian"
-	"language.German"
-	"language.Hungarian"
-	"language.Czech"
-	"language.Spanish"
-	"language.Norwegian"
+    "language.English"
+    "language.Russian"
+    "language.sChinese"
+    "language.tChinese"
+    "language.French"
+    "language.Belarusian"
+    "language.Polish"
+    "language.Ukrainian"
+    "language.German"
+    "language.Hungarian"
+    "language.Czech"
+    "language.Spanish"
+    "language.Norwegian"
 
     //values in NPC and monsters variable "current_state"
-	"npcstate.idle"
-	"npcstate.walking"
-	"npcstate.sneaking"
-	"npcstate.running"
-	"npcstate.moving"
-	"npcstate.following"
-	"npcstate.seating"
+    "npcstate.idle"
+    "npcstate.walking"
+    "npcstate.sneaking"
+    "npcstate.running"
+    "npcstate.moving"
+    "npcstate.following"
+    "npcstate.seating"
 }
 
                                 ////global variables////
@@ -2440,13 +2440,13 @@
     "stats_time_total"          (float)           // real timer of wasted total time, mesuared in ticks (one tick is 1/30 of a second)
     "stats_soulsave_total"      (int)             // souls saved total
     "stats_soulkill_total"      (int)             // souls destroyed total
-	"stats_kills_total_goal"    (int)             // kills goal total of all previous levels
-	"stats_items_total_goal"    (int)             // items goal total of all previous levels
-	"stats_secrets_total_goal"  (int)             // secrets goal total of all previous levels
-	"stats_100percent_kills"    (bool)            // true if player killed all monsters on previous levels (and locked on false after player finished level with at lest one alive monster), note - if you want to use this variable in you custommap you need to read it with enity that activated by Entity Observer with "Level finished" observed event (since this variable updated right after level is finished and not every tick)
-	"stats_100percent_items"    (bool)            // true if player collected all items on previous levels (and locked on false after player finished level with at lest one missed item), note - if you want to use this variable in you custommap you need to read it with enity that activated by Entity Observer with "Level finished" observed event (since this variable updated right after level is finished and not every tick)
-	"stats_100percent_secrets"  (bool)            // true if player collected all secrets on previous levels (and locked on false after player finished level with at lest one missed secret), note - if you want to use this variable in you custommap you need to read it with enity that activated by Entity Observer with "Level finished" observed event (since this variable updated right after level is finished and not every tick)
-	"stats_unforgiven_kills"    (int)             // total karma (negative is "good" and positive is "bad"), monster kills and soul kills are added to this value, while saving of souls with sorcery are substracted from this value
+    "stats_kills_total_goal"    (int)             // kills goal total of all previous levels
+    "stats_items_total_goal"    (int)             // items goal total of all previous levels
+    "stats_secrets_total_goal"  (int)             // secrets goal total of all previous levels
+    "stats_100percent_kills"    (bool)            // true if player killed all monsters on previous levels (and locked on false after player finished level with at lest one alive monster), note - if you want to use this variable in you custommap you need to read it with enity that activated by Entity Observer with "Level finished" observed event (since this variable updated right after level is finished and not every tick)
+    "stats_100percent_items"    (bool)            // true if player collected all items on previous levels (and locked on false after player finished level with at lest one missed item), note - if you want to use this variable in you custommap you need to read it with enity that activated by Entity Observer with "Level finished" observed event (since this variable updated right after level is finished and not every tick)
+    "stats_100percent_secrets"  (bool)            // true if player collected all secrets on previous levels (and locked on false after player finished level with at lest one missed secret), note - if you want to use this variable in you custommap you need to read it with enity that activated by Entity Observer with "Level finished" observed event (since this variable updated right after level is finished and not every tick)
+    "stats_unforgiven_kills"    (int)             // total karma (negative is "good" and positive is "bad"), monster kills and soul kills are added to this value, while saving of souls with sorcery are substracted from this value
 
     "arcade_score"              (int)             // player score in arcade mode
     "developer"                 (bool)            // developer mode if "true"
