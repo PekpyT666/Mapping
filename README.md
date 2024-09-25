@@ -4,7 +4,7 @@ This repository contains the documentation and programs that you need to create 
 
 These files are also shipped alongside with the game on steam.
 <picture>
-  <img src="https://github.com/PekpyT666/Mapping/blob/main/Screenshot.png">
+  <img src="./auto utilized files/Screenshot.png">
 </picture>
 
 To get started, please read the "!READ ME BEFORE YOU BEGIN!" text file.
