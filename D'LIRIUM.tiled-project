@@ -391,6 +391,21 @@
                 "Moving with \"e_move_npc_spd\" speed"
             ],
             "valuesAsFlags": false
+        },
+        {
+            "id": 21,
+            "name": "Entity Keycheck Check Type",
+            "storageType": "int",
+            "type": "enum",
+            "values": [
+                "Keyboard button held down",
+                "Keyboard button pressed",
+                "Keyboard button released",
+                "Mouse button held down",
+                "Mouse button pressed",
+                "Mouse button released"
+            ],
+            "valuesAsFlags": false
         }
     ]
 }

@@ -1,4 +1,4 @@
-//===========================================================================================//
+﻿//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -1152,6 +1152,115 @@
         "15" (Go to previous frame, Activate on end)                     // переключение на 1 кадр назад, в конце передача активации и возврат к последнему кадру
         "16" (Go to previous frame, Activate and Block on end)           // переключение на 1 кадр назад, в конце передача активации и блокировка
     }
+}
+
+//-------------------- Entity Keycheck (ent_keycheck) --------------------//
+{
+    //@brief - Used when you need to activate other entity when the player presses desired button on the keyboard or mouse.
+    //@shape - always point
+    
+    "e_name"                (string)        // current entity name
+    "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
+    "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
+    "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
+    "e_check_inverse"       (bool)          // inverse result of the check, i.e. don't activate target if desired button in desired state, and activate target if it not. This is helpfull for example for "vk_nokey" and "mb_nokey" (inversion will achive behaviour "activate target if player didn't touch any buttons").
+    "e_check_key"           (string)        // desired button to check. Can be : virtual keyboard/mouse code (look at "VIRTUAL KEY CODES" table), just letter or symbol from wich actual keycode will be determined or (if "e_check_raw" is true) raw OS dependant number that represent actual device code.
+    "e_check_raw"           (bool)          // if true disables usage of virtual key codes and uses OS dependant integer values. Most likely you would NOT want to use this feature! But for example 192 is a raw keycode of "~"/"`" buttons on windows compiled version of the game. Again try to avoid usage of raw keycodes, since it will require you/someoneelse to tweak your map with additional logic when/if game will be ported to other systems (mac/linux).
+    "e_check_type"          (int)           // sets type of device wich button to check and type of player action with it ("0" to "5")
+    "e_disable"             (bool)          // deactivate entity after performing activation
+    "e_sort_method"         (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"            (string)        // you can add unique tag for entity and find it by this tag
+    "e_sort_type"           (string)        // you can find entity by it's type (like "ent_button", "ent_spawner", etc). Also note that this is the only e_sort parameter that truly decrease CPU load caused by sort algorithm
+    "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"             (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"             (int)           // y offset of "e_sort_radius"
+    
+    "e_check_type" (DEVICES AND ACTIONS) {
+        "0"  (Keyboard button held down)         // Activate target when this entity activated and desired keyboard button is held down
+        "1"  (Keyboard button pressed)           // Activate target when this entity activated and desired keyboard button changes it state from not held down in the previous frame to held down in the current frame
+        "2"  (Keyboard button released)          // Activate target when this entity activated and desired keyboard button changes it state from held down in the previous frame to not held down in the current frame
+        "3"  (Mouse button held down)            // Activate target when this entity activated and desired mouse button is held down
+        "4"  (Mouse button pressed)              // Activate target when this entity activated and desired mouse button changes it state from not held down in the previous frame to held down in the current frame
+        "5"  (Mouse button released)             // Activate target when this entity activated and desired mouse button changes it state from held down in the previous frame to not held down in the current frame
+    }
+    
+    // Note - modes "1", "2", "4", and "5" are works in game engine frames, not in entities ticks!
+    // If you use them, don't set "e_disable" to true unless you know what you are doing!
+    
+    "e_check_key" (VIRTUAL KEY CODES) {
+        keyboard : {
+            "vk_nokey"
+            "vk_none"      // same as "vk_nokey", just an game engine alias
+            "vk_anykey"
+            "vk_any"       // same as "vk_anykey", just an game engine alias
+            "vk_left"
+            "vk_right"
+            "vk_up"
+            "vk_down"
+            "vk_enter"
+            "vk_escape"
+            "vk_space"
+            "vk_shift"
+            "vk_control"
+            "vk_alt"
+            "vk_backspace"
+            "vk_tab"
+            "vk_home"
+            "vk_end"
+            "vk_delete"
+            "vk_insert"
+            "vk_pageup"
+            "vk_pagedown"
+            "vk_pause"
+            "vk_printscreen"
+            "vk_f1"
+            "vk_f2"
+            "vk_f3"
+            "vk_f4"
+            "vk_f5"
+            "vk_f6"
+            "vk_f7"
+            "vk_f8"
+            "vk_f9"
+            "vk_f10"
+            "vk_f11"
+            "vk_f12"
+            "vk_numpad0"
+            "vk_numpad1"
+            "vk_numpad2"
+            "vk_numpad3"
+            "vk_numpad4"
+            "vk_numpad5"
+            "vk_numpad6"
+            "vk_numpad7"
+            "vk_numpad8"
+            "vk_numpad9"
+            "vk_multiply"
+            "vk_divide"
+            "vk_add"
+            "vk_subtract"
+            "vk_decimal"
+            "vk_lshift"
+            "vk_lcontrol"
+            "vk_lalt"
+            "vk_rshift"
+            "vk_rcontrol"
+            "vk_ralt"
+        },
+        mouse : {
+            "mb_nokey"
+            "mb_none"      // same as "mb_nokey", just an game engine alias
+            "mb_anykey"
+            "mb_any"       // same as "mb_anykey", just an game engine alias
+            "mb_left"
+            "mb_middle"
+            "mb_right"
+            "mb_side1"
+            "mb_side2"
+        }
+    }
+    
 }
 
 //-------------------- Entity Light (ent_light) --------------------//
