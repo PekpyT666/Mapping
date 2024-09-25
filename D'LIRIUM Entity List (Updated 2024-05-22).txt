@@ -1,4 +1,4 @@
-﻿//===========================================================================================//
+//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -1130,8 +1130,8 @@
     "e_sort_type"           (string)        // you can find entity by it's type (like "ent_button", "ent_spawner", etc). Also note that this is the only e_sort parameter that truly decrease CPU load caused by sort algorithm
     "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
-    "e_sort_x_offset"       (int)           // x offset of "e_sort_radius"
-    "e_sort_y_offset"       (int)           // y offset of "e_sort_radius"
+    "e_sort_ox"             (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"             (int)           // y offset of "e_sort_radius"
     
     "e_interact_type" (ACTIONS) {
         "0"  (Loop, Activate on end)                                     // проигрывание повторяющейся анимации с передачей активации в конце
@@ -1809,8 +1809,8 @@
     "e_sort_type"           (string)        // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
     "e_sort_position"       (int)           // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
     "e_sort_radius"         (int)           // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
-    "e_sort_x_offset"       (int)           // x offset of "e_sort_radius"
-    "e_sort_y_offset"       (int)           // y offset of "e_sort_radius"
+    "e_sort_ox"             (int)           // x offset of "e_sort_radius"
+    "e_sort_oy"             (int)           // y offset of "e_sort_radius"
     "e_disable_flashlight"  (bool)          // Disable flashlight on activation
     "e_progress"            (bool)          // Sequencer progress state. Do not change it manually! You need to activate sequencer to properly start/stop it.
         // Note - "e_sort_tag", "e_sort_type", "e_sort_position" and "e_sort_radius" have limited functional in this entity!
