@@ -2,7 +2,7 @@
 /*
 MIT License
 
-Copyright (c) 2023 Grif_on
+Copyright (c) 2023-2024 Grif_on
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -98,6 +98,7 @@ const devToPretty = tiled.registerAction("devToPretty", function () {
                         case "ent_grabber": iteratedObject.type = "Entity Grabber"; break;
                         case "ent_hurt": iteratedObject.type = "Entity Hurt"; break;
                         case "ent_interact": iteratedObject.type = "Entity Interact"; break;
+                        case "ent_keycheck": iteratedObject.type = "Entity Keycheck"; break;
                         case "ent_light": iteratedObject.type = "Entity Light"; break;
                         case "ent_log": iteratedObject.type = "Entity Log"; break;
                         case "ent_movement": iteratedObject.type = "Entity Movement"; break;
@@ -238,6 +239,7 @@ const prettyToDev = tiled.registerAction("prettyToDev", function () {
                         case "Entity Grabber": iteratedObject.type = "ent_grabber"; break;
                         case "Entity Hurt": iteratedObject.type = "ent_hurt"; break;
                         case "Entity Interact": iteratedObject.type = "ent_interact"; break;
+                        case "Entity Keycheck": iteratedObject.type = "ent_keycheck"; break;
                         case "Entity Light": iteratedObject.type = "ent_light"; break;
                         case "Entity Log": iteratedObject.type = "ent_log"; break;
                         case "Entity Movement": iteratedObject.type = "ent_movement"; break;
