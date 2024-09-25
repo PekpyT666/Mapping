@@ -5,7 +5,7 @@
     "extensionsPath": "./scripts",
     "folders": [
     ],
-    "objectTypesFile": "./D'LIRIUM Object Types (Updated 2023-12-27).JSON",
+    "objectTypesFile": "./D'LIRIUM Object Types (Updated 2024-09-25).json",
     "propertyTypes": [
         {
             "id": 1,
