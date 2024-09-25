@@ -448,7 +448,7 @@
             {
                 "name": "e_mask",
                 "type": "string",
-                "value": "spr_dev_cycler"
+                "value": "spr_window_bedroom"
             },
             {
                 "name": "e_mask_ox",
@@ -1028,6 +1028,11 @@
                 "name": "e_assets_folder",
                 "type": "string",
                 "value": ""
+            },
+            {
+                "name": "e_assets_folder_entry",
+                "type": "bool",
+                "value": true
             },
             {
                 "name": "e_level_next",
