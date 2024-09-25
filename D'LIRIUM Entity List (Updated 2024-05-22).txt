@@ -387,7 +387,7 @@
         //In the "////global variables////" section of this file you can find all statistics related global variabless.
         
         //As rule of thumb, store your 2nd-Nth custommaps in resource folder of entry custommap.
-        //(Entry custommap is a custommap that player selected to start in arcade menu OR custommap that you start from Tiled OR custommap started with console command "map custommap")
+        //(Entry custommap is a custommap that player selected to start in arcade menu OR custommap that you start from Tiled)
         
         //Examples of usage -
         
