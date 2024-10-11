@@ -38,7 +38,7 @@
 //Folder near custommap
 //No prefix.
 //If you write a some folder name in "e_assets_folder" without any prefix then the game will use it as `folder in which custommap is + "e_assets_folder" + resource name variable`. 
-//Also, if you write a name of your custommap in the "e_assets_folder" it will be equivalent of "e_assets_folder" = "", with exception that prefabs which instantiated by Entity Prefaber or console command "inject", will not inherit "e_assets_folder" from prefaber or "inject" command.
+//Also, if you write a name of your custommap in the "e_assets_folder" it will be equivalent of "e_assets_folder" = "", with exception that prefabs which loaded by Entity Prefaber or console command "inject", will not inherit "e_assets_folder" from prefaber or "inject" command.
 //This folder alway have READ access but may or may NOT have WRITE access. As turns out steam didn't give a write access for game that made in our game engine to this folder, so if you need read/write access to files for you workshop please look at "%/" prefix usage lower.
 
 //LocalAppdata
@@ -1717,7 +1717,7 @@
 //You can think about this entity as Entity Spawner but more powerful. Instead of manually defining properties of single spawned object in spawner, you create new custommap that will be a prefab (i.e. template/blueprint) for spawning all of it objects with all their properties. You can change prefab even when custommap is already started, but be aware that changing of prefab didn't change already loaded on custommap field prefab instances - they are just object instances without any connection between them and prefab. 
 //The true power of this entity is that you can set "e_make_unique" to true and use "{unique_id}" in properties of the string type. This will guaranty that entities will work with each others in one instance of loaded prefab, but will ignore same entities from another loaded instance of the same prefab.
 //Note, if for some reson you need to get/manipulate "{unique_id}", you can GET last string used for such replacement via "prefabers_unique_id_last" , and you can manipulate with it integer value via "prefabers_unique_id" global variable. But in most cases you don't need to change unique id since it is fully managed by game (nulling when new game started, incremented by one when prefab is loaded, and saved/loaded inside save file). What you can actually do - you can use "prefabers_unique_id_last" (it hold string) to connect some parts of the two prefabs together with some manually placed grabbers and calculators.
-//Also note that first prefab with {unique_id} will have "000000001" as unique string, not "000000000" ("000000000" value is reserved as flag that there is no prefabs instantiated yet).
+//Also note that first prefab with {unique_id} will have "000000001" as unique string, not "000000000" ("000000000" value is reserved as flag that there is no prefabs loaded yet).
 //Reusing of your entities mechanisms is not the only porpuse of this entity.
 //This entity is pretty good for your own optimization. If you have custommap with thousands of entities you can devide it in to smaller parts and load/unload them while player progress through your custommap.
 //And you can use it not only for optimization but for regular gameplay. For example you can use it to make the same room to be different in particullar moments of your custommap gameplay. Or you can spawn hundreds of monsters over the whole custommap by single prefaber. There is a ton of ideas you can come up with.
@@ -2505,7 +2505,7 @@
     "unload_entities"           (bool)            // (false by default) all entities loaded if "false", entities that are in the visible range and in range of Entity Active Area (ent_forceload_area) will be loaded (you can manually manage entities load on CPU) if "true". (It is worth nothing to mention that Entity Prefaber is also good for optimization of big custommaps with many entities) .
     "last_console_command"      (string)          // last executed console command, on level start initialized with empty string
     
-    "prefabers_unique_id_last"  (string)          // string that used to instantiate last prefab, also if equal to "000000000" then no prefabs are instantiated on custommap yet (read only)
+    "prefabers_unique_id_last"  (string)          // string that used to load last prefab with "unique" option turned on, also if equal to "000000000" then there is no "unique" prefabs loaded yet(read only)
     "prefabers_unique_id"       (int)             // number that is used to create "prefabers_unique_id_last" string
 
     "player_sanity"             (float)           // player sanity
