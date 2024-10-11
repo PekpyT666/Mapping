@@ -481,6 +481,11 @@
                 "value": false
             },
             {
+                "name": "e_shadow_yoffset",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_solid_type",
                 "propertytype": "Solid Type",
                 "type": "int",
@@ -1729,6 +1734,11 @@
                 "name": "e_shadow_bot",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_shadow_yoffset",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_solid_type",
@@ -4107,6 +4117,11 @@
                 "value": false
             },
             {
+                "name": "e_shadow_yoffset",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_shooter",
                 "type": "bool",
                 "value": false
@@ -6008,6 +6023,11 @@
                 "value": false
             },
             {
+                "name": "e_shadow_yoffset",
+                "type": "int",
+                "value": 0
+            },
+            {
                 "name": "e_sort_method",
                 "propertytype": "Entity Sorting Method",
                 "type": "int",
@@ -6869,6 +6889,11 @@
                 "name": "e_shadow_bot",
                 "type": "bool",
                 "value": false
+            },
+            {
+                "name": "e_shadow_yoffset",
+                "type": "int",
+                "value": 0
             },
             {
                 "name": "e_solid_type",
