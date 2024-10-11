@@ -1338,6 +1338,7 @@
     "e_output_prettify"   (bool)          // Add additional text to output's. Disable this if you need only raw id/name/value. (if e_input_target is not "")
     "e_use_console"       (bool)          // Print e_text in to standart output. You need to start game with cmd/powershell to see this output in them!
     "e_use_messagebox"    (bool)          // Show e_text as small dialogue box that separated from main game window (recomended to use in windowed mode).
+    "e_messagebox_async"  (bool)          // If "true" will prevent dialogue box from pausing game. Note - async messageboxes can't overlap over each others, but they can schedules one after another.
     "e_use_mini_text"     (bool)          // Spawn text object on entity coordinates, this text object will be selfdeleted after some time.
     "e_mini_text_color"   (color | int)   // Collor of the text object (if "e_use_mini_text" = true).
     "e_sort_method"       (int)           // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.

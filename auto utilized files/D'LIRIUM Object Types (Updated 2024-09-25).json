@@ -4781,6 +4781,11 @@
                 "value": true
             },
             {
+                "name": "e_messagebox_async",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_use_mini_text",
                 "type": "bool",
                 "value": false
