@@ -6218,12 +6218,12 @@
             {
                 "name": "e_pref_distance_offset_x",
                 "type": "float",
-                "value": 8
+                "value": 0
             },
             {
                 "name": "e_pref_distance_offset_y",
                 "type": "float",
-                "value": 8
+                "value": 0
             },
             {
                 "name": "e_pref_file",
