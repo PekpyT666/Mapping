@@ -6297,7 +6297,54 @@
                 "value": "!Entity"
             },
             {
+                "name": "e_pref_target_activation",
+                "propertytype": "Entity Prefaber Activation Condition",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_position",
+                "type": "int",
+                "value": 1
+            },
+            {
+                "name": "e_sort_radius",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sort_type",
+                "type": "string",
+                "value": "!Entity"
+            },
+            {
                 "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_target",
                 "type": "string",
                 "value": ""
             },

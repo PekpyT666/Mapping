@@ -406,6 +406,19 @@
                 "Mouse button released"
             ],
             "valuesAsFlags": false
+        },
+        {
+            "id": 22,
+            "name": "Entity Prefaber Activation Condition",
+            "storageType": "int",
+            "type": "enum",
+            "values": [
+                "No activation",
+                "On load",
+                "On save",
+                "On load and save"
+            ],
+            "valuesAsFlags": false
         }
     ]
 }

@@ -1687,6 +1687,15 @@
     "e_pref_last_unique_id"               (string) // Holds a string that was been used as replacement of the "{unique_id}" when last prefab was been loaded. Value "000000000" is reserved as flag that this prefaber didn't load anything yet.
     "e_destroy_self"                      (bool)   // If true, then Entity Prefaber will delete itself after activation.
     "e_delayed_destroy_self"              (int)    // Amount of this prefaber activations before it set his "e_destroy_self" to true ("0" or lower to disable this feature). Helpful for example if you need to save prefab in to internal storage, but delete prefaber after it will load prefab back (i.e. value of "1" will allow prefaber to be activated two times before selfdestroys).
+    "e_pref_target_activation"            (int)    // Allow to chose when "e_target" will be actiaveted (by default it doesn't activated at all), you can look what possible conditions are in CONDITION list bellow.
+    "e_sort_method"                       (int)    // "0" (used by default) - all entities specified in "e_target", below sort parametrs are ignored, "1" - one nearest entity on "e_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_sort_position" that match all not empty sorts, "3" - "e_sort_position" nearest entities that match all not empty sorts, "4" - "e_sort_position" furthest entities that match all not empty sorts, "5" - "e_sort_position" some (random) entities that match all not empty sorts.
+    "e_sort_tag"                          (string) // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_sort_type"                         (string) // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_sort_position"                     (int)    // number of entity in order (if "e_sort_method" is "1" or "2") OR count of entities (if "e_sort_method" is "3" or "4" or "5")
+    "e_sort_radius"                       (int)    // you can find entity in specified radius (or outside it if "e_sort_radius" less than or equel "0")
+    "e_sort_ox"                           (int)    // x offset of "e_sort_radius"
+    "e_sort_oy"                           (int)    // y offset of "e_sort_radius"
+    "e_target"                            (string) // Unlike other entities you need to choose e_pref_target_activation so prefaber will activate entity with specified name (and as always if e_sort_method isn't 0 then "!Any" allowed)
 
     "e_pref_mode" (MODE) {
         "0"       // Load everything from prefab file.
@@ -1713,6 +1722,13 @@
         "!Item"         // All types of items
         "!Noone"        // Nothing, in case you need placeholder that didn't do anything
     }
+    
+    e_pref_target_activation (CONDITION) {
+        "0"      // No activation
+        "1"      // On load
+        "2"      // On save
+        "3"      // On load and save
+    }
 
 //You can think about this entity as Entity Spawner but more powerful. Instead of manually defining properties of single spawned object in spawner, you create new custommap that will be a prefab (i.e. template/blueprint) for spawning all of it objects with all their properties. You can change prefab even when custommap is already started, but be aware that changing of prefab didn't change already loaded on custommap field prefab instances - they are just object instances without any connection between them and prefab. 
 //The true power of this entity is that you can set "e_make_unique" to true and use "{unique_id}" in properties of the string type. This will guaranty that entities will work with each others in one instance of loaded prefab, but will ignore same entities from another loaded instance of the same prefab.
@@ -1723,7 +1739,7 @@
 //And you can use it not only for optimization but for regular gameplay. For example you can use it to make the same room to be different in particullar moments of your custommap gameplay. Or you can spawn hundreds of monsters over the whole custommap by single prefaber. There is a ton of ideas you can come up with.
 
 //Note about "!prefab" - such naming rule was been made to distinguish prefab files from the normal custommaps. Entity Prefaber will refuse to load files that don't have this prefix and the arcade menu will not read files that have this prefix.
-//If for some reason you need to load prefab file as regular custommap you can do this by renaming+moving file or by creating a SYMBOLIC link to it. But it is advisable to use Entity Prefaber on normal custommap to test prefabs.
+//If for some reason you need to load prefab file as regular custommap you can do this by renaming+moving file or by creating a SYMBOLIC link to it. But it is advisable to just use prefabs via Entity Prefaber on normal custommap.
 
 }
 
