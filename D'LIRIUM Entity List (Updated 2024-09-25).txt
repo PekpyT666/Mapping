@@ -1075,6 +1075,7 @@
     "e_dmg_pain"        (bool)          // pain effects on damage
     "e_dmg_hud"         (bool)          // HUD damage effect
     "e_dmg_die"         (bool)          // allows player to die if "true"
+    "e_dmg_direct"      (bool)          // If "true" damage will be applied without damage reduction from sigil (savepoint) buff and damage multipliers (sanity_damage_multiplier, toxins_damage_multiplier and health_damage_multiplier global variables)
 }
 
 //-------------------- Entity Interact (ent_interact) --------------------//

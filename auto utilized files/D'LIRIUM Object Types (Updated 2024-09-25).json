@@ -3934,6 +3934,11 @@
                 "value": true
             },
             {
+                "name": "e_dmg_direct",
+                "type": "bool",
+                "value": true
+            },
+            {
                 "name": "e_dmg_hud",
                 "type": "bool",
                 "value": true
