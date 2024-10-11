@@ -1,4 +1,4 @@
-﻿//===========================================================================================//
+//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -1665,6 +1665,7 @@
     "e_tag"                               (string) // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types. 
     "e_pref_mode"                         (int)    // What this prefaber should do (from "0" to "3", any other value will be treated as "0").
     "e_pref_activate_on_mode_switching"   (bool)   // If true then prefaber will activate when his mode is changed (to prevent infinite loop this feature ignored mode change made by "e_pref_mode_switching_on_activation").
+    "e_pref_cache_file"                   (bool)   // For speed up of debbuging/mapping you can set it to "false", this will make prefab file loads from disk each time prefab is created (this have some overheat for big prefab files as you can guess). Please, don't forget to set it back to "true" when you will publish your map.
     "e_pref_mode_switching_on_activation" (bool)   // If true then after activation prefaber will switch his "e_pref_mode" to opposite ("0"<->"1" and "2"<->"3").
     "e_pref_mode_switching_on_distance"   (float)  // Prefaber will manage it mode depending on how far player from this Entity Prefaber is ("0" disables this feature, but negative values will invert it). I.e. when number is positive and ditance between prefaber and player greater than this number, then prefaber will set itself in to save state ("1" or "3", depends on what you set in "e_pref_mode"), but when number is positive and ditance between prefaber and player less than this number,then prefaber will set itself in load state ("0" or "2", depends on what you set in "e_pref_mode").
     "e_pref_distance_offset_x"            (float)  // X offset of point from wich prefaber checked distance between him and player (if "e_pref_distance_offset_set_middle" is false) (by default it is seted to width/2 of the prefaber, but if you set it to "0" then it will be the top left corner of the prefaber. i.e. his x).

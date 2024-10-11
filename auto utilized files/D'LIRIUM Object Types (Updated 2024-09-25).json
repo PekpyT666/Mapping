@@ -6196,6 +6196,11 @@
                 "value": false
             },
             {
+                "name": "e_pref_cache_file",
+                "type": "bool",
+                "value": true
+            },
+            {
                 "name": "e_pref_create_image_layers",
                 "type": "bool",
                 "value": false
