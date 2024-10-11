@@ -1,4 +1,4 @@
-//===========================================================================================//
+﻿//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -1262,6 +1262,8 @@
             "mb_right"
             "mb_side1"
             "mb_side2"
+			"mb_wheel_down" // since mouse wheel can't have state, this keycode can only be checked by modes "4" and "5" (and these two modes are also equivalent to each other)
+			"mb_wheel_up"   // since mouse wheel can't have state, this keycode can only be checked by modes "4" and "5" (and these two modes are also equivalent to each other)
         }
     }
     
