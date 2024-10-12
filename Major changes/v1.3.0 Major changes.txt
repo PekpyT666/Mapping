@@ -1,4 +1,4 @@
-//---------- CUSTOMMAP SPRITES/SOUNDS/PREFABS ----------//
+//---------- CACHING OF SPRITES/SOUNDS/PREFABS ----------//
 
 Now custommap assets (with same properties) are cached and become sharable between entities when any entity used them for the first time.
 Cache resets on level finish or abandonment (but not on personal hell entrance/exit).
@@ -15,7 +15,7 @@ For debugging/mapping convinience, Entity Prefaber now have property "e_pref_cac
 //---------- ADDED SUPPORT FOR BASIC SPRITES ----------//
 
 It is optional but convinient alternative for situations when you need a lot of sprites for your entities "e_mask" property.
-Instead of tedious creation png files for each different size of the masks, mapper can write string with format ":width:height:" in "e_mask" (or any other sprite property). This will create rectangular white sprite with specified size.
+Instead of tedious creation of png files for each different size of the masks, mapper can write string with format ":width:height:" in "e_mask" (or any other sprite property). This will create rectangular white sprite with specified size, wich is what mask sprites looks like most of the times.
 And don't forget that you can change color of sprites with respective properties.
 
 Example :
@@ -24,8 +24,8 @@ You can write ":100:50:" in to "e_sprite" of some your Entity Decor and change i
 //---------- SAVE SYSTEM IMPROVEMENT ----------//
 
 Now all savable objects have (and will save/load) "e_name" and "e_tag" properties.
-If you want to change some properties of non entity objects - use "e_name" and "e_tag" for more easier selection of particular instance of them.
-If you want to made non entity objects to save/load your changes of their properties - you can make your own saving system with Entity Observer, Entity Storage and the fact that saving of "e_name" and "e_tag" is now managed by game itself.
+If you want to change some properties of savable non entity objects - use "e_name" and "e_tag" for more easier selection of particular instance of them.
+If you want to made savable non entity objects to save/load your changes of their properties - you can make your own saving system with Entity Observer, Entity Storage and the fact that saving of "e_name" and "e_tag" is now managed by game itself.
 
 //---------- RENAMED CONSTANTS ----------//
 
