@@ -538,6 +538,11 @@
                 "value": "spr_window_bedroom"
             },
             {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
+            },
+            {
                 "name": "e_sprite_angle",
                 "type": "int",
                 "value": 0
@@ -783,6 +788,11 @@
                 "name": "e_sprite",
                 "type": "string",
                 "value": "spr_ent_button"
+            },
+            {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
             },
             {
                 "name": "e_sprite_angle",
@@ -1175,6 +1185,11 @@
                 "name": "e_sprite",
                 "type": "string",
                 "value": ""
+            },
+            {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
             },
             {
                 "name": "e_sprite_anim",
@@ -1750,6 +1765,11 @@
                 "name": "e_sprite",
                 "type": "string",
                 "value": ""
+            },
+            {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
             },
             {
                 "name": "e_sprite_angle",
@@ -3054,6 +3074,11 @@
                 "value": ""
             },
             {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
+            },
+            {
                 "name": "e_sprite_angle",
                 "type": "int",
                 "value": 0
@@ -3386,6 +3411,11 @@
                 "name": "e_sprite",
                 "type": "string",
                 "value": "spr_Door_Indust"
+            },
+            {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
             },
             {
                 "name": "e_sprite_angle",
@@ -4182,6 +4212,11 @@
                 "name": "e_sprite",
                 "type": "string",
                 "value": ""
+            },
+            {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
             },
             {
                 "name": "e_sprite_angle",
@@ -6948,6 +6983,11 @@
                 "value": ""
             },
             {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
+            },
+            {
                 "name": "e_sprite_angle",
                 "type": "int",
                 "value": 0
@@ -8219,6 +8259,11 @@
                 "value": "spr_ent_switch"
             },
             {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
+            },
+            {
                 "name": "e_sprite_angle",
                 "type": "int",
                 "value": 0
@@ -8880,6 +8925,11 @@
                 "name": "e_sprite",
                 "type": "string",
                 "value": "spr_window_mansionWood"
+            },
+            {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
             },
             {
                 "name": "e_sprite_angle",
