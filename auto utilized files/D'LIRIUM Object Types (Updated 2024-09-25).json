@@ -483,7 +483,7 @@
             {
                 "name": "e_shadow_yoffset",
                 "type": "int",
-                "value": 0
+                "value": 1
             },
             {
                 "name": "e_solid_type",
@@ -1753,7 +1753,7 @@
             {
                 "name": "e_shadow_yoffset",
                 "type": "int",
-                "value": 0
+                "value": 1
             },
             {
                 "name": "e_solid_type",
@@ -4155,7 +4155,7 @@
             {
                 "name": "e_shadow_yoffset",
                 "type": "int",
-                "value": 0
+                "value": 1
             },
             {
                 "name": "e_shooter",
@@ -6066,7 +6066,7 @@
             {
                 "name": "e_shadow_yoffset",
                 "type": "int",
-                "value": 0
+                "value": 1
             },
             {
                 "name": "e_sort_method",
@@ -6934,7 +6934,7 @@
             {
                 "name": "e_shadow_yoffset",
                 "type": "int",
-                "value": 0
+                "value": 1
             },
             {
                 "name": "e_solid_type",
