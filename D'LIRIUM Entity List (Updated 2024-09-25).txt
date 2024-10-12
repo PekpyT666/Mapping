@@ -1,4 +1,4 @@
-﻿//===========================================================================================//
+//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -2672,6 +2672,7 @@
     "player_teleport"           (bool)            // player teleportation
     "player_allowcombat"        (bool)            // allow player to fight
     "player_allowflashlight"    (bool)            // allow player to use flashlight
+    "player_noise_radius"       (int)             // Monsters notice player when they are in this radius around player.
 
     "inventory_key_steel"       (bool)            // player has the steel (blue) key if "true"
     "inventory_key_brass"       (bool)            // player has the brass (yellow) key if "true"
