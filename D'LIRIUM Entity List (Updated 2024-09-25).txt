@@ -1627,6 +1627,7 @@
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
     "e_sprite"          (string)        // current entity sprite
+    "e_sprite_alpha"    (string)        // sprite alpha ("0" to "1")
     "e_sprite_remback"  (bool)          // makes all pixels with the sprite background color (left-bottom pixel) transparent (if "e_sprite" is external)
     "e_sprite_smooth"   (bool)          // smooth the sprite edges (if "e_sprite_remback" is "true")
     "e_sprite_ox"       (int)           // sprite X origin (if "e_sprite" is external)

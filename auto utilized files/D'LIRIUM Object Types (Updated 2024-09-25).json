@@ -6115,6 +6115,11 @@
                 "value": "spr_portalIn"
             },
             {
+                "name": "e_sprite_alpha",
+                "type": "float",
+                "value": 1.0
+            },
+            {
                 "name": "e_sprite_angle",
                 "type": "int",
                 "value": 0
