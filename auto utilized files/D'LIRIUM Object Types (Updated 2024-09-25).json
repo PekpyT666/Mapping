@@ -3568,6 +3568,7 @@
             {
                 "name": "e_fade_type",
                 "type": "float",
+                "propertytype": "Draw Method",
                 "value": 1
             },
             {
