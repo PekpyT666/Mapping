@@ -1,0 +1,118 @@
+//---------- CUSTOMMAP SPRITES/SOUNDS/PREFABS ----------//
+
+Now custommap assets (with same properties) are cached and become sharable between entities when any entity used them for the first time.
+Cache resets on level finish or abandonment (but not on personal hell entrance/exit).
+
+Example :
+Suppose you used your sprite in some Entity Decor, changed it on disk (without renaming), and then used it in some Entity Interact.
+Previously Entity Iteract would create new sprite (i.e. get your changes from disk).
+But now it will use same old sprite as in Entity Decor (i.e. changes on disk are ignored).
+
+Caching speeds up rendering, reduced loading time and decreased RAM ussage, in case you have entities that share same assets!
+
+For debugging/mapping convinience, Entity Prefaber now have property "e_pref_cache_file", wich bring back old behaviour when it is set to "false". But please, turn it back to "true", when you will publish your map.
+
+//---------- ADDED SUPPORT FOR BASIC SPRITES ----------//
+
+It is optional but convinient alternative for situations when you need a lot of sprites for your entities "e_mask" property.
+Instead of tedious creation png files for each different size of the masks, mapper can write string with format ":width:height:" in "e_mask" (or any other sprite property). This will create rectangular white sprite with specified size.
+And don't forget that you can change color of sprites with respective properties.
+
+Example :
+You can write ":100:50:" in to "e_sprite" of some your Entity Decor and change it "e_sprite_color" to blue (and don't forget to activate this decor to actualy see sprite). This way you will get a blue rectagle with width 100 and height 50 pixels, without the need to create any png file.
+
+//---------- SAVE SYSTEM IMPROVEMENT ----------//
+
+Now all savable objects have (and will save/load) "e_name" and "e_tag" properties.
+If you want to change some properties of non entity objects - use "e_name" and "e_tag" for more easier selection of particular instance of them.
+If you want to made non entity objects to save/load your changes of their properties - you can make your own saving system with Entity Observer, Entity Storage and the fact that saving of "e_name" and "e_tag" is now managed by game itself.
+
+//---------- RENAMED CONSTANTS ----------//
+
+All constants names was been renamed.
+Now their names are more descriptive and obey one naming style.
+Check the D'LIRIUM Entity List.
+
+//---------- OBJECTS ----------//
+
+obj_nightmarishMass --> obj_mass
+obj_bloodSplashOnce --> obj_blood_splash
+
+obj_FightSystem --> obj_combat_system
+
+obj_spawnPoint  --> obj_personal_personal_spawner
+obj_spawnPointB --> obj_personal_mass_spawner_maniac
+obj_waypoint    --> obj_personal_mass_spawner_normal
+Added obj_personal_player_spawner
+
+//---------- SPRITES ----------//
+
+spr_nightmarishMass        -->   spr_mass
+spr_nightmare_mass_patch   -->   spr_mass_patch
+
+spr_customPlayer_body      -->   spr_customplayer_body
+spr_customPlayer_bodyOut   -->   spr_customplayer_body_outline
+spr_customPlayer_death     -->   spr_customplayer_death
+spr_customPlayer_eyeballs  -->   spr_customplayer_eye
+spr_customPlayer_eyes      -->   spr_customplayer_eye_iris
+spr_customPlayer_gore      -->   spr_customplayer_gore
+spr_customPlayer_hair      -->   spr_customplayer_hooves
+spr_customPlayer_hairOut   -->   spr_customplayer_hooves_outline
+spr_customPlayer_hooves    -->   spr_customplayer_horn
+spr_customPlayer_hoovesOut -->   spr_customplayer_horn_outline
+spr_customPlayer_horn      -->   spr_customplayer_mane
+spr_customPlayer_hornOut   -->   spr_customplayer_mane_outline
+spr_customPlayer_maniac    -->   spr_customplayer_maniac
+spr_customPlayer_personal  -->   spr_customplayer_personalhell
+spr_customPlayer_tail      -->   spr_customplayer_tail
+spr_customPlayer_tailOut   -->   spr_customplayer_tail_outline
+spr_customPlayer_wings     -->   spr_customplayer_wings
+spr_customPlayer_wingsOut  -->   spr_customplayer_wings_outline
+spr_customPlayer_wounds    -->   spr_customplayer_wounds
+
+deleted spr_flashlightButton
+deleted spr_flashlightButtonBig
+deleted spr_superTester
+deleted spr_useButton
+deleted spr_useButtonBig
+
+//---------- SOUNDS ----------//
+
+sound_soulwhisper      --> snd_soul_whisper
+sound_fx_knifehitwall  --> sound_FX_knifeHitWall
+sound_fx_needlehitwall --> sound_FX_needleHitWall
+sound_fx_rockbreak1    --> sound_FX_rockBreak1
+sound_fx_rockbreak2    --> sound_FX_rockBreak2
+sound_fx_rockbreak3    --> sound_FX_rockBreak3
+
+//---------- MASS FROM PERSONAL HELL (obj_mass) ----------//
+
+Added "maximum_size" and "minimum_size" properties.
+Renamed property "goBack" in to "shrinking".
+
+//---------- TRIGGER PUSH (obj_trigger_push) ----------//
+
+It is now inherited from abstract parent obj_trigger.
+It is now saved/loaded by game like any other trigger.
+Added "e_allowmisc" property.
+Added "e_allowmonsters" property.
+Added "e_allowitems" property.
+Added "e_allownpc" property.
+Added "e_allowplayer" property.
+Added "e_allowtele" property.
+Added "e_allowprojectiles" property.
+Added "e_allowtele" property.
+Added "e_allowplayer" property.
+
+//---------- MONSTERS ----------//
+
+Renamed property "idleIsPlayed" in to "on_alert".
+
+Radius of sneaking player hearing increased, but radiuses of running and walking player are decreased. 
+I.e. sneaking player now should sneak more carefully (unlike previously when it was possible to "breathe on neck of monster"),
+but there is no longer need to sneak all the way from one side of screen to another (walking is now more usefull).
+
+//---------- MISC ----------//
+
+Now particles layer have fixed depth. You can get it depth value from PARTICLES_LAYER_DEPTH by Entity Constant.
+Changed default "e_mask" value in Enity Breakable from "spr_dev_cycler" to "spr_window_bedroom".
