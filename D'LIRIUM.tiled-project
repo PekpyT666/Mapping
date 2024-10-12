@@ -151,7 +151,7 @@
             "storageType": "int",
             "type": "enum",
             "values": [
-                "Depending \"e_depth\"",
+                "Using \"e_depth\"",
                 "Above Level",
                 "Above Screen",
                 "Above GUI"
