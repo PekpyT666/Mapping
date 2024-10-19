@@ -10660,6 +10660,16 @@
         "name": "Level End",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "f_difficulty_chicken",
                 "type": "bool",
                 "value": true
@@ -11797,6 +11807,16 @@
         "name": "Save Point",
         "properties": [
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "f_difficulty_chicken",
                 "type": "bool",
                 "value": true
@@ -11844,6 +11864,16 @@
                 "value": true
             },
             {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "f_difficulty_chicken",
                 "type": "bool",
                 "value": true
@@ -11883,6 +11913,16 @@
                 "name": "e_allowplayer",
                 "type": "bool",
                 "value": true
+            },
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
             }
         ]
     },
