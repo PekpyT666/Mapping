@@ -10736,7 +10736,7 @@
             {
                 "name": "glare_size",
                 "type": "float",
-                "value": 0.55
+                "value": 0.5
             },
             {
                 "name": "lantern_immunity",
