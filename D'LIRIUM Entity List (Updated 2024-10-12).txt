@@ -1923,14 +1923,14 @@
     "e_delay"               (int)           // delay before activation ("30" means 1 second)
     "e_sequence"            (bool)          // allows to work in 'sequence mode'
     "e_sequence_on"         (bool)          // enable 'sequence mode' if "true", dissable if "false" (if "e_sequence" is "true") i.e. when you activate sequencer it will do `global.sequence_enabled = e_sequence_on;`
-    "e_sequence_dur"        (int)           // disable 'sequence mode' in time if it's enabled (never if "-1", if "e_sequence" is "true")
+    "e_sequence_dur"        (int)           // disable 'sequence mode' after specified time if sequence still enabled (if "e_sequence" is "true" and "e_force_complete" is true) (never if values of this property is "-1"). In other words - set this value if you want to make your sequence fail proof. All story mode sequencers use this property to ensure that is someone managed to softlock cutscene, it will just force player object to complete it.
     "e_sequence_off"        (bool)          // disable 'sequence mode' after sequence end (if "e_sequence" is "true")
     "e_sequence_stop_enemy" (bool)          // if "true" then on this sequencer activation command ALL regular monsters to stop walking (if "e_sequence" is "true")
     "e_slave_any"           (string)        // name of "obj_enemy_base" to work with (can be used to manipulate both monsters+NPCs+lanters)
     "e_slave_npc"           (string)        // name of NPC to work with
     "e_slave_monst"         (string)        // name of monster to work with
     "e_force_complete"      (bool)          // if \"e_sequence_dur\" > -1 and player/camera/monster/npc are didn't get to the e_move_player/e_move_cam/e_move_monst/e_move_npc in e_sequence_dur time so then they will be instantaneously jumped to e_move_player/e_move_cam/e_move_monst/e_move_npc (or the last e_next in waypoints chain) instead of just stoping where they are right now
-    "e_force_complete_smart"(bool)          // If true and \"e_force_complete\" i true - then player will teleport with 1st level of teleportation spell (even if he didn't have it) intead of instantaneously jump
+    "e_force_complete_smart"(bool)          // If true and \"e_force_complete\" is true - then player will teleport with 1st level of teleportation spell (even if he didn't have it) intead of instantaneously jump
     "e_move_any"            (string)        // name of entity to move targeted "obj_enemy_base" on it (can be used to manipulate both monsters+NPCs+lanters)
     "e_move_npc"            (string)        // name of entity to move targeted NPC to it
     "e_move_npc_type"       (int)           // determine "e_slave_npc"'s speed ("0" - sneaking, "1" - walking,"2" - running, "3" - moving with "e_move_npc_spd" speed)
@@ -2472,7 +2472,7 @@
         "MONSTER_SNOWMAN_ATTACK_INTERVAL"
         "EVENTS_SNOWMANS_COUNT"
         
-        "MONSTER_SPAWN_SPEED"
+        "MONSTER_SPAWN_SPEED" // "Spawn" is a name of monster :>
         
         "PLAYER_SPEED_SNEAK"
         "PLAYER_SPEED_WALK"
@@ -2606,7 +2606,7 @@
         "IS_CHRISTMAS_TIME"                   // evaluates on game start in to true/false
         "DIALOGUE_PAGES_AMOUNT"
         "DIALOGUE_OPTIONS_AMOUNT"
-        "SEQUENCERS_ADDITIONAL_DURATION_BEFORE_FORCE"
+        "SEQUENCERS_ADDITIONAL_DURATION_BEFORE_FORCE"   // This is amount of time that added to "e_sequence_dur" of story mode sequencers. I.e. base time that sequnce suppose to last is "e_sequence_dur" minus this constant.
         
     #endregion
     
@@ -2645,7 +2645,7 @@
         "NPC_STATE.WALKING"
         "NPC_STATE.SNEAKING"
         "NPC_STATE.RUNNING"
-        "NPC_STATE.MOVING",
+        "NPC_STATE.MOVING"
         "NPC_STATE.FOLLOWING"
         "NPC_STATE.SEATING"
         
