@@ -6322,6 +6322,16 @@
                 "value": false
             },
             {
+                "name": "e_pref_arguments",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_pref_arguments_comment",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "e_pref_cache_file",
                 "type": "bool",
                 "value": true
