@@ -1,4 +1,4 @@
-﻿//===========================================================================================//
+//===========================================================================================//
 //------------------------------ Resources for your custommap: ------------------------------//
 //===========================================================================================//
 
@@ -1676,6 +1676,7 @@
 { 
     //@brief - Used when you need to batch spawn many objects by using another prefab file or with previously saved data in this entity (and vise versa). Also provide ability to make names/tags/targets/etc unique per spawned batch (i.e. allow to easily reuse your entities mechanisms).
     //@shape - when "e_pref_mode"==0 point, but when "e_pref_mode"==1 or 2 or 3 should be rectangular
+    //@double_sorts - first is activated object ("e_target"), second is uniquefied object ("e_pref_last_unique_id_output")
     
     "e_activated"                         (bool)   // Current entity activation ("true" if must activate on start). 
     "e_name"                              (string) // Current entity name. 
@@ -1704,6 +1705,7 @@
     "e_pref_relative_coordinates"         (bool)   // If this value is true, then the coordinates of this Entity Prefaber will be the origin of the loaded prefab objects (E.g. an object with x=0 and y=10 inside the prefab file will be loaded at the same custommap x as the Entity Prefaber, but his custommap y will be 10 pixel lower than Entity Prefaber). If this value is false, then the loaded prefab objects will be at the same coordinates as they are inside the prefab file (e.g. an object with x=0 and y=10 inside the prefab file will be loaded on the custommap coordinates x=0 and y=10 despite the location of the Entity Prefaber).
     "e_pref_internal_storage"             (string) // This property contain prefab as json string that was been saved by using "e_pref_mode" = "3". You can manipulate this string on runtime, but you should avoid doing this when it contain big prefab, since it can result in performance impact.
     "e_pref_last_unique_id"               (string) // Holds a string that was been used as replacement of the "{unique_id}" when last prefab was been loaded. Value "000000000" is reserved as flag that this prefaber didn't load anything yet.
+    "e_pref_last_unique_id_output"        (string) // Name of object that will be additionally processed like loaded object instances when "e_pref_make_unique" equal to "true".
     "e_destroy_self"                      (bool)   // If true, then Entity Prefaber will delete itself after activation.
     "e_delayed_destroy_self"              (int)    // Amount of this prefaber activations before it set his "e_destroy_self" to true ("0" or lower to disable this feature). Helpful for example if you need to save prefab in to internal storage, but delete prefaber after it will load prefab back (i.e. value of "1" will allow prefaber to be activated two times before selfdestroys).
     "e_pref_target_activation"            (int)    // Allow to chose when "e_target" will be actiaveted (by default it doesn't activated at all), you can look what possible conditions are in CONDITION list bellow.
@@ -1715,6 +1717,13 @@
     "e_sort_ox"                           (int)    // x offset of "e_sort_radius"
     "e_sort_oy"                           (int)    // y offset of "e_sort_radius"
     "e_target"                            (string) // Unlike other entities you need to choose e_pref_target_activation so prefaber will activate entity with specified name (and as always if e_sort_method isn't 0 then "!Any" allowed)
+    "e_second_sort_method"                (int)    // Applied to "e_pref_last_unique_id_output"! "0" (used by default) - all entities specified in "e_pref_last_unique_id_output", below second_sort parametrs are ignored, "1" - one nearest entity on "e_second_sort_position" that match all not empty sorts, "2" - one furthest entity on "e_second_sort_position" that match all not empty sorts, "3" - "e_second_sort_position" nearest entities that match all not empty sorts, "4" - "e_second_sort_position" furthest entities that match all not empty sorts, "5" - "e_second_sort_position" some (random) entities that match all not empty sorts.
+    "e_second_sort_tag"                   (string) // you can add unique tag for entity and find it by this tag ("!Any" allowed)
+    "e_second_sort_type"                  (string) // you can find entity by it's type , like "ent_button", "ent_spawner", etc ("!Entity" allowed) . Also note that this is the only sort parameter that truly decrease CPU load caused by sort algorithm.
+    "e_second_sort_position"              (int)    // number of entity in order (if "e_second_sort_method" is "1" or "2") OR count of entities (if "e_second_sort_method" is "3" or "4" or "5")
+    "e_second_sort_radius"                (int)    // you can find entity in specified radius (or outside it if "e_second_sort_radius" less than or equel "0")
+    "e_second_sort_ox"                    (int)    // x offset of "e_second_sort_radius"
+    "e_second_sort_oy"                    (int)    // y offset of "e_second_sort_radius"
 
     "e_pref_mode" (MODE) {
         "0"       // Load everything from prefab file.
