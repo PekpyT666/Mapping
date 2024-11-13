@@ -4325,6 +4325,11 @@
                 "value": 1
             },
             {
+                "name": "e_stack_activations",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_tag",
                 "type": "string",
                 "value": ""
