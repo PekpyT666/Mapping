@@ -3,7 +3,7 @@
 /*
  * find_object_by_id.js 
  *
- * This extension adds a 'Find Object by ID' (Ctrl+Shift+F) action to the Map
+ * This extension adds a 'Find Object by ID' action to the Map
  * menu, which can be used to quickly jump to and select an object when you
  * know its ID.
  * 
@@ -59,7 +59,7 @@ const jumpToObject = tiled.registerAction("Find Object by ID", function (/* acti
 });
 
 jumpToObject.text = "Find Object by ID";
-jumpToObject.shortcut = "Ctrl+Shift+F";
+// jumpToObject.shortcut = "Ctrl+Shift+F";
 jumpToObject.icon = "ext:find.png";
 
 tiled.extendMenu("Map", [
