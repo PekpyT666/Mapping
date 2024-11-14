@@ -8741,6 +8741,108 @@
     },
     {
         "color": "#ff000000",
+        "name": "Entity Tick",
+        "properties": [
+            {
+                "name": "e_activated",
+                "type": "bool",
+                "value": false
+            },
+            {
+                "name": "e_disable",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_name",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sort_method",
+                "propertytype": "Entity Sorting Method",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_ox",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_oy",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_position",
+                "type": "int",
+                "value": 1
+            },
+            {
+                "name": "e_sort_radius",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "e_sort_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_sort_type",
+                "type": "string",
+                "value": "!Entity"
+            },
+            {
+                "name": "e_tag",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_target",
+                "type": "string",
+                "value": ""
+            },
+            {
+                "name": "e_tick_accumulate_activations",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_tick_timer",
+                "type": "int",
+                "value": 0
+            },
+            {
+                "name": "f_difficulty_chicken",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_easy",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_hard",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_nightmare",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "f_difficulty_normal",
+                "type": "bool",
+                "value": true
+            }
+        ]
+    },
+    {
+        "color": "#ff000000",
         "name": "Entity Trigger",
         "properties": [
             {
