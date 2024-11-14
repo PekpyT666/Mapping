@@ -11944,6 +11944,11 @@
         "name": "Player",
         "properties": [
             {
+                "name": "e_assets_folder",
+                "type": "string",
+                "value": ""
+            },
+            {
                 "name": "direction",
                 "type": "int",
                 "value": 0
