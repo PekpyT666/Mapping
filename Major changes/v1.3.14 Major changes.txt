@@ -1,0 +1,10 @@
+//---------- OBJECTS ----------//
+
+obj_colorpicker --> obj_color_picker
+
+//---------- SPRITES ----------//
+
+spr_workshopPrevError --> spr_workshop_preview_error
+
+deleted spr_presstart
+deleted spr_presstartNew
