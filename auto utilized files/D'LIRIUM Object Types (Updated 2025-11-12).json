@@ -2270,9 +2270,19 @@
                 "value": true
             },
             {
+                "name": "e_disable_sequence",
+                "type": "bool",
+                "value": false
+            },
+            {
                 "name": "e_draw_priority",
                 "type": "int",
                 "value": 0
+            },
+            {
+                "name": "e_enable_sequence",
+                "type": "bool",
+                "value": false
             },
             {
                 "name": "e_name",
