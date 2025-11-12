@@ -95,6 +95,82 @@ tiled.extendMenu("Map", [
 
 
 
+const qa_clean_up_objects = tiled.registerAction("QA clean up (objects)", function () {
+    let map = tiled.activeAsset;
+    let confirm = tiled.confirm("This tool most likely will break your entities . You are not suppose to use it , unless you are debugging Tiled object types !", "Are you sure ?");
+    if (confirm) {
+        map.macro("QA clean up (objects)", function () {
+            for (let i = 0; i < map.layerCount; i++) {
+                current_layer = map.layerAt(i);
+                if (current_layer.isObjectLayer) {                          //игнорировать необъектные слои
+                    if (current_layer.objects != null) {                    //на случай , если слой не будет иметь объектов вообще
+                        current_layer.objects.forEach(function (processedObject) {
+                            let properties = processedObject.properties();
+                            for (const [key, value] of Object.entries(properties)) {
+                                if (key.includes("_temp_")) processedObject.removeProperty(key);
+                                if (key.includes("_term_")) processedObject.removeProperty(key);
+                                if (key.includes("_timer_")) processedObject.removeProperty(key);
+                                if (key === "f_gamemode_arcade") processedObject.removeProperty(key);
+                                if (key === "f_gamemode_story") processedObject.removeProperty(key);
+                                if (key === "speed") processedObject.removeProperty(key);
+                                if (key === "direction") processedObject.removeProperty(key);
+                                if (key === "e_depth") processedObject.removeProperty(key);
+                                if (key === "e_sprite_color") processedObject.removeProperty(key);
+                                if (key === "shadow_bottom") processedObject.removeProperty(key);
+                                if (key === "shadow_enable") processedObject.removeProperty(key);
+                                if (key === "shadow_frame") processedObject.removeProperty(key);
+                                if (key === "interaction_type") processedObject.removeProperty(key);
+                                if (key === "e_changelevel_type") processedObject.removeProperty(key);
+                                if (key === "draw_char") processedObject.removeProperty(key);
+                                if (key === "e_answer_spr_col") processedObject.removeProperty(key);
+                                if (key === "e_background_col") processedObject.removeProperty(key);
+                                if (key === "e_option_col") processedObject.removeProperty(key);
+                                if (key === "e_option_spr_col") processedObject.removeProperty(key);
+                                if (key === "e_portrait_col") processedObject.removeProperty(key);
+                                if (key === "e_text_col") processedObject.removeProperty(key);
+                                if (key.includes("e_text_line1") && key !== "e_text_line1") processedObject.removeProperty(key); // e_text_line10 - e_text_line16 are depricated
+                                if (key.includes("e_text_page1") && key !== "e_text_page1") processedObject.removeProperty(key); // e_text_page10 - e_text_page16 are depricated
+                                if (key === "last_free_space") processedObject.removeProperty(key);
+                                if (key === "line_sep") processedObject.removeProperty(key);
+                                if (key === "option_number") processedObject.removeProperty(key);
+                                if (key === "option_pos") processedObject.removeProperty(key);
+                                if (key === "page") processedObject.removeProperty(key);
+                                if (key === "page_number") processedObject.removeProperty(key);
+                                if (key === "setup") processedObject.removeProperty(key);
+                                if (key === "e_door_key_color") processedObject.removeProperty(key);
+                                if (key === "e_fade_color") processedObject.removeProperty(key);
+                                if (key === "xview") processedObject.removeProperty(key);
+                                if (key === "yview") processedObject.removeProperty(key);
+                                if (key === "e_mini_text_color") processedObject.removeProperty(key);
+                                if (key.includes("e_destroy_target1") && key !== "e_destroy_target1") processedObject.removeProperty(key); // e_destroy_target10 are depricated
+                                if (key.includes("e_targ1") && key !== "e_targ1") processedObject.removeProperty(key); // e_targ10 are depricated
+                                if (key.includes("e_prog_parm1") && key !== "e_prog_parm1") processedObject.removeProperty(key); // e_prog_parm10 are depricated
+                                if (key.includes("e_prog_string1") && key !== "e_prog_string1") processedObject.removeProperty(key); // e_prog_string10 are depricated
+                                if (key.includes("e_prog_target1") && key !== "e_prog_target1") processedObject.removeProperty(key); // e_prog_target10 are depricated
+                                if (key.includes("e_prog_value1") && key !== "e_prog_value1") processedObject.removeProperty(key); // e_prog_value10 are depricated
+                                if (key === "e_activated" && (processedObject.type == "Entity Node" || processedObject.type == "Entity Storage" || processedObject.type == "Entity Waypoint")) processedObject.removeProperty(key); // Three entities that have e_activated (due to inheritance) but didn't use it at all
+                                if (key === "got_by_player") processedObject.removeProperty(key);
+                                if (key === "level_end_block") processedObject.removeProperty(key);
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    }
+})
+
+qa_clean_up_objects.text = "QA clean up (objects)";
+qa_clean_up_objects.icon = "ext:aaaaaaaaa.png";
+
+if (false) {
+    tiled.extendMenu("Map", [
+        { action: "QA clean up (objects)", before: "SelectNextTileset" }
+    ]);
+}
+
+
+
 const remove_temp_values_from_objects = tiled.registerAction("Remove _temp_ properties (objects)", function () {
     let map = tiled.activeAsset;
     map.macro("Remove _temp_ properties (objects)", function () {
