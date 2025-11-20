@@ -979,8 +979,8 @@
             },
             {
                 "name": "e_input_a",
-                "type": "int",
-                "value": 0
+                "type": "float",
+                "value": 0.0
             },
             {
                 "name": "e_input_a_multiplied",
@@ -989,8 +989,8 @@
             },
             {
                 "name": "e_input_b",
-                "type": "int",
-                "value": 0
+                "type": "float",
+                "value": 0.0
             },
             {
                 "name": "e_input_b_multiplied",
@@ -1345,13 +1345,13 @@
             },
             {
                 "name": "e_input_a",
-                "type": "int",
-                "value": 0
+                "type": "float",
+                "value": 0.0
             },
             {
                 "name": "e_input_b",
-                "type": "int",
-                "value": 0
+                "type": "float",
+                "value": 0.0
             },
             {
                 "name": "e_name",
@@ -1538,8 +1538,8 @@
             },
             {
                 "name": "e_input",
-                "type": "int",
-                "value": 0
+                "type": "float",
+                "value": 0.0
             },
             {
                 "name": "e_name",
