@@ -253,7 +253,7 @@
 
         #region REGULAR MATH 
         // Notes - brackets ( / ) show what type of data e_input_a and e_input_b should be. Again, order always is (a/b).
-        // By default e_input_a and e_input_b properties in Tiled have integer type (that's if you have imported "D'LIRIUM Object Types" manually or by "Set up the map editor" script).
+        // By default e_input_a and e_input_b properties in Tiled have float type (that's if you have imported "D'LIRIUM Object Types" manually or by "Set up the map editor" script).
         // Float and integer and boolean types implicitly converts to each others, but strings don't converts by themselves.
         // And remember that conversion int --> float is not a problem, but float --> int will cause a fractional part loss.
         
