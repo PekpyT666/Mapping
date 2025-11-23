@@ -640,6 +640,11 @@
     "e_diag_Y"          (int)           // Y position of textbox (regarding the GUI)
     "e_draw_priority"   (int)           // sets the draw order if draws above screen or GUI
 
+    //Preventing player from moving character and mouse (aka 'sequence mode')
+
+    "e_enable_sequence"     (bool)          // enable 'sequence mode' if "true", do nothing if "false" i.e. when first dialogue page starts and this property is "true" it does `global.sequence_enabled = true;`
+    "e_disable_sequence"    (bool)          // disable 'sequence mode' if "true", do nothing if "false" i.e. when last dialogue page finishes and this property is "true" it does `global.sequence_enabled = false;`
+
     //Textbox background sprite
 
     "e_background"          (string)        // textbox background sprite
@@ -2763,7 +2768,7 @@
     "gui_cursor"                (bool)            // defines Cursor visibility
     "interaction"               (bool)            // presses <USE> button if "true"
     "game_outside_frame"        (bool)            // draw background frame outside game window
-    "sequence_enabled"          (bool)            // enables sequence mode if "true"
+    "sequence_enabled"          (bool)            // enables 'sequence mode' if "true", while 'sequence mode' are active player can't move character and mouse
 	"personal_god"              (bool)            // Player invincibility after personal return
     "personal_times"            (int)             // Number of personal hell visits
     "arcade_finish"             (bool)            // Defines if player has finished his run in the arcade mode
