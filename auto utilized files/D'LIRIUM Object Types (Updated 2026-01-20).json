@@ -10866,7 +10866,7 @@
                 "name": "image_blend",
                 "type": "color",
                 "value": "#ffffffff"
-            }
+            },
             {
                 "name": "image_alpha",
                 "type": "float",
