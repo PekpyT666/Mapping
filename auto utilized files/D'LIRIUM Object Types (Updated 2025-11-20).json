@@ -10863,6 +10863,16 @@
                 "value": true
             },
             {
+                "name": "image_blend",
+                "type": "color",
+                "value": "#ffffffff"
+            }
+            {
+                "name": "image_alpha",
+                "type": "float",
+                "value": 1
+            },
+            {
                 "name": "image_xscale",
                 "type": "float",
                 "value": 1
