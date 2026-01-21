@@ -69,7 +69,7 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
@@ -128,7 +128,7 @@
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_delay"               (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
     "e_sprite"              (string)        // current entity sprite
@@ -181,7 +181,7 @@
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_delay"               (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sprite"              (string)        // current entity sprite
     "e_sprite_alpha"        (string)        // sprite alpha ("0" to "1")
@@ -422,7 +422,7 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sprite"          (string)        // current entity sprite
     "e_sprite_alpha"    (string)        // sprite alpha ("0" to "1")
@@ -534,7 +534,7 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
@@ -592,7 +592,7 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
     "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
@@ -618,7 +618,7 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // target name to activate it after dialogue ends (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" AND "e_option_0_target"-"e_option_8_target" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_assets_folder"   (string)        // folder in which entity will search for sound , sprite and text resource files (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
@@ -864,7 +864,7 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
@@ -929,7 +929,7 @@
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_delay"               (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sprite"              (string)        // current entity sprite
     "e_sprite_alpha"        (string)        // sprite alpha ("0" to "1")
@@ -1097,7 +1097,7 @@
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_delay"               (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
     "e_block"               (bool)          // blocks current entity until refresh
@@ -1399,7 +1399,7 @@
     "e_move_dist"            (float)           // deactivation distance ("-1" to infinity movement)
     "e_jump_target"          (string)          // name of entity to place current entity on it ("!Player" allowed)
     "e_slave"                (string)          // name of entity that will moved
-    "e_delay"                (int)             // delay before activation ("30" means 1 second)
+    "e_delay"                (int)             // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"              (int)             // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"            (bool)            // current entity activation ("true" if must activate on start)
     "e_sound"                (string)          // activation sound (quiet if "sound_NULL")
@@ -1429,7 +1429,7 @@
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_delay"               (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
     "e_assets_folder"       (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
     "e_activated"           (bool)          // current entity activation ("true" if must activate on start)
@@ -1458,7 +1458,7 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" AND "e_targ0"-"e_targ9" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
@@ -1487,7 +1487,7 @@
     "e_name"            (string)        // name of any object to program
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
     "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
@@ -1662,7 +1662,7 @@
     "e_usedistance"     (int)           // current entity use distance
     "e_usetype"         (int)           // interaction icon ("0" - common, "1" - inspect, "2" - talk, "3" - pick up, "4" - save, "5" - sorcery, "6" - gift, "7" - door, "8" - button press, "9" - search, "10" - use, "11" - nothing)
     "e_jump_target"     (string)        // name of entity to place current entity on it
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_inspector"       (string)        // entity name that will be displayed on the inspector
     "e_shadow"          (bool)          // allow entity to cast a shadow
@@ -1784,7 +1784,7 @@
     "e_name"            (string)        // name of any object to program
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
     "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
@@ -1813,7 +1813,7 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" AND "e_targ0"-"e_targ9"  ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
     "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
@@ -1937,7 +1937,7 @@
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_delay"               (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_sequence"            (bool)          // allows to work in 'sequence mode'
     "e_sequence_on"         (bool)          // enable 'sequence mode' if "true", dissable if "false" (if "e_sequence" is "true") i.e. when you activate sequencer it will do `global.sequence_enabled = e_sequence_on;`
     "e_sequence_dur"        (int)           // disable 'sequence mode' after specified time if sequence still enabled (if "e_sequence" is "true" and "e_force_complete" is true) (never if values of this property is "-1"). In other words - set this value if you want to make your sequence fail proof. All story mode sequencers use this property to ensure that is someone managed to softlock cutscene, it will just force player object to complete it.
@@ -1991,7 +1991,7 @@
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // sound to play on entity activation (quiet if "sound_NULL")
     "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
@@ -2017,7 +2017,7 @@
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"         (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"           (string)        // sound to play on entity activation (quiet if "sound_NULL")
     "e_assets_folder"   (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
@@ -2043,7 +2043,7 @@
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_delay"               (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second). After activation enity will count down this amount of time. While counting down it will ignore any incoming activations (don't spawn anything and don't activate it e_target).
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
     "e_assets_folder"       (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
@@ -2099,7 +2099,7 @@
     "e_target"              (string)        // name of entity that current entity will activate everytime (if e_sort_method isn't 0 then "!Any" allowed)
     "e_target_on"           (string)        // name of entity that current entity will immidietly activate every odd numbered time (if e_sort_method isn't 0 then "!Any" allowed)
     "e_target_off"          (string)        // name of entity that current entity will immidietly activate every even numbered time (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_delay"               (int)           // delay before activating "e_target" AND "e_target_on" AND "e_target_off" ("30" means 1 second)
     "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sprite"              (string)        // current entity sprite
     "e_sprite_alpha"        (string)        // sprite alpha ("0" to "1")
@@ -2197,7 +2197,7 @@
     "e_name"                (string)        // current entity name
     "e_tag"                 (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"              (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"               (int)           // delay before activation ("30" means 1 second)
+    "e_delay"               (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_refresh"             (int)           // entity refresh (never if "-1", "30" means 1 second)
     "e_sound"               (string)        // activation sound (quiet if "sound_NULL")
     "e_assets_folder"       (string)        // folder in which entity will search for sound resource file (you can leave it blank, if your resources inside folder that located near custommap and have the same name as the custommap)
@@ -2242,7 +2242,7 @@
     "e_name"            (string)        // current entity name
     "e_tag"             (string)        // Second name of entity. Helpful if you need to chose certain entity from many that have the same name and types.
     "e_target"          (string)        // name of entity that current entity will activate (if e_sort_method isn't 0 then "!Any" allowed)
-    "e_delay"           (int)           // delay before activation ("30" means 1 second)
+    "e_delay"           (int)           // delay before activating "e_target" ("30" means 1 second)
     "e_sound"           (string)        // activation sound (quiet if "sound_NULL")
     "e_activated"       (bool)          // current entity activation ("true" if must activate on start)
     "e_sprite"          (string)        // current entity sprite
