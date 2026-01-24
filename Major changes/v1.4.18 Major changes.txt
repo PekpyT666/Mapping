@@ -1,0 +1,55 @@
+//---------- DEBUGGING TOOLS ----------//
+
+Since steam added new recording feature, which default keybind is Ctrl+F11, it is now a bad practice to use this keybind in games.
+So, here is how we changed our wrap debug tools keybinds:
+Ctrl+F11 --> Ctrl+F10
+Ctrl+F10 --> Ctrl+F9
+Ctrl+F9  --> Ctrl+F8
+
+//---------- ENTITIES ----------//
+
+Entity Dialogue now have "e_disable_sequence"/"e_enable_sequence" properties.
+This allow you to start/end sequence mode directly from first/last dialogue entity respectively instead of using additional two Entity Sequencer with three e_sequence* properties.
+You can still use old Entity Sequencer way to start/end sequence mode, but please use new way for "dialogue cutscenes" instead when possible. It's more clean and simplier.
+
+Entity Switch's "e_target_on"/"e_target_off" was been reworked to use "e_delay" like any other entities' target properties do.
+If you by any chance had a switch that had both "e_target" and "e_target_on"/"e_target_off" while also using "e_delay" - split such switch in to two switches with the same "e_name" but with different "e_delay".
+
+//---------- SPRITES ----------//
+
+spr_hud_ammo                --> spr_legacy_hud_ammo
+spr_hud_portrait_arcade     --> spr_legacy_hud_portrait_arcade
+spr_hud_portrait_cell       --> spr_legacy_hud_portrait_cell
+spr_hud_healthbar_scale     --> spr_legacy_hud_healthbar_scale
+spr_hud_healthbar_godmode   --> spr_legacy_hud_healthbar_godmode
+spr_hud_healthbar_icons     --> spr_legacy_hud_healthbar_icons
+spr_hud_inventory_melee     --> spr_legacy_hud_inventory_melee
+spr_hud_inventory_fireball  --> spr_legacy_hud_inventory_fireball
+spr_hud_inventory_plasma    --> spr_legacy_hud_inventory_plasma
+spr_hud_inventory_shaft     --> spr_legacy_hud_inventory_shaft
+spr_hud_inventory_teleport  --> spr_legacy_hud_inventory_teleport
+spr_hud_inventory_sorcery   --> spr_legacy_hud_inventory_sorcery
+spr_hud_inventory_selected  --> spr_legacy_hud_inventory_selected
+spr_hud_inventory_pickup    --> spr_legacy_hud_inventory_pickup
+spr_hud_inventory_keysteel  --> spr_legacy_hud_inventory_keysteel
+spr_hud_inventory_keybrass  --> spr_legacy_hud_inventory_keybrass
+spr_hud_inventory_keycopper --> spr_legacy_hud_inventory_keycopper
+spr_hud_inventory_key       --> spr_legacy_hud_inventory_key
+spr_maniacScreen            --> spr_maniac_screen
+spr_cg_eldritchcube         --> spr_cg_eldridgecube
+
+//---------- SOUNDS ----------//
+
+sound_FX_eldritchcube0 --> sound_FX_eldridgecube0
+sound_FX_eldritchcube1 --> sound_FX_eldridgecube1
+sound_FX_eldritchcube2 --> sound_FX_eldridgecube2
+sound_FX_eldritchdraw  --> sound_FX_eldridgedraw
+sound_FX_eldritchput   --> sound_FX_eldridgeput
+music_eldritchcube     --> music_eldridgecube
+
+//---------- MISC ----------//
+
+rm_level_personalHell --> rm_level_personal_hell
+rm_menu_deathScreen   --> rm_menu_deathscreen
+
+Some internal clean up of unused global properties and other unused experimental things.
