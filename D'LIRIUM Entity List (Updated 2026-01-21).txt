@@ -1385,7 +1385,7 @@
 
 //-------------------- Entity Movement (ent_movement) --------------------//
 {
-    //@brief - Used when you need to move something that does not have AI (i.e. NOT monsters, NPCs or Player).
+    //@brief - Used when you need to move something that does not have AI (i.e. NOT monsters, NOT NPCs and NOT Player).
     //@shape - always point
     //@double_sorts - first is moved object ("e_slave"), second is destination ("e_jump_target"/"e_move_target"/"e_move_dir")
     
