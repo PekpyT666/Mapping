@@ -2,7 +2,7 @@
 /*
 MIT License
 
-Copyright (c) 2023 Grif_on
+Copyright (c) 2023-2026 Grif_on
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,19 @@ SOFTWARE.
 
 
 let processRawSavedMap = function (map, is_call_from_menu) {
-    if (map.property("tiled_save_flag") == true || is_call_from_menu) {
-        map.macro("Process raw saved map", function () {
-            if (tiled.confirm(((is_call_from_menu) ? "" : "It seems that you open this saved map for the first time .\n") + "Do you want Tiled to autoexecute a few scripts to make this map look good ?\n\nScripts that will be executed :\n\"Convert types from DEV to PRETTY\" --> \"Make all objects visible\" --> \"Remove properties with default values (objects)" + ((is_call_from_menu) ? "" : "\"\n\nYou can execute them latter with button \"Process raw saved map\" from \"Map\" menu ."), "Execute all scripts to make saved map more readable ?")) {
-                tiled.trigger("devToPretty");
-                tiled.trigger("Make all objects visible");
-                tiled.trigger("Remove properties with default values (objects)");
+    if (map !== null) { // Not on main screen
+        if (map.isTileMap) { // Asset is a map (i.e. not a tileset)
+            if (map.property("tiled_save_flag") == true || is_call_from_menu) {
+                map.macro("Process raw saved map", function () {
+                    if (tiled.confirm(((is_call_from_menu) ? "" : "It seems that you open this saved map for the first time .\n") + "Do you want Tiled to autoexecute a few scripts to make this map look good ?\n\nScripts that will be executed :\n\"Convert types from DEV to PRETTY\" --> \"Make all objects visible\" --> \"Remove properties with default values (objects)" + ((is_call_from_menu) ? "" : "\"\n\nYou can execute them latter with button \"Process raw saved map\" from \"Map\" menu ."), "Execute all scripts to make saved map more readable ?")) {
+                        tiled.trigger("devToPretty");
+                        tiled.trigger("Make all objects visible");
+                        tiled.trigger("Remove properties with default values (objects)");
+                    }
+                    map.setProperty("tiled_save_flag", false);
+                });
             }
-            map.setProperty("tiled_save_flag", false);
-        });
+        }
     }
 }
 
