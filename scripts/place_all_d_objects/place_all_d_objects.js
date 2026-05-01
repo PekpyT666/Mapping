@@ -151,6 +151,7 @@ Second - make sure that you are running the script on a map that is already save
                 case "obj_buttonLanguage_NO":
                 case "obj_patreon_button":
                 case "obj_discord_button":
+                case "obj_platform_button":
                     current_object.type = type;
                     current_object.setProperty("image_xscale", 0.1);
                     current_object.setProperty("image_yscale", 0.1);
