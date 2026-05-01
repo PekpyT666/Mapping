@@ -10828,6 +10828,16 @@
         "name": "Level End",
         "properties": [
             {
+                "name": "e_allowplayer",
+                "type": "bool",
+                "value": true
+            },
+            {
+                "name": "e_allowplayerintele",
+                "type": "bool",
+                "value": true
+            },
+            {
                 "name": "e_name",
                 "type": "string",
                 "value": ""
